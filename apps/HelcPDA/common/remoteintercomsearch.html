@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>远程对讲查询</title>
+</head>
+<body>
+<div data-role="page" id="remoteintercomsearch" class="page" data-close-btn="none">
+	<div data-role="header" data-position="fixed" class="header" >
+		<h1>远程对讲查询</h1>
+	</div>
+	<div id="content" data-role="content" data-tolerance="0,0" >
+
+			<select name="select-choice-type" id="select-choice-type" >
+			    <option value="0">主机ID</option>
+			    <option value="1">电梯工号</option>
+			</select>
+		
+			<input type="text" name="txtkey" id="txtkey" placeholder="对讲主机ID/电梯工号">
+		<div style="text-align:center;">
+		<a href="#" data-role="button" data-icon="back" data-inline="true" data-rel="back">取消</a>
+		<a id="btnconfirm" href="javascript:void(0)" data-role="button" data-inline="true"  data-icon="info" >确定</a>
+		</div>
+	</div>
+	
+</div>
+</body>
+</html>

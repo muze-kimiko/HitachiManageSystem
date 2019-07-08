@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html>
+    	<head>
+    		<meta charset="UTF-8">
+    		<title>FaultTransmitters</title>
+    	</head>
+    	<body>
+	<div data-role="page" id="FaultTransmitters">
+		<div data-role="header" data-position="fixed" style="background:#2B89D3;color:#ffffff;height:40px;" >
+			<div data-type="horizontal" class="ui-btn-left">
+				<a href="#anylink" id="FaultTransmitters-back" data-role="button" data-iconpos="notext" data-rel="back" data-theme="f" data-icon="custarrow-l">后退</a>
+				<a href="#anylink" id="FaultTransmitters-external-back" data-role="button" data-iconpos="notext" rel="external" style="display:none;" data-theme="f" data-icon="custarrow-l">后退</a>
+				<a href="javascript:void(0);" onclick="home();" data-role="button" data-iconpos="notext" data-theme="f" data-icon="custarrow-home">主页</a>
+			</div>
+			<h1  class="pagetitle" style="font-size:15px;">故障发报&nbsp;&nbsp;</h1>
+			<div class="Mcstatus" id="Mcheader" width="100%">
+				<div class="gzcd">
+				    <div class="item"><a href="javascript:void(0);" class="bg">全部</a></div>
+				    <div class="item"><a href="javascript:FaultTransmittersModule.jumpToIssueRecord();" >我的归档</a></div>
+				    <div class="clear"></div>
+				</div>
+			</div>
+		</div>
+		<div data-role="content" style="padding: 38px 0 0 0">
+			<div>
+				<table id="tbcondition" width="100%" border="0" cellspacing="0" cellpadding="0" style="background:#2B89D3;color:#fff;text-shadow: none;display:none;">
+	                <tr>
+	                    <td style="padding-left:8px;"><input class="my-checkbox" type="checkbox" id="chkAll" name="chkAll" onclick="CheckAll()" data-role="none" ></td>
+						<td>
+							<select name="malType" id="malType" width="100px;" data-role="none" style="float:left;">
+							<option value="-1">全部</option>
+							<option value="1" selected>未完成</option>
+							<option value="2">已完成</option>
+							</select>
+						</td>
+						<td>
+						<select name="ddlRelievedDate1" id="ddlRelievedDate1" data-role="none">
+							<option value="">全部</option>
+							<option value="1">已解除</option>
+							<option value="0">未解除</option>
+						</select>
+						</td>
+						<td class="bottomxian"  colspan="3" nowrap="nowrap" align="right" style="color:#fff;padding-right:10px;">
+					总条数<span id="rowcount">0</span>/剩余<span id="remaincount">0</span>
+					</td>
+	                </tr>
+	            </table>
+			</div>
+			
+			 <div id="wrapperFaultTransmitters" style="position:absolute;z-index:1;top:105px; bottom:100px; width:100%;overflow:auto;">
+		   		<div id="scroller">
+					<div id="pullDownFaultTransmitters" style="display:none;">
+						<span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
+					</div>		
+					<div id="SearchResult" width="100%">
+				
+            		</div>
+				</div>	
+		   </div>
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-theme="a" data-tap-toggle="false" style="position:fixed;" data-hide-during-focus="false">
+		    <div id="div-more" style="display:none;padding-bottom:2px;">
+				<button id="more" class="btn" style="margin:0px;width:100%;">更多</button>
+			</div>
+			<div data-role="navbar" id="navbar-custorm">
+	      		<ul>
+			  		<li><a id="footer-realtime" href="#" data-icon="myeye">远程监视</a></li>
+			  		<li><a id="footer-datarw" href="#" data-icon="mydatarw">数据读取</a></li>
+				    <li><a id="footer-faultfile" href="#" data-icon="myfaultfile">故障存档</a></li>
+				    <li><a id="footer-favorite" href="#" data-icon="myfavorite">收藏</a></li>
+				  </ul>
+			</div>
+		</div>
+		
+		<div data-role="popup" id="popupTipDialog" data-overlay-theme="b" data-theme="a" data-dismissible="false" style="padding:0;margin:0;">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;padding:0;margin:0;" >
+				<h1>提示</h1>
+			</div>
+			<div data-role="content" style="padding-top:0px;margin-top:0px;">
+		        <p>网络故障，请查网络情况</p>
+
+				<div data-role="navbar">
+				  <ul>
+			        <li><a href="#" data-theme="a" data-rel="back">返回</a></li>
+			      </ul>
+			    </div>
+			</div>
+		</div>
+	
+		<div data-role="popup" id="popupFavoriteGroupDialog" data-tolerance="0,0" data-position-to="window" data-overlay-theme="b" data-theme="a" style="min-width:100%;min-heigth:100%;width:200px;">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;" >
+				<h1>收藏组</h1>
+				<div data-type="horizontal" class="ui-btn-right">
+					<a href="javascript:void(0);" id="btnAddGroup" data-role="button" data-icon="custarrow-add" data-iconpos="notext" data-theme="f">新增</a>
+				</div>
+			</div>
+			<div data-role="content" style="padding-top:10px;">
+				<div data-role="listview" id="favoriteGroup-listview">
+				</div>
+			</div>
+			<div data-role="footer">
+				<fieldset class="ui-grid-a">
+				    <div class="ui-block-a" style="padding:2px;cursor:pointer;" id="btnFavorite"><div class="ui-bar ui-bar-a" style="height: 20px;text-align:center;background:#2B89D3;color:#ffffff">确定</div></div>
+				    <div class="ui-block-b" style="padding:2px;cursor:pointer;" id="btnCancel"><div class="ui-bar ui-bar-a" style="height: 20px;text-align:center;background:#2B89D3;color:#ffffff">取消</div></div>
+				</fieldset>
+			</div>
+		</div>
+		
+		<div data-role="popup" id="AddGroupUI" data-tolerance="0,0" data-position-to="window" data-overlay-theme="b" data-theme="a" style="min-width:100%;min-heigth:100%;">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;" >
+				<h1  class="pagetitle" style="font-size:15px;">新增分组</h1>
+				<div style="-moz-user-select:none;background-color:#fff;color:#000;height:100px;width:100%;">
+			 		<table style="width:100%;">
+				 		<tr>
+					 		<td align="right" style="padding-left:5px;padding-right:5px;">
+					 			<input type="text" name="txtGroupName" id="txtGroupName" placeholder="组名" >
+					 		</td>
+				 		</tr>
+				 		<tr>
+					 		<td style="text-align:center;">
+						 		<fieldset class="ui-grid-a">
+								    <div class="ui-block-a" style="padding:2px;cursor:pointer;" id="btn-add-Save"><div class="ui-bar ui-bar-a" style="height: 20px;text-align:center;background:#2B89D3;color:#ffffff">保存</div></div>
+								    <div class="ui-block-b" style="padding:2px;cursor:pointer;" id="btn-add-cancel"><div class="ui-bar ui-bar-a" style="height: 20px;text-align:center;background:#2B89D3;color:#ffffff">取消</div></div>
+								</fieldset>
+					 		</td>
+				 		</tr>
+			 		</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+
+</html>
+

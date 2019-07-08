@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:orientation="vertical"
+    android:background="@color/color_bg"
+    >
+<LinearLayout
+	android:id="@+id/layout_title3"
+   android:layout_width="fill_parent"
+   android:layout_height="45dp"
+   android:orientation="horizontal"
+   android:background="#33b5e5">
+    <ImageView
+        android:id="@+id/toPrevePage3"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:layout_marginLeft="5dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:background="@drawable/btn_back_bg"/>
+    <TextView 
+   		android:id="@+id/tv_title_text3"
+   		android:layout_width= "fill_parent"
+   		android:layout_height="40dp"
+        android:layout_weight="0.8"
+		android:gravity = "center_horizontal|center_vertical"
+		android:textSize="20.0dip" 
+		android:textColor="#FFFFFF"
+		/>
+         <Button
+        android:id="@+id/iv_title_allarroudPeople"
+        android:layout_width="64dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:layout_marginRight="5dp"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:background="@drawable/btn_online_bg"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:text="全部"/>
+     <ImageView 
+         android:id="@+id/iv_mapview3"
+         android:layout_width="64dp"
+         android:layout_height="wrap_content"
+         android:layout_weight="0.2"
+         android:layout_marginRight="5dp"
+         android:layout_gravity="center_vertical|center_horizontal"
+         android:background="@drawable/btn_mapview_bg"
+         android:visibility="gone"
+        />
+    
+     
+</LinearLayout>
+<LinearLayout
+    android:id="@+id/layout_title4"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/color_bg"
+     >
+  <Button
+        android:id="@+id/fiveHundrend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="500"
+        android:textColor="@color/black" />
+  
+  
+    <Button
+        android:id="@+id/thoundHundrend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1000"
+        android:textColor="@color/black" />
+    <Button
+        android:id="@+id/sthoundHundrend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2000"
+        android:textColor="@color/black" />
+
+</LinearLayout>
+
+<ListView
+        android:id="@+id/arroudPeople_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:listSelector="@android:color/transparent"
+        android:cacheColorHint="#00000000"
+        android:divider="@color/color_bg"
+        android:fadingEdge="none"
+        android:alpha="0.8"
+        >
+    </ListView>
+
+
+
+ </LinearLayout>

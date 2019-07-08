@@ -1,0 +1,281 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>扶梯开关</title>
+</head>
+<body>
+<div data-role="page" id="futi">
+		<div data-role="header" data-position="fixed" data-tap-toggle="false" style="background:#2B89D3;color:#ffffff;height:40px;" >
+			<div data-type="horizontal"  class="ui-btn-left">
+				<a href="#anylink" data-role="button" data-rel="back" data-iconpos="notext" data-theme="f" data-icon="custarrow-l">后退</a>
+				<a href="javascript:void(0);" onclick="home();" data-role="button" data-iconpos="notext" data-theme="f" data-icon="custarrow-home">主页</a>
+			</div>
+			<h1 class="pagetitle" style="font-size:15px;">扶梯管理</h1>
+			<div data-type="horizontal" class="ui-btn-right">
+				<a href="futisearch.html" id="dialoglink" data-role="button" data-inline="true" data-rel="dialog" data-transition="pop" data-iconpos="notext" data-theme="f" data-icon="custarrow-search" >搜索</a>
+			</div>
+			<div class="Mcstatus" id="Mcheader" width="100%" style="border:0px;background-color:#e4e4e4;margin-top:0;" >
+			   <table width="100%" border="0" cellspacing="0" cellpadding="0">
+				   <tr>
+					   <td style="width:160px;">
+						   <div id="divElevator" style="width:160px;height:152px;background:url(images/lift_futi_stop.png) left top no-repeat;position:relative;">
+						   </div>
+						   <div id="divPerson" style="width:19px;height:34px;background:url(images/futi_person.png) left top no-repeat;position:absolute;left:55px;top:70px;" >
+						   </div>
+						   <div id="divUp" style="width:24px;height:24px;background:url(images/futi_up.png) left top no-repeat;position:absolute;left:30px;top:90px;display:none;" >
+						   </div>
+						   <div id="divDown" style="width:24px;height:24px;background:url(images/futi_down.png) left top no-repeat;position:absolute;left:30px;top:90px;display:none;" >
+						   </div>
+					   </td>
+					   <td>
+						   <div class="" width="100%" style="margin-top:0px" >
+						   		<table style="color:#000;" cellspacing="0" cellpadding="0">
+						   			<tr onclick="javascript:ViewDetail();" style="cursor:pointer;">
+							   			<td colspan="2" style="padding-left:5px;size:15px;font-weight:blod;color:blue;" id="lbElevator">
+							   			
+							   			</td>
+							   		</tr>
+							   		<tr style="font-size:12px;vertical-align:top;">
+							   			<td width="30px" style="padding-left:5px;">地盘:</td>
+							   			<td id="lbBuilding"  style="font-weight:normal;">
+							   				
+							   			</td>
+							   		</tr>
+							   		<tr style="font-size:12px;vertical-align:top;">
+							   			<td width="30px" style="padding-left:5px;">位置:</td>
+							   			<td id="lbAddress" style="font-weight:normal;">
+							   				
+							   			</td>
+							   		</tr>
+						   		</table>
+						   		<table style="color:#000;" cellspacing="0" cellpadding="0">
+						   			<tr>
+							   			<td id="lbLastContactDate" colspan="2" style="text-align:right;color:#363636;font-weight:normal;font-size:12px;"></td>
+							   		</tr>
+							   		<tr>
+							   			<td colspan="2">
+						   			 		<table style="width:100%;border-collapse:collapse; font-size:12px;font-weight:normal; color:#fff;" >
+												<tr>
+													<td align="center"><img id="imgCom" src="images/redwifi.png" /></td>
+													<td align="center" style="width:16px;background: url(images/shishijiankong/jiankong_time_s01.png) no-repeat center center;"><span id="time-hour-shi">0</span></td>
+													<td align="center" style="width:16px;background: url(images/shishijiankong/jiankong_time_s01.png) no-repeat center center;"><span id="time-hour-ge">0</span></td>
+													<td align="center" style="width:16px;background: url(images/shishijiankong/jiankong_time_s02.png) no-repeat center center;"></td>
+													<td align="center" style="width:16px;background: url(images/shishijiankong/jiankong_time_s01.png) no-repeat center center;"><span id="time-minute-shi">0</span></td>
+													<td align="center" style="width:16px;background: url(images/shishijiankong/jiankong_time_s01.png) no-repeat center center;"><span id="time-minute-ge">0</span></td>
+													<td align="center" style="width:16px;background: url(images/shishijiankong/jiankong_time_s02.png) no-repeat center center;"></td>
+													<td align="center" style="width:16px;background: url(images/shishijiankong/jiankong_time_s01.png) no-repeat center center;"><span id="time-second-shi">0</span></td>
+													<td align="center" style="width:16px;background: url(images/shishijiankong/jiankong_time_s01.png) no-repeat center center;"><span id="time-second-ge">0</span></td>
+												</tr>
+											</table>
+							   			</td>
+							   		</tr>
+							   		<tr>
+							   			<td align="center">
+							   				<a href="javascript:void(0)" id="btn-futi-con" class="bluelink" style="font-size:12px;color:#ffffff;text-shadow: none;font-weight: normal;text-decoration:none;">连接</a>
+							   			</td>
+							   			<td align="center">
+							   				<a href="javascript:void(0)" id="btn-futi-discon" class="reddisconnect" style="font-size:12px;color:#ffffff;text-shadow: none;font-weight: normal;text-decoration:none;">断开</a>
+							   			</td>
+							   		</tr>
+						   		</table>
+						   </div>
+					   </td>
+				   </tr>
+			   </table>
+			</div>
+		</div>
+		<div data-role="content" style="padding:170px 0px 0px 0px">
+			
+			<div class="Mcstatus" id="Mcstatus" style="width:100%;">
+			<!-- 
+				<table width="100%" class="littletable" border="0" cellspacing="0" cellpadding="0">
+					<tbody>
+						<tr class="title">
+							<td colspan="6">运行状态</td>
+						</tr>
+						<tr>
+						<td width="5%">
+							<div title="" class="blankgreen0" id="RunStatus0"></div>
+						</td>
+						<td>上行</td>
+						<td width="5%">
+							<div title="" class="blankgreen0" id="RunStatus1"></div>
+						</td>
+						<td>下行</td>
+						<td width="5%">
+							<div title="" class="blankgreen1" id="RunStatus2"></div>
+						</td>
+						<td>停止</td>
+						</tr>
+						<tr>
+						<td width="5%">
+							<div title="" class="blankgreen0" id="RunStatus3"></div>
+						</td>
+						<td>蜂鸣</td>
+						<td width="5%">
+							<div title="" class="blankgreen0" id="RunStatus4"></div>
+						</td>
+						<td>无人</td>
+						<td width="5%">
+							<div title="红灯：电梯进入检修" class="blankred0" id="RunStatus5"></div>
+						</td>
+						<td>电梯检修</td>
+					</tr>
+					</tbody>
+				</table>
+				 -->
+			</div>
+			<div style="clear:both;"></div>
+			<div style="background-color:#E4E4E4;padding-bottom:10px;width:100%; ">
+				<div style="text-align:center;border:1px solid #ccc;background-color:#D4D4D4; height:30px; line-height:30px;">开关设置</div>
+				<div style="text-align:center;width:100%;">
+					<div style="background-color:#E4E4Ee;margin:15px 15px 15px 15px;">
+						<table style="width:100%;background-color:#f6f6f6;border:1px solid #ccc;" cellspacing="0" cellpadding="0">
+							<tr>
+								<td style="border-bottom:1px solid #ccc;text-align:left;padding-left:5px;">定时开梯选择</td>
+								<td style="border-bottom:1px solid #ccc;text-align:right;padding-right:5px;" colspan="2">
+									<select name="slider1" id="slider1" data-role="slider" data-mini="true">
+									<option value="off">关</option>
+									<option value="on">开</option>
+									</select>
+								</td>
+							</tr>
+							<tr style="height:40px;">
+								<td style="border-bottom:1px solid #ccc;text-align:left;padding-left:5px;">时间设置</td>
+								<td style="border-bottom:1px solid #ccc;text-align:right;padding-right:5px;white-space: nowrap;">
+								  		<input type="text" name="txtStartTime" id="txtStartTime" style="width:50px;vertical-align:middle;" value="14:00">
+								</td>
+								<td style="border-bottom:1px solid #ccc;text-align:right;padding-right:5px;white-space: nowrap;width:10px;">
+								<img src="images/clock.png" style="vertical-align:middle;"/>
+								</td>
+							</tr>
+							<tr>
+								<td style="text-align:right;"><button class="ui-btn ui-btn-inline ui-mini" id="upelevator">上行开梯</button></td>
+								<td style="text-align:left;" colspan="2"><button class="ui-btn ui-btn-inline ui-mini" id="downelevator">下行开梯</button></td>
+							</tr>
+						</table>
+						<table style="width:100%;background-color:#f6f6f6;border:1px solid #ccc;margin-top:10px;" cellspacing="0" cellpadding="0">
+							<tr>
+								<td style="border-bottom:1px solid #ccc;text-align:left;padding-left:5px;">定时关梯选择</td>
+								<td style="border-bottom:1px solid #ccc;text-align:right;padding-right:5px;" colspan="2">
+									<select name="slider2" id="slider2" data-role="slider" data-mini="true">
+									<option value="off">关</option>
+									<option value="on">开</option>
+									</select>
+								</td>
+							</tr>
+							<tr style="height:30px;">
+								<td style="border-bottom:1px solid #ccc;text-align:left;padding-left:5px;">时间设置</td>
+								<td style="border-bottom:1px solid #ccc;text-align:right;padding-right:5px;">
+								  		<input type="text" name="txtEndTime" id="txtEndTime" style="width:50px;" value="14:00">
+								</td>
+								<td style="border-bottom:1px solid #ccc;text-align:right;padding-right:5px;white-space: nowrap;width:10px;">
+								<img src="images/clock.png" style="vertical-align:middle;"/>
+								</td>
+							</tr>
+							<tr>
+								<td style="text-align:center;" colspan="2"><button class="ui-btn ui-btn-inline ui-mini" id="closeelevator">关梯</button></td>
+							</tr>
+						</table>
+					<input id="hidProcessId1" type="hidden" />
+					<input id="ElevatorId" type="hidden" />
+					<input id="ProtocolType" type="hidden" />
+					<input id="ProtocolTypeName" type="hidden" />
+					</div>
+					<div style="padding-left:10px;text-align:left;border:1px solid #ccc;background-color:#D4D4D4; height:30px; line-height:30px;color:red;" id="info"></div>
+			   	</div>
+            </div>
+		</div>
+		<div data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="a" data-dismissible="false">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;padding:0;margin:0;" >
+				<h1>中断提示</h1>
+			</div>
+		    <div data-role="content" style="padding-top:0px;margin-top:0px;">
+		        <p>通讯已中断，请重连</p>
+				<div data-role="navbar">
+			      <ul>
+			        <li><a href="#" data-theme="a" data-rel="back">关闭</a></li>
+			        <li><a href="#" data-theme="a" onclick="$('#popupDialog').popup('close');con(1);">重连</a></li>
+			      </ul>
+			    </div>
+		    </div>
+		</div>
+		<div data-role="popup" id="popupElevatorDetail" data-tolerance="0,0" class="ui-popup " data-position-to="window" data-overlay-theme="b" data-theme="a" style="min-width:100%;min-heigth:100%;padding-left:0px;">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;height:40px;" >
+			<div data-type="horizontal" class="ui-btn-left">
+				<a id="back" href="#anylink" data-role="button" data-iconpos="notext" data-rel="back" data-icon="custarrow-l" data-theme="f">后退</a>
+				<a href="javascript:void(0);" onclick="home();" data-role="button" data-iconpos="notext" data-icon="custarrow-home" data-theme="f">主页</a>
+			</div>
+			<h1  class="pagetitle" style="font-size:15px;">电梯详细信息</h1>
+		</div>
+		<div data-role="content" style="padding:0px 0px 0px 0px;">
+			   <div class="Mcstatus2" id="" width="100%">
+				<table  class="jhliftdata_edit" width="100%" border="0">
+				  <tr>
+				    <th width="20%" scope="row">电梯工号</th>
+				    <td width="65%" id="lbDeviceNo2"></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">最&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;后<br>上线时间</th>
+				    <td id="lbLastContactDate2"></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">地盘名称</th>
+				    <td id="lbBuilding2"></td>
+				  </tr>
+				   <tr>
+				    <th scope="row">电梯位置</th>
+				    <td id="lbAddress2"></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">分&nbsp;&nbsp;公&nbsp;&nbsp;司<br>归&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;属</th>
+				    <td id="lbFiliale2"></td>
+				  </tr>
+				  
+				  <tr>
+				    <th scope="row">激活时间</th>
+				    <td id="lbFirstActiveDate2"></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">导入时间</th>
+				    <td id="lbCreatedDate2"></td>
+				  </tr>
+				   <tr>
+				    <th scope="row">遥监卡号</th>
+				    <td id="lbPhone2"></td>
+				  </tr>
+				  <tr style="display:none;">
+				    <th scope="row">激&nbsp;&nbsp;活&nbsp;&nbsp;码</th>
+				    <td id="lbActiveCode2"></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">端&nbsp;&nbsp;口&nbsp;&nbsp;号</th>
+				    <td id="lbTerminalPort2"></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">主板程序</th>
+				    <td id="lbSoftVersion2"></td>
+				  </tr>
+				  <tr>    
+				    <th scope="row">维保站点</th>
+				    <td id="lbCompanyDesc2"></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">保&nbsp;&nbsp;养&nbsp;&nbsp;员</th>
+				    <td id="lbStaffName2"></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">保&nbsp;&nbsp;养&nbsp;&nbsp;员<br/>联系电话</th>
+				    <td id="lbMobile2"></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">电梯备注</th>
+				    <td ><textarea id="lbRemark2"></textarea></td>
+				  </tr>
+				</table>
+            </div>
+		</div>
+		</div>
+	</div>
+</body>
+</html>

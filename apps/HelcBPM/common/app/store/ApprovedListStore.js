@@ -1,0 +1,36 @@
+Ext.define('HelcBPM.store.ApprovedListStore',{
+	extend:'Ext.data.Store',
+	config:{
+		fields:[
+			'DOCUMENT_ID',
+			'TASK_ID',
+			'APP_NAME',
+			'BPD_NAME',
+			//安装分包
+			'WTHTNO',
+			'YFS',
+			'WTGCHTNO',
+			'WTHTTYPE',
+			'WTCLIENTNAME',
+			'GCFWS',
+			'SPZ',
+			'WTSPVERSION',
+			//配件销售
+			'bmname',
+			'BjClientName',
+			'BjOrderNo',
+			'BjWbClientName',
+			'BjOrderName',
+			'BjSpFl',
+			'BjBjVersion',
+			//维护修理
+			'BjSjNo',
+			'BjSjName',
+			'HtType',
+			'BjVersion',
+			//维修改造
+			'ClientType',
+			'SpFl',
+		],
+	},
+});

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>查询</title>
+</head>
+<body>
+	<div data-role="page" id="devicetoursearch" class="devicetoursearch" data-close-btn="none">
+		<div data-role="header" data-position="fixed" class="header" >
+				<div data-type="horizontal" class="ui-btn-left">
+				<a href="#anylink" data-role="button" data-iconpos="notext" data-rel="back" data-icon="custarrow-l" data-theme="f" data-close-btn="none">后退</a>
+				<a href="javascript:void(0);" onclick="home();" data-role="button" data-iconpos="notext" data-icon="custarrow-home" data-theme="f">主页</a>
+				</div>
+			<h1 class="pagetitle" style="font-size:15px;">地盤查询</h1>
+		</div>
+		<div data-role="content" style="background-color:#E4E4E4;padding:0px;">
+			<div style="width:95%;height:50px;border-radius:8px;margin:0 auto;background-color:#fff;margin-top:5px;margin-bottom:5px; " >
+		 		<table>
+		 		<tr>
+			 		<td align="right" style="padding-left:5px;padding-right:5px;"><input type="text" name="txtBuildingName" id="txtBuildingName" ></td>
+			 		<td align="center"><a href="javascript:void(0)" style="color:#ffffff" onclick="devicetourSearch();"  class="querybtn">查询</a></td>
+		 		</tr>
+		 		</table>
+		    </div>
+		</div>
+	</div>
+</body>
+</html>

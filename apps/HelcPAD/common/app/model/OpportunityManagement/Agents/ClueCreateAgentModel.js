@@ -1,0 +1,9 @@
+Ext.define('HelcPAD.model.OpportunityManagement.Agents.ClueCreateAgentModel',{
+	extend:'Ext.data.Model',
+	config:{
+		fields:[
+		    'RegistrationPerson',
+		    'AA',
+		]
+	}
+});

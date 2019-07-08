@@ -1,0 +1,594 @@
+a { text-decoration:none;} 
+.pointer {cursor: hand\9;cursor: pointer;}
+/*浼氳瘽鍐呭绐椾綋*/
+.chatPanel .chatScorll {
+  height: 390px;
+  width: 100%;
+  min-height: 200px;
+  overflow: hidden;
+  overflow-y: auto;
+  /*border-bottom:1px solid #bebebe;*/
+  background-color: #EFF3F7;
+}
+.chatPanel .chatContent {
+  padding: 10px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.chatItem {
+  padding: 4px 0px 10px 0px;
+  _background: none;
+  _border: none;
+}
+.chatItemContent {
+  cursor: pointer;
+}
+.cloudPannel {
+  position: relative;
+  _position: static;
+}
+.chatItem .time {
+  font-size: 12px;
+  padding: 2px 0;
+  margin: 0px auto 10px;
+  width: 100px;
+  border-radius: 20px;
+  color: #7f7f7f;
+  /*background-color:#EEE;*/
+  text-shadow: 0 1px 0 #fff;
+}
+.chatItem .time .timeBg {
+  height: 1px;
+  width: 27px;
+  margin-top: 8px;
+  background-color: #B4B8BD;
+}
+.chatItem .avatar {
+  width: 38px;
+  height: 38px;
+  border: 1px solid #ccc\9;
+  border: 1px solid #FFF;
+  box-shadow: 0px 1px 0px #B3B6BA;
+}
+/*杩炵画涓ゆ潯淇℃伅锛岀涓�潯浠ュ悗鐨勬牱寮�/
+.chatItem .avatar1 {
+  width: 38px;
+  height: 38px;
+
+}
+.chatItem .cloud {
+  max-width: 300px;
+  /*border-radius:11px; border-width:1px; border-style:solid; */
+  cursor: default;
+  position: static;
+}
+.chatItem .cloud {
+  /*for ie*/
+  /*position: relative;*/
+  padding: 0px;
+  margin: 0px;
+}
+.chatItem .cloudContent {
+  /* position:relative;for ie*/
+  text-align: left;
+  /*padding:2px; line-height:1.2; */
+  font-weight: normal;
+  font-size: 14px;
+  min-height: 20px;
+  word-wrap: break-word;
+}
+.zoomIn {
+  cursor: -webkit-zoom-in;
+  cursor: -moz-zoom-in;
+  border-radius: 1px;
+}
+.zoomOut {
+  cursor: -webkit-zoom-out;
+  cursor: -moz-zoom-out;
+}
+.chatPanel .cloud .text {
+  padding: 5px;
+}
+.cloudVoice {
+  cursor: pointer;
+}
+.cloudVoice .replyVoice {
+  position: absolute;
+}
+.cloudText img {
+  vertical-align: text-bottom;
+  margin-bottom: -5px;
+}
+.cloudImg {
+  line-height: 0;
+}
+.cloudImg .cloudContent {
+  min-height: 30px;
+  max-height: 200px;
+}
+.cloudImg .cloudContent img {
+  min-width: 50px;
+  min-height: 50px;
+}
+.cloudImg .cloudContent img.waitingEffect {
+  position: absolute;
+  left: -30px;
+  top: 23px;
+  width: 16px;
+  height: 16px;
+  min-height: 0;
+  min-width: 0;
+}
+.cloudVideo {
+  line-height: 0;
+}
+.chatItem .cloudBody {
+  -moz-border-top-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+.chatItem .cloudContent {
+  border-radius: 13px\9;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  text-shadow: none;
+}
+.you {
+  float: left;
+  width: 100%;
+  _background: none;
+  _border: none;
+  /*-- common --*/
+  /*-- end:common --*/
+}
+.you .avatar {
+  float: left;
+  margin-left:10px;
+}
+.you .sendStatus {
+  position: absolute;
+  top: 50%;
+  right: -198px;
+  margin-top: -23px;
+  width: 200px;
+  text-align: left;
+  font-size: 12px;
+  color: #B8B8B8;
+  background: none;
+}
+.you .sendStatus span {
+  display: block;
+  margin-left: 7px;
+  margin-top: 7px;
+}
+.you .sendStatus .iconSendFailed {
+  background: url(../images/icon_chat17ced3.png) no-repeat -7px -136px;
+  width: 17px;
+  height: 17px;
+  margin-top: 14px;
+}
+.you .sendStatus .unread {
+  background: url(../images/icon_chat17ced3.png) no-repeat -8px -72px;
+  width: 17px;
+  height: 17px;
+  margin: 6px 0 -12px 3px;
+}
+.you .cloud {
+  float: left;
+  min-width: 50px;
+  max-width: 200px;
+  margin: 0 0 0 15px;
+}
+.you .cloud .cloudPannel .file {
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  height: 77px\9;
+}
+.you .cloud .cloudPannel .file .fileIcon {
+  float: right;
+  border-radius: 0px 6px 6px 0px;
+  -moz-border-radius: 0px 6px 6px 0px;
+  -webkit-border-radius: 0px 6px 6px 0px;
+}
+.you .cloud .cloudPannel .file .info {
+  float: left;
+  border-radius: 6px 0px 0px 6px;
+  -moz-border-radius: 6px 0px 0px 6px;
+  -webkit-border-radius: 6px 0px 0px 6px;
+  border-left: 1px solid #979797;
+  border-right: none;
+}
+.you .cloud .cloudPannel .cloudFileArrow {
+  position: absolute;
+  left: -9px;
+  top: 10px;
+  width: 17px;
+  height: 24px;
+  background: url(../images/cloud/filetype_guid_right1db6f8.png) no-repeat;
+  right: -12px\9;
+}
+.you .cloudBody {
+  border: 1px solid #AFAFAF;
+  box-shadow: 0px 1px 0px #D5D5D5;
+  border: 1px solid #9f9f9f\9;
+  border-radius: 6px\9;
+  background-color: #ECECEC;
+}
+.you .cloudContent {
+  padding: 5px 13px\9;
+  padding: 7px 10px;
+  color: #030303;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #F2F2F2;
+  border-right: 1px solid #F2F2F2;
+  background-color: #ECECEC\9;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f4f4f4), to(#e5e5e5), color-stop(0.1, #f3f3f3), color-stop(0.3, #f1f1f1), color-stop(0.5, #ececec), color-stop(0.7, #e9e9e9), color-stop(0.9, #e6e6e6), color-stop(1, #e5e5e5));
+  background-image: -moz-linear-gradient(top, #f3f3f3 10%, #f1f1f1 30%, #ececec 50%, #e9e9e9 70%, #e6e6e6 90%, #e5e5e5 100%);
+}
+.you .cloudVoice {
+  margin-left: 10px;
+}
+.you .cloudVoice .replyVoice {
+  left: 35px;
+  top: 15px;
+}
+.you .cloudVoice .cloudBody {
+  position: relative;
+  margin: 0 17px;
+  margin: 0 7px\9;
+  padding-left: 18px\9;
+  margin: 0px 8px 9px 7px;
+}
+.you .cloudVoice .cloudArrow {
+  position: absolute;
+  width: 18px;
+  height: 25px;
+  left: 0px;
+  top: 11px;
+  background: url(../images/bubble_white_guid1dbc1c.png) no-repeat 0 0;
+}
+.you .cloudVoice .cloudContent {
+  display: block;
+  padding: 7px 7px;
+  padding: 7px 6px\9;
+  border-radius: 7px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  border-radius: 7px\9;
+  margin-left: -20px\9;
+}
+.you .cloudVoice .cloudContent .icoVoice {
+  display: inline-block;
+  float: left;
+  width: 25px;
+  width: 25px\9;
+  height: 20px;
+  background: url(../images/icon_sound_new1dbc39.png) no-repeat 0 -1px;
+  cursor: pointer;
+  margin-left: 0px\9;
+}
+.you .cloudVoice .cloudContent .icoVoicePlaying {
+  display: inline-block;
+  float: left;
+  width: 20px;
+  height: 20px;
+  background: url(../images/voice0021dbc50.gif) no-repeat left 0px;
+}
+.you .cloudText .sendStatus {
+  margin-top: -8px;
+}
+.you .cloudText .cloudArrow {
+  position: absolute;
+  left: -7px;
+  top: 11px;
+  width: 13px;
+  height: 24px;
+  background: url(../images/bubble_white_guid1dbc1c.png) no-repeat;
+}
+.you .cloudImg .cloudContent {
+  padding: 5px 13px\9;
+  padding: 6px;
+  color: #030303;
+  max-height: 150px;
+}
+.you .cloudImg .cloudArrow {
+  position: absolute;
+  left: -7px;
+  top: 10px;
+  width: 17px;
+  height: 24px;
+  right: -12px\9;
+  background: url(../images/bubble_white_guid1dbc1c.png) no-repeat;
+}
+.you .cloudVideo .cloudContent {
+  padding: 5px 13px\9;
+  border-radius: 13px\9;
+  padding: 7px;
+  color: #030303;
+}
+.you .cloudVideo .cloudArrow {
+  position: absolute;
+  left: -7px;
+  top: 10px;
+  width: 17px;
+  height: 24px;
+  right: -12px\9;
+  background: url(../images/bubble_white_guid1dbc1c.png) no-repeat;
+}
+.you .cloudMesg .cloudContent {
+  border-radius: 5px 0px 0px 5px;
+  -webkit-border-radius: 5px 0px 0px 5px;
+  -moz-border-radius: 5px 0px 0px 5px;
+  border: none;
+}
+.you .cloudMesg .cloudArrow {
+  position: absolute;
+  left: -8px;
+  top: 10px;
+  width: 13px;
+  height: 24px;
+  background: url(../images/cloud/bubble_openapi1d20a9.png) no-repeat;
+}
+.you .chatItemContent .cloudMesgLink .cloudBody,
+.you .chatItemContent .cloudMesgFile .cloudBody {
+  background-color: #FAFAFA;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#fafafa));
+  background-image: -moz-linear-gradient(top, #ffffff 0%, #fafafa 100%);
+}
+.you .cloudMesgAppEmojiPanel .cloudMesgIcon {
+  float: left;
+}
+.you .haveAvatarCard {
+  float: left;
+  margin-left: 20px;
+}
+.you .haveAvatarCard .cloudBody {
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+}
+.you .haveAvatarCard .cloudContent {
+  padding: 0;
+}
+.me {
+  float: right;
+  width: 100%;
+  /*-- common --*/
+  /*-- end:common --*/
+}
+.me .avatar {
+  float: right;
+  margin-right: 10px;
+}
+.me .cloud {
+  float: right;
+  min-width: 50px;
+  max-width: 200px;
+  margin: 0 15px 0 0;
+}
+.me .cloud .cloudPannel .file {
+  height: 77px\9;
+  border: 1px solid #75975C;
+}
+.me .cloud .cloudPannel .cloudFileArrow {
+  position: absolute;
+  width: 18px;
+  height: 25px;
+  right: -14px;
+  top: 8px;
+  background: url(../images/cloud/filetype_guid_left1db6f8.png) no-repeat 0 0;
+}
+.me .cloudBody {
+  border: 1px solid #7AA23F;
+  box-shadow: 0px 1px 0px #D5D5D5;
+  border: 1px solid #9f9f9f\9;
+  background-color: #B2CF73;
+}
+.me .cloudContent {
+  border-top: 1px solid #DCE6C8;
+  border-bottom: 1px solid #B9CF8B;
+  border-left: 1px solid #CCDEA3;
+  padding: 13px\9;
+  padding: 7px 10px;
+  border-radius: 13px\9;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  overflow: hidden;
+  color: #000;
+  text-shadow: none;
+  background: #B2CF73\9;
+  background: -webkit-gradient(linear, left top, left bottom, from(#cdeb96), to(#a4c363), color-stop(0.1, #b4d174), color-stop(0.3, #b2cf73), color-stop(0.5, #afcc74), color-stop(0.7, #abca6c), color-stop(0.9, #a9c572), color-stop(1, #a4c363));
+  background-image: -moz-linear-gradient(top, #b4d174 10%, #b2cf73 30%, #afcc74 50%, #abca6c 70%, #a9c572 90%, #a4c363 100%);
+}
+.me .sendStatus {
+  position: absolute;
+  left: -250px;
+  color: #B8B8B8;
+  top: 50%;
+  width: 250px;
+  text-align: right;
+  margin-top: -9px;
+  font-size: 12px;
+}
+.me .sendStatus .iconSendFailed {
+  background: url(../images/icon_chat17ced3.png) no-repeat 50% -240px;
+  width: 30px;
+  height: 30px;
+  margin-top: -5px;
+}
+.me .sendStatus .iconSendFailed:active {
+  background: url(../images/icon_chat17ced3.png) no-repeat 50% -240px;
+}
+.me .cloudText .cloudBody {
+  margin-left: 8px;
+}
+.me .cloudText .cloudArrow {
+  position: absolute;
+  right: -12px;
+  top: 11px;
+  width: 13px;
+  height: 24px;
+  background: url(../images/bubble_green_guid1dbc1c.png) no-repeat;
+}
+.me .cloudText .cloudContent {
+  vertical-align: top;
+}
+.me .cloudText .sendStatus {
+  margin-top: -10px;
+}
+.me .cloudMesg .cloudBody {
+  background-color: #A4C363;
+  background: -webkit-gradient(linear, left top, left bottom, from(#cdeb96), to(#a4c363), color-stop(0.1, #b4d174), color-stop(0.3, #b2cf73), color-stop(0.5, #afcc74), color-stop(0.7, #abca6c), color-stop(0.9, #a9c572), color-stop(1, #a4c363));
+}
+.me .cloudMesg .cloudContent {
+  border-bottom: none;
+  background: none;
+}
+.me .cloudMesg .cloudArrow {
+  top: 10px;
+  width: 17px;
+  height: 24px;
+  position: absolute;
+  right: -17px;
+  background: url(../images/cloud/bubble_green_guid1dbc1c.png) no-repeat;
+}
+.me .cloudVoice {
+  margin-right: 10px;
+}
+.me .cloudVoice .cloudBody {
+  position: relative;
+  margin: 0px 8px 9px 7px;
+  margin: 0 7px\9;
+  _display: none;
+}
+.me .cloudVoice .cloudContent {
+  border: none\9;
+  padding: 0\9;
+  padding: 7px 7px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#cdeb96), to(#a4c363), color-stop(0.1, #d1eba2), color-stop(0.2, #c7e492), color-stop(0.3, #bfdb8d), color-stop(0.4, #bdd687), color-stop(0.5, #b7d17e), color-stop(0.6, #b1ce78), color-stop(0.7, #b0cd77), color-stop(0.8, #abc970), color-stop(0.9, #a7c568), color-stop(1, #a4c363));
+  background-image: -moz-linear-gradient(top, #cdeb96 0%, #d1eba2 10%, #c7e492 20%, #bfdb8d 30%, #bdd687 40%, #b7d17e 50%, #b1ce78 60%, #b0cd77 70%, #abc970 80%, #a7c568 90%, #a4c363 100%);
+}
+.me .cloudVoice .imageBorder {
+  border: 1px solid #a4a4a4\9;
+}
+.me .cloudVoice .cloudArrow {
+  position: absolute;
+  width: 18px;
+  height: 25px;
+  right: -9px;
+  right: -10px\9;
+  top: 11px;
+  background: url(../images/cloud/bubble_green_guid1dbc1c.png) no-repeat 0 0;
+}
+.me .cloudVoice .icoVoice {
+  display: inline-block;
+  float: right;
+  width: 25px;
+  height: 20px;
+  background: url(../images/icon_sound_new1dbc39.png) no-repeat -24px -1px;
+  cursor: pointer;
+}
+.me .cloudVoice .icoVoicePlaying {
+  display: inline-block;
+  float: right;
+  width: 18px;
+  height: 20px;
+  background: url(../images/voice0011dbc39.gif) no-repeat left 0px;
+}
+.me .cloudVoice .replyVoice {
+  right: 30px;
+  top: 0;
+}
+.me .cloudImg .cloudBody {
+  border: 1px solid #9f9f9f\9;
+  border-style: solid;
+  background: #e5e5e5\9;
+  border-radius: 6px\9;
+  _display: none;
+}
+.me .cloudImg .cloudContent {
+  padding: 7px;
+  padding: 5px\9;
+  border: none;
+  border-radius: 8px\9;
+  max-height: 150px;
+}
+.me .cloudImg .imageBorder {
+  border: 5px solid #E5E5E5\9;
+  border-radius: 0px\9;
+}
+.me .cloudImg .sendStatus {
+  margin-top: -10px;
+}
+.me .cloudImg .cloudArrow {
+  position: absolute;
+  width: 18px;
+  height: 25px;
+  right: -17px;
+  top: 8px;
+  background: url(../images/cloud/bubble_green_guid1dbc1c.png) no-repeat 0 0;
+}
+.me .cloudVideo .imageBorder {
+  border: 1px solid #a4a4a4\9;
+}
+.me .cloudVideo .cloudBody {
+  border: 1px solid #9f9f9f\9;
+  border-style: solid;
+  background: #e5e5e5\9;
+  border-radius: 6px\9;
+  _display: none;
+}
+.me .cloudVideo .cloudContent {
+  padding: 7px;
+  padding: 7px\9;
+  border-radius: 6px\9;
+}
+.me .cloudVideo .cloudArrow {
+  position: absolute;
+  right: -16px;
+  top: 10px;
+  width: 17px;
+  height: 24px;
+  background: url(../images/cloud/bubble_green_guid1dbc1c.png) no-repeat;
+}
+.me .cloudMesgWord .cloudContent {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+.me .chatItemContent .cloudMesg .cloudBody {
+  border-right: none;
+  padding: 0px\9;
+  border-radius: 6px 5px 5px 6px;
+}
+.me .chatItemContent .cloudMesgFile .cloudBody {
+  border: none;
+  background-color: #EFF0F4;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f4f6fb), to(#e9eaee), color-stop(0.1, #f3f4f9), color-stop(0.5, #eff0f4), color-stop(0.9, #eaebef), color-stop(1, #e9eaee));
+  background-image: -moz-linear-gradient(top, #f3f4f9 10%, #eff0f4 50%, #eaebef 90%, #e9eaee 100%);
+}
+.me .cloudMesgAppEmojiPanel .cloudMesgIcon {
+  float: right;
+}
+.me .haveAvatarCard {
+  float: right;
+  margin-right: 20px;
+}
+.me .haveAvatarCard .cloudBody {
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+}
+.me .haveAvatarCard .cloudContent {
+  padding: 0;
+  padding: 0px\9;
+  margin: 0px\9;
+}

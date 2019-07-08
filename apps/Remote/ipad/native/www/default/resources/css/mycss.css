@@ -1,0 +1,306 @@
+
+/* Stylesheet content from resources/css/mycss.css in folder common */
+/* -------------------------
+公共 start
+------------------------- */
+.x-panel.x-floating, .x-form.x-floating {
+    padding: 0;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    border-radius: 0px;
+}
+.x-webkit .x-anchor.x-anchor-top {
+    background-color: #104B85;
+}
+
+/* fix ugly loading mask */
+.x-mask,.x-mask .x-mask-inner {
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+}
+
+/* 重设 背景颜色 样式 */
+.x-layout-card-item{ background: #053464;}
+/* 重设 button 样式 */
+.x-button{width:128px;height:68px;border:0;border-radius:0;background-color:#4e7297}
+.x-button-normal .x-button-label{ color:#fff; font-size:24px; line-height:36px}
+.no-bg {background-color:transparent !important}
+
+/* 导航 样式 */
+.remote-main .remote-main-Nav{ height:88px;background-color:#05213d}
+.remote-main .remote-main-Nav .remote-main-Nav-button{float:left;line-height:88px; text-align:center; font-size:18px; color:#7aa2cc;}
+.remote-main .remote-main-Nav .x-item-selected .remote-main-Nav-button{background-color:#324b64;color: #fff;}
+.remote-main .remote-main-Nav .remote-main-logo{ margin-top:32px;width:110px;}
+/* 当前位置显示栏 样式 */
+.remote-breadCrumb{height:88px;background-color:#314b65}
+.remote-breadCrumb .remote-breadCrumb-con{ float:left; margin:35px 0 0 22px; height:18px; line-height:18px; color:#fff;}
+.remote-breadCrumbMini{height:44px;background-color:#314b65}
+.remote-breadCrumbMini .remote-breadCrumb-con{ float:left; margin:16px 0 0 22px; height:18px; line-height:18px; color:#fff;}
+/* 当前位置显示栏 -> button 样式 */
+.remote-breadCrumb .remote-breadCrumb-buttonBox{ margin:0 30px 0 0}
+.remote-breadCrumb .remote-breadCrumb-buttonBox .x-button{float:right; margin:10px 0 0 22px;}
+/* 左导航 样式 */
+.remote-leftsideBar{width:165px; background-color:#00162d;}
+.remote-leftsideBar .x-list{background-color: transparent;}
+.remote-leftsideBar .x-list .x-list-item{height:88px;line-height:88px;color:#7aa2cc;}
+.remote-leftsideBar .x-list .x-list-item.x-item-selected.x-list-item-tpl{ background-color:#053464; color:#fff;}
+.remote-leftsideBar .x-list .x-list-item.x-item-pressed.x-list-item-tpl{ background-color:#053464;}
+.remote-leftsideBar .x-list .x-list-item.x-list-item-tpl:before{border-bottom-color:#00162d;}
+.remote-leftsideBar .x-list .x-list-item.x-list-item-tpl .x-innerhtml{padding:0 1em; text-align:center;}
+
+/* button颜色 */
+
+.remote-buttonColor-orange{background-color:#e08800 !important;}
+.remote-buttonColor-blue{background-color:#227cd8 !important;}
+/* 滚动条 默认样式 */
+.x-scroleftL-bar-x.active {width:2px;}
+.x-scroleftL-bar-y.active {width:2px;}
+/* 标题区域 样式 */
+.remote-title{height:68px;line-height:68px;}
+.remote-title .remote-titleText{font-size:24px;color:#00aeef;}
+.remote-title .x-button{float:right; margin-left:12px;}
+/* 内容 */
+.remote-content{background-color:#053464;}
+.remote-content .x-button{background-color:#237cd8;}
+
+/* 键盘 */
+.remote-keyboard{ width:783px; height:314px;border:solid 1px #0a4b85;background-color:#0a4b85;}
+.remote-keyboard .remote-keyboard-btnBox{}
+.remote-keyboard .remote-keyboard-btn{float:left; clear:none; width:78px; height:78px; line-height:78px; font-size:26px; text-align:center; border:solid 1px #0a4b85; background-color:#01274e; color:#fff; }
+.remote-keyboard .remote-keyboard-bgColre .remote-keyboard-btn{background-color:#157efb !important}
+/* -------------------------
+公共 over
+------------------------- */
+
+/* 电梯列表 */
+.x-scroll-scroller{width: 100% !important;}
+.elevator-list{margin-bottom:2px; padding:0 20px;height:68px; line-height:68px; background-color:#07488a; color:#fff;font-size: 24px;display:block;white-space:nowrap; overflow:hidden;}
+.elevator-list .elevator-list-left80 {text-overflow:ellipsis;width:80%;display:block;white-space:nowrap; overflow:hidden;}
+.elevator-list .elevator-list-all {text-overflow:ellipsis;width:100%;display:block;white-space:nowrap; overflow:hidden;}
+.elevator-list .elevator-list-right20 {float:right;text-align:right;width:20%}
+.elevator-list div{float:left;clear:none; height:68px;text-align:left;white-space:nowrap;}
+.x-item-selected .elevator-list{background-color:#01addb;}
+
+.elevator-type0 {color:#FFF}  /* 直梯 */
+.elevator-type1 {color:#FFF}  /* 扶梯 */
+.elevator-type0:after {content:'　';font-size:0.5em;} /* 直梯*/
+.elevator-type1:after {content:'扶';font-size:0.5em;} /* 扶梯*/
+
+.elevator-type0Y {color:#FFF} /* 直梯有遥监 */
+.elevator-type1Y {color:#FFF} /* 扶梯有遥监 */
+.elevator-type0Y:after {content:'　';font-size:0.5em;} /* 直梯有遥监*/
+.elevator-type1Y:after {content:'扶';font-size:0.5em;} /* 扶梯有遥监*/
+
+.elevator-type0N {color:#888} /* 直梯无遥监 */
+.elevator-type1N {color:#888} /* 扶梯无遥监 */
+.elevator-type0N:after {content:'　';font-size:0.5em;} /* 直梯无遥监*/
+.elevator-type1N:after {content:'扶';font-size:0.5em;} /* 扶梯无遥监*/
+
+
+/* -------------------------
+主页 start
+------------------------- */
+.remote-home{}
+/*  生命周期查询  */
+.remote-home-State{}
+.remote-home-State .remote_home-StateBox{margin-top:100px;height:108px;}
+.remote-home-State .remote_home-StateBox .remote-home-State{float:left;margin-right:10px;width:128px;height:108px; line-height:108px; text-align:center;background-color:#07488a; color:#fff; font-size:22px;}
+.remote-home-State .x-item-selected .remote-home-State{background-color:#01addb;}
+/* -------------------------
+主页 over
+------------------------- */
+
+/* -------------------------
+设置 start
+------------------------- */
+.remote-Setup {margin:18px 30px;}
+.remote-Setup {height:68px;}
+.remote-Setup .x-scroll-container{ background-color:#063465;}
+.remote-Setup .x-button{float:left; margin-right:12px; margin-bottom:12px;background-color:#07488a;}
+.remote-Setup .x-field{float:left; background-color:#063465;}
+.remote-Setup .x-scroleftL-container{ background-color:#063465;}
+.xxxremote-Setup .x-field .x-field-input{ width:600px;}
+/*.remote-Setup .remote-input-lengthen .x-field .x-field-input{ width:658px !important;}*/
+.remote-Setup .x-field .x-input-el{ padding:0;height:68px;border:5px solid #07488a; border-radius:0; background-color:#063465; text-indent:12px; font-size:20px; color:#fff}
+/* -------------------------
+设置 over
+------------------------- */
+
+/* -------------------------
+售后 start
+------------------------- */
+.remote-service{}
+/*  全国地图 */
+/*  全国地图 -> 区域 */
+.remote-service-ChinaMap{margin:18px 30px;}
+.remote-service-ChinaMap .remote-ChinaMap-Region{margin: 10px 0;}
+.remote-service-ChinaMap .remote-ChinaMap-Region .x-button{float:left; margin:0 12px 12px 0;}
+/*  全国地图 -> 搜索框 */
+.remote-service-ChinaMap .remote-ChinaMap-Search{height:68px;}
+.remote-service-ChinaMap .remote-ChinaMap-Search .x-scroll-container{ background-color:#063465;}
+.remote-service-ChinaMap .remote-ChinaMap-Search .x-button{float:left; margin-right:12px; background-color:#07488a;}
+.remote-service-ChinaMap .remote-ChinaMap-Search .x-field{float:left; background-color:#063465;}
+.remote-service-ChinaMap .remote-ChinaMap-Search .x-scroleftL-container{ background-color:#063465;}
+.remote-service-ChinaMap .remote-ChinaMap-Search .x-field .x-field-input{ width:300px;}
+.remote-service-ChinaMap .remote-input-lengthen .x-field .x-field-input{ width:658px !important;}
+.remote-service-ChinaMap .remote-ChinaMap-Search .x-field .x-input-el{ padding:0;height:68px;border:5px solid #07488a; border-radius:0; background-color:#063465; text-indent:12px; font-size:20px; color:#fff}
+/*  全国地图 -> 城市的按钮 */
+.remote-service-ChinaMap .remote-ChinaMap-SearchData { height:230px; }
+.remote-service-ChinaMap .remote-ChinaMap-SearchData .remote-ChinaMap-SearchData-button{float:left; margin:0 12px 12px 0;width:120px;height:68px; line-height:68px;border:0;border-radius:0;background-color:#237cd8;color:#fff; font-size:24px; text-align:center;}
+.remote-service-ChinaMap .remote-ChinaMap-SearchData .x-item-selected .remote-ChinaMap-SearchData-button{background-color:#01addb;}
+
+/*  行业新闻 */
+.remote-service-News{margin:18px 30px;}
+.remote-service-News .remote-service-News-LBox{ width:170px;}
+.remote-service-News .remote-service-News-LBox  .remote-service-News-LBox-buttonBox{margin-top:50px;}
+.remote-service-News .remote-service-News-LBox .x-button{float:left; clear:none; margin-bottom:20px;}
+.remote-service-News .remote-service-News-CBox{border-left:1px solid #07488a; border-right:1px solid #07488a}
+.remote-service-News .remote-service-News-CBox .remote-News-NewsData-button{margin:0 auto 12px auto; padding:20px 10px;width:86%; line-height:34px;border:0;border-radius:0;background-color:#237cd8;color:#fff; font-size:24px; text-align:center;}
+.remote-service-News .remote-service-News-CBox .x-item-selected .remote-News-NewsData-button{ background-color:#01addb;}
+.remote-service-News .remote-service-News-RBox{ width:170px;}
+.remote-service-News .remote-service-News-RBox .remote-service-News-RBox-buttonBox{margin-top:166px;}
+.remote-service-News .remote-service-News-RBox .x-button{float:right; margin-bottom:20px;}
+
+/*  合作伙伴 */
+.remote-service-Customer{margin:18px 30px;}
+.remote-service-Customer .remote-service-Customer-buttonBox{margin-top:50px;}
+.remote-service-Customer .x-button{margin:0 auto 20px auto;}
+
+
+/**********************  
+安装 
+***********************/
+.remote-service-InstaleftL{margin:18px 30px;}
+/* 安装->大客户 */
+.remote-service-InstaleftL .remote-InstaleftL-leftListBox{margin-top:18px;}
+.remote-service-InstaleftL .remote-InstaleftL-leftList{margin-bottom:2px; padding:0 20px;height:68px; line-height:68px; background-color:#07488a; color:#fff;font-size: 24px;}
+.remote-service-InstaleftL .x-item-selected .remote-InstaleftL-leftList,.remote-service-InstaleftL .x-item-selected .remote-InstaleftL-rightList{background-color:#01addb;}
+.remote-service-InstaleftL .remote-InstaleftL-rightListBox{ width:200px;margin-top:18px; margin-left:10px;}
+.remote-service-InstaleftL .remote-InstaleftL-rightList{margin-bottom:2px;height:68px; line-height:68px; background-color:#07488a; color:#fff;font-size: 24px; text-align:center;}
+/* 安装->大客户合同信息 */
+.install-vipContract{margin:18px 30px;}
+.install-vipContract .install-vipContracts-LBox{ width:170px;}
+.install-vipContract .install-vipContracts-LBox .install-vipContracts-buttonBox{margin-top:120px;}
+.install-vipContract .install-vipContracts-LBox .x-button{margin-bottom:20px;}
+.install-vipContract .install-vipContracts-RBox{border-left:1px solid #07488a;}
+.install-vipContract .install-vipContract-listBox{ margin-left:20px;}
+.install-vipContract .install-vipContract-list{margin-bottom:2px; padding:0 20px;height:68px; line-height:68px; background-color:#07488a; color:#fff;font-size: 24px;}
+.install-vipContract .install-vipContract-list div{float:left;}
+.install-vipContract .install-vipContract-list .install-vipContract-list-number{width:30%;}
+.install-vipContract .install-vipContract-list .install-vipContract-list-name{width:50%;}
+.install-vipContract .install-vipContract-list .install-vipContract-list-city{float:right;width:10%; text-align:right; color:#01addb;}
+.install-vipContract .install-vipContract-list .install-vipContract-list-lift{width:100%;}
+.install-vipContract .x-item-selected .install-vipContract-list{background-color:#01addb;}
+.install-vipContract .x-item-selected .install-vipContract-list div{ color:#fff !important}
+
+
+/* 区域地图->故障授信监控 */
+.remote-service-FaultMonitor{margin:18px 30px;}
+.remote-service-FaultMonitor .remote-FaultMonito-listBox{margin-top:18px;}
+.remote-service-FaultMonitor .remote-FaultMonito-list{margin-bottom:2px; padding:0 20px;height:68px; line-height:68px; background-color:#07488a; color:#fff;font-size: 24px;display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+.remote-service-FaultMonitor .x-item-selected .remote-FaultMonito-list{background-color:#01addb;}
+.remote-service-FaultMonitor .remote-FaultMonito-list div{float:left;clear:none; height:68px;text-align:left;white-space:nowrap;}
+.remote-service-FaultMonitor .remote-FaultMonito-list .remote-FaultMonito-listNumber{width:20%;}
+.remote-service-FaultMonitor .remote-FaultMonito-list .remote-FaultMonito-listName{margin-left:12px; width:50%; overflow:hidden !important;text-overflow:ellipsis !important;}
+.remote-service-FaultMonitor .remote-FaultMonito-list .remote-FaultMonito-listTrapped{width:8%;color:#ddd}
+.remote-service-FaultMonitor .remote-FaultMonito-list .remote-FaultMonito-listLadder{ float:right;width:20%; text-align:right;}
+
+
+.remote-FaultMonito-listBox{background-color:#053464;}
+.remote-FaultMonito-listBox .x-list-item.x-list-item-tpl .x-innerhtml{padding:0 0}
+.remote-FaultMonito-listBox .x-list-item.x-list-item-tpl:before{border-bottom:0;}
+.remote-FaultMonito-listBox .x-list-item.x-item-selected.x-list-item-tpl{border-bottom:0;}
+.remote-FaultMonito-listBox .x-list-item{border-top: 0}
+.remote-FaultMonito-listBox .x-slide-action-outer{background-color:#053464 !important;}
+
+/* 区域地图->所有电梯 */
+.remote-service-Elevator{margin:18px 30px;}
+.remote-service-Elevator .remote-Elevator-leftListBox{margin-top:18px; text-align:center;}
+.remote-service-Elevator .remote-Elevator-leftList{margin-bottom:2px; padding:0 20px;height:68px; line-height:68px; background-color:#07488a; color:#fff;font-size: 24px;}
+.remote-service-Elevator .x-item-selected .remote-Elevator-leftList{background-color:#01addb;}
+.remote-service-Elevator .remote-Elevator-leftList div{float:left;clear:none; height:68px;text-align:left;white-space:nowrap; overflow:hidden; text-overflow:eleftLipsis;}
+.remote-service-Elevator .remote-Elevator-leftList .remote-Elevator-leftListNumber{width:25%;}
+.remote-service-Elevator .remote-Elevator-leftList .remote-Elevator-leftListName{width:75%;}
+
+.remote-service-Elevator .remote-Elevator-rightListBox{ width:200px; margin-left:10px;}
+.remote-service-Elevator .remote-Elevator-rightList{margin-bottom:2px;height:68px; line-height:68px; background-color:#07488a; color:#fff;font-size: 24px;}
+.remote-service-Elevator .remote-Elevator-rightListCollection{ float:left; clear:none; width:40px; height:68px; background-color:#073c72;}
+.remote-service-Elevator .remote-Elevator-rightListCollectionY{background-color:#e18901;}
+.remote-service-Elevator .remote-Elevator-rightListNumber{float:left; clear:none; width:160px; height:68px; text-align:center; color:#fff; border: 3px solid #07488a;}
+.remote-service-Elevator .remote-Elevator-rightListConnect{border: 3px solid #01addb;}
+.remote-service-Elevator .x-item-selected  .remote-Elevator-rightListNumber{border: 3px solid #01addb;background-color:#01addb !important;}
+.remote-service-Elevator .x-item-selected .remote-Elevator-rightList{background-color:#01addb;}
+
+/* 售后->配件 */
+.remote-service-Parts{margin:18px 30px;}
+.remote-service-Parts .remote-Parts-Region{margin:0;}
+.remote-service-Parts .remote-Parts-Region .x-button{float:left; margin:0 12px 12px 0;}
+.remote-service-Parts .remote-Parts-Region {}
+.remote-service-Parts .remote-Parts-SearchData { height:230px;}
+.remote-service-Parts .remote-Parts-SearchData .remote-Parts-SearchData-button{float:left; margin:0 12px 12px 0;width:128px;height:68px; line-height:68px;border:0;border-radius:0;background-color:#237cd8;color:#fff; font-size:24px; text-align:center;}
+.remote-service-Parts .x-item-selected .remote-Parts-SearchData-button{background-color:#01addb;}
+/* -------------------------
+售后 over
+------------------------- */
+
+
+/* -------------------------
+主屏与生命周期 start
+------------------------- */
+.remote-Main-Home{}
+/*  全国地图 -> 搜索框 */
+.remote-Main-Home .remote-ChinaMap-Search{height:68px;}
+.remote-Main-Home .remote-ChinaMap-Search .x-scroll-container{ background-color:#063465;}
+.remote-Main-Home .remote-ChinaMap-Search .x-button{float:left; margin-right:12px; background-color:#07488a;}
+.remote-Main-Home .remote-ChinaMap-Search .x-field{float:left; background-color:#063465;}
+.remote-Main-Home .remote-ChinaMap-Search .x-scroleftL-container{ background-color:#063465;}
+.remote-Main-Home .remote-ChinaMap-Search .x-field .x-field-input{ width:300px;}
+.remote-Main-Home .remote-ChinaMap-Search .x-field .x-input-el{ padding:0;height:68px;border:5px solid #07488a; border-radius:0; background-color:#063465; text-indent:12px; font-size:20px; color:#fff}
+.remote-Main-Home .remote-ChinaMap-Search .remote-ChinaMap-buttonR{ float:right; margin-right:0;} 
+
+.remote-Main-Home {}
+.remote-Main-Home .remote-Elevator-leftListBox{margin-top:18px;}
+.remote-Main-Home .remote-Elevator-leftList{margin-bottom:2px; padding:0 20px;height:68px; line-height:68px; background-color:#07488a; color:#fff;font-size: 24px;}
+.remote-Main-Home .x-item-selected .remote-Elevator-leftList{background-color:#01addb;}
+.remote-Main-Home .remote-Elevator-leftList div{float:left;clear:none; height:68px;text-align:left;white-space:nowrap; overflow:hidden; text-overflow:eleftLipsis;}
+.remote-Main-Home .remote-Elevator-leftList .remote-Elevator-leftListNumber{width:25%;}
+.remote-Main-Home .remote-Elevator-leftList .remote-Elevator-leftListName{width:75%;}
+
+.remote-Main-Home .remote-Elevator-rightListBox{ width:200px; margin-left:10px;}
+.remote-Main-Home .remote-Elevator-rightList{margin-bottom:2px;height:68px; line-height:68px; background-color:#07488a; color:#fff;font-size: 24px; text-align:center}
+.remote-Main-Home .remote-Elevator-rightListCollection{ float:left; clear:none; width:40px; height:68px; background-color:#073c72;}
+.remote-Main-Home .remote-Elevator-rightListCollectionY{background-color:#e18901;}
+.remote-Main-Home .remote-Elevator-rightListNumber{float:left; clear:none; width:160px; height:68px; text-align:center; color:#fff; border: 3px solid #07488a;}
+.remote-Main-Home .remote-Elevator-rightListConnect{border: 3px solid #01addb;}
+/* -------------------------
+主屏与生命周期 over
+------------------------- */
+
+
+
+/*  设备控制 */
+.remote-device {margin:18px 30px;}
+.remote-device .remote-device-Box{margin:8px}
+/*
+.remote-device .remote-device-Box .remote-device-button{margin:0 auto 4px 0; padding:18px 10px;width:86%; height:60px;line-height:28px;border:0;border-radius:0;background-color:#237cd8;color:#fff; font-size:18px; text-align:center;}
+.remote-device .remote-device-Box .x-item-selected .remote-device-button{ background-color:#01addb;}
+.remote-device .remote-device-Box .x-form-label span{color:#fff; font-size:18px}
+.remote-device .remote-device-Box .x-field{background-color:#053464;}
+
+.remote-device .remote-device-Box .remote-ac-button-on{float:left;width:70%;margin-right:4px}
+.remote-device .remote-device-Box .remote-ac-button-off{float:left;width:25%}
+
+.remote-device .remote-device-Box .remote-code{margin-left:8px; font-size:0.6em; display:}
+*/
+
+.remote-device .remote-device-Box .x-button{margin:4px;height:48px;border:0;border-radius:0;}
+.remote-device .remote-device-Box .x-button-normal .x-button-label{ color:#fff; font-size:20px; line-height:34px}
+.remote-device .remote-device-Box .x-button-pressing { opacity: 0.5; }
+.x-device-on  {background-color:#3482D5;}
+.x-device-off {background-color:#133e6c;}
+
+.remote-device .remote-device-Box .x-label{font-size:24px;color:#00aeef;}
+.remote-device .x-field { background-color: #053464; color: white;}

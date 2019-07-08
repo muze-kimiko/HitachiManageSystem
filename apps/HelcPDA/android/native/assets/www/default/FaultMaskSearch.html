@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>屏蔽故障查询</title>
+</head>
+<body>
+	<div data-role="page" id="FaultMaskSearch" data-close-btn="none">
+		<div data-role="header" data-position="fixed" style="background:#2B89D3;color:#ffffff;height:40px;" >
+			<h1  class="pagetitle" style="font-size:15px;">屏蔽故障查询</h1>
+		</div>
+		<div data-role="content" style="padding: 0px">
+			<div class="Mcstatus" id="Mcheader" width="100%">
+			   <table width="100%" border="0" cellspacing="0" cellpadding="0">
+				   <tr>
+				   <td style="padding-left:5px;padding-right:5px;">
+					   <label for="txtDeviceNo">电梯工号:</label><input type="text" name="txtDeviceNo" id="txtDeviceNo">
+					   <label for="txtStartTime">故障开始时间:</label><input type="text" name="txtStartTime" id="txtStartTime">
+					   <label for="txtEndTime">故障结束时间:</label><input type="text" name="txtEndTime" id="txtEndTime">
+				   </td>
+				   </tr>
+				   <tr>
+				   <td>
+					   <div data-role="controlgroup" data-type="horizontal" style="text-align:center;">
+						   <a href="#" data-role="button" data-icon="back"  data-rel="back" style="background-color:red;color:#fff">取消</a>
+						   <a href="javascript:void(0)" id="btnSearch" data-role="button" data-icon="info" style="background-color:#3388cc;color:#fff;">确定</a>
+						</div>
+				   </td>
+				   </tr>
+		   	</table>
+		   </div>
+		</div>
+	</div>
+</body>
+</html>

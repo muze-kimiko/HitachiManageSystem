@@ -1,0 +1,356 @@
+<!DOCTYPE HTML>
+<html>
+    	<head>
+    		<meta charset="UTF-8">
+    		<title>ActivateTest</title>
+    	</head>
+    	<body>
+	<div data-role="page" id="ActivateTest">
+		<div data-role="header" data-position="fixed" data-tap-toggle="false" style="background:#2B89D3;color:#ffffff;height:40px;position:fixed;" data-theme="f" data-hide-during-focus="false">
+			<div data-type="horizontal" class="ui-btn-left">
+				<a href="#anylink" id="ActivateTest-back" data-role="button" data-icon="custarrow-l" data-iconpos="notext" data-rel="back" data-theme="f">后退</a>
+				<a href="#anylink" id="ActivateTes-external-back" data-role="button" data-icon="custarrow-l" data-iconpos="notext" rel="external" style="display:none;" data-theme="f">后退</a>
+				<a href="javascript:void(0);" id="home" data-role="button" data-icon="custarrow-home" data-iconpos="notext" data-theme="f">主页</a>
+			</div>
+			<h1  class="pagetitle" style="font-size:15px;">激活调试&nbsp;&nbsp;</h1>
+			
+			<div data-type="horizontal" class="ui-btn-right">
+			<a href="activesearch.html" id="dialoglink"  data-inline="true" data-rel="dialog" data-transition="pop" data-iconpos="notext" data-role="button" data-icon="custarrow-search" data-theme="f">搜索</a>
+<!--  		<a href="javascript:void(0);" id="btnRefresh" data-role="button" data-icon="custarrow-reflash" data-iconpos="notext" data-theme="f">刷新</a>    -->
+			<a href="javascript:void(0);" id="btnAdd" data-role="button" data-icon="custarrow-add" data-iconpos="notext" data-theme="f">新增</a>
+			</div>
+			
+			
+			<div class="btn_jihuotiaoshi" onselectstart="return false;" style="-moz-user-select:none;background-color:#e4e4e4;">
+				<div id="tb-nonadmin" style="width:100%;margin:1px;font-size:15px;display:none;">
+				    <div id="btnActive2" style="float:left;width:33%;height:35px;line-height:35px;background-color:#2B89D3;text-shadow: none;font-weight:normal;"><a href="#" style="height:35px;color:white; display:block; text-decoration:none; text-align:center;border-right:1px solid white;text-shadow: 0;font-weight:normal">激活</a></div>
+				    <div id="btnDebug2" style="float:left;width:33%;height:35px;line-height:35px;background-color:#2B89D3;text-shadow: none;font-weight:normal;"><a href="#" style="height:35px;color:white; display:block; text-decoration:none; text-align:center;border-right:1px solid white;text-shadow: 0;font-weight:normal">调试</a></div>
+				    <div id="btnVersion2" style="float:left;width:33%;height:35px;line-height:35px;background-color:#2B89D3;text-shadow: none;font-weight:normal;"><a href="#" style="height:35px;color:white; display:block; text-decoration:none; text-align:center;border-right:1px solid white;text-shadow: 0;font-weight:normal">读取版本</a></div>
+				    <div class="clear"></div>
+				</div>
+			 
+			 	<div id="tb-admin" style="width:100%;margin:1px;font-size:15px;display:none;">
+				    <div id="btnActive" style="float:left;width:33%;height:35px;line-height:35px;background-color:#2B89D3;text-shadow: none;font-weight:normal;"><a href="#" style="height:35px;color:white; display:block; text-decoration:none; text-align:center;border-right:1px solid white;text-shadow: 0;font-weight:normal">激活</a></div>
+				    <div id="btnDebug" style="float:left;width:33%;height:35px;line-height:35px;background-color:#2B89D3;text-shadow: none;font-weight:normal;"><a href="#" style="height:35px;color:white; display:block; text-decoration:none; text-align:center;border-right:1px solid white;text-shadow: 0;font-weight:normal">调试</a></div>
+				    <div id="btnVersion" style="float:left;width:33%;height:35px;line-height:35px;background-color:#2B89D3;text-shadow: none;font-weight:normal;"><a href="#" style="height:35px;color:white; display:block; text-decoration:none; text-align:center;border-right:1px solid white;text-shadow: 0;font-weight:normal">读取版本</a></div>
+				    <div class="clear"></div>
+				</div>
+				<!-- 
+			 <table id="tb-admin" style="text-align:center;width:100%;display:none;">
+				<tr>
+					<td>
+						<a href="javascript:void(0)" id="btnActive" class="bluebtn" style="font-size:12px;color:#ffffff;text-shadow: none;font-weight: normal;text-decoration:none;">激活</a>
+					</td>
+					<td>
+						<a href="javascript:void(0)" id="btnDebug" class="bluebtn" style="font-size:12px;color:#ffffff;text-shadow: none;font-weight: normal;text-decoration:none;">调试</a>
+					</td>
+					<td style="display:none;">
+						<a href="javascript:void(0)" id="btnCancelActive" class="redbtn" style="font-size:12px;color:#ffffff;text-shadow: none;font-weight: normal;text-decoration:none;">取消激活</a>
+					</td>
+					<td style="display:none;">
+						<a href="javascript:void(0)" id="btnCancelDebug" class="redbtn" style="font-size:12px;color:#ffffff;text-shadow: none;font-weight: normal;text-decoration:none;">取消调试</a>
+					</td>
+				</tr>
+			 </table> -->
+			</div>
+			
+			<div id="filter" style="display:none;">
+				<table class="activetestlist" width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color:#2B89D3;text-shadow: none;color:#fff;">
+					<tr class="bottomxian">
+						<td nowrap="nowrap" style="padding-left:8px;">
+							<input class="my-checkbox" type="checkbox" id="chkAll" name="chkAll" onclick="CheckAll()" data-role="none">
+						</td>
+						<td nowrap>
+							<select name="activestatus" id="activestatus" data-role="none">
+							<option value="-1" selected="selected">全部</option>
+							<option value="1">已激活</option>
+							<option value="0">未激活</option>
+							</select>
+						</td>
+						<td class="bottomxian"  colspan="3" nowrap="nowrap" align="right" style="padding-right:10px;">
+					总数<span id="rowcount"></span>/剩余<span id="remaincount"></span>
+					   </td>
+					</tr>
+				</table>
+			</div>	
+		</div>
+		<div data-role="content" style="padding: 75px 0px 0px 0px;">
+			<div id="wrapper" style="position:absolute;z-index:1;top:105px; bottom:100px; width:100%;overflow:auto;">
+			 <div id="scroller">
+					<div id="pullDown" style="display:none;">
+						<span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
+					</div>	
+				  <div  id="SearchResult" width="100%">
+
+	              </div>
+              </div>
+            </div>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="a" data-tap-toggle="false" style="position:fixed;" data-hide-during-focus="false">
+		<div id="div-more" style="display:none;padding-bottom:2px;">
+				<button id="more" class="btn" style="margin:0px;width:100%;">更多</button>
+			</div>
+			<div data-role="navbar" id="navbar-custorm">
+	      		<ul>
+			  		<li><a id="footer-realtime" href="#" data-icon="myeye">远程监视</a></li>
+			  		<li><a id="footer-datarw" href="#" data-icon="mydatarw">数据读取</a></li>
+				    <li><a id="footer-faultfile" href="#" data-icon="myfaultfile">故障存档</a></li>
+				    <li><a id="footer-favorite" href="#" data-icon="myfavorite">收藏</a></li>
+				  </ul>
+			</div>
+		</div>
+		<div data-role="popup" id="popupElevatorEdit" data-tolerance="0,0" class="ui-popup " data-position-to="window" data-overlay-theme="b" data-theme="a" style="min-width:100%;min-heigth:100%;padding-left:0px;">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;height:40px;" >
+			<div data-type="horizontal" class="ui-btn-left">
+				<a id="back" href="#anylink" data-role="button" data-iconpos="notext" data-rel="back" data-icon="custarrow-l" data-theme="f">后退</a>
+				<a href="javascript:void(0);" id="home-edit" data-role="button" data-iconpos="notext" data-icon="custarrow-home" data-theme="f">主页</a>
+			</div>
+			<div data-type="horizontal" class="ui-btn-right">
+			<a href="javascript:void(0);" id="btnSave" data-role="button" data-icon="custarrow-ok" data-iconpos="notext" data-theme="f">保存</a>
+			</div>
+			<h1  class="pagetitle" style="font-size:15px;">电梯信息编辑</h1>
+		</div>
+		
+			<div data-role="content" style="padding:0px 0px 0px 0px;">
+			   <div class="Mcstatus2" id="" width="100%">
+				<table  class="jhliftdata_edit" width="100%" border="0">
+				  <tr>
+				    <th width="25%" scope="row">电梯工号</th>
+				    <td width="65%" id="lbDeviceNo"></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">所属分公司</th>
+				    <td id="lbFiliale"></td>
+				  </tr>
+				  <tr>    
+				    <th scope="row">所属维保站</th>
+				    <td id="lbCompanyDesc"></td>
+				  </tr>
+				  <tr style="display:none;">
+				    <th scope="row">最&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;后<br>上线时间</th>
+				    <td id="lbLastContactDate"></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">地盘名称</th>
+				    <td id="lbBuilding"></td>
+				  </tr>
+				   <tr>
+				    <th scope="row">电梯位置</th>
+				    <td style="padding-right:10px;"><textarea id="lbAddress"></textarea></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">遥监卡号</th>
+				    <td style="padding-right:10px;"><input type="text" name="lbPhone" id="lbPhone"></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">端&nbsp;&nbsp;口&nbsp;&nbsp;号</th>
+				    <td style="padding-right:10px;"><input type="text" name="lbTerminalPort" id="lbTerminalPort"></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">激&nbsp;&nbsp;活&nbsp;&nbsp;码</th>
+				    <td style="padding-right:10px;"><input type="text" name="lbActiveCode" id="lbActiveCode"></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">电梯备注</th>
+				    <td style="padding-right:10px;"><textarea id="lbRemark"></textarea></td>
+				  </tr>
+				  
+				  <tr style="display:none;">
+				    <th scope="row">激活时间</th>
+				    <td id="lbFirstActiveDate"></td>
+				  </tr>
+				  <tr style="display:none;">
+				    <th scope="row">导入时间</th>
+				    <td id="lbCreatedDate"></td>
+				  </tr>
+				   
+				  
+				  
+				  <tr style="display:none;">
+				    <th scope="row">主板程序</th>
+				    <td id="lbSoftVersion"></td>
+				  </tr>
+				  
+				  <tr style="display:none;">
+				    <th scope="row">保&nbsp;&nbsp;养&nbsp;&nbsp;员</th>
+				    <td id="lbStaffName"></td>
+				  </tr>
+				  <tr style="display:none;">
+				    <th scope="row">保&nbsp;&nbsp;养&nbsp;&nbsp;员<br/>联系电话</th>
+				    <td id="lbMobile"></td>
+				  </tr>
+				  
+				</table>
+				<!-- <button id="btnSave" class="ui-btn ui-icon-check ui-btn-icon-left">保存</button> -->
+				
+				<input id="txtElevatorId" type="hidden" />
+            </div>
+            
+		</div>
+		</div>
+		
+		<div data-role="popup" id="popupTMList" data-tolerance="0,0" class="ui-popup" data-position-to="window" data-overlay-theme="b" data-theme="a" style="min-width:100%;min-heigth:100%;padding-left:0px;">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;height:40px;" >
+			<div data-type="horizontal" class="ui-btn-left">
+				<a href="#anylink" data-role="button" data-iconpos="notext" data-rel="back" data-icon="custarrow-l" data-theme="f">后退</a>
+				<a href="javascript:void(0);" onclick="home();" data-role="button" data-iconpos="notext" data-icon="custarrow-home" data-theme="f">主页</a>
+			</div>
+			<h1 id="title"  class="pagetitle" style="font-size:15px;">终端信息</h1>
+			<div data-type="horizontal" class="ui-btn-right">
+				<a href="javascript:void(0);" id="btn-mt-refresh" data-role="button" data-inline="true" data-icon="custarrow-reflash" data-iconpos="notext" data-theme="f">刷新</a>
+				
+			</div>
+			</div>
+			<div data-role="content" style="padding:10px 0px 0px 0px;">
+				<input id="eid" type="hidden" />
+				<input id="tid" type="hidden" />
+				<input id="assetnum" type="hidden" />
+				<div class="Mcstatus" id="SearchResult2" width="100%" >
+				<table  width="100%" border="0" class="stdtable">
+				  <tr>
+				    <th width="65%" scope="row">描述</th>
+				    <th width="35%" scope="row" nowrap>更新时间</th>
+				  </tr>
+				  
+				</table>
+			</div>
+			<div id="div-more2" style="display:none;">
+				<a href="javascript:void(0);" id="btn-mt-next" data-role="button">更多</a>
+			</div>
+		</div>
+	</div>
+		
+		<div data-role="popup" id="popupTipDialog" data-overlay-theme="b" data-theme="a" data-dismissible="false">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;padding:0;margin:0;" >
+				<h1>提示</h1>
+				<a href="#anylink" data-role="button" data-icon="delete" data-rel="back" data-theme="f" class="ui-btn-right"></a>
+			</div>
+		    <div data-role="content" style="padding-top:0px;margin-top:0px;">
+		        <p>请查询或新增遥监数据？</p>
+				<div data-role="navbar">
+			      <ul>
+			        <li><a id="btnTipAdd" href="#" data-theme="a">新增</a></li>
+			        <li><a href="activesearch.html" data-theme="a" onclick="javascript:void(0)"  data-rel="dialog" data-transition="pop" data-iconpos="notext">查询</a></li>
+			      </ul>
+			    </div>
+		    </div>
+		</div>
+		
+		<div data-role="popup" id="popupRealtimeDialog" data-overlay-theme="b" data-theme="a" data-dismissible="false">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;padding:0;margin:0;" >
+				<h1>提示</h1>
+			</div>
+		    <div data-role="content" style="padding-top:0px;margin-top:0px;">
+		        <p>该梯遥监异常，无法监控</p>
+				<div data-role="navbar">
+			      <ul>
+			        <li><a href="#" data-theme="a" data-rel="back">返回</a></li>
+			      </ul>
+			    </div>
+		    </div>
+		</div>
+		
+		<div data-role="popup" id="popupLastonlineDialog" data-overlay-theme="b" data-theme="a" data-dismissible="false" style="padding:0;margin:0;">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;padding:0;margin:0;" >
+				<h1>提示</h1>
+			</div>
+		    <div data-role="content" style="padding-top:0px;margin-top:0px;">
+		        <p>该电话卡未上线，无法激活，请按以下步骤检查：</p>
+				<p>1、电话号码是否正确；</p>
+				<p>2、终端断送电后重新操作；</p>
+				<p>3、联系遥监技术支持”。。。</p>
+				<p><label><input type="checkbox" name="checkbox" id="showlastonline">不再提示</label></p>
+				<div data-role="navbar">
+				  <ul>
+			        <li><a href="#" data-theme="a" id="btn-ShowLastonline-tip">返回</a></li>
+			      </ul>
+			    </div>
+		    </div>
+		</div>
+		<div data-role="popup" id="popupLastonline24Dialog" data-overlay-theme="b" data-theme="a" data-dismissible="false" style="padding:0;margin:0;">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;padding:0;margin:0;" >
+				<h1>提示</h1>
+			</div>
+		    <div data-role="content" style="padding-top:0px;margin-top:0px;">
+		        <p>该电话卡已长期未上线，无法激活调试，请按以下步骤检查：</p>
+				<p>1、终端断送电后重新操作；；</p>
+				<p>2、电话号码是否正确；</p>
+				<p>3、终端是否损坏；。</p>
+				<p>4、联系遥监技术支持</p>
+				<p><label><input type="checkbox" name="checkbox" id="showlastonline24">不再提示</label></p>
+				<div data-role="navbar">
+				  <ul>
+			        <li><a href="#" data-theme="a" id="btn-ShowLastonline24-tip">返回</a></li>
+			      </ul>
+			    </div>
+		    </div>
+		</div>
+		<div data-role="popup" id="popupCutDialog" data-overlay-theme="b" data-theme="a" data-dismissible="false" style="padding:0;margin:0;">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;padding:0;margin:0;" >
+				<h1>提示</h1>
+			</div>
+			<div data-role="content" style="padding-top:0px;margin-top:0px;">
+		        <p>终端与主板接线断开，无法激活，请按以下步骤检查：</p>
+				<p>1、检查终端与主控板的接线；；</p>
+				<p>2、电话号码是否正确；；</p>
+				<p>3、终端断送电后重新操作；</p>
+				<p>4、联系遥监技术支持”。。。</p>
+				<p><label><input type="checkbox" name="checkbox" id="showcut">不再提示</label></p>
+				<div data-role="navbar">
+				  <ul>
+			        <li><a href="#" data-theme="a" id="btn-ShowTerminalCut-tip">返回</a></li>
+			      </ul>
+			    </div>
+			</div>
+		</div>
+	
+		<div data-role="popup" id="popupActiveTip" class="ui-content">
+		<p id="tipcontent"></p>
+		</div>
+		
+		<div data-role="popup" id="popupFavoriteGroupDialog" data-tolerance="0,0" data-position-to="window" data-overlay-theme="b" data-theme="a" style="min-width:100%;min-heigth:100%;width:200px;">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;" >
+				<h1>收藏组</h1>
+				<div data-type="horizontal" class="ui-btn-right">
+					<a href="javascript:void(0);" id="btnAddGroup" data-role="button" data-icon="custarrow-add" data-iconpos="notext" data-theme="f">新增</a>
+				</div>
+			</div>
+			<div data-role="content" style="padding-top:10px;">
+				<div data-role="listview" id="favoriteGroup-listview">
+				</div>
+			</div>
+			<div data-role="footer">
+				<fieldset class="ui-grid-a">
+				    <div class="ui-block-a" style="padding:2px;cursor:pointer;" id="btnFavorite"><div class="ui-bar ui-bar-a" style="height: 20px;text-align:center;background:#2B89D3;color:#ffffff">确定</div></div>
+				    <div class="ui-block-b" style="padding:2px;cursor:pointer;" id="btnCancel"><div class="ui-bar ui-bar-a" style="height: 20px;text-align:center;background:#2B89D3;color:#ffffff">取消</div></div>
+				</fieldset>
+			</div>
+		</div>
+		
+		<div data-role="popup" id="AddGroupUI" data-tolerance="0,0" data-position-to="window" data-overlay-theme="b" data-theme="a" style="min-width:100%;min-heigth:100%;">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;" >
+				<h1  class="pagetitle" style="font-size:15px;">新增分组</h1>
+				<div style="-moz-user-select:none;background-color:#fff;color:#000;height:100px;width:100%;">
+			 		<table style="width:100%;">
+				 		<tr>
+					 		<td align="right" style="padding-left:5px;padding-right:5px;">
+					 			<input type="text" name="txtGroupName" id="txtGroupName" placeholder="组名" >
+					 		</td>
+				 		</tr>
+				 		<tr>
+					 		<td style="text-align:center;">
+						 		<fieldset class="ui-grid-a">
+								    <div class="ui-block-a" style="padding:2px;cursor:pointer;" id="btn-add-Save"><div class="ui-bar ui-bar-a" style="height: 20px;text-align:center;background:#2B89D3;color:#ffffff">保存</div></div>
+								    <div class="ui-block-b" style="padding:2px;cursor:pointer;" id="btn-add-cancel"><div class="ui-bar ui-bar-a" style="height: 20px;text-align:center;background:#2B89D3;color:#ffffff">取消</div></div>
+								</fieldset>
+					 		</td>
+				 		</tr>
+			 		</table>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</body>
+</html>
+

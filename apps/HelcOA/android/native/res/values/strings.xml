@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- PII user facing -->
+<resources>
+  <string name="app_name">HelcOA</string>  
+  <string name="push_notification_title">HelcOA</string>
+  
+  <!-- General purpose strings -->
+  <string name="error">Error</string>
+  <string name="close">Close</string>
+  <string name="cancel">Cancel</string>
+  
+  <!--  Settings Screen strings -->
+  <string name="worklightSettingsTitle">Worklight Settings</string>
+  <string name="summaryWLServerUrl">Change the server URL: http[s]://domain or IP address[:port][/context root]</string>
+  <string name="titleWLServerUrl">Server URL</string>
+  <string name="networkSettingsTitleWLServerUrl">Network Settings</string>
+  <string name="OKTitleWLServerUrl">OK</string>
+  <string name="titleInvalidWLServerUrl">Invalid URL</string>
+  <string name="errorInvalidWLServerUrl">%1$s is not a valid URL. Valid format is http[s]://domain or IP address[:port][/context root]</string>
+  <string name="serverAddress">Server Address</string>
+  <string name="changeServerAddress">Change server URL</string>
+  
+  <!--  Settings Screen: Web Resources category -->
+  <string name="wlWebResourcesCategory">Web Resources</string>
+  <string name="wlAppIdTitle">App ID</string>
+  <string name="wlAppVersionTitle">App Version</string>
+  <string name="downloadingWebResourcesMessage">Downloading application resources (progress in kilobytes)</string>
+  
+  <!-- Direct Update -->
+  <string name="directUpdateDownloadingMessage">Downloading application update (progress in kilobytes)</string>
+  <string name="kb">kb</string>
+  
+  <!-- Test Resources Checksum -->
+  <string name="testResourcesChecksumErrorMessage">The application encountered an internal error. Please uninstall the application and then re-install it.</string>
+  
+  <string name="action_settings">Settings</string>
+    <string name="init_sdk">Init SDK</string>
+    <string name="initSDKText">Initialize SDK : </string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="domain">Domain</string>
+    <string name="openInSecureBrowser">Open SecureBrowser</string>
+    <string name="composeInSecureEmail">Open SecureEmail</string>
+    <string name="openJIRA">Open JIRA</string>
+    <string name="connectGateway">Connect Gateway</string>
+    <string name="testDocFunctions">Doc View/Edit/Save</string>
+    <string name="viewInSecureViewer">Open SecureViewer</string>
+    <string name="editInSecureEditor">Edit in SecureEditor</string>
+    <string name="saveToDocstore">Save in DocStore</string>
+    <string name="testSDK">Test SDK functions : </string>
+    <string name="testCopyPaste">Test Copy Paste</string>
+    <string name="clearConnection">Disconnect/Clear : </string>
+    <string name="logs">Logs : </string>
+    <string name="disconnectMaas">Disconnect MaaS</string>
+    <string name="clearLog">Clear Logs</string>
+    <string name="whitelistedApps">Open Chooser</string>
+    <string name="sdkInitialized">SDK Initialized </string>
+    <string name="restrictCopyPaste">Restrict Copy Paste : </string>
+    <string name="restictScreenShot">Restrict Screenshot : </string>
+    <string name="selectTextStr">  Copy Text</string>
+	<string name="takeScreenShot">Test Screenshot</string>
+	<string name="restrictExport">Restrict Export : </string>
+	<string name="selectedWhiteListApps">Whitelisted Apps : </string>
+	<string name="initializeAutoEnforceParams">Set Auto-Enforce Params : </string>
+	<string name="shouldAutoEnforceCopyPaste">Auto-Enforce Restrict Copy Paste:</string>
+    <string name="shouldAutoEnforceScreenshot">Auto-Enforce Restrict Screenshot:</string>
+    <string name="shouldAutoEnforceExport">Auto-Enforce Restrict Export:</string>
+    <string name="shouldAutoEnforceGateway">Auto-Enforce Enterprise Gateway:</string>
+    <string name="shouldAutoEnforceSelectiveWipe">Auto-Enforce SelectiveWipe:</string>
+    <string name="shouldAutoEnforceSSOCheck">Auto-Enforce SSO check:</string>
+	<string name="shouldAutoEnforceRestrictRootedDevice">Auto-Enforce Restrict Rooted Device:</string>
+	<string name="encryptionAPItest">Encryption API Test</string>
+	<string name="encryptionAPItestText">Check Logs for encryption API output.</string>
+	<string name="encryptionText">Test Encryption API</string>
+	<string name="addNotification">Add Notification</string>    
+	<string name="lockContianer">Lock Container</string>
+	<string name="containerLockNotificationTest">Test blocking notifications:</string>
+	<string name="encryptionEditText">Enter text</string>
+    <string-array name="select">
+        <item>Yes</item>
+        <item>No</item>
+    </string-array>
+</resources>

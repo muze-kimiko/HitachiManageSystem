@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:id="@+id/ll_exchangeMenu"
+     android:background="@color/white"  >
+	<Button
+		android:id="@+id/send_card" 
+	    android:layout_width="wrap_content"
+	    android:padding="10dp"
+	    android:layout_height="50dp"
+	    android:background="@drawable/button_bg_style"
+		android:drawableLeft="@drawable/location_search"
+	    android:text="坐标收集" />
+	<View 
+	    android:layout_width="65dp"
+	    android:layout_height="2dp"
+	    android:background="#FF909090"
+	    />
+	<Button
+		android:id="@+id/work_card" 
+	    android:layout_width="wrap_content"
+	    android:padding="10dp"
+	    android:layout_height="50dp"
+	    android:background="@drawable/button_bg_style"
+		android:drawableLeft="@drawable/work_card"
+	    android:text="作业打卡" />
+		<View 
+	    android:layout_width="65dp"
+	    android:layout_height="2dp"
+	    android:background="#FF909090"
+	    />
+	<Button
+	    android:id="@+id/up"
+	    android:layout_width="wrap_content"
+	    android:padding="10dp"
+	    android:layout_height="50dp"
+	    android:background="@drawable/button_bg_style"
+		android:drawableLeft="@drawable/shangban"
+	    android:text="上班打卡" />
+	<View 
+	    android:layout_width="65dp"
+	    android:layout_height="2dp"
+	    android:background="#FF909090"
+	    />
+	<Button
+	    android:id="@+id/intermediate"
+	    android:layout_width="wrap_content"
+	    android:padding="10dp"
+	    android:layout_height="50dp"
+	    android:background="@drawable/button_bg_style"
+		android:drawableLeft="@drawable/fujin"
+	    android:text="中途打卡" />
+	<View 
+	    android:layout_width="65dp"
+	    android:layout_height="2dp"
+	    android:background="#FF909090"
+	    />
+	<Button
+	    android:id="@+id/down"
+	    android:layout_width="wrap_content"
+	    android:padding="10dp"
+	    android:layout_height="50dp"
+	    android:background="@drawable/button_bg_style"
+	    android:drawableLeft="@drawable/xiaban"
+		android:text="下班打卡" />
+	
+
+</LinearLayout>

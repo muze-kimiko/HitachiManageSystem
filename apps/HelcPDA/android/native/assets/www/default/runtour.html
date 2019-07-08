@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>tour</title>
+</head>
+<body>
+<div data-role="page" id="runtour" class="runtour">
+		<div data-role="header" data-position="fixed" data-tap-toggle="false" class="header" style="background:#2B89D3;color:#ffffff;height:40px;position:fixed;">
+			<div data-type="horizontal"  class="ui-btn-left">
+				<a href="#anylink" id="tour-back" data-role="button" data-iconpos="notext" data-rel="back" data-theme="f" data-icon="custarrow-l">后退</a>
+				<a href="javascript:void(0);" onclick="home();" data-role="button" data-iconpos="notext" data-theme="f" data-icon="custarrow-home">主页</a>
+			</div>
+			<h1 class="pagetitle" style="font-size:15px;">运行巡视</h1>
+			<div data-type="horizontal" class="ui-btn-right">
+				<a href="javascript:void(0);" id="btnShowSearchUI" data-role="button" data-iconpos="notext" data-theme="f" data-icon="custarrow-search">搜索</a>
+			</div>	
+			<div class="Mcstatus" id="Mcheader" width="100%">
+				<div class="gzcd">
+				    <div class="item"><a href="javascript:changePageExt('devicetour.html')" >遥监异常</a></div>
+				    <div class="item"><a href="javascript:void(0);" class="bg">运行巡视</a></div>
+				    <div class="clear"></div>
+				</div>
+			</div>	
+			<div id="filter">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color:#2B89D3;color:#fff;">
+					<tr class="bottomxian" style="height:30px;line-height:30px;">
+						<td style="padding-left:8px;padding-bottom:5px;" class="bottomxian">
+							<input class="my-checkbox" type="checkbox" id="chkAll" name="chkAll" onclick="CheckAll()" data-role="none">
+								<select style="margin-top:0;vertical-align:middle;height:25px;line-height:25px;" name="runstatus" id="runstatus" data-role="none">
+									<option value="01720D66-EA61-4554-8C64-9AF3F60E75E6" selected="selected">运行正常</option>
+									<option value="BC85D1CC-EC21-4DEE-9CA6-380086EE8D9F" >泊梯状态</option>
+									<option value="AC85D1CC-EC21-4DEE-9CA6-380086998D9F">电梯故障</option>
+									<option value="7B61DF3A-111E-46E6-8084-C024A61AB97C">维修作业</option>
+								</select>
+								<select style="margin-top:0;margin-left:0px;padding-left:0px;vertical-align:middle;height:25px;line-height:25px;" name="zaibaostatus" id="zaibaostatus" data-role="none">
+									<option value="-1" selected="selected">在保状态</option>
+									<option value="1" >在保</option>
+									<option value="0">脱保</option>
+								</select>
+							<td align="right" style="color:#fff;">共
+							<span id="rowcount">0</span>条
+							</td>
+
+					</tr>
+				</table>
+			</div>	
+		</div>
+		<div data-role="content" style="padding-top:75px;padding-left:0px;padding-right:0px;padding-bottom:0px;">
+		      <div id="wrapperRuntour" style="position:absolute;z-index:1;top:115px; bottom:100px; width:100%;overflow:auto;">
+		   		<div id="scroller">
+					<div id="pullDownRuntour" style="display:none;">
+						<span class="pullDownIcon"></span><span class="pullDownLabel">下拉刷新...</span>
+					</div>		
+					<div id="SearchResult" width="100%">
+				
+            		</div>
+				</div>	
+		   </div>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="a" data-tap-toggle="false" style="position:fixed;" data-hide-during-focus="false">
+		      <div id="div-more" style="display:none;padding-bottom:2px;">
+				<button id="more" class="btn" style="margin:0px;width:100%;">更多</button>
+			  </div>
+			<div data-role="navbar" id="navbar-custorm">
+	      		<ul>
+	      			<li data-icon="false"id="footer-activetest"><a href="#" data-icon="myactivetest">激活调试</a></li>
+	      			<li data-icon="false"id="footer-realtime"><a id="#" href="#" data-icon="myeye">实时监视</a></li>
+		            <li data-icon="false" id="footer-faultfile"><a  href="#" data-icon="myfaultfile">故障存档</a></li>
+		            <li data-icon="false" id="footer-favorite"><a href="#" data-icon="myfavorite">收藏</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div data-role="popup" id="SearchUI" data-tolerance="0,0" class="telcard" class="ui-content ui-popup " data-position-to="window" data-overlay-theme="b" data-theme="a" style="min-width:100%;min-heigth:100%;">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;" >
+				<h1  class="pagetitle" style="font-size:15px;">运行巡视搜索</h1>
+			
+				<div style="-moz-user-select:none;background-color:#fff;color:#000;height:100px;width:100%;">
+			 		<table style="width:100%;">
+				 		<tr>
+					 		<td colspan="2" align="right" style="padding-left:5px;padding-right:5px;"><input type="text" name="txtKey" id="txtKey" ></td>
+				 		</tr>
+				 		<tr>
+					 		<td style="text-align:right;">
+					 			<a id="btnMaintenance" href="javascript:void(0)" data-role="none" style="width:66px; height:40px; padding:5px 10px; line-height:40px;background:url(images/guanjianci_moren.png) no-repeat 0 0;  border:0;color:#000;">维保站</a>
+					 		</td>
+					 		<td style="text-align:left;">
+					 			<a id="btnBulding" href="javascript:void(0)" data-role="none" style="width:66px; height:40px; padding:5px 20px; line-height:40px;background:url(images/guanjianci_moren.png) no-repeat 0 0;  border:0;color:#000;">地盘</a>
+					 		</td>
+				 		</tr>
+			 		</table>
+				</div>
+			</div>
+			<div data-role="content" style="padding:0px;"></div>
+		</div>
+		
+		<div data-role="popup" id="popupElevatorDetail" data-tolerance="0,0" class="elevatordetailpop" class="ui-content ui-popup " data-position-to="window" data-overlay-theme="b" data-theme="a" style="min-width:100%;min-heigth:100%;">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;" >
+				<div data-type="horizontal" class="ui-btn-left">
+					<a href="#anylink" data-role="button" data-iconpos="notext"  data-icon="custarrow-l" data-theme="f">后退</a>
+					<a href="javascript:void(0);" onclick="home();" data-role="button" data-iconpos="notext" data-icon="custarrow-home" data-theme="f">主页</a>
+				</div>
+					<h1  class="pagetitle" style="font-size:15px;">电梯信息明细</h1>
+				</div>
+			<div data-role="content" style="padding:0px;">
+				<div id="divmainpop" >
+					<table id="tbmain">
+						<tr>
+							<td rowspan="4" class="dianti" style="padding-left:8px;"><img id="dianti"  src="images/elevator/futi.png" ></td>
+							<td class="rowone" colspan="2" id="lbDeviceNo"></td>
+							<td class="rowone" colspan="2" id="lbModelName"></td>
+						</tr>
+						<tr>
+							<td class="rowtwo" colspan="2" id="lbCityName"></td>
+							<td class="rowtwo" colspan="2" id="lbCompanyName"></td>
+						</tr>
+						<tr>
+							<td style="width:22px;padding-left:8px;" ><img id="weibao" src="images/elevator/zaibao.png" ></td>
+							<td class="rowthree" id="lbWeibao"></td>
+							<td style="width:22px;"><img id="zuangtai" src="images/elevator/unnormal.png" ></td>
+							<td class="rowthree" id="lbZuangtai"></td>
+						</tr>
+						<tr>
+							<td colspan="4" class="rowfour" id="lbAddress"  style="line-height:1.5em;"></td>
+						</tr>
+					</table>
+					<table id="tbperson"  style="color:#F68B1F;">
+						<tr>
+							<td valign="middle" style="padding-top:5px;padding-left:8px;"><img  src="images/elevator/telphone_icon.png" ></td>
+							<td id="lbStaffMobile" width="40%"></td>
+							<td id="lbStaffName" width="20%"></td>
+							<td id="lbMaintenanceName" width="30%"></td>
+						</tr>
+					</table>			
+					<table id="tbdetail">
+						<tr>
+							<td style="vertical-align:top;padding-left:8px;">客户名称</td>
+							<td id="lbCustomerName" style="vertical-align:top;line-height:1.1em;"></td>
+						</tr>
+						<tr>
+							<td width="100px" style="padding-left:8px;">保养类型</td>
+							<td id="lbMainTypeName"></td>
+						</tr>
+						<tr>
+							<td width="100px" style="padding-left:8px;">合&nbsp;&nbsp;同&nbsp;&nbsp;号</td>
+							<td id="lbAGREE_NUM"></td>
+						</tr>
+						<tr>
+							<td style="padding-left:8px;">合同类型</td>
+							<td id="lbAGREE_TYPE"></td>
+						</tr>
+						<tr>
+							<td style="padding-left:8px;">项目类型</td>
+							<td id="lbProjectType"></td>
+						</tr>
+						<tr>
+							<td style="padding-left:8px;">合同服务时间</td>
+							<td id="lbServiceDate"></td>
+						</tr>
+						<tr>
+							<td style="padding-left:8px;">电&nbsp;&nbsp;话&nbsp;&nbsp;卡</td>
+							<td id="lbPhone"></td>
+						</tr>
+						<tr>
+							<td style="padding-left:8px;">遥监录入时间</td>
+							<td id="lbCreatedDate"></td>
+						</tr>
+						<tr>
+							<td style="padding-left:8px;">主板程序版本</td>
+							<td id="lbMainVersion"></td>
+						</tr>
+						<tr>
+							<td style="padding-left:8px;">遥监终端版本</td>
+							<td id="lbSoftVersion"></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div data-role="popup" id="popupRealtimeDialog" data-overlay-theme="b" data-theme="a" data-dismissible="false">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;padding:0;margin:0;" >
+				<h1>提示</h1>
+			</div>
+		    <div data-role="content" style="padding-top:0px;margin-top:0px;">
+		        <p>该梯遥监异常，无法监控</p>
+				<div data-role="navbar">
+			      <ul>
+			        <li><a href="#" data-theme="a" data-rel="back">返回</a></li>
+			      </ul>
+			    </div>
+		    </div>
+		</div>
+	
+		<div data-role="popup" id="popupFavoriteGroupDialog" data-tolerance="0,0" data-position-to="window" data-overlay-theme="b" data-theme="a" style="min-width:100%;min-heigth:100%;width:200px;">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;" >
+				<h1>收藏组</h1>
+				<div data-type="horizontal" class="ui-btn-right">
+					<a href="javascript:void(0);" id="btnAddGroup" data-role="button" data-icon="custarrow-add" data-iconpos="notext" data-theme="f">新增</a>
+				</div>
+			</div>
+			<div data-role="content" style="padding-top:10px;">
+				<div data-role="listview" id="favoriteGroup-listview">
+				</div>
+			</div>
+			<div data-role="footer">
+				<fieldset class="ui-grid-a">
+				    <div class="ui-block-a" style="padding:2px;cursor:pointer;" id="btnFavorite"><div class="ui-bar ui-bar-a" style="height: 20px;text-align:center;background:#2B89D3;color:#ffffff">确定</div></div>
+				    <div class="ui-block-b" style="padding:2px;cursor:pointer;" id="btnCancel"><div class="ui-bar ui-bar-a" style="height: 20px;text-align:center;background:#2B89D3;color:#ffffff">取消</div></div>
+				</fieldset>
+			</div>
+		</div>
+		
+		<div data-role="popup" id="AddGroupUI" data-tolerance="0,0" data-position-to="window" data-overlay-theme="b" data-theme="a" style="min-width:100%;min-heigth:100%;">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;" >
+				<h1  class="pagetitle" style="font-size:15px;">新增分组</h1>
+				<div style="-moz-user-select:none;background-color:#fff;color:#000;height:100px;width:100%;">
+			 		<table style="width:100%;">
+				 		<tr>
+					 		<td align="right" style="padding-left:5px;padding-right:5px;">
+					 			<input type="text" name="txtGroupName" id="txtGroupName" placeholder="组名" >
+					 		</td>
+				 		</tr>
+				 		<tr>
+					 		<td style="text-align:center;">
+						 		<fieldset class="ui-grid-a">
+								    <div class="ui-block-a" style="padding:2px;cursor:pointer;" id="btn-add-Save"><div class="ui-bar ui-bar-a" style="height: 20px;text-align:center;background:#2B89D3;color:#ffffff">保存</div></div>
+								    <div class="ui-block-b" style="padding:2px;cursor:pointer;" id="btn-add-cancel"><div class="ui-bar ui-bar-a" style="height: 20px;text-align:center;background:#2B89D3;color:#ffffff">取消</div></div>
+								</fieldset>
+					 		</td>
+				 		</tr>
+			 		</table>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>

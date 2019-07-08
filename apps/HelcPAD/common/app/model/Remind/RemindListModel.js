@@ -1,0 +1,11 @@
+Ext.define('HelcPAD.model.Remind.RemindListModel',{
+	extend:'Ext.data.Model',
+	config:{
+		fields:[
+		        'subject',
+		        'message',
+		        'sendtime',
+		        'rowid'
+		]
+	}
+});

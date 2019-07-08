@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <solid android:color="@color/color_bg_key" />
+
+    <!-- 控制圆角的属性，值越大就越圆 #BDC7D8-->
+    <corners android:radius="3dip" />
+
+    <stroke
+        android:width="1dip"
+        android:color="#bbb" />
+
+</shape>

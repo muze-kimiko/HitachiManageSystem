@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/laout_mapview"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="#f7efef" >
+	
+<!--     title -->
+    <include 
+        android:id="@+id/mapview_title"
+        layout="@layout/layout_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-3dp"/>
+	
+<!--     map -->
+	<RelativeLayout
+	    android:layout_width="wrap_content"
+	    android:layout_height="fill_parent"
+	    android:layout_below="@id/mapview_title"
+	    android:orientation="horizontal">
+	    	<com.HelcPDA.resource.DemoMapView
+				android:id="@+id/glView_mapview"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent" />
+	    	<RelativeLayout
+				android:id="@+id/rl_zoom"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentBottom="true"
+				android:layout_alignParentRight="true"
+				android:layout_alignWithParentIfMissing="true"
+				android:layout_marginBottom="48dip"
+				android:layout_marginRight="13dip"
+				android:gravity="center_horizontal"
+				android:orientation="vertical" >
+		
+				<ImageView
+					android:id="@+id/btn_zoom_in"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:contentDescription="放大"
+					android:layout_alignParentTop="true"
+					android:background="@drawable/btn_zoom_in"
+					android:clickable="true" />
+		
+				<ImageView
+					android:id="@+id/btn_zoom_out"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_below="@id/btn_zoom_in"
+					android:contentDescription="缩小"
+					android:layout_marginTop="13dip"
+					android:background="@drawable/btn_zoom_out"
+					android:clickable="true" />
+
+			</RelativeLayout>
+
+	    <!-- 	<RelativeLayout 
+	    	    android:layout_width="43dp"
+	    	    android:layout_height="43dp"
+	    	    android:gravity="bottom"
+                android:alpha="0"	
+                android:    	    
+	    	    android:layout_above="@+id/preveBar"
+	    	    > -->
+	    	<!-- </RelativeLayout> -->
+	    	
+	    	<RelativeLayout
+	    	    android:layout_width="match_parent"
+	    	    android:layout_height="96dp"
+	    	    android:layout_alignParentBottom="true"
+	    	    android:layout_marginBottom="48dp"
+	    	    android:layout_toLeftOf="@+id/rl_zoom"
+	    	    android:alpha="0.7"
+	    	    android:background="@color/gray"
+	    	    android:orientation="horizontal" 
+	    	    android:gravity="bottom" 
+	    	    android:id="@+id/preveBar"
+	    	    android:visibility="invisible"
+	    	    >
+
+	    	       <Button
+	    	           android:id="@+id/btn_left2dmap"
+	    	           android:layout_width="50dp"
+	    	           android:layout_height="48dp"
+	    	           android:layout_marginBottom="48dp"
+	    	           android:layout_alignParentLeft="true"
+	    	           android:layout_alignParentTop="true"
+	    	           android:background="@drawable/button_bg_style"
+	    	           android:drawableTop="@drawable/btn_share_manage_normal"
+	    	           android:paddingLeft="5dp"
+	    	           android:paddingRight="5dp"
+	    	           android:text="人"
+	    	           android:textColor="#000000"
+	    	           android:textSize="11sp" />
+	    	       
+	    	       
+	    	       <Button
+	    	           android:id="@+id/btn_right3dmap"
+	    	           android:layout_width="50dp"
+	    	           android:layout_height="48dp"
+	    	           android:layout_marginBottom="48dp"
+	    	           android:layout_alignParentTop="true"
+	    	           android:layout_toRightOf="@+id/btn_left2dmap"
+	    	           android:background="@drawable/button_bg_style"
+	    	           android:drawableTop="@drawable/set_keep_icon"
+	    	           android:paddingLeft="5dp"
+	    	           android:paddingRight="5dp"
+	    	           android:text="轨迹"
+	    	           android:textColor="#000000"
+	    	           android:textSize="11sp" />
+	    	       
+	    	       
+	    	       
+	    	       <Button
+	    	           android:id="@+id/btn_day"
+	    	           android:layout_width="50dp"
+	    	           android:layout_height="48dp"
+	    	           android:layout_marginBottom="48dp"
+	    	           android:layout_alignParentTop="true"
+	    	           android:layout_toRightOf="@+id/btn_right3dmap"
+	    	           android:background="@drawable/button_bg_style"
+	    	           android:drawableTop="@drawable/nav_turn_front_s"
+	    	           android:paddingLeft="5dp"
+	    	           android:paddingRight="5dp"
+	    	           android:text="上传"
+	    	           android:textColor="#000000"
+	    	           android:textSize="11sp" />
+	    	       
+	    	       
+	    	         <Button
+	    	           android:id="@+id/below_time"
+	    	           android:layout_width="50dp"
+	    	           android:layout_height="48dp"
+	    	           android:layout_marginBottom="48dp"
+	    	           android:layout_alignParentTop="true"
+	    	           android:layout_toRightOf="@+id/below_Man"
+	    	           android:background="@drawable/button_bg_style"
+	    	           android:drawableTop="@drawable/set_keep_icon"
+	    	           android:paddingLeft="5dp"
+	    	           android:paddingRight="5dp"
+	    	           android:text="轨迹"
+	    	           android:textColor="#000000"
+	    	           android:textSize="11sp"
+	    	           android:paddingTop="3dp"
+	    	            />
+	    	         
+	    	         
+	    	        <Button
+			          android:id="@+id/below_Man"
+	    	           android:layout_width="50dp"
+	    	           android:layout_height="48dp"
+	    	           android:layout_marginBottom="48dp"
+	    	           android:layout_alignParentTop="true"
+	    	           android:layout_toRightOf="@+id/btn_day"
+	    	           android:background="@drawable/button_bg_style"
+	    	           android:drawableTop="@drawable/btn_share_manage_normal"
+	    	           android:paddingLeft="5dp"
+	    	           android:paddingRight="5dp"
+	    	           android:text="位置"
+	    	           android:textColor="#000000"
+	    	           android:textSize="11sp"
+			         />
+	    	        
+	    	             <Button
+	    	           android:id="@+id/my_detail"
+	    	           android:layout_width="50dp"
+	    	           android:layout_height="48dp"
+	    	           android:layout_marginBottom="49dp"
+	    	           android:layout_alignParentTop="true"
+	    	           android:layout_toRightOf="@+id/below_time"
+	    	           android:background="@drawable/button_bg_style"
+	    	           android:drawableTop="@drawable/btn_share_manage_normal1"
+	    	           android:paddingLeft="5dp"
+	    	           android:paddingRight="5dp"
+	    	           android:text="资料"
+	    	           android:textColor="#000000"
+	    	           android:textSize="11sp"
+	    	            />
+	    	             
+	    	             
+	    	               <Button
+	    	           android:id="@+id/upload_on"
+	    	           android:layout_width="50dp"
+	    	           android:layout_height="48dp"
+	    	           android:layout_marginBottom="52dp"
+	    	           android:layout_alignParentTop="true"
+	    	           android:layout_toRightOf="@+id/my_detail"
+	    	           android:background="@drawable/button_bg_style"
+	    	           android:drawableTop="@drawable/route_detail_walk"
+	    	           android:paddingLeft="5dp"
+	    	           android:paddingRight="5dp"
+	    	           android:text="上班"
+	    	           android:textColor="#000000"
+	    	           android:textSize="11sp" /> 
+	    	           
+	    	                <Button
+	    	           android:id="@+id/upload_off"
+	    	           android:layout_width="50dp"
+	    	           android:layout_height="48dp"
+	    	           android:layout_marginBottom="52dp"
+	    	           android:layout_alignParentTop="true"
+	    	           android:layout_toRightOf="@+id/upload_on"
+	    	           android:background="@drawable/button_bg_style"
+	    	           android:drawableTop="@drawable/route_detail_walk"
+	    	           android:paddingLeft="5dp"
+	    	           android:paddingRight="5dp"
+	    	           android:text="下班"
+	    	           android:textColor="#000000"
+	    	           android:textSize="11sp" /> 
+	    	             
+	    	             
+	    	    
+	    	</RelativeLayout>
+			<RelativeLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="48dp"
+			    android:layout_alignParentBottom="true"
+			    android:alpha="0.9"
+			    android:background="@color/gray"
+			    android:gravity="bottom"
+			    android:orientation="horizontal" 
+			    android:layout_weight="1"
+			    android:id="@+id/bottomTool"
+			    >
+                <Button
+                    android:id="@+id/nearliy"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/button_bg_style"
+                    android:drawableTop="@drawable/icon_my_more_location1"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:text="附近"
+                    android:textColor="#000000"
+                    android:textSize="11sp"
+                    android:layout_marginLeft="23px"
+                    android:layout_marginRight="15px"
+                     />
+                
+                    <Button
+			        android:id="@+id/uploap_card"
+			        android:layout_width="50dp"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentBottom="true"
+			        android:layout_toRightOf="@+id/allofmine"
+			        android:background="@drawable/button_bg_style"
+			        android:drawableTop="@drawable/nav_turn_front_s"
+			        android:paddingLeft="5dp"
+			        android:paddingRight="5dp"
+			        android:text="打卡"
+			        android:textColor="#000000"
+			        android:textSize="11sp" 
+			        android:layout_marginTop="2dp"
+			        android:layout_marginRight="15px"
+			        />
+			    
+			    <Button
+			        android:id="@+id/btn_2dmap"
+			        android:layout_width="50dp"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentBottom="true"
+			        android:layout_toRightOf="@+id/uploap_card"
+			        android:background="@drawable/button_bg_style"
+			        android:drawableTop="@drawable/component_no_download"
+			        android:paddingLeft="5dp"
+			        android:paddingRight="5dp"
+			        android:text="离线"
+			        android:textColor="#000000"
+			        android:textSize="11sp" 
+			        />
+			                      <Button
+			        android:id="@+id/allofmine"
+			        android:layout_width="50dp"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentBottom="true"
+			        android:layout_alignParentTop="true"
+			        android:layout_toRightOf="@+id/btn_3dmap"
+			        android:background="@drawable/button_bg_style"
+			        android:drawableTop="@drawable/btn_share_manage_normal1"
+			        android:paddingLeft="5dp"
+			        android:paddingRight="5dp"
+			        android:text="我的"
+			        android:textColor="#000000"
+			        android:textSize="11sp"
+			        android:layout_marginRight="15px"
+			         android:layout_marginBottom="2dp"
+			         />
+			   <!--  <Button
+			        android:id="@+id/btn_day"
+			        android:layout_width="50dp"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentTop="true"
+			        android:layout_toRightOf="@+id/btn_right3dmap"
+			        android:background="@color/gray"
+			        android:drawableTop="@drawable/nav_turn_front_s"
+			        android:paddingLeft="5dp"
+			        android:paddingRight="5dp"
+			        android:text="上传"
+			        android:textColor="#000000"
+			        android:textSize="8sp"
+			        android:layout_marginRight="15px"
+			        android:layout_marginTop="3dp"
+			         />
+
+			    <Button
+			        android:id="@+id/btn_right3dmap"
+			        android:layout_width="50dp"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentTop="true"
+			        android:layout_toRightOf="@+id/btn_3dmap"
+			        android:background="@color/gray"
+			        android:drawableTop="@drawable/set_keep_icon"
+			        android:paddingLeft="5dp"
+			        android:paddingRight="5dp"
+			        android:text="时间"
+			        android:textColor="#000000"
+			        android:textSize="8sp" 
+			        android:layout_marginRight="15px"
+			        android:layout_marginTop="4dp"
+			        /> -->
+
+			    <Button
+			        android:id="@+id/btn_3dmap"
+			        android:layout_width="50dp"
+			        android:layout_height="wrap_content"
+			        android:layout_alignParentBottom="true"
+			        android:layout_alignParentTop="true"
+			        android:layout_toRightOf="@+id/nearliy"
+			        android:background="@drawable/button_bg_style"
+			        android:drawableTop="@drawable/btn_share_manage_normal"
+			        android:paddingLeft="5dp"
+			        android:paddingRight="5dp"
+			        android:text="下属"
+			        android:textColor="#000000"
+			        android:textSize="11sp"
+			        android:layout_marginRight="15px"
+			        android:paddingBottom="2dp"
+			         />
+
+			</RelativeLayout>
+
+			<Button
+			    android:id="@+id/my_location"
+			    android:layout_width="43dp"
+			    android:layout_height="43dp"
+			    android:layout_above="@+id/preveBar"
+			    android:layout_alignLeft="@+id/rl_zoom"
+			    android:background="@drawable/button_bg_style"
+			    android:drawableTop="@drawable/indoor_locsuc"
+			    android:gravity="bottom"
+			    android:paddingLeft="5dp"
+			    android:paddingRight="5dp"
+			    android:paddingTop="7dp" />
+
+    </RelativeLayout>
+    
+	<!-- 	button list -->
+	<LinearLayout 
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/mapview_title"
+	    android:orientation="vertical">
+	    
+		<LinearLayout 
+		    android:id="@+id/mvt1"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="13dp"
+		    android:layout_marginRight="13dp"
+		    android:layout_marginTop="10.0px"
+		    android:orientation="horizontal">
+		  <!-- 	<Button 
+		    	    android:id="@+id/btn_2dmap"
+		    	    android:layout_width="fill_parent"
+		    	    android:layout_height="33dp"
+		    	    android:layout_marginRight="7dp"
+		    	    android:background="@drawable/btn_bottom_border_bg"
+		    	    android:layout_weight="1"
+		    	    android:textColor="@color/black"
+		    	    android:text="离线数据包下载"/>
+		    	<Button 
+		    	    android:id="@+id/btn_3dmap"
+		    	    android:layout_width="fill_parent"
+		    	    android:layout_height="33dp"
+		    	    android:layout_marginLeft="7dp"
+		    	    android:background="@drawable/btn_bottom_border_bg"
+		    	    android:layout_weight="1"
+		    	    android:textColor="@color/black"
+		    	    android:text="属下"/> -->
+		</LinearLayout>
+		<LinearLayout
+		    android:id="@+id/mvt2"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="13dp"
+		    android:layout_marginRight="13dp"
+		    android:layout_marginTop="10.0px"
+		    android:orientation="horizontal">
+		    <!-- 	<Button 
+		    	    android:id="@+id/btn_left2dmap"
+		    	    android:layout_width="fill_parent"
+		    	    android:layout_height="33dp"
+		    	    android:layout_marginRight="7dp"
+		    	    android:background="@drawable/btn_bottom_border_bg"
+		    	    android:layout_weight="1"
+		    	    android:textColor="@color/black"
+		    	    android:text="周围的人"/>
+		    	<Button 
+		    	    android:id="@+id/btn_right3dmap"
+		    	    android:layout_width="fill_parent"
+		    	    android:layout_height="33dp"
+		    	    android:layout_marginLeft="7dp"
+		    	    android:background="@drawable/btn_bottom_border_bg"
+		    	    android:layout_weight="1"
+		    	    android:textColor="@color/black"
+		    	    android:text="时间"/> -->
+		</LinearLayout>
+
+		 <LinearLayout
+		     android:id="@+id/mvt3"
+		     android:layout_width="fill_parent"
+		     android:layout_height="wrap_content"
+		     android:layout_marginLeft="13dp"
+		     android:layout_marginRight="13dp"
+		     android:layout_marginTop="10.0px"
+		     android:orientation="horizontal" >
+		    	<!-- <Button
+		    	    android:id="@+id/btn_day"
+		    	    android:layout_width="match_parent"
+		    	    android:layout_height="33dp"
+		    	    android:layout_marginRight="7dp"
+		    	    android:background="@drawable/btn_bottom_border_bg"
+		    	    android:text="上传当前位置"
+		    	    android:textColor="@color/black" /> -->
+
+		    	<!-- <Button 
+		    	    android:id="@+id/btn_night"
+		    	    android:layout_width="fill_parent"
+		    	    android:layout_height="33dp"
+		    	    android:layout_marginLeft="7dp"
+		    	    android:background="@drawable/btn_bottom_border_bg"
+		    	    android:layout_weight="1"
+		    	    android:text="夜晚视图"
+		    	    android:textColor="@color/black"/> -->
+		</LinearLayout> 
+	</LinearLayout>
+		
+</RelativeLayout>
+
+

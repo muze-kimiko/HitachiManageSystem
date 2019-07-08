@@ -1,0 +1,113 @@
+
+/* Stylesheet content from css/commentStyle.css in folder common */
+.bordertop{
+	border-top:1.0pt solid black;
+	padding-left:5px;
+}
+
+.borderbottom{
+	border-bottom:1.0pt solid black;
+	padding-left:5px;
+}
+
+.borderleft{
+	border-left:1.0pt solid black;
+	padding-left:5px;
+}
+
+.borderright{
+	border-right:1.0pt solid black;
+	padding-left:5px;
+}
+
+.bigfont{
+	font-size:21px;
+	font-weight:bolder;
+}
+
+.paddingleft{
+	padding-left:5px;
+}
+
+.tbl_nobr_one{
+	padding-left: 5px;
+	padding-right: 5px;
+	height: 30px;
+<!--	width:250px;-->
+	font-weight: bold;
+	align: center;
+}
+.tbl_nobr_value_one_left{
+	padding-left: 5px;
+	padding-right: 5px;
+	height: 30px;
+	text-align: left;
+}
+.tbl_nobr_value_one{
+	padding-left: 5px;
+	padding-right: 5px;
+	height: 30px;
+<!--		width:11%;-->
+	align: center;
+}
+.tbl_nobr_value_height{
+	padding-left: 5px;
+	padding-right: 5px;
+	height: 50px;
+<!--		width:11%;-->
+	align: center;
+}
+.tbl_nobr{
+	white-space:nowrap;
+	padding-left: 5px;
+	padding-right: 5px;
+	height: 30px;
+	font-weight: bold;
+	align: center;
+}
+.tbl_nobr_value{
+	white-space:nowrap;
+	padding-left: 5px;
+	padding-right: 5px;
+	height: 30px;
+	align: center;
+}
+.div_scroll {	
+	overflow:auto;
+	position: relative;
+	display: block;
+	<!--height: 500px;-->
+}
+.tbj_label_cls_y {
+	background-color: red;
+}
+.tbj_label_cls_n {
+	background-color: green;
+}
+.cls_tbj_ipt {
+	font-weight: bold;
+	color:blue;
+}
+.tf_cls_tbj_ipt {
+	color:blue;
+	font-weight: bold;
+	text-align: right;
+}
+.tf_qgdate_ipt{
+  background-color:#FFC0CB;
+  text-align: right;
+}
+/**
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 7px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
+
+-webkit-overflow-scrolling: touch;
+
+*/

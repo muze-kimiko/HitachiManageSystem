@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>归档记录</title>
+<script src="jqueryMobile/jquery.mobile-1.4.5.js"></script>
+<link href="jqueryMobile/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet">
+</head>
+<body>
+	<div data-role="page" id="IssueRecords">
+		<div data-role="header" id="IssueRecords-header" data-position="fixed" data-tap-toggle="false" class="header" style="background:#2B89D3;color:#ffffff;height:40px;position:fixed;">
+			<div data-type="horizontal"  class="ui-btn-left">
+				<a href="#anylink" id="IssueRecords-back" data-role="button" data-iconpos="notext" onclick="IssueRecordsModule.backToFaultTransmittersIssue()" data-theme="f" data-icon="custarrow-l">后退</a>
+				<a href="javascript:void(0);" onclick="home();" data-role="button"  data-icon="custarrow-home" data-iconpos="notext" data-theme="f" >主页</a>
+			</div>
+			<h1 class="pagetitle" style="font-size:15px;">归档记录</h1>
+			<div data-type="horizontal" class="ui-btn-right">
+			<a href="javascript:void(0);" id="btnAdd" data-role="button" data-icon="custarrow-add" data-iconpos="notext" data-theme="f">新增</a>
+			
+		</div>
+		<div class="Mcstatus" id="Mcheader" width="100%">
+				<table  class="jhliftdata_dteail" style="color:#000;" width="100%" border="0" >
+				  <tr style="display:none;">
+				    <th width="35%" scope="row" style="text-align:left;padding-left:5px;">故障ID</th>
+				    <td width="65%"><label id="lbId"></label></td>
+				  </tr>
+				  <tr>
+				    <th width="35%" scope="row" style="text-align:left;padding-left:5px;">电梯工号</th>
+				    <td width="65%"><label id="lbDeviceNo"></label></td>
+				  </tr>
+				  <tr>
+				    <th scope="row" style="text-align:left;padding-left:5px;">故障内容</th>
+				    <td><label id="lbDescription" ></label></td>
+				  </tr>
+				   <tr>
+				    <th scope="row" style="text-align:left;padding-left:5px;">故障时间</th>
+				    <td><label id="lbMalfunctionDate"></label></td>
+				  </tr>
+				  <tr>
+				    <th scope="row" style="text-align:left;padding-left:5px;">地址</th>
+				    <td><label id="lbInstallSite"></label></td>
+				  </tr>
+				</table>
+				<span id="rowcount" style="color:#000;display:none;"></span>
+			</div>
+			</div>
+			
+		<div id="IssueRecords-content" data-role="content" style="padding-top:100px;padding-left:0px;padding-right:0px;padding-bottom:0px;">
+		    <div class="Mcstatus" id="SearchResult" width="100%" style="display:none;">
+		    </div>
+		     <div id="div-more" style="display:none;">
+				<a id="more" href="javascript:void(0);"  data-role="button">更多</a>
+			</div>
+		</div>		
+	</div>
+</body>
+</html>

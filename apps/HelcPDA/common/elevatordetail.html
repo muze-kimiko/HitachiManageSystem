@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>电梯信息明细</title>
+</head>
+<body>
+	<div data-role="page" id="elevatordetail" class="elevatordetail">
+		<div data-role="header" data-position="fixed" style="background:#2B89D3;color:#ffffff;height:40px;" >
+			<div data-type="horizontal" class="ui-btn-left">
+				<a href="#anylink" id="elevatordetail-back" data-role="button" data-iconpos="notext" onclick="elevatorDetailBack();" data-icon="custarrow-l" data-theme="f">后退</a>
+				<a href="javascript:void(0);" onclick="home();" data-role="button" data-iconpos="notext" data-icon="custarrow-home" data-theme="f">主页</a>
+			</div>
+			<h1  class="pagetitle" style="font-size:15px;">电梯信息明细</h1>
+			<div data-type="horizontal" class="ui-btn-right" >
+			<a href="javascript:void(0);" onclick="JumpToElevator(10);" id="elevator-dialoglink" data-role="button" data-inline="true" data-rel="dialog" data-transition="pop" data-iconpos="notext" data-icon="custarrow-search" data-theme="f">搜索</a>
+				<a class="" href="#popupMenu" data-role="button" data-iconpos="notext" data-transition="slideup" data-rel="popup" data-icon="custarrow-menu" data-theme="f">菜单</a>
+				<div id="popupMenu" data-role="popup" style="width:180px;">
+			        <ul style="min-width:210px;" data-role="listview" data-inset="true">
+			            <li data-role="list-divider" style="text-align:left;">菜单</li>
+			            <li data-icon="false" id="elevatordetail-activetest"><a href="#">激活调试</a></li>
+			            <li data-icon="false" id="elevatordetail-realtime"><a href="#">实时监视</a></li>
+			            <li data-icon="false"><a href="#">数据读取</a></li>
+			            <li data-icon="false"><a href="#">故障存档</a></li>
+			        </ul>
+				</div>
+			</div>		
+		</div>
+		<div data-role="content" style="padding: 0px">
+			<div id="divmain" >
+				<table id="tbmain">
+					<tr>
+						<td rowspan="4" class="dianti"><img id="dianti"  src="images/elevator/futi.png" ></td>
+						<td class="rowone" colspan="2" id="lbDeviceNo"></td>
+						<td class="rowone" colspan="2" id="lbModelName"></td>
+					</tr>
+					<tr>
+						<td class="rowtwo" colspan="2" id="lbCityName"></td>
+						<td class="rowtwo" colspan="2" id="lbCompanyName"></td>
+					</tr>
+					<tr>
+						<td style="width:22px;"><img id="weibao" src="images/elevator/zaibao.png" ></td>
+						<td class="rowthree" id="lbWeibao"></td>
+						<td style="width:22px;"><img id="zuangtai" src="images/elevator/unnormal.png" ></td>
+						<td class="rowthree" id="lbZuangtai"></td>
+					</tr>
+					<tr>
+						<td colspan="4" class="rowfour" id="lbAddress"></td>
+					</tr>
+				</table>
+				<table id="tbperson">
+					<tr>
+						<td valign="middle" style="padding-top:5px;"><img  src="images/elevator/telphone_icon.png" ></td>
+						<td class="phone" valign="middle" style="width: 50%; padding-top: 5px; padding-left: 5px;"><label id="lbStaffMobile"></label></td>
+						<td id="lbStaffName" class="phone"></td>
+						<td id="lbMaintenanceName" class="phone"></td>
+					</tr>
+				</table>			
+				<table id="tbdetail">
+					<tr style="line-height:25px;height:25px;">
+						<td style="vertical-align:top;">客户名称</td>
+						<td id="lbCustomerName" style="vertical-align:top;"></td>
+					</tr>
+					<tr>
+						<td width="100px">保养类型</td>
+						<td id="lbMainTypeName"></td>
+					</tr>
+					<tr>
+						<td width="100px">合同号</td>
+						<td id="lbAGREE_NUM"></td>
+					</tr>
+					<tr>
+						<td>合同类型</td>
+						<td id="lbAGREE_TYPE"></td>
+					</tr>
+					<tr>
+						<td>项目类型</td>
+						<td id="lbProjectType"></td>
+					</tr>
+					<tr>
+						<td>合同服务时间</td>
+						<td id="lbServiceDate"></td>
+					</tr>
+					<tr>
+						<td>电话卡</td>
+						<td id="lbPhone"></td>
+					</tr>
+					<tr>
+						<td>遥监录入时间</td>
+						<td id="lbCreatedDate"></td>
+					</tr>
+					<tr>
+						<td>主板程序版本</td>
+						<td id="lbMainVersion"></td>
+					</tr>
+					<tr>
+						<td>遥监终端版本</td>
+						<td id="lbSoftVersion"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

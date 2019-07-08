@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+    Licensed Materials - Property of IBM
+    5725-I43 (C) Copyright IBM Corp. 2011, 2013. All Rights Reserved.
+    US Government Users Restricted Rights - Use, duplication or
+    disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+--><nativeIOSApp xmlns="http://www.worklight.com/native-ios-descriptor" bundleId="com.HITACHI" id="HITACHI" platformVersion="7.1.0.00.20180302-0530" version="1.0">
+	
+	<displayName>HITACHI</displayName>
+	<description>HITACHI</description>
+	
+</nativeIOSApp>

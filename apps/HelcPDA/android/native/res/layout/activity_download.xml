@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/laout_download"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="#D7D7D7"
+	android:orientation="vertical" >
+	
+<!--     title -->
+    <include 
+        android:id="@+id/download_title"
+        layout="@layout/layout_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-3dp"/>
+    <ListView 
+        android:id="@+id/lv_download1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"/>
+</LinearLayout>
+
+

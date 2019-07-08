@@ -1,0 +1,372 @@
+
+/* Stylesheet content from css/MYCSS.css in folder common */
+/* 微调标准样式 */
+/* dataview项目按下时背景颜色 */
+.x-item-pressed, .x-item-pressed, .shortcut_button .x_item_pressed {
+    background: #eee;
+}
+/* 定义右对齐 */
+.align-right {
+    text-align: right;
+}
+/* 输入栏统一右对齐 */
+/*
+.x-form .x-field .x-field-input, 
+.x-form .x-field .x-input-el {
+    text-align: right;
+}
+*/
+/* 输入栏上下间隙加高 */
+.x-field {
+    padding: 5px 0 5px 0;
+}
+/* 输入栏说明统一左对齐 */
+.x-form-fieldset-instructions{
+    text-align:left;
+}
+/* Tab Bar字体加大 */
+.x-tabbar.x-docked-top .x-tab .x-button-label {
+    font-size: 1em;
+}
+/* 微调标准样式（完） */
+
+/* 日立风格Tab Bar */
+/* 图标去掉透明 */
+.hitachi .x-tab {
+    height: 100%;
+}
+.hitachi .x-tab .x-button-icon:before {
+    color: #939393;
+}
+/* 图标颜色 */
+.hitachi .x-tab.x-tab-active .x-button-icon:before, 
+.hitachi .x-tab.x-tab-active .x-button-label, 
+.hitachi .x-tab.x-tab-active .x-badge {
+    color: #E21E2E
+}
+/* 图标去掉描边 */
+.hitachi .x-tab .x-button-icon {
+    -webkit-text-stroke-color: transparent;
+}
+/* 激活项底色 */
+.hitachi .x-tab-active {
+    background: #fff;
+}
+/* 日立风格Tab Bar（完）*/
+
+/* 日立风格主菜单按钮 */
+.mainmenu {
+    max-width: 320px;
+    max-height: 568px;
+    margin: auto;
+}
+.mainmenu .x-scroll-container { background: #fff }
+.mainmenu .x-dataview-item{
+    font-size: 0.9em; 
+    border: none;
+    width: 33%; height:100px; text-align:center;
+    padding: 8px;
+    float: left;
+}
+
+.mainmenu_icon{
+    width:40px; height:40px; line-height:40px;
+    font-family:Pictos; font-size:36px;
+    margin: auto;
+    color: #39393B;
+}
+
+.mainmenu_text{
+    overflow:hidden; white-space:nowrap; text-overflow:ellipsis;
+    text-align: center; font-size:10pt;  text-decoration:bold;
+    margin-top: 8px;
+    color:#E21E2E;
+}
+.disable{
+    color: #ccc;
+}
+/* 日立风格主菜单按钮（完） */
+
+/* 彩色日立风格主菜单按钮 */
+.mainmenu_c {
+    -max-width: 320px;
+    -max-height: 568px;
+    margin: auto;
+}
+.mainmenu_c .x-carousel-indicator span.x-carousel-indicator-active {
+    background-color: #C75C5C;
+}
+.mainmenu_c .x-scroll-container { background: #fff }
+.mainmenu_c .x-dataview-item{
+    font-size: 0.9em; 
+    border: none;
+    /* width: 158px;
+    height:100px; */
+    width: 50%;
+    height:25%;
+    text-align:center;
+    /* padding: 20px; */ 
+    padding:20px 0px 0px 0px;
+    /* margin-bottom:20px; */
+    float: left;
+}
+
+.mainmenu_c_icon{
+    /* width:64px; 
+    height:64px;  */
+    width:50%; 
+    height:25%; 
+    /* line-height:64px; */
+    margin: auto;
+    /* margin-left: 30%; */
+}
+
+.mainmenu_c_text{
+    overflow:hidden; 
+    white-space:nowrap; 
+    text-overflow:ellipsis;
+    text-align: center; 
+    font-size:14pt;  
+    text-decoration:bold;
+    /* margin-top: 8px; */
+    /* margin-left: 5%; */
+	/* width: 150px; */
+    width: 100%;
+    color:#C75C5C;
+}
+.disable{
+    color: #888;
+    opacity: 0.4;
+    -webkit-filter: grayscale(100%);
+}
+
+/* 登录框圆角修饰 */
+.mainmenu_c .x-form-fieldset .x-form-fieldset-inner {
+    border-radius: 4px;
+    margin: auto;
+    width: 95%;
+}
+
+
+/* 底部小按钮 */
+.x-button-bottom,
+.x-button-bottom-round,
+.x-button-bottom-small {
+  border: none;
+  background-color: trasnparent;  
+}
+.x-button-bottom .x-button-label, 
+.x-button-bottom .x-badge,
+.x-button-bottom-round .x-button-label,
+.x-button-bottom-round .x-badge,
+.x-button-bottom-small .x-button-label,
+.x-button-bottom-small .x-badge {
+  color: #6f6f6f;
+}
+.x-button-bottom.x-button-pressing, 
+.x-button-bottom.x-button-pressed,
+.x-button-bottom-round.x-button-pressing,
+.x-button-bottom-round.x-button-pressed,
+.x-button-bottom-small.x-button-pressing,
+.x-button-bottom-small.x-button-pressed {
+  border-color: none;
+  background-color: trasnparent;
+}
+.x-button-bottom.x-button-pressing .x-button-label, 
+.x-button-bottom.x-button-pressing .x-badge, 
+.x-button-bottom.x-button-pressed .x-button-label, 
+.x-button-bottom.x-button-pressed .x-badge,
+.x-button-bottom-round.x-button-pressing .x-button-label,
+.x-button-bottom-round.x-button-pressing .x-badge,
+.x-button-bottom-round.x-button-pressed .x-button-label,
+.x-button-bottom-round.x-button-pressed .x-badge,
+.x-button-bottom-small.x-button-pressing .x-button-label,
+.x-button-bottom-small.x-button-pressing .x-badge,
+.x-button-bottom-small.x-button-pressed .x-button-label,
+.x-button-bottom-small.x-button-pressed .x-badge {
+  color: #C75C5C;
+}
+/* 底部小按钮(完) */
+
+/* 彩色日立风格主菜单按钮（完） */
+
+/* 蓝色确认按钮 */
+.x-button-blue,
+.x-button-blue-round,
+.x-button-blue-small {
+  border-color: #157EFB;
+  background-color: #157EFB;  
+}
+.x-button-blue .x-button-label, .x-button-blue .x-badge,
+.x-button-blue-round .x-button-label,
+.x-button-blue-round .x-badge,
+.x-button-blue-small .x-button-label,
+.x-button-blue-small .x-badge {
+  /*color: #53d769;*/
+  color: #ffffff;
+}
+.x-button-blue.x-button-pressing, .x-button-blue.x-button-pressed,
+.x-button-blue-round.x-button-pressing,
+.x-button-blue-round.x-button-pressed,
+.x-button-blue-small.x-button-pressing,
+.x-button-blue-small.x-button-pressed {
+  border-color: #ABD1FE;
+  background-color: #ABD1FE;
+}
+.x-button-blue.x-button-pressing .x-button-label, .x-button-blue.x-button-pressing .x-badge, .x-button-blue.x-button-pressed .x-button-label, .x-button-blue.x-button-pressed .x-badge,
+.x-button-blue-round.x-button-pressing .x-button-label,
+.x-button-blue-round.x-button-pressing .x-badge,
+.x-button-blue-round.x-button-pressed .x-button-label,
+.x-button-blue-round.x-button-pressed .x-badge,
+.x-button-blue-small.x-button-pressing .x-button-label,
+.x-button-blue-small.x-button-pressing .x-badge,
+.x-button-blue-small.x-button-pressed .x-button-label,
+.x-button-blue-small.x-button-pressed .x-badge {
+  /*color: #cff4d5;*/
+  color: #ffffff;
+}
+/* 蓝色确认按钮(完) */
+
+/* 黑色确认按钮 */
+.x-button-black,
+.x-button-black-round,
+.x-button-black-small {
+  border-color: #39393b;
+  background-color: #39393b;  
+}
+.x-button-black .x-button-label, 
+.x-button-black .x-badge,
+.x-button-black-round .x-button-label,
+.x-button-black-round .x-badge,
+.x-button-black-small .x-button-label,
+.x-button-black-small .x-badge {
+  /*color: #53d769;*/
+  color: #ffffff;
+}
+.x-button-black.x-button-pressing, 
+.x-button-black.x-button-pressed,
+.x-button-black-round.x-button-pressing,
+.x-button-black-round.x-button-pressed,
+.x-button-black-small.x-button-pressing,
+.x-button-black-small.x-button-pressed {
+  border-color: #ABABAE;
+  background-color: #ABABAE;
+}
+.x-button-black.x-button-pressing .x-button-label, 
+.x-button-black.x-button-pressing .x-badge, 
+.x-button-black.x-button-pressed .x-button-label, 
+.x-button-black.x-button-pressed .x-badge,
+.x-button-black-round.x-button-pressing .x-button-label,
+.x-button-black-round.x-button-pressing .x-badge,
+.x-button-black-round.x-button-pressed .x-button-label,
+.x-button-black-round.x-button-pressed .x-badge,
+.x-button-black-small.x-button-pressing .x-button-label,
+.x-button-black-small.x-button-pressing .x-badge,
+.x-button-black-small.x-button-pressed .x-button-label,
+.x-button-black-small.x-button-pressed .x-badge {
+  /*color: #cff4d5;*/
+  color: #ffffff;
+}
+/* 黑色确认按钮(完) */
+
+/* 绿色确认按钮 */
+.x-button-confirm,
+.x-button-confirm-round,
+.x-button-confirm-small {
+  border-color: #53d769;
+  background-color: #53d769;  
+}
+.x-button-confirm .x-button-label, .x-button-confirm .x-badge,
+.x-button-confirm-round .x-button-label,
+.x-button-confirm-round .x-badge,
+.x-button-confirm-small .x-button-label,
+.x-button-confirm-small .x-badge {
+  /*color: #53d769;*/
+  color: #ffffff;
+}
+.x-button-confirm.x-button-pressing, .x-button-confirm.x-button-pressed,
+.x-button-confirm-round.x-button-pressing,
+.x-button-confirm-round.x-button-pressed,
+.x-button-confirm-small.x-button-pressing,
+.x-button-confirm-small.x-button-pressed {
+  border-color: #cff4d5;
+  background-color: #cff4d5;
+}
+.x-button-confirm.x-button-pressing .x-button-label, .x-button-confirm.x-button-pressing .x-badge, .x-button-confirm.x-button-pressed .x-button-label, .x-button-confirm.x-button-pressed .x-badge,
+.x-button-confirm-round.x-button-pressing .x-button-label,
+.x-button-confirm-round.x-button-pressing .x-badge,
+.x-button-confirm-round.x-button-pressed .x-button-label,
+.x-button-confirm-round.x-button-pressed .x-badge,
+.x-button-confirm-small.x-button-pressing .x-button-label,
+.x-button-confirm-small.x-button-pressing .x-badge,
+.x-button-confirm-small.x-button-pressed .x-button-label,
+.x-button-confirm-small.x-button-pressed .x-badge {
+  /*color: #cff4d5;*/
+  color: #ffffff;
+}
+/* 绿色确认按钮(完) */
+
+/* 红色拒绝按钮 */
+.x-button-decline,
+.x-button-decline-round,
+.x-button-decline-small {
+  border-color: #d40000;
+  background-color: #d40000;
+}
+.x-button-decline .x-button-label, .x-button-decline .x-badge,
+.x-button-decline-round .x-button-label,
+.x-button-decline-round .x-badge,
+.x-button-decline-small .x-button-label,
+.x-button-decline-small .x-badge {
+  /*color: #fc3e39;*/
+  color: #ffffff;
+}
+.x-button-decline.x-button-pressing, .x-button-decline.x-button-pressed,
+.x-button-decline-round.x-button-pressing,
+.x-button-decline-round.x-button-pressed,
+.x-button-decline-small.x-button-pressing,
+.x-button-decline-small.x-button-pressed {
+  border-color: #FF6666;
+  background-color: #FF6666;
+}
+.x-button-decline.x-button-pressing .x-button-label, .x-button-decline.x-button-pressing .x-badge, .x-button-decline.x-button-pressed .x-button-label, .x-button-decline.x-button-pressed .x-badge,
+.x-button-decline-round.x-button-pressing .x-button-label,
+.x-button-decline-round.x-button-pressing .x-badge,
+.x-button-decline-round.x-button-pressed .x-button-label,
+.x-button-decline-round.x-button-pressed .x-badge,
+.x-button-decline-small.x-button-pressing .x-button-label,
+.x-button-decline-small.x-button-pressing .x-badge,
+.x-button-decline-small.x-button-pressed .x-button-label,
+.x-button-decline-small.x-button-pressed .x-badge {
+  /*color: #fed1d0;*/
+  color: #ffffff;
+}
+/* 红色拒绝按钮（完）*/
+
+/* 增加图标 */
+/* 地球 */
+.x-tab .x-button-icon.global:before,
+.x-button .x-button-icon.global:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  font-family: "Pictos";
+  content: "G";
+}
+/* 消息 */
+.x-tab .x-button-icon.message:before,
+.x-button .x-button-icon.message:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  font-family: "Pictos";
+  content: "w";
+}
+/* 增加图标（完）*/
+

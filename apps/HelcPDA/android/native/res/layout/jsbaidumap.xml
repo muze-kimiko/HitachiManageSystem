@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/toRelative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray"
+        android:orientation="horizontal" >
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/bmapView"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent" >
+        </com.baidu.mapapi.map.MapView>
+
+        <RelativeLayout
+            android:id="@+id/toolbar"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="@color/white" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/white"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/arroudPeople"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_bg_style"
+                    android:drawableLeft="@drawable/fujin"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:text="附近"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/mine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_bg_style"
+                    android:drawableLeft="@drawable/wode"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:text="我的"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+          
+                <Button
+                    android:id="@+id/choic_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_bg_style"
+                    android:drawableLeft="@drawable/send_card"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:text="打卡"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </RelativeLayout>
+            <RelativeLayout
+            android:id="@+id/toolbar1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_above="@+id/toolbar"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="0dp"
+            android:background="@color/white" 
+            android:visibility="gone"
+            >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/white"
+                android:orientation="horizontal" >
+
+
+                <Button
+                    android:id="@+id/send_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_bg_style"
+                    android:drawableLeft="@drawable/wode"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:text="工号"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/up"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_bg_style"
+                    android:drawableLeft="@drawable/shangban"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:text="上班"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+				
+				<!-- <Button
+                    android:id="@+id/intermediate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                     android:layout_toRightOf="@+id/up"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_bg_style"
+                    android:drawableLeft="@drawable/fujin"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:text="中途打卡"
+                    android:textColor="#000000"
+                    android:textSize="16sp" /> -->
+       
+             <Button
+            android:id="@+id/down"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/intermediate"
+            android:background="@drawable/button_bg_style"
+            android:drawableLeft="@drawable/xiaban"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:text="下班"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+                
+            </LinearLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_zoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/toolbar"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="40dip"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/btn_zoom_in"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:drawableTop="@drawable/fangda"
+                android:background="@drawable/button_bg_style"
+                android:contentDescription="放大" />
+
+            <Button
+                android:id="@+id/btn_zoom_out"
+                android:layout_width="wrap_content"
+                  android:layout_height="40dp"
+                android:layout_below="@id/btn_zoom_in"
+                android:drawableTop="@drawable/suoxiao"
+                android:background="@drawable/button_bg_style"
+                android:contentDescription="缩小" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/my_location"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_above="@+id/rl_zoom"
+            android:layout_alignLeft="@+id/rl_zoom"
+            android:background="@drawable/button_bg_style"
+            android:drawableTop="@drawable/dingwei"
+            android:gravity="bottom"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" />
+
+        
+        
+           <Button
+            android:id="@+id/backtolist"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/button_bg_style"
+            android:drawableTop="@drawable/tuichuditu"
+            android:gravity="top"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp" />
+           
+        <Button
+            android:id="@+id/backtoweb"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginLeft="52dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/button_bg_style"
+            android:drawableTop="@drawable/zhuye"
+            android:gravity="top"
+            android:paddingRight="5dp" />
+        
+     <!--    <Button
+            android:id="@+id/offline"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/button_bg_style"
+            android:drawableTop="@drawable/lixian"
+            android:gravity="top"
+            android:paddingLeft="5dp"
+            /> -->
+            
+            <RelativeLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_above="@+id/rl_zoom"
+                >
+             <LinearLayout 
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:orientation="vertical"
+                 >
+               
+                 
+                 
+             </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/voice_text"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@+id/backtolist"
+                android:layout_centerHorizontal="true"
+                android:background="@color/text_gray"
+                android:text="请点击图像,选择要打点的位置"
+                android:textColor="@color/gray"
+                android:textSize="20dp"
+                android:visibility="gone" />
+
+    </RelativeLayout>
+    
+</LinearLayout>

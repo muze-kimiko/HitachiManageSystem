@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Theme_bgcolor"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" >
+
+            <RelativeLayout style="@style/Theme_banner" >
+
+                <Button
+                    android:id="@+id/btn_back"
+                    style="@style/Theme_button_save" />
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    style="@style/Theme_bannerText" />
+                
+                 <Button
+                    android:id="@+id/btn_view"
+                    style="@style/Theme_button"
+                    android:layout_toLeftOf="@+id/btn_submit"
+                    android:text="查看" />
+                 <Button
+                    android:id="@+id/btn_submit"
+                    style="@style/Theme_button"
+                    android:layout_alignParentRight="true"
+                    android:text="提交" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/Theme_outLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/linearLayout2"
+            android:layout_below="@+id/linearLayout1"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical" >
+
+            <!-- start -->
+
+            <TabHost
+                android:id="@android:id/tabhost"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical" >
+
+                    <FrameLayout
+                        android:id="@android:id/tabcontent"
+                        android:layout_width="fill_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" >
+                    </FrameLayout>
+
+                    <HorizontalScrollView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0" >
+
+                        <TabWidget
+                            android:id="@android:id/tabs"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </HorizontalScrollView>
+                </LinearLayout>
+            </TabHost>
+            <!-- end -->
+            <!--
+	        <LinearLayout
+	            android:id="@+id/ll_includeItem"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content" >
+	            
+	            <ListView
+                    android:id="@+id/lv_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp"
+                    android:background="@drawable/linearlayout_normal"
+                    android:fadingEdge="none" >
+                </ListView>
+                
+	        </LinearLayout>
+            -->
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            style="@style/Theme_foot"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" >
+
+            <!--
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+                
+                <Button
+                    android:id="@+id/btn_homepage"
+                    style="@style/Theme_button_homepage" />
+                
+                <Button
+                    android:id="@+id/btn_explain_book"
+                    style="@style/Theme_button"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:layout_toLeftOf="@+id/btn_record"
+                    android:text="指示" />
+                
+                <Button
+                    android:id="@+id/btn_record"
+                    style="@style/Theme_button"
+                    android:layout_alignParentRight="true"
+                    android:text="换件" />
+            </RelativeLayout>
+            -->
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

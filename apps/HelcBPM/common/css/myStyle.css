@@ -1,0 +1,132 @@
+/* -------------------------
+    	 公共 start
+------------------------- */
+/* 字体 默认颜色 */
+.x-button-normal .x-button-label, .x-button-normal .x-badge, .x-button-round .x-button-label, .x-button-round .x-badge, .x-button-small .x-button-label, .x-button-small .x-badge, .x-button-forward .x-button-label, .x-button-forward .x-badge{color: #157efb;}
+
+/* 其他页toolbar start */
+.x-toolbar.x-docked-top{ border-radius:0 !important;}
+/* 其他页toolbar over */
+
+.x-picker-bar { background-color:#157efb; opacity:0.3;filter:alpha(opacity=50); }
+
+/* tabbar start */
+/* .x-tabbar.x-docked-top .x-tab{background-color: rgba(1, 177, 164, 1);}*/
+.x-tabbar.x-docked-top .x-tab{background-color: #ffffff;}
+/* tabbar over */
+/* 底部 tabbar start */
+/* 底部 tabbar over */
+.helcbpm-bgColor-white{background-color:#fff !important;}   /* 背景颜色 白 */
+.helcbpm-bgColor-red{background-color:#e60020 !important;}   /* 背景颜色 红 */
+.helcbpm-bgColor-green{background-color:#3aaeae !important;}   /* 背景颜色 绿 */
+.helcbpm-bgColor-blue{background-color:#65c2df !important;}   /* 背景颜色 蓝 */
+.helcbpm-bgColor-gray{background-color:#efeff4 !important;}   /* 背景颜色 灰 */
+.helcbpm-fontColor-red{color:#e60020 !important}    /* 字体颜色 红 */
+.helcbpm-fontColor-orange{color:#fe9338 !important} /* 字体颜色 橙 */
+.helcbpm-fontColor-green{color:#3aaeae !important}  /* 字体颜色 绿 */
+.helcbpm-fontColor-blue{color:#65c2df !important}   /* 字体颜色 蓝 */
+.helcbpm-fontColor-gray{color:#9e9e9e !important}   /* 字体颜色 灰 */
+.helcbpm-fontColor-dullGray{color:#6d6d6d !important}   /* 字体颜色 深灰 */
+
+.x-scroll-bar-x.active {width: 1px;}  
+.x-scroll-bar-y.active {width: 1px;}
+
+/*
+.x-field {border-bottom: solid 1px #f5f5f6;}
+.x-form-fieldset .x-field:before {
+  border-bottom: solid 0px #dbdbe0;
+}
+*/
+
+.x-form-label span{font-size: 1em;}
+.x-input-el,.x-form-label{padding: 0.7em;}
+
+.x-form-fieldset-title{margin:1em 0.5em 0.5em 1em;}
+
+/* -------------------------
+    	 登录 start
+------------------------- */
+.helcbpm-login .x-scroll-container{background-image:url(../images/login_bg.png);background-size:100%;background-color:#fff; background-repeat:no-repeat}
+.helcbpm-login .helcbpm-login-logo{ margin:45px auto 45px auto; width:177px; height:50px;}
+.helcbpm-login .helcbpm-login-btn{ margin:20px 0 0 0;}
+.helcbpm-login .helcbpm-login-from{ margin:0 70px;}
+.helcbpm-login .helcbpm-login-bottom{ margin-top:40px;height:40px;}
+.helcbpm-login .helcbpm-login-bottom  .helcbpm-login-bottomText{text-align: center;font-size: 30px;color: #6d6d6d;}
+.helcbpm-login .x-form-fieldset .x-form-fieldset-inner{border:0;background-color:inherit;}
+.helcbpm-login .x-form-fieldset .x-field:before{border-bottom: solid 1px #d3e0e6;left:0;}
+.helcbpm-login .x-button-normal{height:42px;background-color:#157efb;}
+.helcbpm-login .x-button-normal, .x-button-round, .x-button-small, .x-button-forward{border-color:#01b1a4;}
+.helcbpm-login .x-button-normal .x-button-label{color:#fff;}
+/* -------------------------
+	     登录 over
+------------------------- */
+
+
+/* ----- 新增图标 start----- */
+@font-face {font-family: 'icomoon';src:url('fonts/icomoon.eot?-gkb9o');src:url('fonts/icomoon.eot?#iefix-gkb9o') format('embedded-opentype'),url('fonts/icomoon.ttf?-gkb9o') format('truetype'),url('fonts/icomoon.woff?-gkb9o') format('woff'),url('fonts/icomoon.svg?-gkb9o#icomoon') format('svg');font-weight: normal;font-style: normal;}
+.x-tab .x-button-icon.fa::before, .x-button .x-button-icon.fa::before {font-family: FontAwesome;}
+.x-tab .x-button-icon.ln::before, .x-button .x-button-icon.ln::before {font-family: LiftNet;}
+/* ----- 新增图标 over----- */
+
+.x-picker-right {text-align: center;}
+
+/* Loading框  */
+.x-loading-spinner > span.x-loading-top{background-color:rgba(21, 126, 251, 0.99)}
+.x-loading-spinner > span.x-loading-top::after{background-color:rgba(21, 126, 251, 0.9)}
+.x-loading-spinner > span.x-loading-left::before{background-color:rgba(21, 126, 251, 0.8)}
+.x-loading-spinner > span.x-loading-left{background-color:rgba(21, 126, 251, 0.7)}
+.x-loading-spinner > span.x-loading-left::after{background-color:rgba(21, 126, 251, 0.6)}
+.x-loading-spinner > span.x-loading-bottom::before{background-color:rgba(21, 126, 251, 0.5)}
+.x-loading-spinner > span.x-loading-bottom{background-color:rgba(21, 126, 251, 0.4)}
+.x-loading-spinner > span.x-loading-bottom::after{background-color:rgba(21, 126, 251, 0.35)}
+.x-loading-spinner > span.x-loading-right::before{background-color:rgba(21, 126, 251, 0.3)}
+.x-loading-spinner > span.x-loading-right{background-color:rgba(21, 126, 251, 0.25)}
+.x-loading-spinner > span.x-loading-right::after{background-color:rgba(21, 126, 251, 0.2)}
+.x-loading-spinner > span.x-loading-top::before{background-color:rgba(21, 126, 251, 0.15)}
+.x-mask .x-mask-inner .x-mask-message {
+	/* color: #157efb; */
+	color: #157efb;
+}
+.x-mask .x-mask-inner {
+	/* background: rgba(0, 0, 0, 0.25); */
+	background: #FFFFFF;
+}
+/* Loading框  */
+
+
+
+/*#region textarea*/
+.x-field-textarea .x-form-field{
+	line-height:29px;
+	min-height:29px;
+	height:34px;
+	overflow-y:hidden;
+	border-radius:6px;
+/*	padding:0.4em 5px 0 0.2em;*/
+}
+.x-field-textarea{
+	min-height:0;
+}
+.x-field-textarea .x-field-input{
+	padding-right:0 !important;
+}
+
+.rightfield{text-align: right;}
+.right-blue-field{text-align: right;-webkit-text-fill-color:#157efb !important;}
+.blue-field{-webkit-text-fill-color:#157efb !important;}
+
+.x-tab .x-button-icon.quit:before,
+.x-button .x-button-icon.quit:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  font-family: "Pictos";
+  content: "Q";
+}
+
+.scan-button .x-button-normal .x-button-label{color:#157efb;font-size:1.4em;}
+.red-button .x-msgbox .x-msgbox-buttons .x-toolbar-inner .x-button .x-button-label{color:red;}
+.font_white{color:white}

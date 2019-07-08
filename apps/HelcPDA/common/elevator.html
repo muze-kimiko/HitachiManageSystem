@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>电梯查询</title>
+</head>
+<body>
+	<div data-role="page" id="elevator" class="elevator">
+		<div data-role="header" data-position="fixed" data-tap-toggle="false" class="header" >
+			<div data-type="horizontal"  class="ui-btn-left">
+				<a href="#anylink" id="elevator-back" data-role="button" data-iconpos="notext" data-rel="back" data-theme="f" data-icon="custarrow-l">后退</a>
+				<a href="javascript:void(0);" onclick="home(2);" data-role="button" data-iconpos="notext" data-theme="f" data-icon="custarrow-home">主页</a>
+			</div>
+			<h1 class="pagetitle" style="font-size:15px;">电梯信息</h1>
+			<div style="-moz-user-select:none;background-color:#e4e4e4;color:#000;height:55px;padding-top:5px;">
+			<div style="width:95%;height:50px;border-radius:8px;margin:0 auto;background-color:#fff; " >
+			 		<table>
+			 		<tr>
+				 		<td align="right" style="padding-left:5px;padding-right:5px;"><input type="text" name="txtDeviceNo" id="txtDeviceNo" placeholder="请输入3位或以上工号"></td>
+				 		<td align="center"><a id="btnsearch" href="javascript:void(0)"  data-role="button" data-icon="search">查询</a></td>
+			 		</tr>
+			 		</table>
+		    </div>	
+		    </div>	
+		</div>
+		<div data-role="content" style="background-color:#E4E4E4;padding:50px  0px 0px;">
+		    <div class="Mcstatus" id="SearchResult" width="100%">
+		    </div>
+		    <div id="div-more" style="display:none;">
+				<a id='more' href="javascript:void(0);" data-role="button">更多</a>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="a" data-tap-toggle="false" style="position:fixed;" data-hide-during-focus="false">
+			<div data-role="navbar" id="navbar-custorm">
+	      		<ul>
+	      			<li data-icon="false" id="footer-activetest"><a href="#" data-icon="myactivetest">激活调试</a></li>
+		            <li data-icon="false" id="footer-realtime"><a href="#" data-icon="myeye">远程监视</a></li>
+		            <li data-icon="false" id="footer-readdata"><a href="#" data-icon="mydatarw">数据读取</a></li>
+		            <li data-icon="false" id="footer-faultfile"><a href="#" data-icon="myfaultfile">故障存档</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div data-role="popup" id="popupElevatorDetail" data-tolerance="0,0" class="elevatordetailpop" class="ui-content ui-popup " data-position-to="window" data-overlay-theme="b" data-theme="a" style="min-width:100%;min-heigth:100%;height:746px;">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;" >
+			<div data-type="horizontal" class="ui-btn-left">
+				<a href="#anylink" data-role="button" data-iconpos="notext"  data-icon="custarrow-l" data-theme="f">后退</a>
+				<a href="javascript:void(0);" onclick="home(2);" data-role="button" data-iconpos="notext" data-icon="custarrow-home" data-theme="f">主页</a>
+			</div>
+				<h1  class="pagetitle" style="font-size:15px;">电梯信息明细</h1>
+			</div>
+			<div data-role="content" style="padding:0px;height:100%;">
+				
+				<div class="swiper-container" style="heigth:180px;text-align:center;">
+   					
+			        <div class="swiper-wrapper" style="heigth:180px;">
+			           
+					<div class="swiper-slide">
+						<table width="100%" border="0">
+						    <tr style="width:100%;text-align:center;font-weight:bold">
+	    						<td id="btnbasic" style="width:50% " class="tabfocus">
+	     						基本信息
+	    						</td>
+	    						<td id="btndetail" style="width:50%" class="tabblur">
+	     						运行信息
+	    						</td>
+	   						</tr>
+					  	</table>
+					  	<div id="basic">
+							<div id="divmainpop" >
+								<table id="tbmain">
+									<tr>
+										<td rowspan="4" class="dianti" style="padding-left:8px;"><img id="dianti"  src="images/elevator/futi.png" ></td>
+										<td class="rowone" colspan="2" id="lbDeviceNo"></td>
+										<td class="rowone" colspan="2" id="lbModelName"></td>
+									</tr>
+									<tr>
+										<td class="rowtwo" colspan="2" id="lbCityName" style="padding-left:8px;"></td>
+										<td class="rowtwo" colspan="2" id="lbCompanyName"></td>
+									</tr>
+									<tr>
+										<td style="width:22px;padding-left:8px;"><img id="weibao" src="images/elevator/zaibao.png" ></td>
+										<td class="rowthree" id="lbWeibao"></td>
+										<td style="width:22px;"><img id="zuangtai" src="images/elevator/unnormal.png" ></td>
+										<td class="rowthree" id="lbZuangtai"></td>
+									</tr>
+									<tr>
+										<td colspan="4" class="rowfour" id="lbAddress" style="line-height:1.5em;"></td>
+									</tr>
+								</table>
+								<table id="tbperson" style="color:#F68B1F;">
+									<tr>
+										<td valign="middle" style="padding-top:5px;padding-left:8px;"><img  src="images/elevator/telphone_icon.png" ></td>
+										<td id="lbStaffMobile" width="40%"></td>
+										<td id="lbStaffName" width="20%"></td>
+										<td id="lbMaintenanceName" width="30%"></td>
+									</tr>
+								</table>			
+								<table id="tbdetail">
+									<tr>
+										<td style="vertical-align:top;padding-left:8px;">客户名称</td>
+										<td id="lbCustomerName" style="vertical-align:top;line-height:1.1em;"></td>
+									</tr>
+									<tr>
+										<td width="100px" style="padding-left:8px;">保养类型</td>
+										<td id="lbMainTypeName"></td>
+									</tr>
+									<tr>
+										<td width="100px" style="padding-left:8px;">合&nbsp;&nbsp;同&nbsp;&nbsp;号</td>
+										<td id="lbAGREE_NUM"></td>
+									</tr>
+									<tr>
+										<td style="padding-left:8px;">合同类型</td>
+										<td id="lbAGREE_TYPE"></td>
+									</tr>
+									<tr>
+										<td style="padding-left:8px;">项目类型</td>
+										<td id="lbProjectType"></td>
+									</tr>
+									<tr>
+										<td style="padding-left:8px;">合同服务时间</td>
+										<td id="lbServiceDate"></td>
+									</tr>
+									<tr>
+										<td style="padding-left:8px;">电&nbsp;&nbsp;话&nbsp;&nbsp;卡</td>
+										<td id="lbPhone"></td>
+									</tr>
+									<tr>
+										<td style="padding-left:8px;">遥监录入时间</td>
+										<td id="lbCreatedDate"></td>
+									</tr>
+									<tr>
+										<td style="padding-left:8px;">主板程序版本</td>
+										<td id="lbMainVersion"></td>
+									</tr>
+									<tr>
+										<td style="padding-left:8px;">遥监终端版本</td>
+										<td id="lbSoftVersion"></td>
+									</tr>
+									<tr>
+										<td style="padding-left:8px;">用途</td>
+										<td id="lbPurpose"></td>
+									</tr>
+									<tr>
+										<td style="padding-left:8px;">层站</td>
+										<td id="lbFloor"></td>
+									</tr>
+									<tr>
+										<td style="padding-left:8px;">载重</td>
+										<td id="lbPZZZ"></td>
+									</tr>
+									<tr>
+										<td style="padding-left:8px;">梯型</td>
+										<td id="lbIsElevator"></td>
+									</tr>
+									<tr>
+										<td style="padding-left:8px;" id="lbldate">遥年检日期</td>
+										<td id="lbInspectionDate"></td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div id="detail" class="swiper-slide">
+						<table width="100%" border="0">
+						    <tr style="width:100%;text-align:center;font-weight:bold">
+	    						<td id="btnbasic" onclick="basicShow()" style="width:50% " class="tabblur">
+	     						基本信息
+	    						</td>
+	    						<td id="btndetail" onclick = "detailShow()" style="width:50%" class="tabfocus">
+	     						运行信息
+	    						</td>
+	   						</tr>
+					  	</table>
+						<div data-role="collapsibleset" data-theme="a" data-inset="true">
+						
+							
+							<div data-role="collapsible">
+	   							<h2 style="color:#2B89D3;">运行信息</h2>
+						 		<ul data-role="listview" >
+							 		 <li>
+								    	<table style="width:100%;font-weight:100px;">
+								    		<tr>
+										 		<td>数据更新时间:<span id="lbDataUpdateTime" style="color:#F68B1F;"></span></td>
+										 	</tr>
+										 	<tr style="height:30px;line-height:30px;">
+										 		<!-- <td style="width:50%">上月运行次数:<span style="color:#F68B1F;" id="lbPreRunTimes">1000</span></td> -->
+										 		<td>累计运行次数:<span style="color:#F68B1F;" id="lbRunTimes"></span></td>
+										 	</tr>
+										 	<tr>
+										 		<td >累计运行时间:<span id="lbRunTime" style="color:#F68B1F;"></span></td>
+										 		
+										 	</tr>
+									 	</table>
+									</li>
+								</ul>
+						 	</div>
+						 	 
+						 	 
+							<div data-role="collapsible">
+								<h2>故障统计</h2>
+						 		<ul data-role="listview">
+							 		<li>
+								 		<table style="width:100%;font-weight:100;">
+								 			<tr>
+										 		<td>数据更新时间:<span id="lbDataUpdateTime2" style="color:#F68B1F;"></span></td>
+										 	</tr>
+										 	<tr>
+										 		<td>当月故障数:<span style="color:#F68B1F;" id="lbMonthFault"></span></td>
+										 	</tr>
+										 	<tr>
+										 		<td>当月困人故障数:<span style="color:#F68B1F;" id="lbTroubleFault"></span></td>
+										 	</tr>
+									 	</table>
+							 		</li>
+							 		<li data-role="list-divider" style="height:12px;line-height:12px;font-size:12px;">当月多发故障类别及次数</li>
+							 		<li>
+							 		<!-- 
+							 		<table style="width:100%;font-size:10px;">
+							 			<tr>
+							 				<td ><span id="lbFaultTrap" style="padding:1px;border:border:1px solid #ccc;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;困人故障</td>
+							 				<td ><span id="lbFaultA" style="padding:1px;border:border:1px solid #ccc;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;A类</td>
+							 				<td ><span id="lbFaultB" style="padding:1px;border:border:1px solid #ccc;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;B类</td>
+							 				<td ><span id="lbFaultC" style="padding:1px;border:border:1px solid #ccc;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;C类</td>
+							 			</tr>
+							 			<tr><td colspan="4"></td></tr>
+							 			<tr>
+							 				<td ><span id="lbFaultStop" style="padding:1px;border:border:1px solid #ccc;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;不能起动</td>
+							 				<td ><span id="lbFaultSafety" style="padding:1pxborder:border:1px solid #ccc;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;安全装置动作</td>
+							 				<td ><span id="lbFaultDoor" style="padding:1px;border:border:1px solid #ccc;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;开关门异常</td>
+							 				<td></td>
+							 			</tr>
+								 	</table>
+								 	-->
+								 	<table style="width:100%;font-size:10px;">
+							 			<tr>
+							 				<td ><span id="lbFaultTrap" style="padding:1px;border:border:1px solid #ccc;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;困人故障</td>
+							 				<td ><span id="lbFaultStart" style="padding:1px;border:border:1px solid #ccc;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;不能起动故障</td>
+							 				<td ><span id="lbFaultExection" style="padding:1px;border:border:1px solid #ccc;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;电源系统异常</td>
+							 			</tr>
+							 			<tr><td colspan="3"></td></tr>
+							 			<tr>
+							 				<td ><span id="lbFaultStop" style="padding:1px;border:border:1px solid #ccc;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;运行中急停</td>
+							 				<td ><span id="lbFaultSafety" style="padding:1pxborder:border:1px solid #ccc;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;安全装置动作</td>
+							 				<td ><span id="lbFaultRun" style="padding:1px;border:border:1px solid #ccc;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;运行故障</td>
+							 				<td></td>
+							 			</tr>
+								 	</table>
+								 	
+							 		<div id="faultchart"></div></li>
+								</ul>
+							</div>
+							<!-- 
+							<div data-role="collapsible">
+	   							<h2>多发故障</h2>
+						 		<ul data-role="listview" id="listview-multipleFaultInfo">
+							 		<li>今日暂无记录</li>
+								</ul>
+						 	</div>
+						 	 -->
+						 	 
+							<div data-role="collapsible">
+	   							<h2>钢丝绳</h2>
+						 		<ul id="wirerope" data-role="listview">
+						 		
+						 		</ul>
+						 	</div>
+					 	</div>
+					 </div>
+						
+			        </div>
+			    	<div class="pagination" id="pagination"></div>
+			        
+			    </div>
+			    
+			
+			
+			
+			</div>
+		</div>
+		
+		<div data-role="popup" id="popupRealtimeDialog" data-overlay-theme="b" data-theme="a" data-dismissible="false">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;padding:0;margin:0;" >
+				<h1>提示</h1>
+			</div>
+		    <div data-role="content" style="padding-top:0px;margin-top:0px;">
+		        <p>该梯遥监异常，无法监控</p>
+				<div data-role="navbar">
+			      <ul>
+			        <li><a href="#" data-theme="a" data-rel="back">返回</a></li>
+			      </ul>
+			    </div>
+		    </div>
+		</div>
+	</div>
+</body>
+</html>

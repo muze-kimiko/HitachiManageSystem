@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+    Licensed Materials - Property of IBM
+    5725-I43 (C) Copyright IBM Corp. 2011, 2013. All Rights Reserved.
+    US Government Users Restricted Rights - Use, duplication or
+    disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<wl:adapter xmlns:wl="http://www.ibm.com/mfp/integration" xmlns:sql="http://www.ibm.com/mfp/integration/sql" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SQLAdapter_erp">
+    <!--This adapter has been upgraded, For more information about the changes, see the "Adapter timeout and concurrency" topic in the product Knowledge Center.-->
+    <displayName>SQLAdapter_erp</displayName>
+	<description>SQLAdapter_erp</description>
+	<connectivity>
+		<connectionPolicy xsi:type="sql:SQLConnectionPolicy">
+			<!-- Example for using a JNDI data source, replace with actual data source name -->
+			<!-- <dataSourceJNDIName>java:/data-source-jndi-name</dataSourceJNDIName> -->
+			
+			<!-- Example for using MySQL connector, do not forget to put the MySQL connector library in the project's lib folder -->
+			<dataSourceDefinition>
+				<driverClass>net.sourceforge.jtds.jdbc.Driver</driverClass>
+				<!--测试机：10.96.128.250 heds_user  正式机：10.96.129.112 pda_user pdauser-->
+				<url>jdbc:jtds:sqlserver://10.96.129.112:1433/Neuxa.HEDS.LDS;useLOBs=false</url>
+			    <user>pda_user</user>
+    			<password>pdauser</password> 
+			</dataSourceDefinition>
+		</connectionPolicy>
+		<!-- 连接 100 -->
+		<!--<loadConstraints maxConcurrentConnectionsPerNode="100" /> Element loadConstraint was removed as it is no longer supported. For more information, see the "Adapter timeout and concurrency" topic in the product Knowledge Center.-->
+	</connectivity>
+
+	<!-- Replace this with appropriate procedures -->
+	<procedure name="procedure1"/>
+	<procedure name="procedure2"/>
+    <procedure name="procedure3"/>
+</wl:adapter>

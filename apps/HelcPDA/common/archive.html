@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+    	<head>
+    		<meta charset="UTF-8">
+    		<title>Archive</title>
+<script src="jqueryMobile/jquery.mobile-1.4.5.js"></script>
+<link href="jqueryMobile/jquery.mobile.theme-1.4.5.min.css"
+	rel="stylesheet">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<link href="jqueryMobile/jquery.mobile.theme-1.4.5.min.css"
+	rel="stylesheet">
+</head>
+    	<body>
+	<div data-role="page" id="archive">
+		<div data-role="header" data-position="fixed" style="background:#2B89D3;color:#ffffff;height:40px;" >
+			<h1  class="pagetitle" style="font-size:15px;">归档</h1>
+		</div>
+		<div data-role="content" style="padding: 0px">
+            <div class="Mcstatus" id="ElevatorDetail" width="100%">
+				<table  class="jhliftdata_dteail" width="100%" border="0">
+				  <tr>
+				    <th width="35%" scope="row" style="text-align:left;padding-left:5px;">发报类型</th>
+				    <td width="65%" style="padding-right:8px;">
+				 <select name="ddlIssueType" id="ddlIssueType">
+					<option value="5bfc0f01-ecf4-4720-b51e-1c64d4395a2b">处理中</option>
+					<option value="b64391ec-56c9-462a-8afb-9a870d94e252">作业发报(维保)</option>
+					<option value="5d5e6399-045a-4b49-9b0e-2fff8a3511af">作业发报(客户)</option>
+					<option value="66e981aa-e1b1-4415-87d6-b706f74ea5ca">不处理发报</option>
+				</select>
+				</td>
+				  </tr>
+				  <tr>    
+				    <th scope="row" style="text-align:left;padding-left:5px;">处理记录</th>
+				    <td style="padding-right:8px;"><textarea id="txtRecord"></textarea></td>
+				  </tr>
+				</table>
+            </div>
+            <div data-role="controlgroup" data-type="horizontal" style="text-align:center;">
+            <a href="#" data-role="button" data-icon="back"  data-rel="back" style="background-color:red;color:#fff" id="back">取消</a>
+			   <a href="javascript:void(0)" onclick="SaveArchive()" data-role="button" data-icon="info" style="background-color:#3388cc;color:#fff;">保存</a>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+
+</html>
+

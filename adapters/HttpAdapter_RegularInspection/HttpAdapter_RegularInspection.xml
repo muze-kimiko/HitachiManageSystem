@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Licensed Materials - Property of IBM
+    5725-I43 (C) Copyright IBM Corp. 2011, 2013. All Rights Reserved.
+    US Government Users Restricted Rights - Use, duplication or
+    disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<wl:adapter name="HttpAdapter_RegularInspection"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:wl="http://www.ibm.com/mfp/integration"
+	xmlns:http="http://www.ibm.com/mfp/integration/http">
+
+	<displayName>HttpAdapter_RegularInspection</displayName>
+	<description>HttpAdapter_RegularInspection</description>
+	<connectivity>
+		<connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
+		    <!-- 正式机地址  http://10.96.128.96:8080  -->
+			<!-- 测试机地址  http://10.96.128.70:8080  -->
+			<protocol>http</protocol>
+			<domain>10.96.128.70</domain>
+			<port>8080</port>
+			<connectionTimeoutInMilliseconds>120000</connectionTimeoutInMilliseconds>
+			<socketTimeoutInMilliseconds>120000</socketTimeoutInMilliseconds>
+			<maxConcurrentConnectionsPerNode>200</maxConcurrentConnectionsPerNode>
+			<!-- Following properties used by adapter's key manager for choosing specific certificate from key store  
+			<sslCertificateAlias></sslCertificateAlias> 
+			<sslCertificatePassword></sslCertificatePassword>
+			-->		
+		</connectionPolicy>
+	</connectivity>
+
+	<procedure name="getFeed"/>
+	<procedure name="getFeedFiltered"/>
+	
+	<procedure name="QueryAssetNumber"/>
+	<procedure name="InsertCheckHeader"/>
+	<procedure name="QueryMaintenancePerson"/>
+	<procedure name="QueryCheckList"/>
+	<procedure name="InsertCheckLineAndAtt"/>
+	<procedure name="UpdateCheckLineAndAtt"/>
+	<procedure name="QueryCheckHeaderAndLineRange"/>
+	<procedure name="QueryCheckHeaderAndLine"/>
+	<procedure name="UpdateCheckHeader"/>
+	<procedure name="QueryCheckAtt"/>
+	<procedure name="DeleteCheckAtt"/>
+	<procedure name="SubmitCheckHeader"/>
+	<procedure name="DeleteCheckHeader"/>
+	<procedure name="QueryLastCheckInfo"/>
+	
+</wl:adapter>

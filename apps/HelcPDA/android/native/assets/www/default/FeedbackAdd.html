@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>新增意见反馈</title>
+</head>
+<body>
+	<div data-role="page" id="FeedbackAdd">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" style="background:#2B89D3;color:#ffffff;height:40px;">
+			<div data-type="horizontal"  class="ui-btn-left">
+				<a href="#" data-role="button" data-icon="custarrow-l" data-iconpos="notext" data-rel="back" data-theme="f">后退</a>
+			</div>
+			<h1 class="pagetitle" style="font-size:15px;"></h1>
+			<div data-type="horizontal" class="ui-btn-right">
+			<a href="javascript:void(0);" id="btnSave" data-role="button" data-icon="custarrow-ok" data-iconpos="notext" data-theme="f">保存</a>
+			</div>
+		</div>
+		<div data-role="content">
+			<form name="myForm">
+			<ul data-role="listview">
+			 	<li data-role="list-divider" style="text-align:left;font-weight:normal;"><font style="color:red;font-weight:bold;">*</font>问题描述(至少5字)</li>
+			    <li>
+					<textarea name="description" id="description" rows="8" cols="40" placeholder="请描述遇到的问题，以便我们及时为你解决问题描述(必填：最少5个字，最多200字)"></textarea>
+			    </li>
+			    <li data-role="list-divider"></li>
+			    <li>
+				    添加照片
+          		<p style="padding:0px;margin:0px;"> 
+	          		<img style="float:left;" src="images/camera.png" data-sheet="takephoto-actionsheet" data-role="actionsheet">
+	          		<img id="cameraImage" style="float:left;width:60px;height:60px;display:none;"  data-role="actionsheet">
+	          		<span style="display:none;background-color:#ededed;padding:5px 5px;cursor:pointer" id="img-remove">X</span>
+          		</p>
+			    </li>
+			    <li data-role="list-divider"></li>
+			    <li>
+					联系方式<input name="contact" id="contact" type="tel" value="" placeholder="请输入有效手机号码">
+			    </li>
+			</ul> 
+			</form>
+			<div id="takephoto-actionsheet">
+				<a data-role="button" href="#" id="takephoto">拍照</a>
+				<a data-role="button" href="#" id="getpicture">相册</a>
+				<br/>
+				<a data-role="button" type="reset">取消</a> 
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>

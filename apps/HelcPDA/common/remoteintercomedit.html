@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>远程对讲数据编辑</title>
+</head>
+<body>
+<div data-role="page" id="remoteintercomedit" class="page">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" class="header" >
+		<div data-type="horizontal"  class="ui-btn-left">
+			<a href="#anylink" id="remoteintercomedit-back" data-role="button" data-iconpos="notext" data-rel="back" data-theme="f" data-icon="custarrow-l">后退</a>
+			<a href="javascript:void(0);" onclick="home(1);" data-role="button" data-iconpos="notext" data-theme="f" data-icon="custarrow-home">主页</a>
+		</div>
+		<h1>远程对讲参数设置</h1>
+		<div data-type="horizontal" class="ui-btn-right">
+		<a href="remoteintercomsearch.html" id="btnSearch"  data-inline="true" data-rel="dialog" data-transition="pop" data-iconpos="notext" data-role="button" data-icon="custarrow-search" data-theme="f">搜索</a>
+		</div>
+	 	<div id="info" style="padding:0px 0px;width:100%;background-color:#e4e4e4;position:fixed;color:#000;">
+	 		<ul data-role="listview" data-inset="true" data-icon="edit">
+				<li>
+					<a href="#" id="btnEditHost">
+					<h2 ><span id="txtHostId" style="display:none;"></span><span id="txtHostCode"></span></h2>
+					<p>&nbsp;<span id="txtHostPosition"></span></p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div id="content" data-role="content" data-tolerance="0,0" style="padding-top:85px;">
+		<ul data-role="listview" id="listview">
+			<li id="li-divider-00001" data-role="list-divider" style="text-align:left;">
+				<span>[01]<img style="vertical-align:middle;" alt="" src="images/item.png"></span>
+				<span style="vertical-align:middle;" id="subkey-00001">00001</span> 
+				<span style="float:right;"><input type="checkbox" name="install-00001" id="install-00001" checked="checked" data-role="none">已加装</span>
+			</li>
+			<li id="li-00001" onclick="RemoteICModule.showEditSubkeyUI(this);" style="padding:0px;">
+			  <a href="#" >
+			  	  <span id="subid-00001" style="display:none;"></span>
+				  <p>工号：<span id="deviceno-00001"></span></p>
+				  <p>位置：<span id="subkeyposition-00001"></span></p>
+				  <p>备注：<span id="remark-00001"></span></p>
+			  </a>
+			</li>
+			<li style="padding:2px 0px;"></li>
+			<li id="li-divider-00010" data-role="list-divider" style="text-align:left;">
+				<span>[02]<img style="vertical-align:middle;" alt="" src="images/item.png"></span>
+				<span id="subkey-00010">00010</span> 
+				<span style="float:right;"><input type="checkbox" name="install-00010" id="install-00010" data-role="none">已加装</span>
+			</li>
+			<li id="li-00010" onclick="RemoteICModule.showEditSubkeyUI(this);" style="padding:0px;">
+			  <a href="#" >
+				  <span id="subid-00010" style="display:none;"></span>
+				  <p>工号：<span id="deviceno-00010"></span></p>
+				  <p>位置：<span id="subkeyposition-00010"></span></p>
+				  <p>备注：<span id="remark-00010"></span></p>
+			  </a>
+			</li>
+			<li style="padding:2px 0px;"></li>
+			<li id="li-divider-00011" data-role="list-divider" style="text-align:left;">
+				<span>[03]<img style="vertical-align:middle;" alt="" src="images/item.png"></span>
+				<span id="subkey-00011">00011</span> 
+				<span style="float:right;"><input type="checkbox" name="install-00011" id="install-00011" data-role="none">已加装</span>
+			</li>
+			<li id="li-00011" onclick="RemoteICModule.showEditSubkeyUI(this);" style="padding:0px;">
+			  <a href="#" >
+			  	  <span id="subid-00011" style="display:none;"></span>
+				  <p>工号：<span id="deviceno-00011"></span></p>
+				  <p>位置：<span id="subkeyposition-00011"></span></p>
+				  <p>备注：<span id="remark-00011"></span></p>
+			  </a>
+			</li>
+			<li style="padding:2px 0px;"></li>
+			<li id="li-divider-00100" data-role="list-divider" style="text-align:left;">
+				<span>[04]<img style="vertical-align:middle;" alt="" src="images/item.png"></span>
+				<span id="subkey-00100">00100</span> 
+				<span style="float:right;"><input type="checkbox" name="install-00100" id="install-00100" data-role="none">已加装</span>
+			</li>
+			<li id="li-00100" onclick="RemoteICModule.showEditSubkeyUI(this);" style="padding:0px;">
+			  <a href="#" >
+			  	  <span id="subid-00100" style="display:none;"></span>
+				  <p>工号：<span id="deviceno-00100"></span></p>
+				  <p>位置：<span id="subkeyposition-00100"></span></p>
+				  <p>备注：<span id="remark-00100"></span></p>
+			  </a>
+			</li>
+			<li style="padding:2px 0px;"></li>
+			<li id="li-divider-00101" data-role="list-divider" style="text-align:left;">
+				<span>[05]<img style="vertical-align:middle;" alt="" src="images/item.png"></span>
+				<span id="subkey-00101">00101</span> 
+				<span style="float:right;"><input type="checkbox" name="install-00101" id="install-00101" data-role="none">已加装</span>
+			</li>
+			<li id="li-00101" onclick="RemoteICModule.showEditSubkeyUI(this);" style="padding:0px;">
+			  <a href="#" >
+			  	  <span id="subid-00101" style="display:none;"></span>
+				  <p>工号：<span id="deviceno-00101"></span></p>
+				  <p>位置：<span id="subkeyposition-00101"></span></p>
+				  <p>备注：<span id="remark-00101"></span></p>
+			  </a>
+			</li>
+			<li style="padding:2px 0px;"></li>
+			<li id="li-divider-00110" data-role="list-divider" style="text-align:left;">
+				<span>[06]<img style="vertical-align:middle;" alt="" src="images/item.png"></span>
+				<span id="subkey-00110">00110</span> 
+				<span style="float:right;"><input type="checkbox" name="install-00110" id="install-00110" data-role="none">已加装</span>
+			</li>
+			<li id="li-00110" onclick="RemoteICModule.showEditSubkeyUI(this);" style="padding:0px;">
+			  <a href="#" >
+			  	  <span id="subid-00110" style="display:none;"></span>
+				  <p>工号：<span id="deviceno-00110"></span></p>
+				  <p>位置：<span id="subkeyposition-00110"></span></p>
+				  <p>备注：<span id="remark-00110"></span></p>
+			  </a>
+			</li>
+			<li style="padding:2px 0px;"></li>
+			<li id="li-divider-00111" data-role="list-divider" style="text-align:left;">
+				<span>[07]<img style="vertical-align:middle;" alt="" src="images/item.png"></span>
+				<span id="subkey-00111">00111</span> 
+				<span style="float:right;"><input type="checkbox" name="install-00111" id="install-00111" data-role="none">已加装</span>
+			</li>
+			<li id="li-00111" onclick="RemoteICModule.showEditSubkeyUI(this);" style="padding:0px;">
+			  <a href="#" >
+			      <span id="subid-00111" style="display:none;"></span>
+				  <p>工号：<span id="deviceno-00111"></span></p>
+				  <p>位置：<span id="subkeyposition-00111"></span></p>
+				  <p>备注：<span id="remark-00111"></span></p>
+			  </a>
+			</li>
+			<li style="padding:2px 0px;"></li>
+			<li id="li-divider-01000" data-role="list-divider" style="text-align:left;">
+				<span>[08]<img style="vertical-align:middle;" alt="" src="images/item.png"></span>
+				<span id="subkey-01000">01000</span> 
+				<span style="float:right;"><input type="checkbox" name="install-01000" id="install-01000" data-role="none">已加装</span>
+			</li>
+			<li id="li-01000" onclick="RemoteICModule.showEditSubkeyUI(this);" style="padding:0px;">
+			  <a href="#" >
+			      <span id="subid-01000" style="display:none;"></span>
+				  <p>工号：<span id="deviceno-01000"></span></p>
+				  <p>位置：<span id="subkeyposition-01000"></span></p>
+				  <p>备注：<span id="remark-01000"></span></p>
+			  </a>
+			</li>
+			<li style="padding:2px 0px;"></li>
+			<li id="li-divider-01001" data-role="list-divider" style="text-align:left;">
+				<span>[09]<img style="vertical-align:middle;" alt="" src="images/item.png"></span>
+				<span id="subkey-01001">01001</span> 
+				<span style="float:right;"><input type="checkbox" name="install-01001" id="install-01001" data-role="none">已加装</span>
+			</li>
+			<li id="li-01001" onclick="RemoteICModule.showEditSubkeyUI(this);" style="padding:0px;">
+			  <a href="#" >
+			      <span id="subid-01001" style="display:none;"></span>
+				  <p>工号：<span id="deviceno-01001"></span></p>
+				  <p>位置：<span id="subkeyposition-01001"></span></p>
+				  <p>备注：<span id="remark-01001"></span></p>
+			  </a>
+			</li>
+			<li style="padding:2px 0px;"></li>
+			<li id="li-divider-01010" data-role="list-divider" style="text-align:left;">
+				<span>[10]<img style="vertical-align:middle;" alt="" src="images/item.png"></span>
+				<span id="subkey-01010">01010</span> 
+				<span style="float:right;"><input type="checkbox" name="install-01010" id="install-01010" data-role="none">已加装</span>
+			</li>
+			<li id="li-01010" onclick="RemoteICModule.showEditSubkeyUI(this);" style="padding:0px;">
+			  <a href="#" >
+			      <span id="subid-01010" style="display:none;"></span>
+				  <p>工号：<span id="deviceno-01010"></span></p>
+				  <p>位置：<span id="subkeyposition-01010"></span></p>
+				  <p>备注：<span id="remark-01010"></span></p>
+			  </a>
+			</li>
+			<li style="padding:2px 0px;"></li>
+			<li id="li-divider-01011" data-role="list-divider" style="text-align:left;">
+				<span>[11]<img style="vertical-align:middle;" alt="" src="images/item.png"></span>
+				<span id="subkey-01011">01011</span> 
+				<span style="float:right;"><input type="checkbox" name="install-01011" id="install-01011" data-role="none">已加装</span>
+			</li>
+			<li id="li-01011" onclick="RemoteICModule.showEditSubkeyUI(this);" style="padding:0px;">
+			  <a href="#" >
+			      <span id="subid-01011" style="display:none;"></span>
+				  <p>工号：<span id="deviceno-01011"></span></p>
+				  <p>位置：<span id="subkeyposition-01011"></span></p>
+				  <p>备注：<span id="remark-01011"></span></p>
+			  </a>
+			</li>
+			<li style="padding:2px 0px;"></li>
+			<li id="li-divider-01100" data-role="list-divider" style="text-align:left;">
+				<span>[12]<img style="vertical-align:middle;" alt="" src="images/item.png"></span>
+				<span id="subkey-01100">01100</span> 
+				<span style="float:right;"><input type="checkbox" name="install-01100" id="install-01100" data-role="none">已加装</span>
+			</li>
+			<li id="li-01100" onclick="RemoteICModule.showEditSubkeyUI(this);" style="padding:0px;">
+			  <a href="#" >
+			      <span id="subid-01100" style="display:none;"></span>
+				  <p>工号：<span id="deviceno-01100"></span></p>
+				  <p>位置：<span id="subkeyposition-01100"></span></p>
+				  <p>备注：<span id="remark-01100"></span></p>
+			  </a>
+			</li>
+			<li style="padding:2px 0px;"></li>
+			<li id="li-divider-01101" data-role="list-divider" style="text-align:left;">
+				<span>[13]<img style="vertical-align:middle;" alt="" src="images/item.png"></span>
+				<span id="subkey-01101">01101</span> 
+				<span style="float:right;"><input type="checkbox" name="install-01101" id="install-01101" data-role="none">已加装</span>
+			</li>
+			<li id="li-01101" onclick="RemoteICModule.showEditSubkeyUI(this);" style="padding:0px;">
+			  <a href="#" >
+			  	  <span id="subid-01101" style="display:none;"></span>
+				  <p>工号：<span id="deviceno-01101"></span></p>
+				  <p>位置：<span id="subkeyposition-01101"></span></p>
+				  <p>备注：<span id="remark-01101"></span></p>
+			  </a>
+			</li>
+			<li style="padding:2px 0px;"></li>
+			<li id="li-divider-01110" data-role="list-divider" style="text-align:left;">
+				<span>[14]<img style="vertical-align:middle;" alt="" src="images/item.png"></span>
+				<span id="subkey-01110">01110</span> 
+				<span style="float:right;"><input type="checkbox" name="install-01110" id="install-01110" data-role="none">已加装</span>
+			</li>
+			<li id="li-01110" onclick="RemoteICModule.showEditSubkeyUI(this);" style="padding:0px;">
+			  <a href="#" >
+			      <span id="subid-01110" style="display:none;"></span>
+				  <p>工号：<span id="deviceno-01110"></span></p>
+				  <p>位置：<span id="subkeyposition-01110"></span></p>
+				  <p>备注：<span id="remark-01110"></span></p>
+			  </a>
+			</li>
+			<li style="padding:2px 0px;"></li>
+			<li id="li-divider-01111" data-role="list-divider" style="text-align:left;">
+				<span>[15]<img style="vertical-align:middle;" alt="" src="images/item.png"></span>
+				<span id="subkey-01111">01111</span> 
+				<span style="float:right;"><input type="checkbox" name="install-01111" id="install-01111" data-role="none">已加装</span>
+			</li>
+			<li id="li-01111" onclick="RemoteICModule.showEditSubkeyUI(this);" style="padding:0px;">
+			  <a href="#" >
+			  	  <span id="subid-01111" style="display:none;"></span>
+				  <p>工号：<span id="deviceno-01111"></span></p>
+				  <p>位置：<span id="subkeyposition-01111"></span></p>
+				  <p>备注：<span id="remark-01111"></span></p>
+			  </a>
+			</li>
+			<li style="padding:2px 0px;"></li>
+			<li id="li-divider-10000" data-role="list-divider" style="text-align:left;">
+				<span>[16]<img style="vertical-align:middle;" alt="" src="images/item.png"></span>
+				<span id="subkey-10000">10000</span> 
+				<span style="float:right;"><input type="checkbox" name="install-10000" id="install-10000" data-role="none">已加装</span>
+			</li>
+			<li id="li-10000" onclick="RemoteICModule.showEditSubkeyUI(this);" style="padding:0px;">
+			  <a href="#" >
+			      <span id="subid-10000" style="display:none;"></span>
+				  <p>工号：<span id="deviceno-10000"></span></p>
+				  <p>位置：<span id="subkeyposition-10000"></span></p>
+				  <p>备注：<span id="remark-10000"></span></p>
+			  </a>
+			</li>
+			<li style="padding:2px 0px;"></li>
+			<li id="li-divider-10001" data-role="list-divider" style="text-align:left;">
+				<span>[17]<img style="vertical-align:middle;" alt="" src="images/item.png"></span>
+				<span id="subkey-10001">10001</span> 
+				<span style="float:right;"><input type="checkbox" name="install-10001" id="install-10001" data-role="none">已加装</span>
+			</li>
+			<li id="li-10001" onclick="RemoteICModule.showEditSubkeyUI(this);" style="padding:0px;">
+			  <a href="#" >
+			      <span id="subid-10001" style="display:none;"></span>
+				  <p>工号：<span id="deviceno-10001"></span></p>
+				  <p>位置：<span id="subkeyposition-10001"></span></p>
+				  <p>备注：<span id="remark-10001"></span></p>
+			  </a>
+			</li>
+			<li style="padding:2px 0px;"></li>
+			<li id="li-divider-10010" data-role="list-divider" style="text-align:left;">
+				<span>[18]<img style="vertical-align:middle;" alt="" src="images/item.png"></span>
+				<span id="subkey-10010">10010</span> 
+				<span style="float:right;"><input type="checkbox" name="install-10010" id="install-10010" data-role="none">已加装</span>
+			</li>
+			<li id="li-10010" onclick="RemoteICModule.showEditSubkeyUI(this);" style="padding:0px;">
+			  <a href="#" >
+			      <span id="subid-10010" style="display:none;"></span>
+				  <p>工号：<span id="deviceno-10010"></span></p>
+				  <p>位置：<span id="subkeyposition-10010"></span></p>
+				  <p>备注：<span id="remark-10010"></span></p>
+			  </a>
+			</li>
+			<li style="padding:2px 0px;"></li>
+			<li id="li-divider-10011" data-role="list-divider" style="text-align:left;">
+				<span>[19]<img style="vertical-align:middle;" alt="" src="images/item.png"></span>
+				<span id="subkey-10011">10011</span> 
+				<span style="float:right;"><input type="checkbox" name="install-10011" id="install-10011" data-role="none">已加装</span>
+			</li>
+			<li id="li-10011" onclick="RemoteICModule.showEditSubkeyUI(this);" style="padding:0px;">
+			  <a href="#" >
+			  	  <span id="subid-10011" style="display:none;"></span>
+				  <p>工号：<span id="deviceno-10011"></span></p>
+				  <p>位置：<span id="subkeyposition-10011"></span></p>
+				  <p>备注：<span id="remark-10011"></span></p>
+			  </a>
+			</li>
+			<li style="padding:2px 0px;"></li>
+			<li id="li-divider-10100" data-role="list-divider" style="text-align:left;">
+				<span>[20]<img style="vertical-align:middle;" alt="" src="images/item.png"></span>
+				<span id="subkey-10100">10100</span> 
+				<span style="float:right;"><input type="checkbox" name="install-10100" id="install-10100" data-role="none">已加装</span>
+			</li>
+			<li id="li-10100" onclick="RemoteICModule.showEditSubkeyUI(this);" style="padding:0px;">
+			  <a href="#" >
+			  	  <span id="subid-10100" style="display:none;"></span>
+				  <p>工号：<span id="deviceno-10100"></span></p>
+				  <p>位置：<span id="subkeyposition-10100"></span></p>
+				  <p>备注：<span id="remark-10100"></span></p>
+			  </a>
+			</li>
+			<li style="padding:2px 0px;"></li>
+			<li id="li-divider-10101" data-role="list-divider" style="text-align:left;">
+				<span>[21]<img style="vertical-align:middle;" alt="" src="images/item.png"></span>
+				<span id="subkey-10101">10101</span> 
+				<span style="float:right;"><input type="checkbox" name="install-10101" id="install-10101" data-role="none">已加装</span>
+			</li>
+			<li id="li-10101" onclick="RemoteICModule.showEditSubkeyUI(this);" style="padding:0px;">
+			  <a href="#" >
+			  	  <span id="subid-10101" style="display:none;"></span>
+				  <p>工号：<span id="deviceno-10101"></span></p>
+				  <p>位置：<span id="subkeyposition-10101"></span></p>
+				  <p>备注：<span id="remark-10101"></span></p>
+			  </a>
+			</li>
+			<li style="padding:2px 0px;"></li>
+			<li id="li-divider-10110" data-role="list-divider" style="text-align:left;">
+				<span>[22]<img style="vertical-align:middle;" alt="" src="images/item.png"></span>
+				<span id="subkey-10110">10110</span> 
+				<span style="float:right;"><input type="checkbox" name="install-10110" id="install-10110" data-role="none">已加装</span>
+			</li>
+			<li id="li-10110" onclick="RemoteICModule.showEditSubkeyUI(this);" style="padding:0px;">
+			  <a href="#" >
+			  	  <span id="subid-10110" style="display:none;"></span>
+				  <p>工号：<span id="deviceno-10110" ></span></p>
+				  <p>位置：<span id="subkeyposition-10110"></span></p>
+				  <p>备注：<span id="remark-10110"></span></p>
+			  </a>
+			</li>
+			<li style="padding:2px 0px;"></li>
+			<li id="li-divider-10111" data-role="list-divider" style="text-align:left;">
+				<span>[23]<img style="vertical-align:middle;" alt="" src="images/item.png"></span>
+				<span id="subkey-10111">10111</span> 
+				<span style="float:right;"><input type="checkbox" name="install-10111" id="install-10111" data-role="none">已加装</span>
+			</li>
+			<li id="li-10111" onclick="RemoteICModule.showEditSubkeyUI(this);" style="padding:0px;">
+			  <a href="#" >
+			      <span id="subid-10111" style="display:none;"></span>
+				  <p>工号：<span id="deviceno-10111"></span></p>
+				  <p>位置：<span id="subkeyposition-10111"></span></p>
+				  <p>备注：<span id="remark-10111"></span></p>
+			  </a>
+			</li>
+			<li style="padding:2px 0px;"></li>
+			<li id="li-divider-11000" data-role="list-divider" style="text-align:left;">
+				<span>[24]<img style="vertical-align:middle;" alt="" src="images/item.png"></span>
+				<span id="subkey-11000">11000</span> 
+				<span style="float:right;"><input type="checkbox" name="install-11000" id="install-11000" data-role="none">已加装</span>
+			</li>
+			<li id="li-11000" onclick="RemoteICModule.showEditSubkeyUI(this);" style="padding:0px;">
+			  <a href="#" >
+			  	  <span id="subid-11000" style="display:none;"></span>
+				  <p>工号：<span id="deviceno-11000"></span></p>
+				  <p>位置：<span id="subkeyposition-11000"></span></p>
+				  <p>备注：<span id="remark-11000"></span></p>
+			  </a>
+			</li>
+		 </ul>
+	</div>
+	<div id="footer" data-role="footer" data-position="fixed" data-theme="a" data-tap-toggle="false" style="position:fixed;" data-hide-during-focus="false">
+		<div data-role="navbar" id="navbar-custorm">
+      		<ul>
+      			<li data-icon="false" id="btnLocalSave"><a href="#" >本地保存</a></li>
+	            <li data-icon="false" id="btnSubmit"><a href="#">提交</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div data-role="popup" id="EditSubkeyDialog" data-overlay-theme="b" data-theme="a" data-tolerance="0,0" style="position:fixed;left:0px;top:0px;" >
+		<div data-role="header" style="background:#2B89D3;color:#ffffff;padding:0px;margin:0px;" >
+			<h1  class="pagetitle" style="font-size:15px;">编辑子机<span id="subkey-subkey"></span></h1>
+		</div>
+	    <div data-role="content" style="padding-top:0px;padding-bottom:0px;">
+		    <div>
+		    	<label for="subkey-deviceno">工号:
+			    	<input type="text" name="subkey-deviceno" id="subkey-deviceno" placeholder="工号...">
+			    </label>
+			    <label for="subkey-position">子机位置:
+			    	<textarea name="subkey-position" id="subkey-position"></textarea>
+			    </label>
+			    <label for=subkey-remark>备注:
+			    	<textarea name="subkey-remark" id="subkey-remark"></textarea>
+			    </label>
+			 </div>
+			 <div data-role="navbar">
+		      <ul>
+		        <li><a id="btnEditSubkey-save" href="#" data-theme="a">确定</a></li>
+		        <li><a id="btnEditSubkey-clear" href="#" data-theme="a">清空</a></li>
+		        <li><a id="btnEditSubkey-cancel" href="#" data-theme="a" data-rel="dialog" data-transition="pop" data-iconpos="notext">取消</a></li>
+		      </ul>
+		     </div>
+	    </div>
+	</div>
+	
+	<div data-role="popup" id="EditHostDialog" data-overlay-theme="b" data-theme="a" data-tolerance="0,0"  style="position:fixed;left:0px;top:0px;">
+		<div data-role="header" style="background:#2B89D3;color:#ffffff;padding:0px;margin:0px;" >
+			<h1  class="pagetitle" style="font-size:15px;">编辑主机<span id="host-header-code"></span></h1>
+		</div>
+	    <div data-role="content"  style="padding-top:0px;padding-bottom:0px;">
+		    <div>
+		    	<label for="host-hostcode">主机ID:
+			    	<input type="text" name="host-hostcode" id="host-hostcode" placeholder="主机ID..." >
+			    </label>
+			    <label for="host-hostposition">主机位置:
+			    	<textarea name="host-hostposition" id="host-hostposition" placeholder="主机位置..." ></textarea>
+			    </label>
+			 </div>
+			 <div data-role="navbar">
+		      <ul>
+		        <li><a id="btnEditHost-save" href="#" data-theme="a">确定</a></li>
+		        <li><a id="btnEditHost-cancel" href="#" data-theme="a" data-rel="dialog" data-transition="pop" data-iconpos="notext">取消</a></li>
+		      </ul>
+			</div>
+	    </div>
+	</div>
+</div>
+</body>
+</html>

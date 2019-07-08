@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Licensed Materials - Property of IBM
+    5725-I43 (C) Copyright IBM Corp. 2011, 2013. All Rights Reserved.
+    US Government Users Restricted Rights - Use, duplication or
+    disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<wl:adapter name="HttpAdapter_BPM_AWH"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:wl="http://www.ibm.com/mfp/integration"
+	xmlns:http="http://www.ibm.com/mfp/integration/http">
+
+	<displayName>HttpAdapter_BPM_AWH</displayName>
+	<description>HttpAdapter_BPM_AWH</description>
+	<connectivity>
+		<connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
+			<protocol>http</protocol>
+			<!--外网测试：mail.gzsolartech.com:9448
+				内网测试：10.98.202.145:9081
+				正式：smartbpm.hitachi-helc.com(10.98.202.146):9082
+			-->
+			<domain>10.98.202.145</domain>
+			<port>9081</port>
+			<connectionTimeoutInMilliseconds>30000</connectionTimeoutInMilliseconds>
+			<socketTimeoutInMilliseconds>30000</socketTimeoutInMilliseconds>
+			<maxConcurrentConnectionsPerNode>300</maxConcurrentConnectionsPerNode>
+			<!-- Following properties used by adapter's key manager for choosing specific certificate from key store  
+			<sslCertificateAlias></sslCertificateAlias> 
+			<sslCertificatePassword></sslCertificatePassword>
+			-->		
+		</connectionPolicy>
+	</connectivity>
+
+	<procedure name="getFeed"/>
+	<procedure name="getFeedFiltered"/>
+	<!-- 登录 -->
+	<procedure name="login"/>
+	<!-- 待办列表 -->
+	<procedure name="todoList"/>
+	<!-- 已办列表 -->
+	<procedure name="alreadyDealtList"/>
+	<!-- 获取文档 -->
+	<procedure name="getDocumentByDocId"/>
+	<!-- 更新文档 -->
+	<procedure name="updateDocument"/>
+	<!-- 更新文档（新） -->
+	<procedure name="updateDocument_new"/>
+	<!-- 获取下个环节信息 -->
+	<procedure name="getNextTacheInfo"/>
+	<!-- 提交流程 -->
+	<procedure name="submitTask"/>
+	<!-- 提交流程（新） -->
+	<procedure name="submitTask_new"/>
+	<!-- 获取审批意见列表 -->
+	<procedure name="getAuditRecordList"/>
+	<!-- 获取维修工号明细列表 -->
+	<procedure name="getWXDetailList"/>
+	<!-- 获取维改工号明细列表 -->
+	<procedure name="getWGDetailList"/>
+	<!-- 获取附件数据
+	<procedure name="getAttachmentData"/>
+	 -->
+</wl:adapter>

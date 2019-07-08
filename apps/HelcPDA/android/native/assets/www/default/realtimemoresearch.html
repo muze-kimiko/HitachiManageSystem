@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div data-role="page" id="realtimemoresearch" class="telcard">
+		<div data-role="header" data-position="fixed" class="header" >
+			<div data-type="horizontal"  class="ui-btn-left">
+				<a href="#anylink" id="elevator-back" data-role="button" data-iconpos="notext" data-rel="back" data-theme="f" data-icon="custarrow-l">后退</a>
+				<a href="javascript:void(0);" onclick="home();" data-role="button" data-iconpos="notext" data-theme="f" data-icon="custarrow-home">主页</a>
+			</div>
+			<h1 class="pagetitle" style="font-size:15px;">电梯查询</h1>
+			<div style="-moz-user-select:none;background-color:#e4e4e4;color:#000;height:95px;padding-top:5px;">
+			<div style="width:95%;height:90px;border-radius:8px;margin:0 auto;background-color:#fff; " >
+			 		<table>
+			 		<tr>
+				 		<td align="right" style="padding-left:5px;padding-right:5px;"><input type="text" name="txtKey" id="txtKey" ></td>
+				 		<td align="center"><a href="javascript:void(0)" id="btnsearch" data-role="button" data-icon="search" >查询</a></td>
+				 		<td align="center"><a href="javascript:void(0)" id="btnsearchok"  data-role="button" data-icon="info" >确定</a></td>
+			 		</tr>
+			 		</table>
+			 		<div class="condition">
+					 	<ul>
+						   <li><a id="deviceno" href="javascript:void(0)"  class="querytypebtn" style="color:#000000;text-shadow: none;font-weight: normal;text-decoration:none;">工号</a></li>
+						   <li ><a id="building" href="javascript:void(0)" class="querytypebtn" style="color:#000000;text-shadow: none;font-weight: normal;text-decoration:none;">地盘</a></li>
+						   <li ><a id="phone" href="javascript:void(0)" class="querytypebtn" style="color:#000000;text-shadow: none;font-weight: normal;text-decoration:none;">遥监卡号</a></li>
+					  </ul>
+				    </div>
+		    </div>	
+		    </div>	
+		</div>
+		<div data-role="content" style="background-color:#E4E4E4;padding:90px  0px 0px;">
+		    <div class="Mcstatus" id="SearchResult" width="100%">
+		    </div>
+		    <div id="div-more" style="display:none;">
+				<a id="more" href="javascript:void(0);" data-role="button">更多</a>
+			</div>
+		</div>
+		
+		<input type="hidden" id="hidquerytype">
+		<div data-role="popup" id="popupElevatorDetail" data-tolerance="0,0" class="elevatordetailpop" class="ui-content ui-popup " data-position-to="window" data-overlay-theme="b" data-theme="a" style="min-width:100%;min-heigth:100%;height:746px;">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;" >
+			<div data-type="horizontal" class="ui-btn-left">
+				<a href="#anylink" data-role="button" data-iconpos="notext"  data-icon="custarrow-l" data-theme="f">后退</a>
+				<a href="javascript:void(0);" onclick="home();" data-role="button" data-iconpos="notext" data-icon="custarrow-home" data-theme="f">主页</a>
+			</div>
+				<h1  class="pagetitle" style="font-size:15px;">电梯信息明细</h1>
+			</div>
+			<div data-role="content" style="padding:0px;height:100%;">
+				<div class="Mcstatus" width="100%">
+					<table width="100%" border="0">
+					    <tr style="width:100%;text-align:center;font-weight:bold">
+    						<td id="btnbasic" onclick="basicShow()" style="width:50% ">
+     						基本信息
+    						</td>
+    						<td id="btndetail" onclick = "detailShow()" style="width:50%">
+     						详细信息
+    						</td>
+   						</tr>
+				  	</table>
+				  	<div id="basic">
+						<div id="divmainpop" >
+							<table id="tbmain">
+								<tr>
+									<td rowspan="4" class="dianti" style="padding-left:8px;"><img id="dianti"  src="images/elevator/futi.png" ></td>
+									<td class="rowone" colspan="2" id="lbDeviceNo"></td>
+									<td class="rowone" colspan="2" id="lbModelName"></td>
+								</tr>
+								<tr>
+									<td class="rowtwo" colspan="2" id="lbCityName" style="padding-left:8px;"></td>
+									<td class="rowtwo" colspan="2" id="lbCompanyName"></td>
+								</tr>
+								<tr>
+									<td style="width:22px;padding-left:8px;"><img id="weibao" src="images/elevator/zaibao.png" ></td>
+									<td class="rowthree" id="lbWeibao"></td>
+									<td style="width:22px;"><img id="zuangtai" src="images/elevator/unnormal.png" ></td>
+									<td class="rowthree" id="lbZuangtai"></td>
+								</tr>
+								<tr>
+									<td colspan="4" class="rowfour" id="lbAddress" style="line-height:1.5em;"></td>
+								</tr>
+							</table>
+							<table id="tbperson" style="color:#F68B1F;">
+								<tr>
+									<td valign="middle" style="padding-top:5px;padding-left:8px;"><img  src="images/elevator/telphone_icon.png" ></td>
+									<td id="lbStaffMobile" width="40%"></td>
+									<td id="lbStaffName" width="20%"></td>
+									<td id="lbMaintenanceName" width="30%"></td>
+								</tr>
+							</table>			
+							<table id="tbdetail">
+								<tr>
+									<td style="vertical-align:top;padding-left:8px;">客户名称</td>
+									<td id="lbCustomerName" style="vertical-align:top;line-height:1.1em;"></td>
+								</tr>
+								<tr>
+									<td width="100px" style="padding-left:8px;">保养类型</td>
+									<td id="lbMainTypeName"></td>
+								</tr>
+								<tr>
+									<td width="100px" style="padding-left:8px;">合&nbsp;&nbsp;同&nbsp;&nbsp;号</td>
+									<td id="lbAGREE_NUM"></td>
+								</tr>
+								<tr>
+									<td style="padding-left:8px;">合同类型</td>
+									<td id="lbAGREE_TYPE"></td>
+								</tr>
+								<tr>
+									<td style="padding-left:8px;">项目类型</td>
+									<td id="lbProjectType"></td>
+								</tr>
+								<tr>
+									<td style="padding-left:8px;">合同服务时间</td>
+									<td id="lbServiceDate"></td>
+								</tr>
+								<tr>
+									<td style="padding-left:8px;">电&nbsp;&nbsp;话&nbsp;&nbsp;卡</td>
+									<td id="lbPhone"></td>
+								</tr>
+								<tr>
+									<td style="padding-left:8px;">遥监录入时间</td>
+									<td id="lbCreatedDate"></td>
+								</tr>
+								<tr>
+									<td style="padding-left:8px;">主板程序版本</td>
+									<td id="lbMainVersion"></td>
+								</tr>
+								<tr>
+									<td style="padding-left:8px;">遥监终端版本</td>
+									<td id="lbSoftVersion"></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					</div>
+					 <div id="detail">
+						 <ul data-role="listview" data-inset="true" style="font-size:15px;">
+						    <li style="text-align:left;color:#2B89D3;">运行信息</li>
+						    <li>
+						    	<table style="width:100%;font-weight:100px;">
+								 	<tr style="height:30px;line-height:30px;">
+								 		<td style="width:50%">上月运行次数:<span style="color:#F68B1F;" id="lbPreRunTimes">1000</span></td>
+								 		<td style="width:50%">累计运行次数:<span style="color:#F68B1F;" id="lbRunTimes">1000</span></td>
+								 	</tr>
+								 	<tr>
+								 		<td >累计运行时间:<span id="lbRunTime" style="color:#F68B1F;">20</span></td>
+								 		<td></td>
+								 	</tr>
+							 	</table>
+							</li>
+						    <li>
+						    	<table>
+								 	<tr style="height:30px;line-height:30px;">
+								 		<td style="width:50%">用途:<span id="lbPurpose" style="color:#F68B1F;">Purpose</span></td>
+								 		<td style="width:50%">层站:<span id="lbFloor" style="color:#F68B1F;">C/Z/M</span></td>
+								 	</tr>
+								 	<tr style="height:30px;line-height:30px;">
+								 		<td style="width:50%">载重:<span id="lbPZZZ" style="color:#F68B1F;">PZZZ</span></td>
+								 		<td style="width:50%">梯型:<span id="lbIsElevator" style="color:#F68B1F;">直梯</span></td>
+								 	</tr>
+								 	<tr>
+								 		<td colspan="2" style="font-size:12px;text-align:left;">
+								 			年检日期:<span id="lbInspectionDate">2015-14-10</span>
+								 		</td>
+								 	</tr>
+							 	</table>
+	    					</li>
+						    <li style="text-align:left;color:#2B89D3;border-bottom:0px;">故障统计</li>
+						    <li>
+						    	<table style="width:100%;font-weight:100;">
+								 	<tr style="height:30px;line-height:30px;">
+								 		<td style="width:50%">当月故障数:<span style="color:#F68B1F;" id="lbMonthFault">10</span></td>
+								 		<td style="width:50%">当月困人故障数:<span style="color:#F68B1F;" id="lbTroubleFault">20</span></td>
+								 	</tr>
+							 	</table>
+						 	</li>
+						</ul>
+					 </div>
+				 </div>
+			</div>
+	</div>
+</body>
+</html>

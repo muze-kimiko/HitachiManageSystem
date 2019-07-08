@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+    Licensed Materials - Property of IBM
+    5725-I43 (C) Copyright IBM Corp. 2011, 2013. All Rights Reserved.
+    US Government Users Restricted Rights - Use, duplication or
+    disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<wl:adapter xmlns:wl="http://www.ibm.com/mfp/integration" xmlns:sql="http://www.ibm.com/mfp/integration/sql" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SqlAdapter_OA">
+    <!--This adapter has been upgraded, For more information about the changes, see the "Adapter timeout and concurrency" topic in the product Knowledge Center.-->
+    <displayName>SqlAdapter_OA</displayName>
+	<description>SqlAdapter_OA</description>
+	<connectivity>
+		<connectionPolicy xsi:type="sql:SQLConnectionPolicy">
+			<!-- Example for using a JNDI data source, replace with actual data source name -->
+			<!-- <dataSourceJNDIName>java:/data-source-jndi-name</dataSourceJNDIName> -->
+			
+			<dataSourceDefinition>
+				<driverClass>net.sourceforge.jtds.jdbc.Driver</driverClass>
+				<url>jdbc:jtds:sqlserver://172.16.255.41:1433/hitachimiss2</url>
+			    <user>hitachimiss2</user>
+    			<password>hitachimiss2</password> 
+			</dataSourceDefinition>
+		</connectionPolicy>
+		<!--<loadConstraints maxConcurrentConnectionsPerNode="5" /> Element loadConstraint was removed as it is no longer supported. For more information, see the "Adapter timeout and concurrency" topic in the product Knowledge Center.-->
+	</connectivity>
+
+	<!-- Replace this with appropriate procedures -->
+	<procedure name="procedure1"/>
+	<procedure name="procedure2"/>
+
+</wl:adapter>

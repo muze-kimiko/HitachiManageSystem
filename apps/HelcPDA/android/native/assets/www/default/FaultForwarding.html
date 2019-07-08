@@ -1,0 +1,50 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>故障转发</title>
+</head>
+<body>
+	<div data-role="page" id="FaultForwarding" class="favorite">
+		<div data-role="header" data-position="fixed" class="header" style="background:#2B89D3;color:#ffffff;height:40px;position:fixed;">
+			<div data-type="horizontal"  class="ui-btn-left">
+				<a href="#anylink" id="FaultForwarding-back" data-role="button"  data-iconpos="notext" data-rel="back" data-icon="custarrow-l" data-theme="f">后退</a>
+				<a href="javascript:void(0);" onclick="home(1);" data-role="button"  data-iconpos="notext" data-icon="custarrow-home" data-theme="f">主页</a>
+			</div>
+			<h1 class="pagetitle" style="font-size:15px;">故障转发</h1>
+			<a class="ui-btn-right" href="#popupMenu" data-rel="popup" data-transition="slideup" data-icon="custarrow-menu" data-iconpos="notext" data-theme="f" >Actions...</a>
+			<div id="popupMenu" data-role="popup" data-theme="a">
+		        <ul style="min-width: 210px;" data-role="listview" data-inset="true">
+		           <li data-role="list-divider">操作</li>
+		            <li><a href="FaultForwardingSearch.html" id="linkSearch"  data-inline="true" data-rel="dialog" data-transition="pop">搜索</a></li>
+		            <li><a href="FaultForwardingSetting.html">设置</a></li>
+		        </ul>
+			</div>
+			
+			<div id="div-rowcount" style="display:none;padding-top:1px;">
+		    <table class="gzcudang" width="100%" border="0" cellspacing="0" cellpadding="0" style="font-size:15px;">
+				<tr class="gzcd_bgcolor" style="background:#2B89D3;height-line:35px;height:35px;">
+					<td  style="padding-left:16px;display:none;"><input type="checkbox" name="chkAll" id="chkAll" data-role="none"></td>
+					<td class="bottomxian"  nowrap="nowrap" align="right" style="color:#fff;padding-right:10px;">
+					总条数<span id="rowcount">0</span>/剩余<span id="remaincount">0</span>
+					</td>
+				</tr>
+			</table>
+		   </div>
+		</div>
+		<div data-role="content" style="padding:30px 0px 0px 0px; ">
+			<div data-role="collapsibleset" data-theme="a" data-content-theme="a"  id="SearchResult">
+				
+			</div>
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-theme="a" data-tap-toggle="false" style="position:fixed;" data-hide-during-focus="false">
+			<div id="div-more" style="display:none;padding-bottom:2px;">
+				<button id="more" class="btn" style="margin:0px;width:100%;">更多</button>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>故障码详细</title>
+</head>
+<body>
+	<div data-role="page" id="FaultCodeDetail">
+		<div data-role="header" data-position="fixed" class="header" style="background:#2B89D3;color:#ffffff;height:40px;position:fixed;">
+			<div data-type="horizontal"  class="ui-btn-left">
+				<a href="#anylink" data-role="button"  data-iconpos="notext" data-rel="back" data-icon="custarrow-l" data-theme="f">后退</a>
+				<a href="javascript:void(0);" onclick="home(1);" data-role="button"  data-iconpos="notext" data-icon="custarrow-home" data-theme="f">主页</a>
+			</div>
+			<h1 class="pagetitle" style="font-size:15px;">故障转发设置</h1>
+			
+			<ul data-role="listview" data-inset="false">
+			    <li data-role="list-divider">详细信息</li>
+			    <li style="height:12px;line-height:12px;font-size:12px;">
+				    <div class="ui-grid-b">
+					    <div class="ui-block-a"><strong>主微故障码</strong></div>
+					    <div class="ui-block-b"><span id="lbMainFaultCode"></span></div>
+					    <div class="ui-block-c"><span id="lbMainFaultCodeDesc"></span></div>
+					</div>
+				</li>
+			    <li style="height:12px;line-height:12px;font-size:12px;">
+				    <div class="ui-grid-b">
+					    <div class="ui-block-a"><strong>副微故障码</strong></div>
+					    <div class="ui-block-b"><span id="lbSubFaultCode"></span></div>
+					    <div class="ui-block-c"><span id="lbDescFaultCodeDesc"></span></div>
+					</div>
+				</li>
+			    <li style="height:12px;line-height:12px;font-size:12px;">
+				    <div class="ui-grid-b">
+					    <div class="ui-block-a"><strong>ACD</strong></div>
+					    <div class="ui-block-b"><span id="lbACD"></span></div>
+					    <div class="ui-block-c"><span id="lbACDDesc"></span></div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div id="content" data-role="content" style="padding:80px 0px 0px 0px;">
+			<ul data-role="listview" data-inset="true" id="listview-detail"></ul>
+			
+		</div>
+	</div>
+</body>
+</html>

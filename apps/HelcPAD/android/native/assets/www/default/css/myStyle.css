@@ -1,0 +1,545 @@
+
+/* Stylesheet content from css/myStyle.css in folder common */
+
+/* -----首页Button-list样式 start----- */
+.i_Button_Box{
+	margin:10px 0;
+	width:100%;
+	height:auto;
+	background-color:#FFF;
+	border-color:#d2d2d2;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	border-top-style:solid;
+	border-top-width:1px;
+}
+.i_Button_List{
+   	margin-left:4%;
+	width:96%;
+	height:44px;
+	line-height:44px;
+	color:#3d4245;
+	border-color:#d2d2d2;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	display:block;
+}
+.i_Button_List:active{
+	background-color:#CCC;
+}
+.i_Button_pressing{
+	background:#f0f0f0;
+}
+.i_Button_List_Label{
+    font-size: 12pt;
+	text-align:left;
+}
+.i_Button_List_NoBorder{
+	border-bottom-width:0px;
+}
+.i_Button_List_Isclosure{
+	float: right;
+	clear:none;
+    width:44px;
+    height:44px;
+    content: '!';
+    font-family: 'iOS7';
+    color: #ccc;
+    font-size: 12pt;
+    text-align: center;
+    background-color: transparent;
+    line-height: 44px;
+    padding-left: 1px;
+}
+.i_Button_List_Icon{
+	float:left;
+	clear:none;
+    margin:10px 2px 4px 4px;
+	width:26px;
+	height:26px;
+	line-height:26px;
+	color:#666;
+	text-align:center;
+	font-family: "Pictos";
+	font-size:16pt;
+	border-radius: 3px;
+}
+
+.i_Button_List_Title{
+	float:left;
+	clear:none;
+	width:60%;
+}
+
+.i_Button_List_Small{
+	color:white;
+	background:#63B8FF;
+	padding:.5em 2em .5em;
+	border:0;
+	border-radius:.5em
+}
+/* -----首页Button-list样式 over----- */
+
+/* -----首页Button-icon样式 start */
+/* 
+.i_Button_Icon{
+    margin:0 auto;
+	width:32px;
+	height:32px;
+	line-height:32px;
+	color:#FFF;
+	text-align:center;
+	font-family: "Pictos";
+	font-size:19pt;
+	background-color:#e42828;
+	border-radius: 5px;
+}
+.i_Button_IconBorder{
+    border-right:1px solid #CCC;
+}
+.i_Button_Icon_bg01{
+	background:url(images/i_icon01.png);
+    background-size:32px 32px;
+}
+.i_Button_Icon_bg02{
+	background:url(images/i_icon02.png);
+    background-size:32px 32px;
+}
+.i_Button_Icon_bg03{
+	background:url(images/i_icon03.png);
+    background-size:32px 32px;
+}
+.i_Button_Icon_bg04{
+	background:url(images/i_icon04.png);
+    background-size:32px 32px;
+}
+*/
+.i_Button_Icon{
+    margin:0 auto;
+	width:32px;
+	height:32px;
+	line-height:32px;
+	color:#FFF;
+	text-align:center;
+	font-family: "Pictos";
+	font-size:19pt;
+	background-color:#e42828;
+	border-radius: 5px;
+}
+.i_Button_IconBorder{
+	float:left;
+	clear:none;
+	padding-top:8px;
+	width:25%;
+	height:68px;
+    border-right:1px solid #CCC;
+}
+.i_Button_IconFont{
+	margin-top:5px;
+	width:100%;
+	font-size:10pt;
+	color:#3d4245; 
+	text-align:center;
+    background-size:32px 32px;
+}
+.i_Button_Icon_bg01{
+	background-image:url(../images/i_icon01.png);
+}
+.i_Button_Icon_bg02{
+	background-image:url(../images/i_icon02.png);
+}
+.i_Button_Icon_bg03{
+	background-image:url(../images/i_icon03.png);
+}
+.i_Button_Icon_bg04{
+	background-image:url(../images/i_icon04.png);
+}
+/* -----首页Button-icon样式 over----- */
+
+/* -----首页Banner样式 start */
+.i_Banner_Title{
+    width:26px;
+    height:104px;
+}
+.i_Banner_Con{
+	float:left;
+	clear:none;
+    width:100%;
+	font-size:10pt;
+	color:#FFF;
+}
+.i_Banner_date{
+	float:left;
+	clear:none;
+	margin-top:5px;
+	font-size:7pt;
+	color:#FFF;
+}
+.i_Banner_more{
+	float:left;
+	clear:none;
+	margin:10px 0 0 0 ;
+	width:40px;
+	height:16px;
+	line-height:14px;
+	font-size:8pt;
+	color:#FFF;
+	background:#fe2d2d;
+	border-radius: 5px;
+}
+/* -----首页Banner样式 over----- */
+
+
+
+/* -----首页TabBar-样式覆盖 start----- */
+/* -----图标添加----- */
+.x-tab .x-button-icon.more::before, .x-button .x-button-icon.more::before{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    font-family: "Pictos";
+    content: ".";
+}
+
+.x-tab .x-button-icon.news::before, .x-button .x-button-icon.news::before{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    font-family: "Pictos";
+    content: "w";
+}
+
+.x-tab .x-button-icon.backlog::before, .x-button .x-button-icon.backlog::before{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    font-family: "Pictos";
+    content: "n";
+}
+
+/* -----颜色覆盖----- */
+.icon_color .x-tab .x-button-icon{
+    -webkit-text-stroke-width: 0;
+}
+.x-tab .x-button-icon:before {
+    color:#ccc;
+}
+
+/* 
+.x-tab .x-button-icon{
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0 auto;
+    -webkit-text-stroke-width: .35px;
+    -webkit-text-stroke-color: #444;
+}
+.x-button-icon{
+    width: 1.5em;
+    height: 1.5em;
+    color: #444;
+}
+.x-tab .x-button-icon{
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0 auto;
+    -webkit-text-stroke-width: .35px;
+    -webkit-text-stroke-color: #444;
+}
+.x-tab.x-tab-active .x-button-icon::before, .x-tab.x-tab-active .x-button-label, .x-tab.x-tab-active .x-badge{
+    color: #FD0000;
+}
+.x-tab .x-button-icon{
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0 auto;
+    -webkit-text-stroke-width: .35px;
+    -webkit-text-stroke-color: #444;
+}
+.x-button-icon{
+    width: 1.5em;
+    height: 1.5em;
+    color: #FD0000;
+}
+*/
+
+/* -----宽度覆盖----- */
+.x-tab{
+    position: relative;
+    min-width: 20%;
+    margin: 0;
+    
+}
+/* -----首页TabBar-样式覆盖 over----- */
+/* 
+.x-carousel-indicator span.x-carousel-indicator-active{
+    background-color: #FFF;
+    filter:alpha(opacity=100);  
+    -moz-opacity:1;  
+    -khtml-opacity: 1;  
+    opacity: 1;  
+}
+.x-carousel-indicator span{
+    display: block;
+    width: 5px;
+    height: 5px;
+    margin: 3px;
+    background-color: #FFF;
+    filter:alpha(opacity=50);  
+    -moz-opacity:0.5;  
+    -khtml-opacity: 0.5;  
+    opacity: 0.5;  
+}
+*/
+/* -----待办 --> 提示条数 样式 start----- */
+.t_badge_title{
+position: absolute !important;
+margin:auto;
+top: 2px;
+left: 55%;
+right: 45%;
+z-index: 2;
+width: auto;
+line-height:18px;
+min-width: 18px;
+font-size: .65em;
+white-space: nowrap;
+text-overflow: ellipsis;
+text-align: center;
+display: block;
+overflow: hidden;
+color: white !important;
+font-weight: bold;
+text-shadow: 0 0 0 !important;
+font-family: "Helvetica Neue", Helvetica, Arial;
+padding: 0px;
+border: 0px;
+border-radius: 26px;
+background-color: #fc3e39;
+}
+/* --提示条数 红--*/
+.t_badge{
+position: absolute !important;
+margin:auto;
+top: 2px;
+right: 0px;
+z-index: 2;
+width: auto;
+line-height:18px;
+min-width: 18px;
+font-size: .65em;
+white-space: nowrap;
+text-overflow: ellipsis;
+text-align: center;
+display: block;
+overflow: hidden;
+color: white !important;
+font-weight: bold;
+text-shadow: 0 0 0 !important;
+font-family: "Helvetica Neue", Helvetica, Arial;
+padding: 0px;
+border: 0px;
+border-radius: 26px;
+background-color: #fc3e39;
+}
+
+.t_badge_non{
+position: absolute !important;
+margin:auto;
+top: 2px;
+right: 0px;
+z-index: 2;
+width: auto;
+line-height:18px;
+min-width: 18px;
+font-size: .65em;
+white-space: nowrap;
+text-overflow: ellipsis;
+text-align: center;
+display: block;
+overflow: hidden;
+color: white !important;
+font-weight: bold;
+text-shadow: 0 0 0 !important;
+font-family: "Helvetica Neue", Helvetica, Arial;
+padding: 0px;
+border: 0px;
+border-radius: 26px;
+/*background-color: #fc3e39;*/
+background:green
+}
+
+.t_badge2{
+position: reative;
+float:right;
+}
+/* --  图标   -- */
+.t_badge_Icon{
+	float:left;
+	clear:none;
+    margin:0px 0px 2px 4px;
+	width:20px;
+	height:20px;
+	line-height:20px;
+	color:#666;
+	text-align:center;
+	font-family: "Pictos";
+	font-size:16pt;
+	border-radius: 3px;
+}
+
+/* -----待办 --> 提示条数 样式 over----- */
+
+
+
+/* -----查询 lisr 样式 start */
+.q_list .x-list-item{
+    float:left;
+    width:33.3333333%;
+    height:100px;
+    border-bottom: solid 1px #dbdbe0;
+    border-right: solid 1px #dbdbe0;
+}
+.q_list .x-list-item .q_list_box{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+}
+.q_list .x-list-item .q_list_box div{
+    width:100%;
+    text-align:center;
+}
+.q_list .x-list-item .q_list_box div span{
+    font-family: "Pictos";		
+}
+.q_list .x-list-item .q_list_box .q_list_icon{margin:25px auto 10px auto ;}
+.q_list .x-list-item .q_list_box .q_list_name{font-size:12pt;}
+.q_list .x-list-item .q_list_box span{font-size:20pt;color:#FF0000;}
+/* -----查询 lisr 样式 over */
+
+
+.helcmg_btn, .helcmg_btn .x-button-icon, .helcmg_btn .x-button-label
+{
+    background: #2689F7;
+    color: white;
+}
+.grey_bg
+{
+    background: #ECEBF1;
+}
+
+
+/* -----更多 样式 start */
+.m_Exit_Banner{
+	margin: 0 auto;
+	width: 96%;
+	height: 36px;
+	line-height: 36px;
+	background-color: #e03a3e;
+	border-width: 0px;
+	text-align: center;
+	border-radius: 5px;
+}
+.m_Exit_Banner_label{
+	color:#fff;
+}
+.m_Exit_Bannerpressing{
+	background-color: #e64d50;
+}
+/* -----更多 样式 over */
+
+/* -----通话记录样式 */
+.x-label.helcCalllog_label{
+	font-size:11pt;
+	margin:10px 0 0 4%;
+}
+
+/* ----- 版本号样式 */
+.x-label.version_label{
+	font-size:10pt;
+	margin:10px 0 0 2%;
+	color: white;
+}
+
+/* ----- 备注样式 */
+.x-label.remark_label{
+	font-size:10pt;
+	margin:10px 0 0 2%;
+	color: black;
+}
+
+/* -----弹出消息框 */
+.x-label.helcxxTitle_label{
+	font-size:14pt;
+	margin: 0 40% 0 40%;
+}
+.x-label.helcxxText_label{
+	font-size:12pt;
+	margin: 0 40% 0 40%;
+}
+
+.x-container.prevent-pointer-events input, .x-container.prevent-pointer-events textarea {
+pointer-events: none;
+}
+
+.no-choice{
+	font-family:"Pictos";
+	color:#cccccc;
+}
+.be-choice{
+	font-family:"Pictos";
+	color:blue;
+}
+.x-msgbox-text {
+  text-align: left;
+}
+
+
+/*--移植OA专用样式
+--*/
+.oa_i_Button_List{
+    width:96%;
+    color:#666;
+    font-size:14px;
+}
+.oa_i_Button_List_Icon_1{
+    margin:10px 2px 4px 4px;
+	width:30px;
+	height:26px;
+	line-height:26px;
+	color:#666;
+	text-align:center;
+	font-size:16pt;
+	border-radius: 3px;
+}
+.oa_i_Button_List_Icon_2{font-family: "Pictos";}
+.oa_i_Button_List_Title{
+    color:#000;
+    font-size:18px;
+}
+.oa_i_Button_List_Title span{
+    margin-right:5px;
+    color:#f00;
+}
+.oa_i_Button_List_left{
+    text-align:left;
+}
+.oa_i_Button_List_right{
+    text-align:right;
+}
+/*--     移植OA专用样式
+--*/

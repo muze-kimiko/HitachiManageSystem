@@ -1,0 +1,356 @@
+.p_judge_box2{
+    margin:0 10px 0 0;
+    font-family: "Pictos";
+    font-size: 20pt;
+    color:#ccc;
+    float:left;
+}
+/* 定制按钮 */
+/* 
+//背景属性：背景颜色 背景图片 背景是否重复 背景时候随浏览器滚动 背景平位置 背景垂直位置
+//按钮的长度 
+//按钮的高度 
+//边框为0 
+//字体大小 
+//字体颜色 
+//字体加重 
+//圆角 
+//指针形式：手型 
+//左浮动
+//垂直居中
+//水平居中
+ */
+.anOne{
+	background: none repeat scroll 0 0 #82C400; 
+	width:20%; 
+	height:30px; 
+	border-width: 0; 
+	font-size: 17px;
+	color: #FFFFFF; 
+	font-weight: 500; 
+	border-radius: 6px; 
+	cursor:pointer;
+	float:left;
+	line-height:30px;
+	text-align:center;
+	margin:10px 2% 5px 2%;
+}
+
+.anTwo{
+	background: none repeat scroll 0 0 #82C400; 
+	width:20%; 
+	height:30px; 
+	border-width: 0; 
+	font-size: 17px;
+	color: #FFFFFF; 
+	font-weight: 500; 
+	border-radius: 6px; 
+	cursor:pointer;
+	float:left;
+	line-height:30px;
+	text-align:center;
+	margin:2px 2% 2px 2%;
+}
+
+.anThree{
+	background: none repeat scroll 0 0 #82C400; 
+	width:20%; 
+	height:30px; 
+	border-width: 0; 
+	font-size: 17px;
+	color: #FFFFFF; 
+	font-weight: 500; 
+	border-radius: 6px; 
+	cursor:pointer;
+	float:left;
+	line-height:30px;
+	text-align:center;
+	margin:9px 2% 5px 2%;
+}
+
+/*自定义按钮   xcx 2016-8-16*/
+/* 颜色组合
+绿 7AC5A5
+黄 F7B583 
+粉 FAA2AD
+蓝 8BC5D9
+澄 F5C2BA */
+.ysZhOne{
+	background: none repeat scroll 0 0 #7AC5A5; 
+}
+.ysZhTwo{
+	background: none repeat scroll 0 0 #F7B583; 
+}
+.ysZhThree{
+	background: none repeat scroll 0 0 #FAA2AD; 
+}
+.ysZhFour{
+	background: none repeat scroll 0 0 #8BC5D9; 
+}
+.ysZhFive{
+	background: none repeat scroll 0 0 #F5C2BA; 
+}
+
+.anOneDiv{
+	width:100%;
+	height:35px; 
+	float:left;
+	/* background:yellow; */
+}
+
+.anTwoDiv{
+	width:96%;
+	height:32px; 
+	float:left;
+	/* background:blue; */
+	margin:0px 2% 5px 2%;
+}
+
+.anThreeDiv{
+	width:96%;
+	height:32px; 
+	float:left;
+	/* background:blue; */
+	margin:0px 2% 8px 2%;
+}
+
+
+
+/*--------
+  日历界面
+  -------*/
+/* 通用属性 */
+.day
+{
+    border: #d7d7d7 1px solid;
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+    text-align:center;
+}
+/* 周 */
+.day_weel
+{
+    font-size:10pt;
+    height: 30px;
+    line-height: 30px;
+    text-align:center;
+    background:#eee;
+}
+
+/* 非日期 */
+.day_null
+{
+    color: white;
+    background:white;
+}
+/* 无计划日 */
+.day_blank
+{
+    color: #444;
+    background:#fff;
+}
+
+/* 有计划日 */
+.day_plan
+{
+    color:  #444;
+    background:#d6f0fb;
+}
+
+/* 今天 */
+.day_today
+{
+    color: #FFF;
+    border: #009ddc 1px solid;
+    background:#009ddc;
+}
+
+
+/*--------------------
+  对Cupertino界面的微调 
+  -------------------*/
+
+/* 用颜色区分出数据栏 */
+.x-input-text
+{
+    color: #666;
+}
+
+/* 侧栏菜单宽度 */
+.x-menu.x-left, .x-menu.x-right
+{
+    width:150px;
+}
+
+/* 侧栏菜单增加阴影 */
+.x-menu
+{
+    disabled-background: -webkit-gradient(linear, 0 0, 4 0, from(#888), to(#eceaf0));
+    background: -webkit-gradient(linear, 0 0, 4 0, from(#888), to(#fff));
+}
+
+/* 侧栏菜单按钮：改为方形，颜色调整 */
+.x-menu-inner .x-button
+{
+    disabled--webkit-border-radius: 0px;
+    disabled--moz-border-radius: 0px;
+    disabled--ms-border-radius: 0px;
+    disabled--o-border-radius: 0px;
+    disabled-border-radius: 0px;
+    disabled-border-color: #444;
+}
+
+/* 侧栏菜单按钮：图标、文字颜色(平时) */
+.x-menu-inner .x-button-icon, .x-menu-inner .x-button-label
+{
+    disabled-color: #444;
+}
+/* 侧栏菜单按钮：边框、图标、文字颜色(点击时) */
+.x-menu-inner .x-button-pressing
+{
+    disabled-border-color: #ccc;
+}
+.x-menu-inner .x-button-pressing .x-button-icon, .x-menu-inner .x-button-pressing .x-button-label
+{
+    disabled-color: #ccc;
+}
+
+
+/* 提示文字 */
+.m-label-prompt{
+    color:#999;
+    font-size:14px;
+    font-weight:normal;
+}
+
+
+/* 其他 lisr 样式 start */
+.o_list_table{width:100%;color:#666;text-align:left;font-size:16px;}
+.o_list_table .o_list_title{color:#000;font-size:18px;text-align:left;}
+.o_list_table .o_list_title span{text-align:left;color:#ccc;font-size:16px;}
+.o_list_table .o_list_con_01{text-align:left;}
+.o_list_table .o_list_con_02{padding-right:18px;text-align: right;}
+/* 其他 lisr 样式 over */
+
+
+/* -----图标添加----- */
+.x-tab .x-button-icon.date::before, .x-button .x-button-icon.date::before{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    font-family: "Pictos";
+    content: "";
+}
+
+
+
+/*--------------------
+       定位界面
+  -------------------*/
+.l_icon_box{
+    position:absolute;
+    top:30px;right:10px;
+    width:50px;
+    height:auto;
+}
+.l_icon_button{
+    margin:0 auto 10px auto;
+    width:50px;
+    height:50px;
+    border:none;
+    background-size:50px 50px;
+}
+.l_icon_button_bg01{background-image:url(../images/l_icon_near.png);}
+.l_icon_button_bg02{background-image:url(../images/l_icon_staff.png);}
+.l_icon_button_bg03{background-image:url(../images/l_icon_time.png);}
+.l_icon_button_bg04{background-image:url(../images/l_icon_myNear.png);}
+.l_icon_button_click {filter:alpha(opacity=90);-moz-opacity:0.9;-khtml-opacity: 0.9;opacity: 0.9;}
+.l_icon_button_current{border: 2px solid #157efb;}
+.l_text_color .x-button-label{color:#000}
+.l_list{background-image:url(images/l_list_bg.png);}
+.l_list_box{width:100px; height:56px; line-height:26px;border-right:#CCC solid 1px; text-align:center}
+.l_list_box:active{background-color:#CCC;}
+
+
+/* ----- 公共的CSS ----- */
+.p_judge_box{
+    margin:0 10px 0 0;
+    width:100%;
+    text-align: center;
+    font-family: "Pictos";
+    font-size: 20pt;
+    color:#ccc;
+}
+
+
+.p_judge_box_clicked{
+    margin:0 10px 0 0;
+    width:100%;
+    text-align: center;
+    font-family: "Pictos";
+    font-size: 20pt;
+    color:#e03a3e;
+
+}
+/* 提交状况 */
+.已退调,.p_submit_yes,.已提交{background:green;color:white;border:green 2px solid;}
+.调试未到达,.调试中,.已进入待提交队列 ,.p_submit_no,.未提交{background:red;color:white;border:red 2px solid;}
+/* 必填框*改为红色 */
+.x-field-required .x-form-label::after{
+   color:#ff0000; 
+}
+
+
+/*--------------------
+       实时监控
+  -------------------*/
+.monitoring{
+	float:left;
+	margin:10px 5px 0 5px;
+	width: 120px;
+	height: 38px;
+	line-height:38px;
+	color:#fff;
+	text-align:center;
+	border-radius: 5px;
+}
+.monitoring_red{
+	background: red;
+}
+.monitoring_green{
+	background: green;
+}
+.monitoring_no{
+	background: #666;
+}
+
+/*--------------------
+     安装计划于实绩
+  -------------------*/
+
+/* 用颜色区分出数据栏 */
+.az-input-text
+{
+    color: #ff0000;
+}
+
+/*#region textarea*/
+.x-field-textarea .x-form-field{
+	line-height:29px;
+	min-height:29px;
+	height:34px;
+	overflow-y:hidden;
+	padding:0.2em 0 0 0.2em;
+	border-radius:6px;
+}
+.x-field-textarea{
+	min-height:0;
+	border-radius:6px;
+}
+.x-field-textarea .x-field-input{
+	padding-right:0 !important;
+}

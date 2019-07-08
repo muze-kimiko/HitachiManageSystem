@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html>
+    	<head>
+    		<meta charset="UTF-8">
+    		<title>FaultDetail</title>
+<script src="jqueryMobile/jquery.mobile-1.4.5.js"></script>
+<link href="jqueryMobile/jquery.mobile.theme-1.4.5.min.css"
+	rel="stylesheet">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+    	<body>
+	<div data-role="page" id="faultdetail">
+		<div data-role="header" data-position="fixed" style="background:#2B89D3;color:#ffffff;height:40px;" >
+			<div data-type="horizontal" class="ui-btn-left">
+				<a id="back" href="#anylink" data-role="button" data-iconpos="notext" data-rel="back" data-icon="custarrow-l" data-theme="f">后退</a>
+				<a href="javascript:void(0);" onclick="home();" data-role="button" data-iconpos="notext" data-icon="custarrow-home" data-theme="f">主页</a>
+			</div>
+			<h1  class="pagetitle" style="font-size:15px;">故障详细信息</h1>
+		</div>
+		<div data-role="content" style="padding: 0px">
+
+			   <div class="Mcstatus" id="ElevatorDetail" width="100%">
+				<table  class="jhliftdata_dteail" width="100%" border="0" >
+				  <tr>
+				    <th width="35%" scope="row" style="text-align:left;padding-left:5px;">电梯工号</th>
+				    <td width="65%"><label id="lbDeviceNo"></label></td>
+				  </tr>
+				  <tr>
+				    <th scope="row" style="text-align:left;padding-left:5px;">地盘名称</th>
+				    <td><label id="lbBuilding" ></label></td>
+				  </tr>
+				   <tr>
+				    <th scope="row" style="text-align:left;padding-left:5px;">电梯位置</th>
+				    <td><textarea id="lbAddress"></textarea></td>
+				  </tr>
+				  <tr>
+				    <th scope="row" style="text-align:left;padding-left:5px;">所&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;属<br>分&nbsp;&nbsp;公&nbsp;&nbsp;司</th>
+				    <td><label id="lbFiliale"></label></td>
+				  </tr>
+				  <tr>
+				    <th scope="row" style="text-align:left;padding-left:5px;">所&nbsp;&nbsp;属&nbsp;&nbsp;站</th>
+				    <td><label id="lbMaintenance"></label></td>
+				  </tr>			  
+				  <tr>
+				    <th scope="row" style="text-align:left;padding-left:5px;">发报类型</th>
+				    <td><label id="lbLastIssueTypeName"></label></td>
+				  </tr>
+				  <tr>
+				    <th scope="row" style="text-align:left;padding-left:5px;">下单编号</th>
+				    <td><label id="lbOrderNO"></label></td>
+				  </tr>
+				  
+				  <tr>
+				    <th scope="row" style="text-align:left;padding-left:5px;">处理记录</th>
+				    <td><label id="lbIssueRecordsContent"></label></td>
+				  </tr>
+				  <tr>
+				    <th scope="row" style="text-align:left;padding-left:5px;">归档人</th>
+				    <td><label id="lbIssuePerson"></label></td>
+				  </tr>
+				  <tr>
+				    <th scope="row" style="text-align:left;padding-left:5px;">归档时间</th>
+				    <td><label id="lbLastIssueDate"></label></td>
+				  </tr>
+				  
+				  
+				  <tr>
+				    <th scope="row" style="text-align:left;padding-left:5px;">电梯备注</th>
+				    <td ><label id="lbRemark"></label><textarea id="lbRemark2"></textarea></td>
+				  </tr>
+				  <tr>
+				    <th scope="row" style="text-align:left;padding-left:5px;">地盘备注</th>
+				    <td ><label id="lbBuildingRemark"></label><textarea id="lbBuildingRemark2"></textarea></td>
+				  </tr>
+				</table>
+            </div>
+            <div data-role="controlgroup" data-type="horizontal" style="text-align:center;">
+            <a href="#" data-role="button" data-icon="back"  data-rel="back" style="background-color:red;color:#fff">取消</a>
+			   <a href="javascript:void(0)" onclick="SaveFaultDetail()" data-role="button" data-icon="info" style="background-color:#3388cc;color:#fff;">保存</a>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+
+</html>
+

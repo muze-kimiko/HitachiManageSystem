@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+    	<head>
+    		<meta charset="UTF-8">
+    		<title>retrievalsearch</title>
+    	</head>
+    	<body>
+	<div data-role="page" id="retrievalsearch" data-close-btn="none">
+		<div data-role="header" data-position="fixed" style="background:#2B89D3;color:#ffffff;height:40px;" >
+			<h1  class="pagetitle" style="font-size:15px;">手册搜索</h1>
+		</div>
+		<div data-role="content" style="padding: 0px">
+			   <div class="Mcstatus" id="Mcheader" width="100%">
+			   <table width="100%" border="0" cellspacing="0" cellpadding="0">
+			   <tr>
+			   <td>
+		       <label for="txtAlias">电梯类型:</label><input type="text" name="txtAlias" id="txtAlias">
+			   <label for="txtCode">故障代码:</label><input type="text" name="txtCode" id="txtCode">
+			   <label for="txtName">故障名称:</label><input type="text" name="txtName" id="txtName">
+			   <label for="selectFaulttype">故障类别</label>
+			   <select name="selectFaulttype" id="selectFaulttype">
+		         <option value="-1">全部</option>
+		         <option value="5AD930EB-3761-4B01-BAFF-38C281F561F0">主微机故障</option>
+		         <option value="C403E933-213C-4AF3-9DB7-92D25BF0CB99">副微机故障</option>
+		        </select>
+			  </td>
+			   </tr>
+			   <tr>
+			   <td>
+			   <div data-role="controlgroup" data-type="horizontal" style="text-align:center;">
+			   <a href="#" data-role="button" data-icon="back"  data-rel="back" style="background-color:red;color:#fff">取消</a>
+			   <a href="javascript:void(0)" id="btn-retrieval-search" data-role="button" data-icon="info" style="background-color:#3388cc;color:#fff;">确定</a>
+				</div>
+			   </td>
+			   </tr>
+			   </table>
+			   </div>
+			   <div class="Mcstatus" id="SearchResult" width="100%">
+			   <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td>
+					</td>
+                </tr>
+            </table>
+            </div>
+		</div>
+	</div>
+
+</body>
+
+
+</html>
+

@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+    	<head>
+    		<meta charset="UTF-8">
+    		<title>StatusReport</title>
+    	</head>
+    	<body>
+	<div data-role="page" id="StatusReport">
+		<div data-role="header" data-position="fixed" data-tap-toggle="false" style="background:#2B89D3;color:#ffffff;height:40px;position:fixed;" data-theme="f" data-hide-during-focus="false">
+			<div data-type="horizontal" class="ui-btn-left">
+				<a href="#anylink" id="StatusReport-back" data-role="button" data-icon="custarrow-l" data-iconpos="notext" data-rel="back" data-theme="f">后退</a>
+				<a href="#anylink" id="StatusReport-external-back" data-role="button" data-icon="custarrow-l" data-iconpos="notext" rel="external" style="display:none;" data-theme="f">后退</a>
+				<a href="javascript:void(0);" onclick="home(4);" data-role="button" data-icon="custarrow-home" data-iconpos="notext" data-theme="f">主页</a>
+				
+			</div>
+			<h1  class="pagetitle" style="font-size:15px;">运行报表&nbsp;&nbsp;</h1>
+			
+			<table  id="tongjiTitle" class="yunxingtongji" width="100%" border="0" cellpadding="0" cellspacing="0" style="background-color:#fff;color:#000;">
+				<tr>
+					<td style="padding-left:5px;padding-right:5px;">
+						<input type="search" name="txtFiliale" id="txtFiliale" value="" placeholder="搜索分公司">
+					</td>
+					<td>
+						<a id="btnsearch" href="javascript:void(0)"  data-role="button" data-icon="search" style="background:#2B89D3;color:#fff;">查询</a>
+					</td>
+				</tr>
+				 <tr>
+					<td colspan="2" style="color:#2B89D3">统计周期
+						<SELECT id="select-choice-period" name="select-choice-period" data-role="none" style="color:#2B89D3;font-weight:bold;"> 
+							<OPTION selected value="7">7天</OPTION> 
+							<OPTION value="15">15天</OPTION> 
+							<OPTION value="30">30天</OPTION> 
+						</SELECT> 
+						正常监控比例
+						<SELECT id="select-choice-mini" name="select-choice-mini" data-role="none" style="color:#2B89D3;font-weight:bold;"> 
+							<OPTION selected value="">全部</OPTION> 
+							<OPTION value="90">90%以上</OPTION> 
+							<OPTION value="50">50%以上</OPTION> 
+							<OPTION value="0">50%以下</OPTION>
+						</SELECT> 
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" style="text-align:right;font-size:12px;font-weight:normal;height:1em;line-height:1em;">
+						正常比例=正常监控量/在保台量
+					</td>
+				</tr>
+				<tr>
+				<td id="tip" colspan="2" style="text-align:right;font-size:12px;font-weight:normal;padding-top:2px;"></td>
+				</tr>
+			</table>
+		</div>
+		<!-- <div data-role="content" style="padding-top:120px;padding-left:0px;padding-right:0px;padding-bottom:0px;">-->
+		<div data-role="content" style="padding-top:0px;padding-left:0px;padding-right:0px;padding-bottom:0px;">
+			<div class="Mcstatus" id="SearchResult" width="100%"></div>
+            <div id="div-more" style="display:none;">
+				<a id="more" href="javascript:void(0);" data-role="button">更多</a>
+			</div>
+		</div>
+		<div data-role="popup" id="popupNodata" class="ui-content">
+		<p>共搜索到0条数据</p>
+		</div>
+	</div>
+</body>
+</html>
+

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Licensed Materials - Property of IBM
+    5725-I43 (C) Copyright IBM Corp. 2011, 2013. All Rights Reserved.
+    US Government Users Restricted Rights - Use, duplication or
+    disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<wl:adapter name="HttpAdapter_MUG"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:wl="http://www.ibm.com/mfp/integration"
+	xmlns:http="http://www.ibm.com/mfp/integration/http">
+
+	<displayName>HttpAdapter_MUG</displayName>
+	<description>HttpAdapter_MUG</description>
+	<connectivity>
+		<connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
+			<!-- 正式机地址:http://10.96.128.96:8080  -->
+			<!-- 测试机地址:http://10.98.199.17:8080  -->
+			<protocol>http</protocol>
+			<domain>10.98.199.17</domain>
+			<port>8080</port>
+			<connectionTimeoutInMilliseconds>60000</connectionTimeoutInMilliseconds>
+			<socketTimeoutInMilliseconds>60000</socketTimeoutInMilliseconds>
+			<maxConcurrentConnectionsPerNode>200</maxConcurrentConnectionsPerNode>
+			<!-- Following properties used by adapter's key manager for choosing specific certificate from key store  
+			<sslCertificateAlias></sslCertificateAlias> 
+			<sslCertificatePassword></sslCertificatePassword>
+			-->		
+		</connectionPolicy>
+	</connectivity>
+
+	<procedure name="getServerDT"/>
+	
+	<procedure name="PlanListQuery"/>
+	
+	<procedure name="MPlanPersonQuery"/>
+	
+	<procedure name="ActionTaskQuery"/>
+	
+	<procedure name="ItemListQuery"/>
+
+	<procedure name="MPlanTemplateQuery"/>
+	
+	<procedure name="RecordQuery"/>
+	
+	<procedure name="AttachmentQuery"/>
+	
+	<procedure name="LegacyQuery"/>
+	
+	<procedure name="PreWorkQuery"/>
+	
+	<procedure name="PostWorkQuery"/>
+	
+	<procedure name="ProjectNoQuery"/>
+	
+	<procedure name="RecordSynchronize"/>
+	
+	<procedure name="ItemListSynchronize"/>
+	
+	<procedure name="PlanListSynchronize"/>
+	
+	<procedure name="LegacyUpsert"/>
+	
+	<procedure name="AttachmentSynchronize"/>
+	
+	<procedure name="PlanListRegain"/>
+	
+	<procedure name="PlanListSubmit"/>
+	
+	<procedure name="AttachmentDelete"/>
+	
+	<procedure name="LegacyDelete"/>
+	
+	<procedure name="BrakeQuery"/>
+	
+	<procedure name="BrakekPick"/>
+	
+	<procedure name="MeasureProjectQuery"/>
+	
+	<procedure name="ItemListSubmit"/>
+	
+	<procedure name="ContentAttQuery"/>
+</wl:adapter>

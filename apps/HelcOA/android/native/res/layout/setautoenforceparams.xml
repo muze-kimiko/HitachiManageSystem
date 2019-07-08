@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/setAutoEnforceparams"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:baselineAligned="false"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/initializeAutoEnforceParams"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/initializeAutoEnforceParams"
+            android:textSize="15sp"
+            android:textStyle="bold" >
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/autoEnforceRestrictCopyPaste"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/shouldAutoEnforceCopyPaste"
+                android:textIsSelectable="true" >
+            </TextView>
+
+            <Spinner
+                android:id="@+id/selectAutorestrictCopyPaste"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:entries="@array/select"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/autoEnforceRestrictScreenShot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/shouldAutoEnforceScreenshot"
+                android:textIsSelectable="true" >
+            </TextView>
+
+            <Spinner
+                android:id="@+id/selectAutorestrictScreenShot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:entries="@array/select"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/autoRestrictExport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shouldAutoEnforceExport"
+                android:textIsSelectable="true" >
+            </TextView>
+
+            <Spinner
+                android:id="@+id/selectAutorestrictExport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/select"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/autoEnforceEnterpriseGateway"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shouldAutoEnforceGateway"
+                android:textIsSelectable="true" >
+            </TextView>
+
+            <Spinner
+                android:id="@+id/selectAutoEnforceEnterpriseGateway"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/select"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/autoEnforceSelectiveWipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shouldAutoEnforceSelectiveWipe"
+                android:textIsSelectable="true" >
+            </TextView>
+
+            <Spinner
+                android:id="@+id/selectAutoEnforceSelectiveWipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/select"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/autoEnforceSSOCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shouldAutoEnforceSSOCheck"
+                android:textIsSelectable="true" >
+            </TextView>
+
+            <Spinner
+                android:id="@+id/selectAutoEnforceSSOCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:entries="@array/select"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

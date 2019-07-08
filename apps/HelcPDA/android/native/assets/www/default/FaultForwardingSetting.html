@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>故障转发设置</title>
+</head>
+<body>
+	<div data-role="page" id="FaultForwardingSetting">
+		<div data-role="header" data-position="fixed" class="header" style="background:#2B89D3;color:#ffffff;height:40px;position:fixed;font-weight:normal;">
+			<div data-type="horizontal"  class="ui-btn-left">
+				<a href="#anylink" data-role="button"  data-iconpos="notext" data-rel="back" data-icon="custarrow-l" data-theme="f">后退</a>
+				<a href="javascript:void(0);" onclick="home(1);" data-role="button"  data-iconpos="notext" data-icon="custarrow-home" data-theme="f">主页</a>
+			</div>
+			<h1 class="pagetitle" style="font-size:15px;">故障转发设置</h1>
+			<div data-type="horizontal" class="ui-btn-right">
+				<a href="javascript:void(0);" id="btnSave" data-role="button" data-icon="custarrow-ok" data-iconpos="notext" data-theme="f">保存</a>
+			</div>
+			
+			<ul data-role="listview" data-inset="true" style="padding:0px 0px 0px 0px;">
+				<li>
+					<input id="txtCompanyId" type="hidden">
+					<input id="txtContactIds" type="hidden">
+					联系人员<input type="text" id="txtSelectedStaff" style="text-align:right;float:right;border:0px;background-color:#fff;" disabled="disabled" data-role="none"/>
+				</li>
+				<li>
+					<input id="txtElevatorIds" type="hidden">
+					电梯工号<input type="text" id="txtSelectedDeviceNo" placeholder="请选择工号"  style="text-align:right;float:right;border:0px;" data-role="none"/>
+				</li>
+				<li data-role="list-divider"></li>
+				<li id="btnCycle" >
+					<input id="txtCycleIds" type="hidden">
+					重复 <span id="lblCycle" class="ui-li-count" style="border:0px;font-weight:normal">请选择重复周期</span>
+				</li>
+				<li >
+					开始时间 <input type="text" id="txtStartTime" style="text-align:right;float:right;border:0px;" data-role="none" value="00:00"/>
+				</li>
+				<li >结束时间 <input id="txtEndTime" style="text-align:right;float:right;border:0px;" data-role="none" value="23:59" /></li>
+				<li data-role="list-divider"></li>
+				<li>
+					<input id="txtFaultIds" type="hidden">
+					<input id="txtFaultNames" type="hidden">
+					故障<input type="text" id="txtFault" placeholder="请选择故障"  style="text-align:right;float:right;border:0px;" data-role="none"/>
+				</li>
+				
+			</ul>
+		</div>
+		
+		<div data-role="content" style="padding-top:300px; font-weight:normal;">
+			<ul data-role="listview" id="listview-selectfault">
+			    
+			</ul>
+		</div>
+		
+		<!-- 电梯工号 -->
+		<div data-role="popup" id="popupDeviceNo" data-tolerance="0,0" class="ui-popup " data-position-to="window" data-overlay-theme="b" data-theme="a" style="min-width:100%;min-heigth:100%;padding-left:0px;">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;height:40px;" >
+				<div data-type="horizontal" class="ui-btn-right">
+				<a href="javascript:void(0);" data-role="button"  data-theme="f" style="color:#fff;" id="btnConfirmDeviceNo">确定</a>
+				</div>
+				<h1  class="pagetitle" style="font-size:15px;">选择工号</h1>
+			</div>
+		    <div data-role="content" style="padding-top:0px;margin-top:0px;">
+				<table>
+					<tr>
+						<td><input type="text" name="txtDeviceNo" id="txtDeviceNo" placeholder="请输入至少4位工号"></td>
+					</tr>
+					<tr>
+						<td><input type="text" name="txtBuilding" id="txtBuilding" placeholder="请输入地盘"></td>
+					</tr>
+					<tr>
+						<td><button data-role="none" id="btnSearchDeviceNo">查询</button></td>
+					</tr>
+				</table>
+		        <ul data-role="listview" id="list-deviceno">
+				   
+				</ul>
+		    </div>
+		</div>
+	
+		<!-- 联系人 -->
+		<div data-role="popup" id="popupCycle" data-tolerance="0,0" class="ui-popup " data-position-to="window" data-overlay-theme="b" data-theme="a" style="min-width:100%;min-heigth:100%;padding-left:0px;width:250px;">
+			
+				 <fieldset data-role="controlgroup" data-iconpos="right" data-mini="true" >
+			        <input name="checkbox-week7" id="checkbox-week7" type="checkbox" value="7" onclick="cycleClick()">
+			        <label for="checkbox-week7" style="font-weight:normal;">星期日</label>
+			        <input name="checkbox-week1" id="checkbox-week1" type="checkbox" value="1" onclick="cycleClick()"> 
+			        <label for="checkbox-week1" style="font-weight:normal;">星期一</label>
+			        <input name="checkbox-week2" id="checkbox-week2" type="checkbox" value="2" onclick="cycleClick()">
+			        <label for="checkbox-week2" style="font-weight:normal;">星期二</label>
+			        <input name="checkbox-week3" id="checkbox-week3" type="checkbox" value="3" onclick="cycleClick()">
+			        <label for="checkbox-week3" style="font-weight:normal;">星期三</label>
+			        <input name="checkbox-week4" id="checkbox-week4" type="checkbox" value="4" onclick="cycleClick()">
+			        <label for="checkbox-week4" style="font-weight:normal;">星期四</label>
+			        <input name="checkbox-week5" id="checkbox-week5" type="checkbox" value="5" onclick="cycleClick()">
+			        <label for="checkbox-week5" style="font-weight:normal;">星期五</label>
+			        <input name="checkbox-week6" id="checkbox-week6" type="checkbox" value="6" onclick="cycleClick()">
+			        <label for="checkbox-week6" style="font-weight:normal;">星期六</label>
+			        <button id="btnClose">关闭</button>
+			    </fieldset>
+
+		</div>
+		<!-- 故障 -->
+		<div data-role="popup" id="popupFault" data-tolerance="0,0" class="ui-popup " data-position-to="window" data-overlay-theme="b" data-theme="a" style="min-width:100%;min-heigth:100%;padding-left:0px;width:250px;">
+			
+				<div id="faultlist" class="ui-controlgroup-controls" style="font-size:10px;"></div>
+				
+				<button id="btnFaultClose">关闭</button>
+
+		</div>
+	</div>
+</body>
+</html>

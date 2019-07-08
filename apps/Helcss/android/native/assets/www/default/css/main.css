@@ -1,0 +1,276 @@
+
+/* Stylesheet content from css/main.css in folder common */
+/* Reset CSS */
+a, abbr, address, article, aside, audio, b, blockquote, body, canvas, caption, cite, code, dd, del, details, dfn, dialog, div, dl, dt, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, p, pre, q, samp, section, small, span, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, ul, var, video {
+	margin: 0;
+	padding: 0;
+}
+
+/* Worklight container div */
+body {
+	height: 460px;
+	margin: 0 auto;
+	width: 320px;
+	background: #000;
+}
+
+.seldataviewcss {
+	border:2px  #3399DD solid; 
+	/*
+	background-color: gray;
+	*/
+}
+
+/* 主菜单按钮样式 */
+.home-button
+{
+    float:left;
+    padding-top: 125px;
+    padding-left: 20px;
+    font-size: 11pt;
+}
+
+.home-button-pressed
+{
+    filter:alpha(opacity=80);
+    -maz-opacity=0.8;
+    -khtml-opacity=0.8;
+    opacity:0.8;
+}
+
+.home-button-label
+{
+    color: white;
+    text-align: left;
+}
+
+.home-button-label-eng
+{
+    font-size: 8pt;
+}
+
+/* 侧栏菜单增加阴影 */
+.x-menu
+{
+    background: #000;
+    height:2048;
+}
+
+/* 侧栏菜单按钮：改为方形，颜色调整 */
+.x-menu-inner .x-button
+{
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+    border-radius: 0px;
+    border-color: #caa774;
+    background: #000;
+    height: 40px;
+}
+
+/* 侧栏菜单按钮：图标、文字颜色(平时) */
+.x-menu-inner .x-button-icon, .x-menu-inner .x-button-label
+{
+    color: #caa774;
+}
+/* 侧栏菜单按钮：边框、图标、文字颜色(点击时) */
+.x-menu-inner .x-button-pressing
+{
+    border-color: #e5c89d;
+}
+.x-menu-inner .x-button-pressing .x-button-icon, .x-menu-inner .x-button-pressing .x-button-label
+{
+    color: #e5c89d;
+}
+
+/* 遥监状态 */
+.led{
+	font-size: 14pt;
+	margin: 4px;
+	padding: 4px;
+	float:left;
+	width: 100px;
+	text-align: center;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.led_red
+{
+	color: #ffffff;
+	background: #c21613;
+	border: 1px solid #c21613;
+}
+
+.led_green
+{
+	color: #ffffff;
+	background: #16bc31;
+	border: 1px solid #16bc31;
+}
+
+.led_off
+{
+	color: #888888;
+	background: #444444;
+	border: 1px solid #444444;
+}
+
+.whitecolor
+{
+    color: white;
+}
+
+.bluecolor
+{
+    color: #157efb;
+}
+
+/* Company Profile */
+.a-main{padding-top:50px;width:100%; min-width:768px;height: 3065px;background-image: url(../aboutus_images/aboutUs_bg.png);background-size: 768px 3065px;}
+.a-con{margin:0 auto;width:90%;height:auto;}
+.a-logo{float:right;clear:none;margin:0 auto 50px auto;width:100%;text-align: right;}
+.a-title,.a-title>span,.a-title-eng,.a-title-line{float:left;clear:none;}
+.a-title{width:100%;font-size:32pt; font-weight:bold;margin:0 0 40px 0;}
+.a-title-eng{margin-top:5px;width:100px;color:#717171;font-size:12pt;}
+.a-title-line{margin:5px 5px;width:2px;height:39px;background-color:#717171;font-size:12pt;}
+.a-introduce01 p, .a-introduce02 p, .a-introduce03 p{font-size:14pt;}
+.a-introduce01>h1, .a-introduce02>h1, .a-introduce03>h1{margin:30px 0;}
+.a-introduce01{width:100%;}
+.a-introduce01 > div{float:right;clear:none;margin-top:30px;width:225px;}
+.a-introduce01 > div > div{width:225px; height:22px;line-height:22px;margin:0 auto;text-align: center;}
+.a-introduce02{width:100%;}
+.a-introduce02 ul{ position:relative;float:left;clear:none;margin-top:30px;width:100%; height:1160px;list-style: none;}
+.a-introduce02 ul li{ position:absolute;width: auto;text-align:left;list-style: none;}
+.a-introduce03{width:100%;}
+.a-introduce03 ul{float:right;clear:none;width:100%;list-style: none;}
+.a-introduce03 ul li{float:left;clear:none;margin:16px 5px;width:220px;height:150px;list-style: none;}
+.a-introduce01>h1 , .a-introduce01>p , .a-introduce02>h1 , .a-introduce02>p , .a-introduce03>h1 , .a-introduce03>p {float:left;clear:none;}
+.a-introduce01>h1 , .a-introduce01>p {width:440px;}
+.a-introduce02>h1 , .a-introduce02>p , .a-introduce03>h1 , .a-introduce03>p {width:100%;}
+.a-bottom{float:left;clear:none;margin:60px auto;width:100%;text-align: center;}
+
+/*2014-9-3*/
+/*安卓主菜单式样*/
+.home-button-az-one
+{
+    float:left;
+    padding-top: 70px;
+    padding-left: 5px;
+    font-size: 5pt;
+}
+
+.home-button-az-one2
+{
+    float:left;
+    padding-top: 52px;
+    padding-left: 5px;
+    font-size: 5pt;
+}
+
+
+
+.home-button-az-two
+{
+    float:left;
+    padding-top: 52px;
+    padding-left: 5px;
+    font-size: 5pt;
+}
+
+/*安卓平台*/
+.a-main-az{padding-top:50px;width:100%;height: 100%;background-image: url(../aboutus_images/aboutUs_bg.png);background-size: 100% 100%;}
+.a-introduce01-az p, .a-introduce02-az p{font-size:14pt;}
+.a-introduce01-az>h1, .a-introduce02-az>h1{margin:30px 0;}
+.a-introduce01-az{width:100%;}
+.a-introduce01-az > div{float:right;clear:none;margin-top:0px;width:50%;}
+.a-introduce01-az > div > div{width:50%; height:22px;line-height:22px;margin:0 auto;text-align: center;}
+.a-introduce02-az{width:100%;}
+.a-introduce02-az ul{ position:relative;float:left;clear:none;margin-top:30px;width:100%; height:2000px;list-style: none;}
+.a-introduce02-az ul li{ position:absolute;width: auto;text-align:left;list-style: none;}
+.a-introduce02-az>h1 , .a-introduce02-az>p  {float:left;clear:none;}
+.a-introduce02-az>h1 , .a-introduce02-az>p {width:100%;}
+.a-introduce03-az{width:100%;}
+.a-introduce03-az ul{float:right;clear:none;width:100%;list-style: none;}
+.a-introduce03-az ul li{float:left;clear:none;margin:16px 5px;width:30%;height:150px;list-style: none;}
+
+
+/*#region textarea*/
+.x-field-textarea .x-form-field{
+	line-height:38px;
+	min-height:38px;
+	height:34px;
+	overflow-y:hidden;
+	padding:0.2em 0 0 0.2em;
+	border-radius:6px;
+}
+.x-field-textarea{
+	min-height:0;
+	border-radius:6px;
+}
+.x-field-textarea .x-field-input{
+	padding-right:0 !important;
+}
+
+/* 遥监状态 */
+.led_az{
+	font-size: 9pt;
+	margin: 2px;
+	padding: 2px;
+	float:left;
+	width: 70px;
+	text-align: center;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+}
+
+/*版本号样式*/
+.x-label.version_label{
+	font-size:10pt;
+	margin:10px 0 0 10%;
+	color: white;
+}
+
+/*九宫格字体大小控制*/
+.home-button-label-eng2{
+	face:微软雅黑;
+	font-size: 11pt;
+}
+
+/*中信图片*/
+.a-bottom2{float:left;clear:none;margin:10px auto;width:100%;text-align: center;}
+
+/*遥监*/
+.x-form .yjzy{
+	font-size:10pt;
+}
+
+/*巡查和安装管理*/
+.YaoJiao_size{
+	font-size:12pt;
+	face:微软雅黑;
+}
+
+/*首页第图标*/
+.login_jpg{
+	color:'white';
+	font-size:12pt;
+}
+/* Stylesheet content from css/main.css in folder android */
+
+/* this CSS file extends the application CSS file found under common\css */
+
+/* body should stretch in an Android application */
+html, body {
+	height: 100%;
+	width: 100%;
+	min-height: 100%;
+	overflow: auto;
+}

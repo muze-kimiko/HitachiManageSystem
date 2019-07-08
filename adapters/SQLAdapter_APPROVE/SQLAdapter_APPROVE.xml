@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+    Licensed Materials - Property of IBM
+    5725-I43 (C) Copyright IBM Corp. 2011, 2013. All Rights Reserved.
+    US Government Users Restricted Rights - Use, duplication or
+    disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<wl:adapter xmlns:wl="http://www.ibm.com/mfp/integration" xmlns:sql="http://www.ibm.com/mfp/integration/sql" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SQLAdapter_APPROVE">
+    <!--This adapter has been upgraded, For more information about the changes, see the "Adapter timeout and concurrency" topic in the product Knowledge Center.-->
+    <displayName>SQLAdapter_APPROVE</displayName>
+	<description>SQLAdapter_APPROVE</description>
+	<connectivity>
+		<connectionPolicy xsi:type="sql:SQLConnectionPolicy">
+			<!-- Example for using a JNDI data source, replace with actual data source name -->
+			<!-- <dataSourceJNDIName>java:/data-source-jndi-name</dataSourceJNDIName> -->
+			
+			<!-- Example for using MySQL connector, do not forget to put the MySQL connector library in the project's lib folder -->
+			<dataSourceDefinition>
+				<driverClass>oracle.jdbc.driver.OracleDriver</driverClass>
+				<!-- 测试:10.96.143.98:1521:IPAD -->
+				<!-- 正式:10.96.143.97:1521:IPAD -->
+				<!-- 新正式:10.96.128.95:1521:SBPRD -->
+				<url>jdbc:oracle:thin:@10.96.128.95:1521:SBPRD</url>
+			    <user>PORTAL</user>
+    			<password>IPADHAND2013</password> <!-- 测试：handhand  正式：IPADHAND2013 -->
+			</dataSourceDefinition>
+		</connectionPolicy>
+		<!--<loadConstraints maxConcurrentConnectionsPerNode="50" /> Element loadConstraint was removed as it is no longer supported. For more information, see the "Adapter timeout and concurrency" topic in the product Knowledge Center.-->
+	</connectivity>
+
+	<!-- Replace this with appropriate procedures --><!--The requestTimeoutInSeconds attribute in the <procedure> element is no longer supported and has been removed. For more information, see the "Adapter timeout and concurrency" topic in the product Knowledge Center.-->
+	<procedure name="procedure1"/>
+	<procedure name="procedure2"/>
+	<procedure name="loginInfo"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<procedure name="lastLoginLog"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<procedure name="InsertLoginLog"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<procedure name="operateLog"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<procedure name="insertOperateLog"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<procedure name="deviceuser"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<procedure name="removeDevice"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<procedure name="checkDevByUser"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<procedure name="InsertDevice"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<procedure name="UpdateDeviceTime"/>
+    <!--requestTimeoutInSeconds="60000"-->
+
+
+</wl:adapter>

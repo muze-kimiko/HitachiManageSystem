@@ -1,0 +1,10 @@
+Ext.define('HelcPDA.store.report.PersonKPI.PersonKPICompanyStore',{
+	id:'PersonKPICompanyStore',
+	extend:'Ext.data.Store',
+	config:{
+		fields:[
+			'COMPANY_NAME',
+			'COMPANY_ID',
+		],
+	},
+});

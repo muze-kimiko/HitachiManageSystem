@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+    Licensed Materials - Property of IBM
+    5725-I43 (C) Copyright IBM Corp. 2011, 2013. All Rights Reserved.
+    US Government Users Restricted Rights - Use, duplication or
+    disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<wl:adapter xmlns:wl="http://www.ibm.com/mfp/integration" xmlns:http="http://www.ibm.com/mfp/integration/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="HttpAdapter_BPM">
+    <!--This adapter has been upgraded, For more information about the changes, see the "Adapter timeout and concurrency" topic in the product Knowledge Center.-->
+    <displayName>HttpAdapter_BPM</displayName>
+	<description>HttpAdapter_BPM</description>
+	<connectivity>
+		<connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
+			<protocol>http</protocol>
+			<domain>bp.bpm.com</domain>
+			<port>9080</port>
+            <connectionTimeoutInMilliseconds>30000</connectionTimeoutInMilliseconds>
+            <socketTimeoutInMilliseconds>30000</socketTimeoutInMilliseconds>
+            <!--The previous elements: <connectionTimeoutInMilliseconds> and <socketTimeoutInMilliseconds>, were added to <connectionPolicy> element. These elements correspond to TCP connection and socket timeouts when connecting to the back-end. For more details, see HTTP protocol specifications and "Adapter timeout and concurrency" topic in the product Knowledge Center.-->	
+			<!-- Following properties used by adapter's key manager for choosing specific certificate from key store  
+			<sslCertificateAlias></sslCertificateAlias> 
+			<sslCertificatePassword></sslCertificatePassword>
+			-->		
+		<maxConcurrentConnectionsPerNode>10</maxConcurrentConnectionsPerNode>
+            <!--The <maxConcurrentConnectionsPerNode> element has been moved from <loadConstraint> element (and loadConstraint has been commented out). This element sets the maximum number of concurrent requests to the backend. For more information, see the "Adapter timeout and concurrency" topic in the product Knowledge Center.-->
+        </connectionPolicy>
+		<!--<loadConstraints maxConcurrentConnectionsPerNode="10" />-->
+	</connectivity>
+    <!--The requestTimeoutInSeconds attribute in <procedure> elements was removed as it is no longer supported. To change the default connection and socket For more information, see the "Adapter timeout and concurrency" topic in the product Knowledge Center. more details, see <documentation>.-->
+    <procedure name="getStories"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<procedure name="getStoriesFiltered"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<procedure name="TodoList"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<procedure name="WebServiceTest"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<procedure name="ForApprovalProcess"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<procedure name="ApprovalProcess"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<procedure name="startTheProcess"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<procedure name="startTheProcessName"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<procedure name="draftingProcess"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<procedure name="DrafterSubmit"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<procedure name="toMyTodoListRecord"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<procedure name="toOvrTodoListRecord"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<procedure name="examine"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<procedure name="POFormExamine"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<procedure name="GetERPProcess_Info"/>
+    <!--requestTimeoutInSeconds="60000"-->
+</wl:adapter>

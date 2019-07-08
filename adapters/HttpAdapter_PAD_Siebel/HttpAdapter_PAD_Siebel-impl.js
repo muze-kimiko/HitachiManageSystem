@@ -1,0 +1,174 @@
+/*
+ *  Licensed Materials - Property of IBM
+ *  5725-I43 (C) Copyright IBM Corp. 2011, 2013. All Rights Reserved.
+ *  US Government Users Restricted Rights - Use, duplication or
+ *  disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+ */
+
+/**
+ *  WL.Server.invokeHttp(parameters) accepts the following json object as an argument:
+ *  
+ *  {
+ *  	// Mandatory 
+ *  	method : 'get' , 'post', 'delete' , 'put' or 'head' 
+ *  	path: value,
+ *  	
+ *  	// Optional 
+ *  	returnedContentType: any known mime-type or one of "json", "css", "csv", "javascript", "plain", "xml", "html"  
+ *  	returnedContentEncoding : 'encoding', 
+ *  	parameters: {name1: value1, ... }, 
+ *  	headers: {name1: value1, ... }, 
+ *  	cookies: {name1: value1, ... }, 
+ *  	body: { 
+ *  		contentType: 'text/xml; charset=utf-8' or similar value, 
+ *  		content: stringValue 
+ *  	}, 
+ *  	transformation: { 
+ *  		type: 'default', or 'xslFile', 
+ *  		xslFile: fileName 
+ *  	} 
+ *  } 
+ */
+
+/**
+ * @param interest
+ *            must be one of the following: world, africa, sport, technology, ...
+ *            (The list can be found in http://edition.cnn.com/services/rss/)
+ * @returns json list of items
+ */
+function getStories(interest) {
+	path = getPath(interest);
+	
+	var input = {
+	    method : 'get',
+	    returnedContentType : 'xml',
+	    path : path
+	};
+	
+	
+	return WL.Server.invokeHttp(input);
+}
+/**
+ * 
+ * @param interest
+ *            must be one of the following: world, africa, sport, technology, ...
+ *            (The list can be found in http://edition.cnn.com/services/rss/)
+ * @returns json list of items
+ */
+function getStoriesFiltered(interest) {
+	path = getPath(interest);
+	
+	var input = {
+	    method : 'get',
+	    returnedContentType : 'xml',
+	    path : path,
+	    transformation : {
+		    type : 'xslFile',
+		    xslFile : 'filtered.xsl'
+	    }
+	};
+	
+	return WL.Server.invokeHttp(input);
+}
+
+
+
+function getPath(interest) {
+	if (interest == undefined || interest == '') {
+		interest = '';
+	}else {
+		interest = '_' + interest;
+	}
+	return 'rss/edition' + interest + '.rss';
+}
+
+//合同资料Siebel查询
+function toSiebelcontractSeacher(ContractNumber,ContractType,CustomerName,AssetNumber,FinalUser,BigCustomer,userID){
+	WL.Logger.error("SS:"+userID+'  '+AssetNumber);
+	var request='<?xml version="1.0" encoding="utf-8"?>'+
+	'<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">'+
+	  '<soap:Body>'+
+	    '<ContractListQueryByExample_Input xmlns="http://siebel.com/PDAContractsInfo">'+
+	      '<ListOfHelPdaContractsListIo xmlns="http://www.siebel.com/xml/HEL%20PDA%20Contracts%20List%20IO">'+
+	        '<HelPdaContracts Operation="">'+
+	          '<Id />'+
+	          '<Created />'+
+	          '<CreatedBy />'+
+	          '<Updated />'+
+	          '<UpdatedBy />'+
+	          '<ConflictId />'+
+	          '<ModId />'+
+	          '<Searchspec />'+
+	          '<AssetNumber>'+AssetNumber+'</AssetNumber>'+
+	          '<Attrib1>'+userID+'</Attrib1>'+
+	          '<Attrib2 />'+
+	          '<Attrib3 />'+
+	          '<Attrib4 />'+
+	          '<Attrib5 />'+
+	          '<Attrib6 />'+
+	          '<Attrib7 />'+
+	          '<Attrib8 />'+
+	          '<Attrib9 />'+
+	          '<BigCustomer>'+BigCustomer+'</BigCustomer>'+
+	          '<ContractNumber>'+ContractNumber+'</ContractNumber>'+
+	          '<ContractType>'+ContractType+'</ContractType>'+
+	          '<CustomerName>'+CustomerName+'</CustomerName>'+
+	          '<FinalUser>'+FinalUser+'</FinalUser>'+
+	        '</HelPdaContracts>'+
+	      '</ListOfHelPdaContractsListIo>'+
+	    '</ContractListQueryByExample_Input>'+
+	  '</soap:Body>'+
+	'</soap:Envelope>';
+	
+	WL.Logger.error(request);
+	var input = {
+			method:'post',
+			returnedContentType:'xml',   
+			headers: {'Accept-Encoding':'identity','SOAPAction':'"document/http://siebel.com/PDAContractsInfo:ContractListQueryByExample"'},
+			path:'/eai_chs/start.swe?SWEExtSource=WebService&SWEExtCmd=Execute&UserName=PDA&Password=PDAPDA',
+			returnedContentEncoding : 'utf-8',    
+			body:{
+				content:request.toString(),
+				contentType:'text/xml;charset=utf-8',
+			}
+  	};
+	
+	var result = WL.Server.invokeHttp(input);
+	
+	return result.Envelope.Body;
+}
+
+//合同资料Siebel详细信息
+function toSiebelcontractList(ContractNumber){
+	
+	var request='<?xml version="1.0" encoding="utf-8"?>'+
+	'<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">'+
+	  '<soap:Body>'+
+	    '<ContractDetailQueryByExample_Input xmlns="http://siebel.com/PDAContractsInfo">'+
+	      '<ListOfHelPdaContractsDetailIo xmlns="http://www.siebel.com/xml/HEL%20PDA%20Contracts%20Detail%20IO">'+
+	        '<HelPdaQuoteHeaders Operation="">'+
+	          '<ContractNumber>'+ContractNumber+'</ContractNumber>'+
+	        '</HelPdaQuoteHeaders>'+
+	      '</ListOfHelPdaContractsDetailIo>'+
+	    '</ContractDetailQueryByExample_Input>'+
+	  '</soap:Body>'+
+	'</soap:Envelope>';
+	WL.Logger.error(request);
+	var input = {
+			method:'post',
+			returnedContentType:'xml',   
+			headers: {'Accept-Encoding':'identity','SOAPAction':'"document/http://siebel.com/PDAContractsInfo:ContractDetailQueryByExample"'},
+			path:'/eai_chs/start.swe?SWEExtSource=WebService&SWEExtCmd=Execute&UserName=PDA&Password=PDAPDA',
+			//转格式，防止乱码
+			returnedContentEncoding : 'utf-8',    
+			body:{
+				content:request.toString(),
+				contentType:'text/xml;charset=utf-8',
+			}
+	};
+	
+	var result = WL.Server.invokeHttp(input);
+	
+	return result.Envelope.Body;
+}
+

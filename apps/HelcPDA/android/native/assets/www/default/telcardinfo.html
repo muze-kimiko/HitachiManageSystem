@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>电话卡信息</title>
+</head>
+<body>
+	<div data-role="page" id="telcardinfo" class="telcard">
+		<div data-role="header" data-position="fixed" class="header"  style="position:fixed;" >
+			<div data-type="horizontal"  class="ui-btn-left">
+				<a href="#anylink" id="telcardinfo-back" data-role="button" data-iconpos="notext" data-rel="back" data-theme="f" data-icon="custarrow-l">后退</a>
+				<a href="javascript:void(0);" onclick="home(2);" data-role="button" data-iconpos="notext" data-theme="f" data-icon="custarrow-home">主页</a>
+			</div>
+			<h1 class="pagetitle" style="font-size:15px;">电话卡信息</h1>
+			
+			<div style="-moz-user-select:none;background-color:#e4e4e4;color:#000;height:100px;padding-top:5px;">
+				
+				<div style="width:95%;height:80px;border-radius:10px;margin:0 auto;background-color:#fff;padding-bottom:5px; " >
+			 		<table>
+			 		<tr>
+				 		<td align="right" style="padding-left:5px;padding-right:5px;"><input type="text" name="txtKey" id="txtKey" ></td>
+				 		<td align="center" style="display:none;"><a href="javascript:void(0)" style="color:#ffffff"   class="querybtn">查询</a></td>
+			 		</tr>
+			 		</table>
+					<div class="condition">
+					 	<ul>
+						   <li ><a id="phone" href="javascript:void(0)"   class="querytypebtn" style="color:#000000;text-shadow: none;font-weight: normal;text-decoration:none;">电话卡</a></li>
+						   <li ><a id="sim" href="javascript:void(0)"  class="querytypebtn" style="color:#000000;text-shadow: none;font-weight: normal;text-decoration:none;">SIM码</a></li>
+						   <li  ><a  id="imei" href="javascript:void(0)"  class="querytypebtn" style="color:#000000;text-shadow: none;font-weight: normal;text-decoration:none;">IMEI码</a></li>
+					  </ul>
+				    </div>
+			    </div>
+			</div>
+			<!-- 
+			<div style="background-color:#e4e4e4;text-align:right;color:#000;padding-right:10px;">
+				<span id="rowcount"></span>
+			</div>
+			 -->
+		</div>
+		<div data-role="content" style="padding: 100px 0px 0px;">
+			
+		    <div class="Mcstatus" id="SearchResult" width="100%">
+		    </div>
+		     
+		     <!-- 
+		    <ul data-role="listview" id="SearchResult">
+		    
+		    </ul>
+		    -->
+		    
+		    <div id="div-more" style="display:none;">
+				<a id="more" href="javascript:void(0);" data-role="button">更多</a>
+			</div>
+		    <div style="display:none;height:0px;background-color:#ffffff;">
+		    <input id="telcardkeytype" type="text"  value="1" >
+		    </div>
+		    
+		</div>
+		
+		<div data-role="popup" id="popupTelcardDetail" data-tolerance="0,0" class="" class="ui-content ui-popup " data-position-to="window" data-overlay-theme="b" data-theme="a" style="min-width:100%;min-heigth:100%;">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;" >
+			<div data-type="horizontal" class="ui-btn-left">
+				<a href="#anylink" data-role="button" data-iconpos="notext"  data-icon="custarrow-l" data-theme="f">后退</a>
+				<a href="javascript:void(0);" onclick="home();" data-role="button" data-iconpos="notext" data-icon="custarrow-home" data-theme="f">主页</a>
+			</div>
+				<h1  class="pagetitle" style="font-size:15px;">电话卡信息明细</h1>
+			</div>
+			<div data-role="content" style="padding:0px 0px 0px 0px;">
+				<div  width="100%">
+					<table  class="telcarddetail" width="100%" border="0">
+					  <tr>
+					    <th width="35%">电梯工号</th>
+					    <td width="65%" id="lbDeviceNo"></td>
+					  </tr>
+					  <tr>
+					    <th >地盘名称</th>
+					    <td id="lbBuilding"></td>
+					  </tr>
+					   <tr>
+					    <th>电梯位置</th>
+					    <td id="lbAddress"></td>
+					  </tr>
+					  <tr>
+					    <th >电&nbsp;&nbsp;话&nbsp;&nbsp;卡</th>
+					    <td id="lbPhone"></td>
+					  </tr>
+					  <tr>
+					    <th>SIM码</th>
+					    <td id="lbSimCode"></td>
+					  </tr>
+					  
+					  <tr>
+					    <th>IMEI码</th>
+					    <td id="lbImeiCode"></td>
+					  </tr>
+					  <tr>
+					    <th>运&nbsp;&nbsp;营&nbsp;&nbsp;商</th>
+					    <td id="lbMalfunction"></td>
+					  </tr>
+					   <tr>
+					    <th>最后上线时间</th>
+					    <td id="lbLastContactDate"></td>
+					  </tr>
+					  <tr>
+					    <th>状态</th>
+					    <td id="lbIsUes"></td>
+					  </tr>
+					</table>
+	            </div>
+			</div>
+		</div>
+			
+	</div>
+</body>
+</html>

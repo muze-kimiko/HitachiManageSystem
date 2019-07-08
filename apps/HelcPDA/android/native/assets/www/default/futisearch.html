@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div data-role="page" id="futisearch" data-close-btn="none">
+		<div data-role="header" data-position="fixed" style="background:#2B89D3;color:#ffffff;height:40px;" >
+				<div data-type="horizontal" class="ui-btn-left">
+				<a href="#anylink" data-role="button" data-iconpos="notext" data-rel="back" data-icon="custarrow-l" data-theme="f" data-close-btn="none">后退</a>
+				<a href="javascript:void(0);" onclick="home();" data-role="button" data-iconpos="notext" data-icon="custarrow-home" data-theme="f">主页</a>
+				</div>
+			<h1  class="pagetitle" style="font-size:15px;">电梯搜索</h1>
+		</div>
+		<div data-role="content" style="padding: 0px">
+			<!--application UI goes here-->
+
+			   <div class="Mcstatus" id="Mcheader" width="100%" style="padding-left:5px;padding-right:5px;">
+			   <table width="100%" border="0" cellspacing="0" cellpadding="0">
+			   <tr>
+			   <td>
+			   <label for="txtDeviceNo">电梯工号:</label><input type="search" placeholder="工号" name="txtDeviceNo" id="txtDeviceNo" autocomplete="on">
+			   <label for="txtCompany">分公司:</label><input type="search" placeholder="分公司" name="txtCompany" id="txtCompany">
+			   <label for="txtBuilding">地盘:</label><input type="search" placeholder="地盘" name="txtBuilding" id="txtBuilding">
+			   <label for="txtAddress">地址:</label><input type="search" placeholder="地址" name="txtAddress" id="txtAddress">
+			  </td>
+			   </tr>
+			   <tr>
+			   <td>
+			   <div data-role="controlgroup" data-type="horizontal" style="text-align:center;">
+			   <a href="javascript:ClearSearch();" data-role="button" data-icon="delete" >清空</a>
+			   <a href="javascript:futiSearch();" onclick="" data-role="button" data-icon="search" >搜索</a>
+			   <a href="javascript:void(0)" onclick="futiOK();" data-role="button" data-icon="info" >确定</a>
+				</div>
+			   </td>
+			   </tr>
+			   </table>
+			   </div>
+
+			   <div class="Mcstatus" id="SearchResult" width="100%">
+			   <table width="100%" border="0" cellspacing="0" cellpadding="0" class="standard">
+                <tr>
+                    <td>
+					</td>
+                </tr>
+            </table>
+            </div>
+            <div id="div-more" style="display:none;">
+				<a href="javascript:void(0);" onclick="futiSearchNext();" data-role="button">更多</a>
+			</div>
+		</div>
+		<div data-role="popup" id="popupTipDialog" data-overlay-theme="b" data-theme="f" data-dismissible="false">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;padding:0;margin:0;" >
+				<h1 style="text-algin:left;">提示</h1>
+			</div>
+		    <div data-role="content" style="padding-top:0px;margin-top:0px;">
+			<p id="tip">中断提示</p>
+			<a href="#" data-role="button" data-mini="true" data-theme="a" data-rel="back">关闭</a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

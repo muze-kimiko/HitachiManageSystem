@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Licensed Materials - Property of IBM
+    5725-I43 (C) Copyright IBM Corp. 2011, 2013. All Rights Reserved.
+    US Government Users Restricted Rights - Use, duplication or
+    disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<wl:adapter name="HttpAdapter_PAD_ERP"
+	xmlns:wl="http://www.ibm.com/mfp/integration" 
+	xmlns:http="http://www.ibm.com/mfp/integration/http" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	>
+
+	<displayName>HttpAdapter_PAD_ERP</displayName>
+	<description>HttpAdapter_PAD_ERP</description>
+	<connectivity>
+		<connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
+			<protocol>http</protocol>
+			<!--正式： 172.16.255.40 -->
+			<!--测试： 172.16.255.41 -->
+			<domain>172.16.255.41</domain>
+			<port>8888</port>	
+			<connectionTimeoutInMilliseconds>30000</connectionTimeoutInMilliseconds>
+            <socketTimeoutInMilliseconds>30000</socketTimeoutInMilliseconds>
+			<!-- Following properties used by adapter's key manager for choosing specific certificate from key store  
+			<sslCertificateAlias></sslCertificateAlias> 
+			<sslCertificatePassword></sslCertificatePassword>
+			-->		
+		<maxConcurrentConnectionsPerNode>100</maxConcurrentConnectionsPerNode>
+		</connectionPolicy>
+		<!-- 连接数  100 -->
+		<!-- <loadConstraints maxConcurrentConnectionsPerNode="100" /> -->
+	</connectivity>
+
+	<procedure name="getStories"/>
+
+	<procedure name="getStoriesFiltered"/>
+	
+	<!-- 查找合同 ERP  -->
+	<procedure name="toErpcontractSeacher"></procedure>
+	<!-- 合同详细信息 -->
+	<procedure name="toErpcontractList"></procedure>
+	<!-- 工号详细信息 -->
+	<procedure name="toErpcontractNoList"></procedure>
+	
+	
+	<procedure name="toERPcontractSeacher"/>
+	
+	<procedure name="toERP_BoxInfo"/>
+	<procedure name="toErppcjl"/>
+
+</wl:adapter>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>收藏分组管理</title>
+</head>
+<body>
+	<div data-role="page" id="FavoriteGroup" class="favorite">
+		<div data-role="header" data-position="fixed" class="header" style="position:fixed;">
+			<div data-type="horizontal"  class="ui-btn-left">
+				<a href="#anylink" id="favoritegroup-back" data-role="button"  data-iconpos="notext" data-rel="back" data-icon="custarrow-l" data-theme="f">后退</a>
+				<a href="javascript:void(0);" onclick="home(2);" data-role="button"  data-iconpos="notext" data-icon="custarrow-home" data-theme="f">主页</a>
+			</div>
+			<h1 class="pagetitle" style="font-size:15px;">收藏分组管理</h1>
+			<div class="Mcstatus" id="Mcheader" width="100%">
+			  <div class="gzcd">
+			      <div class="item"><a href="javascript:changePage('favorite.html')">收藏记录</a></div>
+			      <div class="item"><a href="#"  class="bg">收藏分组</a></div>
+			      <div class="clear"></div>
+			  </div>
+		   </div>
+		</div>
+		<div id="content" data-role="content" style="background-color:#E4E4E4;padding:30px 0 0 0;">
+			<ul id="mylistview" data-role="listview" data-inset="true" data-filter="true" data-autodividers="false"  data-placeholder="aa">
+			   
+			</ul>
+
+			<input id="deleteid" type="hidden">
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-theme="a" data-tap-toggle="false" style="position:fixed;" data-hide-during-focus="false">
+			<div data-role="navbar" id="navbar-custorm">
+	      		<ul>
+	      			<li><a id="btnAdd" href="#" data-icon="myactivetest">新增</a></li>
+			  		<li><a id="btnUpdate" href="#" data-icon="mymultieye">修改</a></li>
+			  		<li><a id="btnDelete" href="#" data-icon="mydatarw">删除</a></li>
+				  </ul>
+			</div>
+		</div>
+		
+		<!-- 删除 -->
+		<div data-role="popup" id="popupDelAllDialog" data-overlay-theme="b" data-theme="a" data-dismissible="false">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;padding:0;margin:0;" >
+				<h1>取消收藏提示!</h1>
+			</div>
+		    <div data-role="content" style="padding-top:0px;margin-top:0px;">
+		        <p>是否取消所选收藏记录？</p>
+				<div data-role="navbar">
+			      <ul>
+			        <li><a href="#" data-theme="a" data-rel="back">否</a></li>
+			        <li><a href="#" data-theme="a" id="deletelist">是</a></li>
+			      </ul>
+			    </div>
+		    </div>
+		</div>
+		<!-- 新增 -->
+		<div data-role="popup" id="AddUI" data-tolerance="0,0" data-position-to="window" data-overlay-theme="b" data-theme="a" style="min-width:100%;min-heigth:100%;">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;" >
+				<h1  class="pagetitle" style="font-size:15px;">新增分组</h1>
+				<div style="-moz-user-select:none;background-color:#fff;color:#000;height:100px;width:100%;">
+			 		<table style="width:100%;">
+				 		<tr>
+					 		<td align="right" style="padding-left:5px;padding-right:5px;">
+					 			<input type="text" name="txtGroupName" id="txtGroupName" placeholder="组名" >
+					 		</td>
+				 		</tr>
+				 		<tr>
+					 		<td >
+					 			<input type="button" value="保存" data-role="button" id="btnSave">
+					 		</td>
+				 		</tr>
+			 		</table>
+				</div>
+			</div>
+			<div data-role="content" style="padding:0px;"></div>
+		</div>
+		<!-- 修改 -->
+		<div data-role="popup" id="UpdateUI" data-tolerance="0,0" data-position-to="window" data-overlay-theme="b" data-theme="a" style="min-width:100%;min-heigth:100%;">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;" >
+				<h1  class="pagetitle" style="font-size:15px;">修改分组</h1>
+				<div style="-moz-user-select:none;background-color:#fff;color:#000;height:100px;width:100%;">
+			 		<table style="width:100%;">
+				 		<tr>
+					 		<td align="right" style="padding-left:5px;padding-right:5px;">
+					 			<input id="update-txtGroupId" type="hidden">
+					 			<input type="text" name="update-txtGroupName" id="update-txtGroupName" placeholder="组名" >
+					 		</td>
+				 		</tr>
+				 		<tr>
+					 		<td >
+					 			<input type="button" value="保存" data-role="button" id="update-btnSave">
+					 		</td>
+				 		</tr>
+			 		</table>
+				</div>
+			</div>
+			<div data-role="content" style="padding:0px;"></div>
+		</div>
+	</div>
+</body>
+</html>

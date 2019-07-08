@@ -1,0 +1,918 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>index</title>
+<meta
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"
+	name="viewport">
+<link href="images/favicon.png" rel="shortcut icon">
+<link href="images/apple-touch-icon.png" rel="apple-touch-icon">
+<link href="jqueryMobile/jquery.mobile-1.4.5.css" rel="stylesheet">
+<link href="jqueryMobile/jquery.mobile.actionsheet.css" rel="stylesheet">
+<link href="js/mobiscroll/css/mobiscroll.custom-2.6.2.min.css"rel="stylesheet" />
+<link href="js/PhotoSwipe/photoswipe.css" rel="stylesheet"/>
+<link href="js/PhotoSwipe/default-skin/default-skin.css" rel="stylesheet" />
+<link href="css/main.css" rel="stylesheet">
+<script>
+		// Define WL namespace.
+		var WL = WL ? WL : {};
+		/**
+		 * WLClient configuration variables.
+		 * Values are injected by the deployer that packs the gadget.
+		 */
+		 WL.StaticAppProps = {
+   "APP_DISPLAY_NAME": "日立移动办公",
+   "APP_ID": "HelcPDA",
+   "APP_SERVICES_URL": "\/apps\/services\/",
+   "APP_VERSION": "3.5.2",
+   "ENVIRONMENT": "android",
+   "LOGIN_DISPLAY_TYPE": "embedded",
+   "WORKLIGHT_NATIVE_VERSION": "393369579",
+   "WORKLIGHT_PLATFORM_VERSION": "7.1.0.0",
+   "WORKLIGHT_ROOT_URL": "\/apps\/services\/api\/HelcPDA\/android\/"
+};
+</script>
+<script src="worklight/cordova.js"></script>
+<script src="worklight/wljq.js"></script>
+<script src="worklight/worklight.js"></script>
+<script src="worklight/checksum.js"></script>
+<script src="worklight/jsonstore.js"></script>
+
+<link href="js/iscroll/scrollbar.css" rel="stylesheet">
+<link href="js/swiper/css/idangerous.swiper2.7.6.css" rel="stylesheet">
+<script charset="utf-8" src="js/global.js" ></script>
+<script charset="utf-8" src="js/jquery.min.js" ></script>
+<script>
+		// Define WL namespace.
+		var WL = WL ? WL : {};
+		/**
+		 * WLClient configuration variables.
+		 * Values are injected by the deployer that packs the gadget.
+		 */
+		 WL.StaticAppProps = {
+   "APP_DISPLAY_NAME": "日立移动办公",
+   "APP_ID": "HelcPDA",
+   "APP_SERVICES_URL": "\/apps\/services\/",
+   "APP_VERSION": "3.5.2",
+   "ENVIRONMENT": "android",
+   "LOGIN_DISPLAY_TYPE": "embedded",
+   "WORKLIGHT_NATIVE_VERSION": "393369579",
+   "WORKLIGHT_PLATFORM_VERSION": "7.1.0.0",
+   "WORKLIGHT_ROOT_URL": "\/apps\/services\/api\/HelcPDA\/android\/"
+};
+</script>
+<script src="worklight/wljq.js"></script>
+<script src="worklight/worklight.js"></script>
+
+<script charset="utf-8" src="js/jquery.blockUI.js"></script>
+<script>window.$ = window.jQuery = WLJQ;</script>
+<script charset="utf-8" src="jqueryMobile/jquery.mobile-1.4.5.min.js"></script>
+<script charset="utf-8" src="jqueryMobile/jquery.mobile.actionsheet.js"></script>
+<script charset="utf-8" src="js/json2.js" ></script>
+<script charset="utf-8" src="js/jquery.signalR-2.0.3.min.js"></script>
+<script charset="utf-8" src="js/jqm.autoComplete-1.5.2.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/ext.js"></script>
+<script src="js/basic.js"></script>
+<script src="js/search.js"></script>
+<script src="js/mobiscroll/js/mobiscroll.custom-2.6.2.min.js"></script>
+<script src="js/PhotoSwipe/photoswipe.min.js"></script>
+<script src="js/PhotoSwipe/photoswipe-ui-default.min.js"></script>
+<script src="js/circliful.js"></script>
+<script src="js/iscroll/iscroll.js"></script>
+<script src="js/swiper/js/idangerous.swiper2.7.6.min.js"></script>
+<script src="js/business/watermark.js"></script>
+<script src="js/ichart.1.2.1.min.js"></script>
+
+
+<script src="http://pda.hitachi-helc.com:28000/signalr/hubs"></script>
+<script src="js/business/futi.js"></script>
+<script src="js/iscrollwrapper.js"></script>
+<script src="js/business/realtime.js"></script>
+<script src="js/business/main.js"></script>
+<script src="js/business/faultfile.js"></script>
+<script src="js/business/retrieval.js"></script>
+<script src="js/business/faulttransmitters.js"></script>
+<script src="js/business/faulttransmittersissue.js"></script>
+<script src="js/business/activatetest.js"></script>
+<script src="js/business/favorite.js"></script>
+<script src="js/business/runtour.js"></script>
+<script src="js/business/devicetour.js"></script>
+<script src="js/business/elevator.js"></script>
+<script src="js/business/alarmcollect.js"></script>
+<script src="js/business/faultmask.js"></script>
+<script src="js/business/bindstatus.js"></script>
+<script src="js/business/feedback.js"></script>
+<script src="js/business/datarw.js"></script>
+<script src="js/business/telcard.js"></script>
+<script src="js/business/faultforwarding.js"></script>
+<script src="js/business/smsreceipt.js"></script>
+<script src="js/business/report.js"></script>
+<script src="js/business/test.js"></script>
+
+<style class="cp-pen-styles">
+.my-gallery {
+	width: 100%;
+	float: left;
+}
+
+.my-gallery img {
+	width: 100%;
+	height: auto;
+}
+
+.my-gallery figure {
+	display: block;
+	float: left;
+	margin: 0 5px 5px 0;
+	width: 150px;
+}
+
+.my-gallery figcaption {
+	display: none;
+}
+</style>
+<script>
+	var paramUrl,
+	 chat,
+	 userId = "",
+	 isStart = false,
+	 time_out = 0,
+	 userId,
+	 ProcessDate,
+	 last_date,
+	 DoorStatus = "True",
+	 elevatorId = "",
+	 floorTable = {},
+	 startTime,
+	 lastDataDate = null;
+
+	$(document).on("pagecreate", function() {
+		$(".photopopup").on({
+			popupbeforeposition : function() {
+				var maxHeight = $(window).height() - 60 + "px";
+				$(".photopopup img").css("max-height", maxHeight);
+			}
+		});
+	});
+
+	WLJQ(document).on('pageinit',function() {
+		$("table[class=msgtable]").each(function() {
+			var _this = $(this);
+
+			//鼠标移动隔行变色hover用法关键
+			_this.find("tr").hover(function() {
+				$(this).attr("bColor",$(this).css("background-color")).css("background-color","#E0E0E0").css("cursor","pointer");
+			},
+			function() {
+				$(this).css("background-color",$(this).attr("bColor"));
+			});
+		});
+
+		WLJQ(document).on('pageshow', function() {
+			try {
+				currentUrl = window.location.href;
+			} catch (err) {
+			}
+		});
+
+		$("table[class=jihuo_cols]").each(function() {
+			var _this = $(this);
+
+			//鼠标移动隔行变色hover用法关键
+			_this.find("tr").hover(
+			function() {
+				$(this).attr("bColor",$(this).css("background-color")).css("background-color","#E0E0E0").css("cursor","pointer");
+			},
+			function() {
+				$(this).css("background-color",$(this).attr("bColor"));
+			});
+
+		});
+	});
+	WLJQ(document).on('pageshow', '#index', function() {
+		$("#txtUserid").val(userid);
+		$("#txtPassword").val("");
+		login();
+	});
+	
+	/**************************关于界面***********************************/
+	WLJQ(document).on('pageshow','#about',function(){
+	      var version=EssApp.Version;
+	      var publishDate=EssApp.PublishedDate;
+          $("#version").html(version);     	
+          $("#publishDate").html(publishDate);          
+	});
+	/****************************************************************/
+	function CheckAll() {
+		var checked = $("#chkAll").prop("checked");
+		$("input[name='chk']").each(function() {
+			this.checked = checked;
+		});
+	}
+	function CheckSingle(id) {
+		var activeCss={"background-color" : "#3388cc","color" : "#fff"};
+		
+		$("input[name='chk']").each(function() {
+			if (this.value == id) {
+				this.checked = !this.checked;
+				return;
+			}
+
+		});
+		var isSelected = false;
+		$("input[name='chk']:checked").each(function() {
+			isSelected = true;
+			return;
+		});
+
+		if (isSelected) {
+			if ($("#btnsearchok")) {
+				$("#btnsearchok").css(activeCss);
+			}
+			if ($("#btnsearch")) {
+				$("#btnsearch").removeClass('ui-btn-active');
+				$("#btnsearch").removeAttr('background-color');
+				$("#btnsearch").css({"color" : "#000"});
+			}
+		} else {
+			if ($("#btnsearchok")) {
+				$("#btnsearchok").removeClass('ui-btn-active');
+				$("#btnsearchok").removeAttr('background-color');
+				$("#btnsearchok").css({"color" : "#000"});
+			}
+			if ($("#btnsearch")) {
+				$("#btnsearch").css(activeCss);
+			}
+		}
+	}
+
+
+	//故障发报 用
+	function GetSelectedActive() {
+		var id = "";
+
+		$("input[name='chk']:checked").each(function() {
+			var arr = this.value.split(',');
+			id += arr[0] + ",";
+		});
+
+		if (id != '') {
+			id = id.substring(0, id.length - 1);
+		}
+
+		return id;
+	}
+
+	function HideRealtime() {
+		if ($('#Mcheader').css("display") == "none") {
+			$('#Mcheader').css("display", "block");
+		} else {
+			$('#Mcheader').css("display", "none");
+		}
+	}
+
+	function JumpToRetrieval(alias, code, faulttype) {
+		changePage('Retrieval.html?action=search&alias='
+				+ encodeURIComponent(alias) + '&code='
+				+ encodeURIComponent(code) + '&faulttype='
+				+ encodeURIComponent(faulttype));
+	}
+	
+	function ViewDetail() {
+		var assetnum = getUrlParam('assetnum');
+		
+		var param = {"assetnum": assetnum};
+		GetAPIData("/api/elevators/GetElevatorByAssetNum", JSON.stringify(param),
+				fnGetElevatorDetailByAssetNum, err, null, null, true, false,
+				null, '正在加载,请稍侯...');
+	}
+
+	function fnGetElevatorDetailByAssetNum(data) {
+		$("#popupElevatorDetail").css("width", $(window).width());
+		$("#popupElevatorDetail").css("height", $(window).height() + 160);
+
+		if (typeof data != 'undefined' && data) {
+			var objResult = JSON.parse(data.Data);
+			
+			if (typeof objResult[0] != 'undefined') {
+				var obj=objResult[0];
+				
+				$('#lbDeviceNo2').html(obj.DeviceNo);
+				$('#lbBuilding2').html(obj.Building);
+				$('#lbAddress2').html(obj.InstallSite);
+				$('#lbFiliale2').html(obj.Filiale);
+				$('#lbFirstActiveDate2').html(obj.FirstActiveDate);
+				$('#lbCreatedDate2').html(obj.CreatedDate);
+				$('#lbPhone2').html(obj.Phone);
+				$('#lbActiveCode2').html(obj.ActiveCode);
+				$('#lbTerminalPort2').html(obj.TerminalPort);
+				$('#lbSoftVersion2').html(obj.MainVersion);
+				$('#lbCompanyDesc2').html(obj.CompanyDesc);
+				$('#lbStaffName2').html(obj.StaffName);
+				$('#lbMobile2').html(obj.Mobile);
+				$('#lbRemark2').html(obj.Remark);
+				$('#lbLastContactDate2').html(obj.LastContactDate);
+				obj=null;
+			}
+			objResult=null;
+		}
+		$("#popupElevatorDetail").popup("open");
+	}
+
+	function SaveFaultDetail() {
+		var curTime=CommonModule.getCurentTime('/');
+		var assetnum = $("#lbDeviceNo").html();
+		var address = $("#lbAddress").val();
+
+		var elevatorRemark = $("#lbRemark").html();
+		var soruceElevatorRemark = $("#lbRemark").html();
+		var newElevatorRemark = $("#lbRemark2").val();
+		
+		if (newElevatorRemark.length > 0) {
+			if (soruceElevatorRemark.length > 0)
+				elevatorRemark = soruceElevatorRemark + "," + newElevatorRemark + "[" +curTime+","+ userid + "(PDA)]";
+			else
+				elevatorRemark = newElevatorRemark + "[" +curTime+","+ userid + "(PDA)]";
+		}
+
+		var buildingRemark = $("#lbBuildingRemark").html();
+		var soruceBuildingRemark = $("#lbBuildingRemark").html();
+		var newBuildingRemark = $("#lbBuildingRemark2").val();
+		
+		if (newBuildingRemark.length > 0) {
+			if (soruceBuildingRemark.length > 0)
+				buildingRemark = soruceBuildingRemark + "," + newBuildingRemark+ "[" +curTime+","+ userid + "(PDA)]";
+			else
+				buildingRemark = newBuildingRemark + "[" +curTime+","+ userid + "(PDA)]";
+		}
+
+		var jsonString = { 
+			"assetnum":assetnum
+			,"address":address
+			,"ElevatorRemark":elevatorRemark
+			,"BuildingRemark":buildingRemark
+		};
+		
+		GetAPIData("/api/elevators/UpdateFaultDetailExt", JSON
+				.stringify(jsonString),fnUpdateFaultDetail, err, null, null, false, false);
+	}
+
+	function fnUpdateFaultDetail(data) {
+		if (typeof data != 'undefined' && data) {
+			if (data.StatusID == 0) {
+				alert('更新成功!');
+				$("#back").click();
+			} else {
+				alert(data.Message);
+			}
+		} else {
+			alert('更新失败!');
+		}
+	}
+
+	function home(id) {
+		if (!!id)
+			changePage('main.html?id=' + id);
+		else
+			changePage('main.html');
+	}
+
+	function test() {
+		showLoader('login....');
+	}
+
+	function changeDays(value) {
+		var html = "";
+		var preDay;
+		var endDay;
+
+		try {
+			if (isInt(value) && value > 0) {
+				preDay = getDay(GetDate(), -value);
+				endDay = getDay(GetDate(), -1);
+				html = "数据源: " + FormatDate(preDay) + " - "
+						+ FormatDate(endDay);
+			} else {
+				html = "数据源: " + FormatDate(GetDate());
+			}
+			$("#tip").html(html);
+		} catch (err) {
+		}
+
+	}
+	function basicShow() {
+		$("#basic").show();
+		$("#detail").hide();
+		var elef = document.getElementById("btnbasic");
+		var elen = document.getElementById("btndetail");
+		elef.className = "tabfocus";
+		elen.className = "tabblur";
+	}
+	function detailShow() {
+		$("#basic").hide();
+		$("#detail").show();
+		var elef = document.getElementById("btndetail");
+		var elen = document.getElementById("btnbasic");
+		elef.className = "tabfocus";
+		elen.className = "tabblur";
+	}
+
+	
+	/*****************************************************/
+	function refreshPage() {
+		WLJQ.mobile.changePage(window.location.href, {
+			allowSamePageTransition : true,
+			transition : 'none',
+			reloadPage : true
+		});
+	}
+	function MainMenu(index, params) {
+		var url = '';
+		switch (index) {
+		case 10:
+			
+			changePageExt('ActivateTest.html?action=search');
+			break;
+		case 20:
+
+			if (typeof params != 'undefined') {
+				url = '?' + params;
+			}
+
+			changePageExt('realtime.html' + url);
+			break;
+		case 30:
+
+			if (typeof params != 'undefined') {
+				url = '?' + params;
+			}
+
+			changePageExt('FaultRW.html' + url);
+
+			break;
+		case 40:
+			if (typeof params != 'undefined') {
+				url = '?' + params;
+			}
+
+			changePageExt('DataRW.html' + url);
+			break;
+		case 50:
+			changePage('faultsearch.html?action=jump&assetnum=' + params);
+
+			break;
+		}
+	}
+
+	function MainMenuExt(index) {
+		switch (index) {
+		case 10:
+			changePage('ActivateTest.html');
+			break;
+		case 20:
+			var id = "";
+
+			$("input[name='chk']:checked").each(function() {
+				var arr = this.value.split(',');
+				id = arr[1];
+				return false;
+			});
+
+			if (id == "") {
+				alert("请选择要监控的电梯");
+				return;
+			}
+			var jsonString = {"DeviceNo":id};
+
+			GetAPIData("/api/elevators/GetElevatorByDeviceNo", JSON.stringify(jsonString),
+					onRealtimeExceptionSuccess, err, null, null, true, false,
+					null, '正在处理中,请稍侯...');
+			break;
+		case 30:
+			var assetnum = [];
+
+			$("input[name='chk']:checked").each(function() {
+				var arr = this.value.split(',');
+				assetnum.push(arr[1]);
+			});
+			if (assetnum && assetnum.length > 0) {
+				url = '?action=jump&assetnum=' + assetnum.join(',');
+			} else {
+				url = '?assetnum=' + assetnum;
+			}
+			changePage('ActivateTest.html' + url);
+			break;
+		case 40:
+			var id = "";
+
+			$("input[name='chk']:checked").each(function() {
+				var arr = this.value.split(',');
+				id = arr[1];
+				return false;
+			});
+			if (id == "") {
+				alert("请选择的电梯");
+				return;
+			}
+			var jsonString = {"DeviceNo":id};
+
+			GetAPIData("/api/elevators/GetElevatorByDeviceNo", JSON.stringify(jsonString),
+					onDatarwExceptionSuccess, err, null, null, true, false,
+					null, '正在处理中,请稍侯...');
+			break;
+		case 50:
+			var id = "";
+
+			$("input[name='chk']:checked").each(function() {
+				var arr = this.value.split(',');
+				id = arr[1];
+				return false;
+			});
+
+			if (id == "") {
+				alert("请选择电梯");
+				return;
+			}
+			var jsonString = {"DeviceNo":id};
+
+			GetAPIData("/api/elevators/GetElevatorByDeviceNo", JSON.stringify(jsonString),
+					onFaultfileExceptionSuccess, err, null, null, true, false,
+					null, '正在处理中,请稍侯...');
+
+			break;
+		case 60:
+			var id = "";
+
+			$("input[name='chk']:checked").each(function() {
+				var arr = this.value.split(',');
+				id = arr[1];
+				return false;
+			});
+
+			changePage('elevator.html?assetnum=' + id);
+			break;
+		case 70:
+			var id = "";
+
+			$("input[name='chk']:checked").each(function() {
+				var arr = this.value.split(',');
+				id = arr[1];
+				return false;
+			});
+			if (id == "") {
+				alert("请选择电梯");
+				return;
+			}
+
+			changePage('FaultRW.html?assetnum=' + id);
+			break;
+		case 80:
+			var id = [];
+
+			$("input[name='chk']:checked").each(function() {
+				var arr = this.value.split(',');
+				id.push(arr[1]);
+			});
+			if (id == "" || id.length <= 0) {
+				alert("请选择电梯");
+				return;
+			}
+			changePage('realtimemore.html?action=jump&paralist=' + id.join(','));
+			break;
+		}
+	}
+	function onRealtimeExceptionSuccess(data) {
+		if (data) {
+			var objResult = JSON.parse(data.Data);
+
+			if (objResult.ds && objResult.ds1[0].datacount > 0) {
+				var obj=objResult.ds[0];
+				
+				if (obj.IsException == "0")
+					changePage('realtime.html?assetnum='+ obj.DeviceNo);
+				else {
+					setTimeout("$('#popupRealtimeDialog').popup('open')", 100);
+					return;
+				}
+			}
+		}
+		return;
+	}
+	function onDatarwExceptionSuccess(data) {
+
+		if (data) {
+			var objResult = JSON.parse(data.Data);
+
+			if (objResult.ds && objResult.ds1[0].datacount > 0) {
+				var obj=objResult.ds[0];
+				
+				if (obj.IsException == "0")
+					changePage('FaultRW.html?action=jump&assetnum='+ obj.DeviceNo);
+				else {
+					alert("遥监未激活，无法进行操作");
+					return;
+				}
+			}
+			
+		}
+		return;
+	}
+	function onFaultfileExceptionSuccess(data) {
+		if (data) {
+			var objResult = JSON.parse(data.Data);
+
+			if (objResult.ds && objResult.ds1[0].datacount > 0) {
+				var obj=objResult.ds[0];
+			
+				if (obj.IsException == "0")
+					changePage('faultsearch.html?action=jump&assetnum='+ obj.DeviceNo);
+				else {
+					alert("遥监未激活，无法进行操作");
+					return;
+				}
+			}
+			else
+			{
+				alert("该梯没权限，请联系管理员");
+				return;
+			}
+		}
+		return;
+	}
+	/*****************************************************/
+	function getUrlParam(name) {
+		var result = "";
+		var url = window.location.href;
+		if (url.indexOf("?") != -1) {
+			url = url.substr(url.indexOf("?") + 1);
+			var strs = url.split("&");
+			for (var i = 0; i < strs.length; i++) {
+				var tempArr = strs[i].split("=");
+				if (tempArr[0] == name) {
+					result = decodeURIComponent(tempArr[1]);
+					break;
+				}
+			}
+		}
+		return result;
+	}
+	function err(msg) {
+		alert('错误:' + msg.statusText)
+		return false;
+	}
+	/**************************search页面***********************************/
+	/*
+	function search() {
+		PageIndex = 1;
+		$("#SearchResult").html('');
+		$("#div-more").css('display', 'none');
+
+		var deviceNo = $("#txtDeviceNo").val();
+		var company = $("#txtCompany").val();
+		var building = $("#txtBuilding").val();
+
+		if (deviceNo == "" && company == "" && building == "" && address == "" && phone == "") {
+			alert("请输入搜索条件!");
+		} else {
+			addSearch('txtDeviceNo');
+			var jsonString = '{\"PageSize\":\"' + PageSetting.PageSize
+					+ '\",\"PageIndex\":\"' + '1'
+					+ '\",\"strOrder\":\"\",\"deviceNo\":\"' + deviceNo
+					+ '\",\"company\":\"' + company + '\",\"building\":\"'
+					+ building + '\"}';
+
+			GetAPIData("/api/elevators/GetListExt", jsonString, fnNewSearch,
+					err, null, null, true, false, null, '正在查询,请稍侯...');
+		}
+	}
+	function searchNext() {
+		PageSetting.PageIndex = PageSetting.PageIndex + 1;
+
+		if (PageSetting.isLastPage()) {
+			alert("已经到最后一页");
+			return false;
+		}
+
+		var deviceNo = $("#txtDeviceNo").val();
+		var company = $("#txtCompany").val();
+		var building = $("#txtBuilding").val();
+
+
+		var jsonString = '{\"PageSize\":\"' + PageSetting.PageSize
+				+ '\",\"PageIndex\":\"' + PageSetting.PageIndex
+				+ '\",\"strOrder\":\"\",\"deviceNo\":\"' + deviceNo
+				+ '\",\"company\":\"' + company + '\",\"building\":\"'
+				+ building + '\"}';
+		GetAPIData("/api/elevators/GetListExt", jsonString, fnNewSearch, err,
+				null, null, true, false, null, '正在查询,请稍侯...');
+	}
+	
+	function fnNewSearch(data) {
+		var html = '';
+
+		if (data) {
+			var objResult = eval("(" + data.Data + ")");
+
+			html = "<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" class=\"stdtable\">";
+			if (objResult && objResult.ds && objResult.ds1[0] && objResult.ds1[0].datacount) {
+				$("#div-more").css("display", "");
+				PageSetting.TotalCount = objResult.ds1[0].datacount;
+
+				for (var i = 0,len=objResult.ds.length; i < len; i++) {
+					var item=objResult.ds[i];
+					var deviceNo=item.DeviceNo||''
+					,isException=item.IsException;
+					
+					var trcolor = (i % 2 == 1 ? "oddtr" : "eventr");
+					html += "<tr class=\"" + trcolor + "\" >";
+					html += "<td rowspan=\"3\">";
+					
+					if (isException == "0") {
+						html += "<input class=\"my-checkbox\" type=\"checkbox\" name=\"chk\" value=\"" + deviceNo + "\">";
+					}
+
+					html += "</td>";
+					html += "<td onclick=\"CheckSingle('"+ deviceNo + "')\">"+ deviceNo+ "</td>";
+					html += "<td onclick=\"CheckSingle('"+ deviceNo + "')\">"+ (item.BuildingName ||'')+ "</td>";
+					html += "</tr>";
+
+					html += "<tr class=\"" + trcolor+ "\" onclick=\"CheckSingle('"+ deviceNo + "')\">";
+					html += "<td colspan=\"2\">" + (item.TentName||'')+ "</td>";
+					html += "</tr>";
+
+					html += "<tr class=\"" + trcolor + "\">";
+					if (isException == "0") {
+						html += "<td colspan=\"2\" style=\"color:green;\">遥监正常</td>";
+					} else {
+						html += "<td colspan=\"2\" style=\"color:red;\">遥监异常</td>";
+					}
+					html += "</tr>";
+				}
+			} else {
+				$("#div-more").css("display", "none");
+				html = html
+						+ "<tr><td colspan=\"2\" align=\"right\">共搜索到0条数据</td></tr>";
+			}
+			html += "</table>";
+
+			$("#SearchResult").append(html);
+
+			if ($("#btnsearch")) {
+				$("#btnsearch").css({"background-color" : "#3388cc","color" : "#fff"});
+			}
+
+		}
+	}
+	
+	function SearchOK() {
+		var ids = [];
+		$("input[name='chk']:checked").each(function() {
+			ids.push(this.value);
+		});
+		if (ids.length<=0) {
+			alert("请选择电梯!");
+			return false;
+		} else {
+			addSearch('txtDeviceNo');
+			
+			if(ids.length==1){
+				paraObj = {DeviceNo: ids[0]};
+				GetAPIData("/api/elevators/GetElevatorByDeviceNo", JSON.stringify(paraObj),onRealtimeExceptionSuccess, err, null, null, true, false,null, '正在处理中,请稍侯...');
+			}
+			else{
+				changePage('realtimemore.html?action=jump&paralist=' + ids.join(','));
+			}
+			return true;
+		}
+	}*/
+	/********************************************************/
+	/*****************************************************/
+	/* 
+	WLJQ(document).on(
+			'pageshow',
+			'#detail',
+			function() {
+				try {
+					var assetnum = getUrlParam('assetnum');
+					if (assetnum != "") {
+						var data = '{"assetnum":"' + assetnum + '"}';
+						GetAPIData("/api/elevators/GetElevatorByAssetNum",
+								data, fnGetElevatorByAssetNum, err, null, null,
+								false, false);
+					}
+				} catch (err) {
+				}
+			});
+
+
+	WLJQ(document).on(
+			'pageshow',
+			'#edit',
+			function() {
+				try {
+					var assetnum = getUrlParam('assetnum');
+					if (assetnum != "") {
+						var data = '{"assetnum":"' + assetnum + '"}';
+						GetAPIData("/api/elevators/GetElevatorByAssetNum",
+								data, fnGetEditElevatorByAssetNum, err, null,
+								null, false, false);
+					}
+				} catch (err) {
+				}
+			});
+
+	WLJQ(document).on(
+			'pageshow',
+			'#tmlist',
+			function() {
+				try {
+					var eid = getUrlParam('eid');
+					var tid = getUrlParam('tid');
+					var assetnum = getUrlParam('assetnum');
+
+					$("#title").html("终端信息-" + assetnum);
+					if (eid != "" && tid != "") {
+						var jsonString = '{\"PageSize\":\"' + '10'
+								+ '\",\"PageIndex\":\"' + '1'
+								+ '\",\"strOrder\":\"\",\"eid\":\"' + eid
+								+ '\",\"tid\":\"' + tid + '\"}';
+						GetAPIData("/api/elevators/GetTMList", jsonString,
+								fnsearch, err, null, null, false, false);
+					}
+				} catch (err) {
+				}
+			});
+	function fnsearch(data) {
+		if (data) {
+			var objResult = eval("(" + data.Data + ")");
+			if (objResult && objResult[0]) {
+				$("#SearchResult").html(objResult[0].HTML);
+				if ($("#div-more")) {
+					$("#div-more").show();
+				}
+			}
+		}
+	}
+	function fnGetElevatorByAssetNum(data) {
+		if (typeof data != 'undefined' && data != null && data != "") {
+			var objResult = eval("(" + data.Data + ")");
+			if (typeof objResult[0] != 'undefined') {
+				$('#lbDeviceNo').html(objResult[0].DeviceNo);
+				$('#lbBuilding').html(objResult[0].Building);
+				$('#lbAddress').html(objResult[0].InstallSite);
+				$('#lbFiliale').html(objResult[0].Filiale);
+				$('#lbFirstActiveDate').html(objResult[0].FirstActiveDate);
+				$('#lbCreatedDate').html(objResult[0].CreatedDate);
+				$('#lbPhone').html(objResult[0].Phone);
+				$('#lbActiveCode').html(objResult[0].ActiveCode);
+				$('#lbTerminalPort').html(objResult[0].TerminalPort);
+				$('#lbSoftVersion').html(objResult[0].MainVersion);
+				$('#lbCompanyDesc').html(objResult[0].CompanyDesc);
+				$('#lbStaffName').html(objResult[0].StaffName);
+				$('#lbMobile').html(objResult[0].Mobile);
+				$('#lbRemark').val(objResult[0].Remark);
+				$('#lbLastContactDate').html(objResult[0].LastContactDate);
+			}
+		}
+	}
+
+	*/
+</script>
+</head>
+<body>
+	<div data-role="page" id="index">
+		<div data-role="header"></div>
+		<div data-role="content" style="padding: 0px;">
+			<div style="display: none">
+				<label id="label">电梯服务系统移动版:</label>
+				<form action="" id="user_form" method="get">
+					<label for="text">用户名:</label><input id="txtUserid"
+						name="txtUserid" required="required" type="text"> <br>
+					<label for="text0">密码:</label><input id="txtPassword"
+						name="txtPassword" type="password"> <a data-role="button"
+						href="javascript:void(0);" id="button" onclick="return login()">登录</a>
+				</form>
+			</div>
+			<div>
+				<img src="images/guodu_main.png" />
+			</div>
+			<div id="div-loading" style="text-align: center;">
+				<img src="images/guodu_loading.gif" />
+				<p style="margin-top: 15px;">跳转中。。。
+				<p>
+			</div>
+			<div style="text-align: center; color: red; font-weight: bold;">
+				<label id="LabelCheckLogin" style="color: red"></label>
+			</div>
+			<a id="guodu-back" href="index.html?page=main" rel="external"
+				class="ui-btn ui-corner-all" style="margin-top: 30px;">返回</a>
+		</div>
+	</div>
+	<script src="js/initOptions.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/messages.js"></script>
+</body>
+</html>

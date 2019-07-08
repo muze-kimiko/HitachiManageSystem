@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Licensed Materials - Property of IBM
+    5725-I43 (C) Copyright IBM Corp. 2011, 2013. All Rights Reserved.
+    US Government Users Restricted Rights - Use, duplication or
+    disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<wl:adapter name="HttpAdapter_PAD_Siebel"
+	xmlns:wl="http://www.ibm.com/mfp/integration" 
+	xmlns:http="http://www.ibm.com/mfp/integration/http" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	>
+
+	<displayName>HttpAdapter_PAD_Siebel</displayName>
+	<description>HttpAdapter_PAD_Siebel</description>
+	<connectivity>
+		<connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
+			<!-- 正式机地址  http://10.96.128.96:8080  -->
+			<!-- 测试机地址  http://10.98.199.17:8080  -->
+			<protocol>http</protocol>
+			<!-- <domain>10.96.128.70</domain>  废止-->
+			<domain>10.98.199.17</domain>
+			<port>8080</port>	
+			<connectionTimeoutInMilliseconds>30000</connectionTimeoutInMilliseconds>
+            <socketTimeoutInMilliseconds>30000</socketTimeoutInMilliseconds>
+			<!-- Following properties used by adapter's key manager for choosing specific certificate from key store  
+			<sslCertificateAlias></sslCertificateAlias> 
+			<sslCertificatePassword></sslCertificatePassword>
+			-->		
+			<maxConcurrentConnectionsPerNode>100</maxConcurrentConnectionsPerNode>
+		</connectionPolicy>
+		
+	</connectivity>
+
+	<procedure name="getStories"/>
+
+	<procedure name="getStoriesFiltered"/>
+	
+	<!-- 查找合同 Siebel  -->
+	<procedure name="toSiebelcontractSeacher"></procedure>
+	<!-- 合同详细信息 -->
+	<procedure name="toSiebelcontractList"></procedure>
+	
+</wl:adapter>

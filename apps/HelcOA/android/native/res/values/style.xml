@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 样式 -->
+    <!-- 最外背景样式 -->
+    <style name="Theme_bgcolor">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="android:focusable">true</item>
+        <item name="android:focusableInTouchMode">true</item>
+        <item name="android:background">@color/color_bg</item>
+    </style>
+
+    <!-- 标题栏背景的样式
+    <style name="Theme_banner">
+        <item name="android:background">@drawable/banner</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">1dp</item>
+        <item name="android:paddingBottom">5dp</item>
+    </style>
+ -->
+    <!-- 标题的样式 -->
+    <style name="Theme_bannerText">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/color_text</item>
+    </style>
+
+    <!-- 查询条件的提示TextView内容文字的样式 -->
+    <style name="Theme_contentText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textColor">@color/color_text</item>
+    </style>
+
+    <!-- 中间内容最外面的布局的样式(暂时只是用来留两边的空隙) -->
+    <style name="Theme_outLayout">
+        <item name="android:paddingLeft">3dp</item>
+        <item name="android:paddingRight">3dp</item>
+    </style>
+
+    <!-- ScrowView中间部分字段key的样式 -->
+    <style name="Theme_FieldKey">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_text</item>
+        <item name="android:background">@color/color_bg_key</item>
+    </style>
+    <!-- ScrowView中间部分字段key warn的样式 -->
+    <style name="Theme_FieldKey_warn">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">@color/red</item>
+        <!-- <item name="android:background">@color/color_text</item> -->
+    </style>
+    <!-- ScrowView中间部分字段值的样式 -->
+    <style name="Theme_FieldValue">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">10px</item>
+        <item name="android:textColor">@color/color_text</item>
+        <!-- <item name="android:background">#fff</item> -->
+    </style>
+
+    <!-- ListView里面的TextView内容文字的样式 -->
+    <style name="Theme_ListViewText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_text</item>
+    </style>
+
+    <!-- 必输内容文字的样式 -->
+    <style name="Theme_MEditViewText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:background">@color/color_bg_met</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:textColor">@color/color_text</item>
+    </style>
+
+    <!-- 页脚的样式 -->
+    <style name="Theme_foot">
+        <item name="android:background">@color/color_title</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <!-- ##########################EditText的基本样式 ############################## 
+    <style name="Theme_edittext">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:background">@drawable/edittext_bg_style</item>
+    </style>
+-->
+    
+
+    <!-- ##########################Button的基本样式 ############################## -->
+    <style name="Theme_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <!-- 返回按钮的样式 -->
+    <style name="Theme_button_return" parent="@style/Theme_button">
+        <!-- <item name="android:background">@drawable/btn_return</item> -->
+        <item name="android:text">返回</item>
+    </style>
+    
+     <!-- 返回按钮的样式 -->
+    <style name="Theme_button_save" parent="@style/Theme_button">
+        <!-- <item name="android:background">@drawable/btn_return</item> -->
+        <item name="android:text">保存</item>
+    </style>
+
+    <!-- 地图模块按钮的样式 -->
+    <style name="Theme_button_map" parent="@style/Theme_button">
+        <!-- <item name="android:background">@drawable/btn_return</item> -->
+    </style>
+    
+    <!-- 主页按钮的样式 -->
+    <style name="Theme_button_homepage" parent="@style/Theme_button">
+
+        <!-- <item name="android:background">@drawable/home_ghp</item> -->
+        <item name="android:text">主页</item>
+    </style>
+    <!-- ########################## Button的基本样式 end############################## -->
+
+
+	<style name="dialog_style" parent="android:style/Theme.Dialog"> 
+	<item name="android:windowNoTitle">true</item>
+	<item name="android:windowFrame">@null</item> <!--边框-->
+	<item name="android:windowIsFloating">true</item> <!--是否浮现在activity之上-->
+	<item name="android:windowIsTranslucent">true</item><!--半透明-->  
+	<item name="android:background">@android:color/transparent</item><!--背景透明-->
+	<item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
+	</style>
+
+
+    <!-- 基本颜色 -->
+    <color name="color_bg">#EEEEEE</color>
+ <!-- 背景颜色 -->
+    <color name="color_bg_list">#FFFFFF</color>
+ <!-- 必输框背景颜色 -->
+    <color name="color_bg_met">#EA8</color>
+ <!-- 必输背景颜色（不是框） -->
+    <color name="color_bg_title">#FF0000</color>
+ <!-- ListView背景颜色 -->
+    <color name="color_text">#000000</color>
+ <!-- 文字颜色 -->
+    <color name="color_clicked">#29A329</color>
+ <!-- 点击后颜色(暂在listview中使用) -->
+    <color name="color_title">#E7E7E7</color>
+ <!-- 地图的颜色 -->
+     <color name="color_map_menu">#00ccff</color>
+ <!-- 状态栏的颜色 -->
+
+    <color name="color_bg_key">#ccc</color>
+    
+    <color name="color_bg_spn">#ccb</color>
+    
+    
+ <!-- ScrowView中间部分字段key的样式 的背景 -->
+ 
+</resources>

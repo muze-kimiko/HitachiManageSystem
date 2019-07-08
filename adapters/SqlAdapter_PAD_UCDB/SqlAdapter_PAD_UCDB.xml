@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+    Licensed Materials - Property of IBM
+    5725-I43 (C) Copyright IBM Corp. 2011, 2013. All Rights Reserved.
+    US Government Users Restricted Rights - Use, duplication or
+    disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<wl:adapter xmlns:wl="http://www.ibm.com/mfp/integration" xmlns:sql="http://www.ibm.com/mfp/integration/sql" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="SqlAdapter_PAD_UCDB">
+    <!--This adapter has been upgraded, For more information about the changes, see the "Adapter timeout and concurrency" topic in the product Knowledge Center.-->
+    <displayName>SqlAdapter_PAD_UCDB</displayName>
+	<description>SqlAdapter_PAD_UCDB</description>
+	<connectivity>
+		<connectionPolicy xsi:type="sql:SQLConnectionPolicy">
+			<!-- Example for using a JNDI data source, replace with actual data source name -->
+			<!-- <dataSourceJNDIName>java:/data-source-jndi-name</dataSourceJNDIName> -->
+			
+			<!-- Example for using MySQL connector, do not forget to put the MySQL connector library in the project's lib folder -->
+			<dataSourceDefinition>
+				<driverClass>oracle.jdbc.driver.OracleDriver</driverClass>
+				<url>jdbc:oracle:thin:@10.96.129.81:1521:UCDBORA</url>
+			    <user>ucabs</user>
+    			<password>ucabs1</password> 
+			</dataSourceDefinition>
+		</connectionPolicy>
+		<!-- 连接 100 -->
+		<!--<loadConstraints maxConcurrentConnectionsPerNode="100" /> Element loadConstraint was removed as it is no longer supported. For more information, see the "Adapter timeout and concurrency" topic in the product Knowledge Center.-->
+	</connectivity>
+
+	<!-- Replace this with appropriate procedures -->
+	<procedure name="procedure1"/>
+	<procedure name="procedure2"/>
+	<procedure name="queryByEmp"/>
+	<procedure name="procedure_Three"/>
+	
+</wl:adapter>

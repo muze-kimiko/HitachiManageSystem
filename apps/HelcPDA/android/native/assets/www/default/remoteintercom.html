@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>远程对讲</title>
+</head>
+<body>
+<div data-role="page" id="remoteintercom" class="page">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" class="header" >
+		<div data-type="horizontal"  class="ui-btn-left">
+			<a href="#anylink" id="remoteintercom-back" data-role="button" data-iconpos="notext" data-rel="back" data-theme="f" data-icon="custarrow-l">后退</a>
+			<a href="javascript:void(0);" onclick="home(1);" data-role="button" data-iconpos="notext" data-theme="f" data-icon="custarrow-home">主页</a>
+		</div>
+		<h1>远程对讲</h1>
+	</div>
+	<div data-role="content">
+	  <a href="remoteintercomsearch.html" data-role="button" id="btnOnline"  data-rel="dialog" data-transition="pop" >在线查询</a>
+	  <a href="javascript:void(0);" data-role="button" id="btnLocalcache">未提交</a>
+	</div>
+	
+	<div data-role="popup" id="LocalcacheDialog" data-overlay-theme="b" data-theme="a" data-tolerance="0,0" style="min-width:100%;min-heigth:90%;max-heigth:90%;">
+	    <div id="content" data-role="content" style="padding-top:0px;margin:0px;">
+			<ul class="ui-listview ui-listview-inset ui-corner-all ui-shadow ui-group-theme-a" data-role="listview" data-inset="true" data-split-theme="b" data-split-icon="plus" data-theme="a">
+				<li class="ui-li-has-alt ui-first-child">
+					<a class="ui-btn" href="#"><h2>Broken Bells</h2></a>
+					<a title="Purchase album" class="ui-btn ui-btn-icon-notext ui-icon-plus ui-btn-b" aria-expanded="false" aria-haspopup="true" aria-owns="purchase" href="#purchase" ></a>
+				</li>
+				<li class="ui-li-has-alt ui-last-child">
+					<a class="ui-btn" href="#"><h2>Phoenix</h2></a>
+					<a title="Purchase album" class="ui-btn ui-btn-icon-notext ui-icon-plus ui-btn-a" aria-expanded="false" aria-haspopup="true" aria-owns="purchase" href="#purchase" data-theme="a"></a>
+				</li>
+			</ul>
+	    </div>
+	</div>
+</div>
+</body>
+</html>

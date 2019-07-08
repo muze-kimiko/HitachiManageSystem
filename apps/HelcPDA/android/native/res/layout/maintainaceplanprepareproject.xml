@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Theme_bgcolor"
+    android:orientation="vertical" >
+    
+
+	<RelativeLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent" >
+
+	    <LinearLayout
+	        android:id="@+id/linearLayout1"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentTop="true"
+	        android:layout_centerHorizontal="true" >
+
+	        <RelativeLayout
+	            style="@style/Theme_banner" >
+
+	            <Button
+	                android:id="@+id/btn_back"
+	                style="@style/Theme_button_save" />
+
+	            <TextView
+	                android:id="@+id/tv_title"
+	                style="@style/Theme_bannerText"
+	                android:text="保养项目" />
+	            
+	        </RelativeLayout>
+	    </LinearLayout>
+
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_above="@+id/linearLayout2"
+	        android:layout_below="@+id/linearLayout1"
+	        android:orientation="vertical"
+	        style="@style/Theme_outLayout"
+	        android:layout_centerHorizontal="true" >
+	        
+
+	        <ScrollView
+	                android:id="@+id/scrollView1"
+	                android:layout_width="match_parent"
+	            	android:layout_weight="0.5"
+	                android:layout_height="wrap_content" >  
+	        <LinearLayout
+	            android:id="@+id/ll_field"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical"
+	            android:paddingBottom="5dp"
+	            android:paddingTop="5dp" >
+	            <!--  -->
+	            <TextView
+                    style="@style/Theme_FieldKey"
+                    android:text="保养计划编码："
+                    android:visibility="gone" />
+               <TextView
+                    android:id="@+id/tv_mp_id"
+                    style="@style/Theme_FieldValue"
+                    android:visibility="gone" />
+               
+               <TextView
+                    style="@style/Theme_FieldKey"
+                    android:text="保养项目编码："
+                    android:visibility="gone" />
+               <TextView
+                    android:id="@+id/tv_task_row_id"
+                    style="@style/Theme_FieldValue"
+                    android:visibility="gone" />
+
+               	<TextView
+               	    style="@style/Theme_FieldKey"
+                    android:text="项目名称：" />
+               	<TextView
+                    android:id="@+id/tv_task_name"
+                    style="@style/Theme_FieldValue" />
+               	<!-- 
+               	<TextView
+               	    style="@style/Theme_FieldKey"
+                    android:text="项目类型：" />
+               	<EditText
+                    android:id="@+id/et_plan_status"
+                    style="@style/Theme_FieldValue" />
+                 -->
+                 <TextView
+               	    style="@style/Theme_FieldKey"
+                    android:text="项目类型：" />
+               	<TextView
+                    android:id="@+id/tv_plan_status"
+                    style="@style/Theme_FieldValue" />
+               	
+                <TextView
+                    style="@style/Theme_FieldKey"
+                    android:text="项目描述：" />
+                <TextView
+                    android:id="@+id/tv_task_description"
+                    style="@style/Theme_FieldValue" />
+                
+                <TextView
+               	    style="@style/Theme_FieldKey"
+                    android:text="标准时长（分钟）：" />
+               	<TextView
+                    android:id="@+id/tv_task_stand_time"
+                    style="@style/Theme_FieldValue" />
+               	
+               	<TextView
+               	    style="@style/Theme_FieldKey"
+                    android:text="基数（分钟）：" />
+               	<TextView
+                    android:id="@+id/tv_task_radix"
+                    style="@style/Theme_FieldValue" />
+               	
+               	<TextView
+               	    style="@style/Theme_FieldKey"
+                    android:text="完成状态：" />
+                <Spinner
+                 	android:id="@+id/spn_plan_times"
+                 	android:layout_width="match_parent"
+                 	android:layout_height="wrap_content" />
+               	
+               	<TextView
+               	    style="@style/Theme_FieldKey"
+                    android:text="项目说明：" />
+                <EditText
+                 	android:id="@+id/et_comments"
+                 	android:layout_width="match_parent"
+                 	android:layout_height="wrap_content"
+                 	android:singleLine="false"
+                 	android:gravity="left|top" />
+               	<!-- 
+               	<TextView
+               	    style="@style/Theme_FieldKey"
+                    android:text="计划调整ID：" />
+               	<EditText
+                    android:id="@+id/et_changePlanNum"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+                </EditText>
+                 -->
+                
+	        </LinearLayout>
+			</ScrollView><!-- 
+	        <ScrollView
+	                android:id="@+id/scrollView2"
+	                android:layout_width="match_parent"
+	            	android:layout_weight="0.5"
+	                android:layout_height="wrap_content" >    
+	        <LinearLayout
+	            android:id="@+id/linear_info"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical" >
+	            
+	            <TextView
+	                android:id="@+id/tv_title1"
+	                android:layout_width="fill_parent"
+	                android:layout_height="35dp"
+	                android:layout_weight="1"
+	                android:gravity="center_vertical"
+	                android:textColor="@color/color_text"
+	                android:text="检查层门副门锁触电超行程"
+	                android:textSize="15dp" />
+
+	            <RadioGroup
+	                android:id="@+id/rg_checkDoorOverLoad"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:textColor="@color/color_text"
+	                android:layout_x="3px"
+	                android:orientation="vertical" >
+
+	                <RadioButton
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="40dp"
+	                    android:layout_weight="1"
+	                    android:checked="true"
+	                    android:textColor="@color/color_text"
+	                    android:text="好"
+	                    android:textSize="12dp" />
+
+	                <RadioButton
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="35dp"
+	                    android:layout_weight="1"
+	                    android:textColor="@color/color_text"
+	                    android:text="否"
+	                    android:textSize="12dp" />
+
+	                <RadioButton
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="40dp"
+	                    android:layout_weight="1"
+	                    android:textColor="@color/color_text"
+	                    android:text="没"
+	                    android:textSize="12dp" />
+	            </RadioGroup>
+
+	            <TextView
+	                android:layout_width="fill_parent"
+	                android:layout_height="35dp"
+	                android:layout_weight="1"
+	                android:gravity="center_vertical"
+	                android:textColor="@color/color_text"
+	                android:text="确认层门自闭力" />
+
+	            <RadioGroup
+	                android:id="@+id/rg_checkCloseStrength"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:textColor="@color/color_text"
+	                android:layout_x="3px"
+	                android:orientation="vertical" >
+
+	                <RadioButton
+	                    android:id="@+id/radioButton1"
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="35dp"
+	                    android:layout_weight="1"
+	                    android:checked="true"
+	                    android:textColor="@color/color_text"
+	                    android:text="好"
+	                    android:textSize="12dp" />
+
+	                <RadioButton
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="35dp"
+	                    android:layout_weight="1"
+	                    android:textColor="@color/color_text"
+	                    android:text="否"
+	                    android:textSize="12dp" />
+
+	                <RadioButton
+	                    android:layout_width="fill_parent"
+	                    android:layout_height="35dp"
+	                    android:layout_weight="1"
+	                    android:textColor="@color/color_text"
+	                    android:text="没"
+	                    android:textSize="12dp" />
+	            </RadioGroup>
+	        </LinearLayout>
+			</ScrollView>
+ -->
+	    </LinearLayout>
+	    <LinearLayout
+	        style="@style/Theme_foot"
+	        android:layout_alignParentBottom="true"
+	        android:layout_centerHorizontal="true"
+	        android:id="@+id/linearLayout2" >
+
+	        <RelativeLayout
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content" >
+ 
+	            <Button
+	                android:id="@+id/btn_homepage"
+	                style="@style/Theme_button_homepage"
+	                android:layout_marginTop="5dp"
+	                android:layout_marginBottom="5dp"
+	                android:visibility="gone" />
+	                 
+
+	            <Button
+	                android:id="@+id/btn_toxml"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                style="@style/Theme_button"
+	                android:padding="10dp"
+	                android:layout_alignParentRight="true"
+	                android:layout_marginRight="5dp"
+	                android:layout_marginTop="5dp"
+	                android:layout_marginBottom="5dp"
+	                android:text="整备详细信息" />
+	        </RelativeLayout>
+	    </LinearLayout>
+	</RelativeLayout>
+
+</LinearLayout>

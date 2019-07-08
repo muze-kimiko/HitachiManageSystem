@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+    	<head>
+    		<meta charset="UTF-8">
+    		<title>Add</title>
+<script src="jqueryMobile/jquery.mobile-1.4.5.js"></script>
+<link href="jqueryMobile/jquery.mobile.theme-1.4.5.min.css"
+	rel="stylesheet">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<link href="jqueryMobile/jquery.mobile.theme-1.4.5.min.css"
+	rel="stylesheet">
+</head>
+    	<body>
+	<div data-role="page" id="add">
+		<div data-role="header" data-position="fixed" style="background:#2B89D3;color:#ffffff;height:40px;" >
+			<h1  class="pagetitle" style="font-size:15px;">电梯新增</h1>
+		</div>
+		<div data-role="content" style="padding: 0px">
+            <div class="Mcstatus" id="ElevatorDetail" width="100%">
+				<table  class="jhliftdata_dteail" width="100%" border="0">
+				  <tr>
+				    <th width="35%" scope="row" style="text-align:left;padding-left:5px;">电梯工号</th>
+				    <td width="65%" style="padding-right:8px;"><input type="text"
+							name="lbDeviceNo" id="lbDeviceNo"></td>
+				  </tr>
+				  <tr>    
+				    <th scope="row" style="text-align:left;padding-left:5px;">所属分公司</th>
+				    <td style="padding-right:8px;"><input type="text"
+							name="lbFiliale" id="lbFiliale"></td>
+				  </tr>
+				  <tr>
+				    <th scope="row" style="text-align:left;padding-left:5px;">地盘名称</th>
+				    <td style="padding-right:8px;"><input type="text"
+							name="lbBuilding" id="lbBuilding"></td>
+				  </tr>
+				  <tr>
+				    <th scope="row" style="text-align:left;padding-left:5px;">电梯位置</th>
+				    <td style="padding-right:8px;"><input type="text"
+							name="lbAddress" id="lbAddress"></td>
+				  </tr>
+				   <tr>
+				    <th scope="row" style="text-align:left;padding-left:5px;">遥监卡号</th>
+				    <td style="padding-right:8px;"><input type="text"
+							name="lbPhone" id="lbPhone"></td>
+				  </tr>
+
+				  <tr>
+				    <th scope="row" style="text-align:left;padding-left:5px;">端口号</th>
+				    <td style="padding-right:8px;"><input type="text"
+							name="lbTerminalPort" id="lbTerminalPort"></td>
+				  </tr>		  
+				  
+				  
+				  <tr>
+				    <th scope="row" style="text-align:left;padding-left:5px;">电梯备注</th>
+				    <td style="padding-right:8px;"><textarea id="lbRemark"></textarea></td>
+				  </tr>
+				</table>
+            </div>
+            <div data-role="controlgroup" data-type="horizontal" style="text-align:center;">
+            <a href="#" data-role="button" data-icon="back"  data-rel="back" style="background-color:red;color:#fff">取消</a>
+			   <a href="javascript:void(0)" onclick="SaveAdd()" data-role="button" data-icon="info" style="background-color:#3388cc;color:#fff;">保存</a>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+
+</html>
+

@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+    	<head>
+    		<meta charset="UTF-8">
+    		<title>Detail</title>
+<script src="jqueryMobile/jquery.mobile-1.4.5.js"></script>
+<link href="jqueryMobile/jquery.mobile.theme-1.4.5.min.css"
+	rel="stylesheet">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+</head>
+    	<body>
+	<div data-role="page" id="detail">
+		<div data-role="header" data-position="fixed" style="background:#2B89D3;color:#ffffff;height:40px;" >
+			<div data-type="horizontal" class="ui-btn-left">
+				<a href="#anylink" data-role="button" data-iconpos="notext" data-rel="back" data-icon="custarrow-l" data-theme="f">后退</a>
+				<a href="javascript:void(0);" onclick="home();" data-role="button" data-iconpos="notext" data-icon="custarrow-home" data-theme="f">主页</a>
+			</div>
+			<h1  class="pagetitle" style="font-size:15px;">电梯详细信息</h1>
+		</div>
+		<div data-role="content" style="padding: 0px">
+
+			   <div class="Mcstatus" id="ElevatorDetail" width="100%">
+				<table  class="jhliftdata_dteail" width="100%" border="0">
+				  <tr>
+				    <th width="35%" scope="row">电梯工号</th>
+				    <td width="65%"><label id="lbDeviceNo"></label></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">最后上线时间</th>
+				    <td><label id="lbLastContactDate"></label></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">地盘名称</th>
+				    <td><label id="lbBuilding" ></label></td>
+				  </tr>
+				   <tr>
+				    <th scope="row">电梯位置</th>
+				    <td><label id="lbAddress"></label></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">分公司归属</th>
+				    <td><label id="lbFiliale"></label></td>
+				  </tr>
+				  
+				  <tr>
+				    <th scope="row">激活时间</th>
+				    <td><label id="lbFirstActiveDate"></label></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">导入时间</th>
+				    <td><label id="lbCreatedDate"></label></td>
+				  </tr>
+				   <tr>
+				    <th scope="row">遥监卡号</th>
+				    <td><label id="lbPhone"></label></td>
+				  </tr>
+				  <tr style="display:none;">
+				    <th scope="row">激活码</th>
+				    <td><label id="lbActiveCode"></label></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">端口号</th>
+				    <td><label id="lbTerminalPort"></label></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">主板程序</th>
+				    <td><label id="lbSoftVersion"></label></td>
+				  </tr>
+				  <tr>    
+				    <th scope="row">维保站点</th>
+				    <td><label id="lbCompanyDesc"></label></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">保养员</th>
+				    <td><label id="lbStaffName"></label></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">保养员联系电话</th>
+				    <td><label id="lbMobile"></label></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">电梯备注</th>
+				    <td ><textarea id="lbRemark"></textarea></td>
+				  </tr>
+				</table>
+            </div>
+		</div>
+	</div>
+
+</body>
+
+
+</html>
+

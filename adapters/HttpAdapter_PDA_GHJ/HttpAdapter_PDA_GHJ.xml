@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Licensed Materials - Property of IBM
+    5725-I43 (C) Copyright IBM Corp. 2011, 2013. All Rights Reserved.
+    US Government Users Restricted Rights - Use, duplication or
+    disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<wl:adapter name="HttpAdapter_PDA_GHJ"
+	 xmlns:wl="http://www.ibm.com/mfp/integration" 
+	 xmlns:http="http://www.ibm.com/mfp/integration/http" 
+	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	>
+
+	<displayName>HttpAdapter_PDA_GHJ</displayName>
+	<description>HttpAdapter_PDA_GHJ</description>
+	<connectivity>
+		<connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
+			<protocol>http</protocol>
+			
+			<!-- <domain>10.96.128.96</domain> --><!-- 正式-->
+			<!--<domain>10.98.199.17</domain> --><!-- 测试 -->
+			<domain>10.96.128.96</domain>
+			<port>8080</port>	
+			<!-- Following properties used by adapter's key manager for choosing specific certificate from key store  
+			<sslCertificateAlias></sslCertificateAlias> 
+			<sslCertificatePassword></sslCertificatePassword>
+			-->		
+			<connectionTimeoutInMilliseconds>300000</connectionTimeoutInMilliseconds>
+            <socketTimeoutInMilliseconds>300000</socketTimeoutInMilliseconds>
+			<maxConcurrentConnectionsPerNode>100</maxConcurrentConnectionsPerNode>
+		</connectionPolicy>
+	</connectivity>
+
+	<procedure name="getStories"/>
+
+	<procedure name="getStoriesFiltered"/>
+	
+	<procedure name="getReplaceListQuery"/>
+	
+	<procedure name="getReplaceDetQuery"/>
+	
+	<procedure name="getQueryPageAssetInf"/>
+	
+	<procedure name="getReplaceRegain"/>
+	
+	<procedure name="getReplaceSubmit"/>
+	
+	<procedure name="getServRepQueryPage"/>
+	
+	<procedure name="getReplaceDetUpdate"/>
+	
+</wl:adapter>

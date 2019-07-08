@@ -1,0 +1,9 @@
+Ext.define('HelcOA.model.startTheProcess.DailyOffice.MeetingRoomsModel',{
+	extend:'Ext.data.Model',
+	config:{
+		fields:['company']
+	},
+	data:[
+	      {company:'广东'}
+	      ]
+});

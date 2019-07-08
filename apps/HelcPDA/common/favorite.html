@@ -1,0 +1,269 @@
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>收藏记录</title>
+</head>
+<body>
+	<div data-role="page" id="favorite" class="favorite">
+		
+   		<div data-role="panel" id="leftpanel" data-position="left" data-display="overlay" data-theme="a">
+			<ul data-role="listview" id="group-listview">
+				<li data-role="list-divider"><span id="btnCopy" style="float:left;border:1px solid #ccc;">复制</span>收藏组<span id="btnCut" style="float:right;border:1px solid #ccc;">剪切</span></li>
+			</ul>
+		</div>
+			
+		<div data-role="header" data-position="fixed" class="header" >
+			<div data-type="horizontal"  class="ui-btn-left">
+				<a href="#anylink" id="favorite-back" data-role="button"  data-iconpos="notext" data-rel="back" data-icon="custarrow-l" data-theme="f">后退</a>
+				<a href="javascript:void(0);" onclick="home(2);" data-role="button"  data-iconpos="notext" data-icon="custarrow-home" data-theme="f">主页</a>
+			</div>
+			<h1 class="pagetitle" style="font-size:15px;">收藏记录</h1>
+			<div data-type="horizontal" class="ui-btn-right">
+				<a href="href=#leftpanel" class="leftmenu" data-role="button" data-icon="custarrow-action" data-iconpos="notext" data-theme="f">新增</a>
+			</div>
+			<div class="Mcstatus" id="Mcheader" width="100%">
+			  <div class="gzcd">
+			      <div class="item"><a href="" class="bg">收藏记录</a></div>
+			      <div class="item"><a href="javascript:changePage('FavoriteGroup.html')" >收藏分组</a></div>
+			      <div class="clear"></div>
+			  </div>
+		   </div>
+		</div>
+		<div data-role="content" style="padding:30px 0 0 0; background-color:#E4E4E4;">
+			<div id="mycollapsibleset" data-role="collapsibleset" data-theme="a" data-content-theme="b">
+			</div>
+			<input id="deleteid" type="hidden">
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-theme="a" data-tap-toggle="false" style="position:fixed;" data-hide-during-focus="false">
+			<div data-role="navbar" id="navbar-custorm">
+	      		<ul>
+	      			<li><a id="footer-activetest" href="#" data-icon="myactivetest">激活调试</a></li>
+			  		<li><a id="footer-realtimemore" href="#" data-icon="mymultieye">远程监视</a></li>
+			  		<li><a id="footer-faultrw" href="#" data-icon="mydatarw">数据读取</a></li>
+				    <li><a id="footer-faultfile" href="#" data-icon="myfaultfile">故障存档</a></li>
+				    
+				  </ul>
+			</div>
+		</div>
+		
+		<div data-role="popup" id="popupDelDialog" data-overlay-theme="b" data-theme="a" data-dismissible="false">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;padding:0;margin:0;" >
+				<h1>取消收藏提示!</h1>
+			</div>
+		    <div data-role="content" style="padding-top:0px;margin-top:0px;">
+		        <p>是否取消收藏？</p>
+				<div data-role="navbar">
+			      <ul>
+			        <li><a href="#" data-theme="a" data-rel="back">否</a></li>
+			        <li><a href="#" data-theme="a" id="deletesingle">是</a></li>
+			      </ul>
+			    </div>
+		    </div>
+		</div>
+		
+		<div data-role="popup" id="popupDelAllDialog" data-overlay-theme="b" data-theme="a" data-dismissible="false">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;padding:0;margin:0;" >
+				<h1>取消收藏提示!</h1>
+			</div>
+		    <div data-role="content" style="padding-top:0px;margin-top:0px;">
+		        <p>是否取消所选收藏记录？</p>
+				<div data-role="navbar">
+			      <ul>
+			        <li><a href="#" data-theme="a" data-rel="back">否</a></li>
+			        <li><a href="#" data-theme="a" id="deletelist">是</a></li>
+			      </ul>
+			    </div>
+		    </div>
+		</div>
+		
+		<div data-role="popup" id="popupRealtimeDialog" data-overlay-theme="b" data-theme="a" data-dismissible="false">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;padding:0;margin:0;" >
+				<h1>提示</h1>
+			</div>
+		    <div data-role="content" style="padding-top:0px;margin-top:0px;">
+		        <p>该梯遥监异常，无法监控</p>
+				<div data-role="navbar">
+			      <ul>
+			        <li><a href="#" data-theme="a" data-rel="back">返回</a></li>
+			      </ul>
+			    </div>
+		    </div>
+		</div>
+		
+		<div data-role="popup" id="AddUI" data-tolerance="0,0" data-position-to="window" data-overlay-theme="b" data-theme="a" style="min-width:100%;min-heigth:100%;">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;" >
+				<h1  class="pagetitle" style="font-size:15px;">新增分组</h1>
+				<div style="-moz-user-select:none;background-color:#fff;color:#000;height:100px;width:100%;">
+			 		<table style="width:100%;">
+				 		<tr>
+					 		<td align="right" style="padding-left:5px;padding-right:5px;">
+					 			<input type="text" name="txtGroupName" id="txtGroupName" placeholder="组名" >
+					 		</td>
+				 		</tr>
+				 		<tr>
+					 		<td >
+					 			<input type="button" value="保存" data-role="button" id="btnSave">
+					 		</td>
+				 		</tr>
+			 		</table>
+				</div>
+			</div>
+			<div data-role="content" style="padding:0px;"></div>
+		</div>
+	</div>
+</body>
+</html>
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>收藏记录</title>
+</head>
+<body>
+	<div data-role="page" id="favorite" class="favorite">
+	
+		<div data-role="header" data-position="fixed" class="header" style="position:fixed;">
+			<div data-type="horizontal"  class="ui-btn-left">
+				<a href="#anylink" id="favorite-back" data-role="button"  data-iconpos="notext" data-rel="back" data-icon="custarrow-l" data-theme="f">后退</a>
+				<a href="javascript:void(0);" onclick="home(2);" data-role="button"  data-iconpos="notext" data-icon="custarrow-home" data-theme="f">主页</a>
+			</div>
+			<h1 class="pagetitle" style="font-size:15px;">收藏记录</h1>
+			
+			<a class="ui-btn-right" href="#popupMenu" data-rel="popup" data-transition="slideup" data-icon="custarrow-menu" data-iconpos="notext" data-theme="f" >Actions...</a>
+			<div id="popupMenu" data-role="popup" data-theme="a">
+		        <ul style="min-width: 210px;" data-role="listview" data-inset="true">
+		           <li data-role="list-divider">收藏组</li>
+		            <li id="btnAdd"><a href="#">新增</a></li>
+		            <li id="btnDelete"><a href="#">删除</a></li>
+		        </ul>
+			</div>
+			
+		</div>
+		<div data-role="content" style="padding:0 0 0 0; background-color:#E4E4E4;">
+			<div id="mycollapsibleset" data-role="collapsibleset" data-theme="a" data-content-theme="b">
+			</div>
+			<input id="deleteid" type="hidden">
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-theme="a" data-tap-toggle="false" style="position:fixed;" data-hide-during-focus="false">
+			<div data-role="navbar" id="navbar-custorm">
+	      		<ul>
+	      			<li><a id="footer-activetest" href="#" data-icon="myactivetest">激活调试</a></li>
+			  		<li><a id="footer-realtimemore" href="#" data-icon="mymultieye">远程监视</a></li>
+			  		<li><a id="footer-faultrw" href="#" data-icon="mydatarw">数据读取</a></li>
+				    <li><a id="footer-faultfile" href="#" data-icon="myfaultfile">故障存档</a></li>
+				    
+				  </ul>
+			</div>
+		</div>
+		
+		<div data-role="popup" id="popupDelDialog" data-overlay-theme="b" data-theme="a" data-dismissible="false">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;padding:0;margin:0;" >
+				<h1>取消收藏提示!</h1>
+			</div>
+		    <div data-role="content" style="padding-top:0px;margin-top:0px;">
+		        <p>是否取消收藏？</p>
+				<div data-role="navbar">
+			      <ul>
+			        <li><a href="#" data-theme="a" data-rel="back">否</a></li>
+			        <li><a href="#" data-theme="a" id="deletesingle">是</a></li>
+			      </ul>
+			    </div>
+		    </div>
+		</div>
+		
+		<div data-role="popup" id="popupDelAllDialog" data-overlay-theme="b" data-theme="a" data-dismissible="false">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;padding:0;margin:0;" >
+				<h1>取消收藏提示!</h1>
+			</div>
+		    <div data-role="content" style="padding-top:0px;margin-top:0px;">
+		        <p>是否取消所选收藏记录？</p>
+				<div data-role="navbar">
+			      <ul>
+			        <li><a href="#" data-theme="a" data-rel="back">否</a></li>
+			        <li><a href="#" data-theme="a" id="deletelist">是</a></li>
+			      </ul>
+			    </div>
+		    </div>
+		</div>
+		
+		<div data-role="popup" id="popupRealtimeDialog" data-overlay-theme="b" data-theme="a" data-dismissible="false">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;padding:0;margin:0;" >
+				<h1>提示</h1>
+			</div>
+		    <div data-role="content" style="padding-top:0px;margin-top:0px;">
+		        <p>该梯遥监异常，无法监控</p>
+				<div data-role="navbar">
+			      <ul>
+			        <li><a href="#" data-theme="a" data-rel="back">返回</a></li>
+			      </ul>
+			    </div>
+		    </div>
+		</div>
+		
+		<div data-role="popup" id="AddUI" data-tolerance="0,0" data-position-to="window" data-overlay-theme="b" data-theme="a" style="min-width:100%;min-heigth:100%;">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;" >
+				<h1  class="pagetitle" style="font-size:15px;">新增分组</h1>
+				<div style="-moz-user-select:none;background-color:#fff;color:#000;height:100px;width:100%;">
+			 		<table style="width:100%;">
+				 		<tr>
+					 		<td align="right" style="padding-left:5px;padding-right:5px;">
+					 			<input type="text" name="txtGroupName" id="txtGroupName" placeholder="组名" >
+					 		</td>
+				 		</tr>
+				 		<tr>
+					 		<td style="text-align:center;">
+						 		<fieldset class="ui-grid-a">
+								    <div class="ui-block-a" style="padding:2px;cursor:pointer;" id="btn-add-Save"><div class="ui-bar ui-bar-a" style="height: 20px;text-align:center;background:#2B89D3;color:#ffffff">保存</div></div>
+								    <div class="ui-block-b" style="padding:2px;cursor:pointer;" id="btn-add-cancel"><div class="ui-bar ui-bar-a" style="height: 20px;text-align:center;background:#2B89D3;color:#ffffff">取消</div></div>
+								</fieldset>
+					 		</td>
+				 		</tr>
+			 		</table>
+				</div>
+			</div>
+			<div data-role="content" style="padding:0px;"></div>
+		</div>
+		
+		<div data-role="popup" id="popupFavoriteGroupDialog" data-tolerance="0,0" data-position-to="window" data-overlay-theme="b" data-theme="a" style="min-width:100%;min-heigth:100%;width:200px;">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;" >
+				<h1>收藏组</h1>
+			</div>
+			<div data-role="content" style="padding-top:10px;">
+				<div data-role="listview" id="favoriteGroup-listview">
+				</div>
+			</div>
+			<div data-role="footer">
+				<fieldset class="ui-grid-a">
+				    <div class="ui-block-a" style="padding:2px;cursor:pointer;" id="btnDelFavorite"><div class="ui-bar ui-bar-a" style="height: 20px;text-align:center;background:#2B89D3;color:#ffffff">删除</div></div>
+				    <div class="ui-block-b" style="padding:2px;cursor:pointer;" id="btnCancel"><div class="ui-bar ui-bar-a" style="height: 20px;text-align:center;background:#2B89D3;color:#ffffff">取消</div></div>
+				</fieldset>
+			</div>
+		</div>
+		
+		<div data-role="popup" id="popupMoveGroupDialog" data-tolerance="0,0" data-position-to="window" data-overlay-theme="b" data-theme="a" style="min-width:100%;min-heigth:100%;width:200px;">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;" >
+				<h1>目标收藏组</h1>
+			</div>
+			<div data-role="content" style="padding-top:10px;">
+				<div data-role="listview" id="moveGroup-listview">
+				</div>
+			</div>
+			<div data-role="footer">
+				<fieldset class="ui-grid-a">
+				    <div class="ui-block-a" style="padding:2px;cursor:pointer;" id="btn-group-move"><div class="ui-bar ui-bar-a" style="height: 20px;text-align:center;background:#2B89D3;color:#ffffff">确定</div></div>
+				    <div class="ui-block-b" style="padding:2px;cursor:pointer;" id="btn-group-Cancel"><div class="ui-bar ui-bar-a" style="height: 20px;text-align:center;background:#2B89D3;color:#ffffff">取消</div></div>
+				</fieldset>
+			</div>
+		</div>
+		<input type="hidden" id="hiddelid">
+	</div>
+</body>
+</html>
+
+ 

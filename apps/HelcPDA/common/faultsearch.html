@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+   	<head>
+   		<meta charset="UTF-8">
+   		<title>FaultSearch</title>
+		<script src="jqueryMobile/jquery.mobile-1.4.5.js"></script>
+		<link href="jqueryMobile/jquery.mobile.theme-1.4.5.min.css"
+			rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	</head>
+    	<body>
+		<div data-role="page" id="faultsearch" data-close-btn="none">
+			<div data-role="header" data-position="fixed" style="background:#2B89D3;color:#ffffff;height:40px;" >
+				<h1  class="pagetitle" style="font-size:15px;">故障搜索</h1>
+			</div>
+			<div data-role="content" style="padding: 0px">
+				<!--application UI goes here-->
+	
+				   <div class="Mcstatus" id="Mcheader" width="100%">
+				   <table width="100%" border="0" cellspacing="0" cellpadding="0">
+				   <tr>
+				   <td style="padding-left:5px;padding-right:5px;">
+					   <label for="txtDeviceNo">电梯工号:</label><input type="text" name="txtDeviceNo" id="txtDeviceNo">
+					   <label for="txtStartTime">故障开始时间:</label><input type="text" name="txtStartTime" id="txtStartTime">
+					   <label for="txtEndTime">故障结束时间:</label><input type="text" name="txtEndTime" id="txtEndTime">
+					   <label for="txtOrderNo">下单编号:</label><input type="text" name="txtOrderNo" id="txtOrderNo">
+					   <label for="txtCode">故障码:</label><input type="text" name="txtCode" id="txtCode">
+					   <label><input type="checkbox" name="checkbox"id="CheckBoxFault">2天内的故障</label>
+					   <label><input type="checkbox" name="checkbox" id="IsOrder">是否已下单</label>
+				   </td>
+				   </tr>
+				   <tr>
+				   <td>
+				   <div data-role="controlgroup" data-type="horizontal" style="text-align:center;">
+				   <a href="#" data-role="button" data-icon="back"  data-rel="back" style="background-color:red;color:#fff">取消</a>
+				   <a href="javascript:void(0)" id="btn-fault-search" data-role="button" data-icon="info" style="background-color:#3388cc;color:#fff;">确定</a>
+					</div>
+				   </td>
+				   </tr>
+				   </table>
+				   </div>
+				   <div class="Mcstatus" id="SearchResult" width="100%">
+				   <table width="100%" border="0" cellspacing="0" cellpadding="0">
+	                <tr>
+	                    <td>
+						</td>
+	                </tr>
+	            </table>
+	            </div>
+			</div>
+		</div>
+	</body>
+</html>
+

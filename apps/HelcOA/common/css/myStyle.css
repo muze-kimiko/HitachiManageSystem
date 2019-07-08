@@ -1,0 +1,211 @@
+/*------------------
+       公共的 - 开始
+  ------------------*/
+/* 必填框*改为红色 */
+.x-field-required .x-form-label::after{
+   color:#ff0000; 
+}
+/*---首页 - 结束-----------------------------------------------------------------------*/
+
+/* ----- 版本号样式 */
+.x-label.version_label{
+	font-size:10pt;
+	margin:10px 15px 0px !important;
+	color: black;
+}
+/*------------------
+       首页 - 开始
+  ------------------*/
+.i_box_bg{
+	background-color:#e42828;
+}
+.i_Button_Icon{
+    margin:0 auto;
+	width:50px;
+	height:50px;
+	line-height:50px;
+	color:#FFF;
+	text-align:center;
+	font-family: "Pictos";
+	font-size:19pt;
+	border-radius: 25px;
+}
+.i_Button_IconBorder{
+    margin-top:8px;
+	float:left;
+	clear:none;
+	width:16%;
+	height:78px;
+}
+.i_Button_IconBorder:active{
+	noused-background-color:#f8f8f8;
+}
+.i_Button_IconFont{
+	margin-top:5px;
+	width:100%;
+	font-size:10pt;
+	color:#3d4245; 
+	text-align:center;
+    background-size:32px 32px;
+}
+.i_Button_Icon_bg01{
+	background-image:url(../images/i_icon01.png);
+}
+.i_Button_Icon_bg02{
+	background-image:url(../images/i_icon02.png);
+}
+.i_Button_Icon_bg03{
+	background-image:url(../images/i_icon03.png);
+}
+.i_Button_Icon_bg04{
+	background-image:url(../images/i_icon04.png);
+}
+.i_Button_Icon_bg05{
+	background-image:url(../images/i_icon05.png);
+}
+.i_Button_Icon_bg06{
+	background-image:url(../images/i_icon06.png);
+}
+
+
+.i_Button_List{
+    width:96%;
+    color:#666;
+    font-size:14px;
+}
+.i_Button_List_Icon_1{
+    margin:10px 2px 4px 4px;
+	width:30px;
+	height:26px;
+	line-height:26px;
+	color:#666;
+	text-align:center;
+	font-size:16pt;
+	border-radius: 3px;
+}
+.i_Button_List_Icon_2{font-family: "Pictos";}
+.i_Button_List_Title{
+    color:#000;
+    font-size:18px;
+}
+.i_Button_List_Title span{
+    margin-right:5px;
+    color:#f00;
+}
+.i_Button_List_left{
+    text-align:left;
+}
+.i_Button_List_right{
+    text-align:right;
+}
+
+/*-- 按钮图标-添加 --*/
+.x-tab .x-button-icon.more::before, .x-button .x-button-icon.list::before{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    font-family: "Pictos";
+    content: "l";
+}
+
+/*---首页 - 结束-----------------------------------------------------------------------*/
+
+/*------------------
+    人员选择 - 开始
+  ------------------*/
+.p_Choose_List{
+    width:100%;
+    font-size:14px;
+}
+.p_Choose_List_name{
+    color:#000;
+    font-size:18px;
+}
+.p_Choose_List_right{
+    width:25px;
+    text-align:right;
+	font-family: "Pictos";
+	font-size:19pt;
+	color:#019cdc;
+}
+/*---人员选择 - 结束-----------------------------------------------------------------------*/
+
+/*------------------
+    新闻列表 - 开始
+  ------------------*/
+.i_News_List{
+    width:100%;
+}
+.i_News_List_Title{
+    font-size:14px;
+}
+/*---新闻列表 - 结束-----------------------------------------------------------------------*/
+
+/*------------------
+    修改密码 - 开始
+  ------------------*/
+.m_Inpur_box{text-indent:10px;}
+
+/*---修改密码 - 结束-----------------------------------------------------------------------*/
+/* ----- 公共的CSS ----- */
+/* ----- 公共的CSS ----- */
+.p_judge_box{
+    margin:0 10px 0 0;
+    width:100%;
+    text-align: center;
+    font-family: "Pictos";
+    font-size: 20pt;
+    color:#ccc;
+}
+
+
+.p_judge_box_clicked{
+    margin:0 10px 0 0;
+    width:100%;
+    text-align: center;
+    font-family: "Pictos";
+    font-size: 20pt;
+    color:#e03a3e;
+
+}
+
+/*#region textarea*/
+.x-field-textarea .x-form-field{
+	line-height:29px;
+	min-height:29px;
+	height:34px;
+	overflow-y:hidden;
+	padding:0.2em 0 0 0.2em;
+	border-radius:6px;
+}
+.x-field-textarea{
+	min-height:0;
+	border-radius:6px;
+}
+.x-field-textarea .x-field-input{
+	padding-right:0 !important;
+}
+
+.已通过{
+	background:green;
+	color:white;
+	width:180px;
+	text-align:center;
+	font-size:13px;
+}
+.被否决{
+	background:red;
+	color:white;
+	width:180px;
+	text-align:center;
+	font-size:13px;
+}
+.x-form-fieldset-instructions{
+	text-align:left;
+}
+.x-form-white-bg .x-scroll-container {
+  background-color: #ffffff;
+}

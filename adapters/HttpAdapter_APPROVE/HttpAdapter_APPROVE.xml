@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+    Licensed Materials - Property of IBM
+    5725-I43 (C) Copyright IBM Corp. 2011, 2013. All Rights Reserved.
+    US Government Users Restricted Rights - Use, duplication or
+    disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<wl:adapter xmlns:wl="http://www.ibm.com/mfp/integration" xmlns:http="http://www.ibm.com/mfp/integration/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" name="HttpAdapter_APPROVE">
+    <!--This adapter has been upgraded, For more information about the changes, see the "Adapter timeout and concurrency" topic in the product Knowledge Center.-->
+    <displayName>HttpAdapter_APPROVE</displayName>
+	<description>HttpAdapter_APPROVE</description>
+	<connectivity>
+		<connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
+			<protocol>http</protocol>
+			<!-- <domain>10.96.128.70</domain> 废止-->
+			<domain>10.98.199.17</domain>
+            <!--测试:10.98.199.17 正式:10.96.128.96 -->
+			<port>8080</port>
+            <connectionTimeoutInMilliseconds>180000</connectionTimeoutInMilliseconds>
+            <socketTimeoutInMilliseconds>180000</socketTimeoutInMilliseconds>
+            <!--The previous elements: <connectionTimeoutInMilliseconds> and <socketTimeoutInMilliseconds>, were added to <connectionPolicy> element. These elements correspond to TCP connection and socket timeouts when connecting to the back-end. For more details, see HTTP protocol specifications and "Adapter timeout and concurrency" topic in the product Knowledge Center.-->	
+			<!-- Following properties used by adapter's key manager for choosing specific certificate from key store  
+			<sslCertificateAlias></sslCertificateAlias> 
+			<sslCertificatePassword></sslCertificatePassword>
+			-->		
+		<maxConcurrentConnectionsPerNode>200</maxConcurrentConnectionsPerNode>
+            <!--The <maxConcurrentConnectionsPerNode> element has been moved from <loadConstraint> element (and loadConstraint has been commented out). This element sets the maximum number of concurrent requests to the backend. For more information, see the "Adapter timeout and concurrency" topic in the product Knowledge Center.-->
+        </connectionPolicy>
+		<!--<loadConstraints maxConcurrentConnectionsPerNode="200" />-->
+	</connectivity>
+    <!--The requestTimeoutInSeconds attribute in <procedure> elements was removed as it is no longer supported. To change the default connection and socket For more information, see the "Adapter timeout and concurrency" topic in the product Knowledge Center. more details, see <documentation>.-->
+    <procedure name="getStories"/>
+
+	<procedure name="getStoriesFiltered"/>
+	
+	<procedure name="LdapLogin"/>
+	
+	<procedure name="LdapUpdatePwd"/>
+	
+	<procedure name="getStsyemInfo"/>
+	
+	<!-- TBJ待审批数�?-->
+	<procedure name="toQueryTJBAprovelPendingCount"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<!-- TBJ待审批列�?-->
+	<procedure name="toQueryTJBAprovelPendingList"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<!-- TBJ待审批详�?-->
+	<procedure name="toQueryTJBAprovelPendingDetail"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<!-- 服务费审批信�?-->
+	<procedure name="toQueryServiceFee"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<!-- 梯�?浮率 -->
+	<procedure name="toQueryElevatorC"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<!-- 付款比例 -->
+	<procedure name="toQueryProportion"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<!-- 付款比例 -->
+	<procedure name="toQueryCompare"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<!-- 历史列表 -->
+	<procedure name="toQueryHistory"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<!-- 价格明细 -->
+	<procedure name="toQueryPriceDetail"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<!-- 审批历史 -->
+	<procedure name="toQueryTBJHistory"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<!-- 已审批列�?(分页) -->
+	<procedure name="toQueryTJBAprovedListPage"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<!-- 已完成列�?(分页) -->
+	<procedure name="toQueryTJBAproveFinishListPage"/>
+    <!--requestTimeoutInSeconds="60000"-->
+	<!-- 同意 -->
+	<procedure name="approveToPass"/>
+    <!--requestTimeoutInSeconds="120000"-->
+	<!-- 保留意见 -->
+	<procedure name="approveToReserve"/>
+    <!--requestTimeoutInSeconds="120000"-->
+	<!-- 拒绝 -->
+	<procedure name="approveToRefuse"/>
+    <!--requestTimeoutInSeconds="120000"-->
+	
+	<procedure name="AddServiceApproved"/>
+    <!--requestTimeoutInSeconds="60000"-->
+    <!-- 增费超点列表  -->
+	
+	<procedure name="AddServiceApprovePending"/>
+    <!--requestTimeoutInSeconds="60000"-->
+    <!-- 增费超点待审核列�? -->
+	
+	<procedure name="AddServiceApprove"/>
+    <!--requestTimeoutInSeconds="60000"-->
+    <!-- 增费超点已审核列�? -->
+	
+	<procedure name="TBJApproveMain"/>
+    <!--requestTimeoutInSeconds="60000"-->
+    <!-- 增费-总览-设备合同服务费确认书情况 -->
+	
+	<procedure name="TBJServiceFee"/>
+    <!--requestTimeoutInSeconds="60000"-->
+    <!-- 增费-总览-服务费历史及申请-->
+	
+	<procedure name="TBJProdRate"/>
+    <!--requestTimeoutInSeconds="60000"-->
+    <!-- 增费-总览-梯种浮率-->
+	
+	<procedure name="TBJApprovePay"/>
+    <!--requestTimeoutInSeconds="60000"-->
+    <!-- 增费-TBJ信息-付款比例-->
+	
+	<procedure name="addServiceToPass"/>
+    <!--requestTimeoutInSeconds="120000"-->
+    <!-- 增费-审核同意-->
+	
+	<procedure name="addServiceToProcessReserve"/>
+    <!--requestTimeoutInSeconds="120000"-->
+    <!-- 增费-审核保留意见-->
+	
+	<procedure name="addServiceToRefuse"/>
+    <!--requestTimeoutInSeconds="180000"-->
+    <!-- 增费-审核拒绝-->
+	
+	<procedure name="TBJApproveHistory"/>
+    <!--requestTimeoutInSeconds="60000"-->
+    <!-- 增费-TBJ审批历史-->
+	
+	<procedure name="toQueryTBJHistory_zf"/>
+	
+	<procedure name="toQueryPriceDetailnew"/>
+	
+	
+</wl:adapter>

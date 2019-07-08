@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Licensed Materials - Property of IBM
+    5725-I43 (C) Copyright IBM Corp. 2011, 2013. All Rights Reserved.
+    US Government Users Restricted Rights - Use, duplication or
+    disclosure restricted by GSA ADP Schedule Contract with IBM Corp.
+-->
+<wl:adapter name="HttpAdapter_PAD_Custom"
+	xmlns:wl="http://www.ibm.com/mfp/integration" 
+	xmlns:http="http://www.ibm.com/mfp/integration/http" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	>
+	<displayName>HttpAdapter_PAD_Custom</displayName>
+	<description>HttpAdapter_PAD_Custom</description>
+	<connectivity>
+		<connectionPolicy xsi:type="http:HTTPConnectionPolicyType">
+			<protocol>http</protocol>
+			<!--测试的 -->
+			<!-- <domain>10.96.128.70</domain>  废止-->
+			<domain>10.98.199.17</domain>
+			<!-- 正式的 -->
+			<!-- <domain>10.96.128.96</domain> -->
+			<port>8080</port>	
+			<!-- Following properties used by adapter's key manager for choosing specific certificate from key store  
+			<sslCertificateAlias></sslCertificateAlias> 
+			<sslCertificatePassword></sslCertificatePassword>
+			-->		
+			<connectionTimeoutInMilliseconds>30000</connectionTimeoutInMilliseconds>
+            <socketTimeoutInMilliseconds>30000</socketTimeoutInMilliseconds>
+            <maxConcurrentConnectionsPerNode>100</maxConcurrentConnectionsPerNode>
+		</connectionPolicy>
+		
+	</connectivity>
+
+	<procedure name="getStories"/>
+
+	<procedure name="getStoriesFiltered"/>
+	
+	<procedure name="toCustomSeacher"/>
+	<procedure name="toCustomInfo"/>
+	<procedure name="toCustomSQSY"/>
+	<procedure name="toCustomInfo_BC"/>
+	<procedure name="toCustornAddressList"/>
+	<procedure name="toCustornAddressAdd"/>
+	<procedure name="toCustomInfo_TJSQ"/>
+	<procedure name="toCustomInfo_TBEBS"/>
+	<procedure name="toCustonInfo_SC"/>
+	<procedure name="toCustonInfo_CX"/>
+	
+	<procedure name="checkOpportunity"/>
+	<procedure name="queryOpportunity"/>
+
+	<procedure name="opptyLose"/>
+	<procedure name="opptyExamine"/>
+	<procedure name="queryOpptyAccount"/>
+	<procedure name="queryCompany"/>
+	<procedure name="queryOpportunityList"/>
+	<procedure name="queryLoseReason"/>
+	<procedure name="buildNewOppty"/>
+	<procedure name="salesRepQuery"/>
+	<procedure name="keyContactQuery"/>
+	<procedure name="keyContactBuild"/>
+	<procedure name="uploadAnnex"/>
+	<procedure name="downloadAnnex"/>
+	<procedure name="queryOpptyInstallSite"/>
+	<procedure name="bulidOpptyInstallSite"/>
+	<procedure name="buildOpptyLoseReason"/>
+	<procedure name="queryCustomerDemand"/>
+	<procedure name="buildCustomerDemand"/>
+	<procedure name="buildCompetitor"/>
+	<procedure name="queryCompetitor"/>
+	<procedure name="deleteLoseReason"/>
+	<procedure name="deleteCompetitor"/>
+	<procedure name="queryAgentAchieve"/>
+	<procedure name="queryAgentName"/>
+	<procedure name="agentAchieveSynchronize"/>
+	<procedure name="SameOpptyQueryByXY"/>
+	<procedure name="approveOppty"/>
+	<procedure name="managerOperationOppty"/>
+	<procedure name="CustomTYLS"/>
+	<procedure name="CustomJJLS"/>
+	
+	<!-- 第三阶段 -->
+	<procedure name="directorDQRYJzg"/>
+	<procedure name="directorSJXDDL"/>
+	<procedure name="perfimranceTYDLSYJ"/>
+	<procedure name="perfimranceBHDLSYJ"/>
+	<procedure name="clueListQuery"/>
+	<procedure name="submitAgentAchieve"/>
+	<procedure name="clueDetail"/>
+	<procedure name="clueSynchronize"/>
+	<procedure name="clueSynchronizeTwo"/>
+	<procedure name="clueHandleDirector_GLSJ"/>
+	<procedure name="submitClue"/>
+	<procedure name="cancelClue"/>
+	<procedure name="deleteClue"/>
+	
+	
+	<procedure name="ZGxgdlsyj"/>
+	
+	<procedure name="salesRepQueryTwo"/>
+	<!-- 新建报备 -->
+	<procedure name="clueSynchronizeNew"/>
+	<procedure name="zwSelect"/>
+	<procedure name="xgPosition"/>
+	<!-- 关注人 -->
+	<procedure name="getnewGZR"/>
+	<procedure name="getDetailedGZR"/>
+	<!-- 自动报价 -->
+	<procedure name="getZDBJ"/>
+	<!-- 子客户查询 -->
+	<procedure name="getSubcustomersSelect"/>
+	
+</wl:adapter>

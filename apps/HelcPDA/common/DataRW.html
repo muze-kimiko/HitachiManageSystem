@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>DataRW</title>
+	<script src="jqueryMobile/jquery.mobile-1.4.5.js"></script>
+	<link href="jqueryMobile/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link href="jqueryMobile/jquery.mobile.theme-1.4.5.min.css" rel="stylesheet">
+	<style type="text/css">
+	.ui-checkbox, .ui-radio{margin:0;}
+	
+	</style>
+</head>
+   <body>
+	<div data-role="page" id="DataRW">
+		<div data-role="header" data-position="fixed" style="background:#2B89D3;color:#ffffff;height:40px;position:fixed;" >
+			<div data-type="horizontal" class="ui-btn-left">
+				<a href="#anylink" id="FaultFile-back" data-role="button" data-iconpos="notext" data-rel="back" data-theme="f" data-icon="custarrow-l" >后退</a>
+				<a href="javascript:void(0);" onclick="home(3);" data-role="button" data-iconpos="notext" data-theme="f" data-icon="custarrow-home">主页</a>
+			</div>
+			<h1  class="pagetitle" style="font-size:15px;">地址读取&nbsp;&nbsp;</h1>
+			<div data-type="horizontal" class="ui-btn-right">
+				<a href="faultrwsearch.html" id="dialoglink" data-role="button" data-inline="true" data-rel="dialog" data-transition="pop" data-iconpos="notext" data-theme="f" data-icon="custarrow-search">搜索</a>
+			</div>
+			<div class="Mcstatus" id="Mcheader" width="100%">
+				<div class="gzcd">
+				    <div class="item"><a href="javascript:changePageExt('FaultRW.html')" >故障读取</a></div>
+				    <div class="item"><a  class="bg">地址读取</a></div>
+				    <div class="clear"></div>
+					<table width="100%" style="background-color:#3388cc;color:#fff;text-shadow:0;margin-top:2px;font-weight: normal;">
+						<tr>
+							<td nowrap="nowrap" style="border:none;text-shadow:0; text-align:left; padding:2px;" id="txtDeviceNo"></td>
+							<td style="width:22px;"><img id="zuangtai" src="images/elevator/unnormal.png" style="display:none;"></td>
+						    <td id="lbZuangtai" nowrap="nowrap" style="text-align:left;"></td>
+						</tr>
+						<tr style="display:none;">
+					      <td  colspan="3"  align="left" style=" padding:2px;text-shadow:0;" id="txtBudingName"></td>
+					    </tr>
+						<tr>
+						    <td  colspan="3"  align="left" style=" padding:2px;text-shadow:0;" id="txtAddress"></td>
+						</tr>
+					</table>
+					<input id="hidProcessId1" type="hidden" />
+					<input id="hidProcessId3" type="hidden" />
+					<input id="ElevatorId" type="hidden" />
+					<input id="ProtocolType" type="hidden" />
+					<input id="ProtocolTypeName" type="hidden" />
+				</div>
+			</div>
+			<div class="Mcstatus" width="100%">
+				<table width="100%" border="0">
+				    <tr style="width:100%;text-align:center;font-weight:bold">
+						<td id="tab-read" style="width:50% ">
+							读取
+						</td>
+						<td id="tab-write" style="width:50%">
+							写入
+						</td>
+					</tr>
+			  	</table>
+		  	</div>
+		</div>
+		<div data-role="content" style="padding:125px 0px 0px 0px">
+			<div class="Mcstatus" id="SearchResult" width="100%">
+								
+				<table id="tb-read" width="100%" border="0" cellspacing="0" cellpadding="0" class="datarw">
+				   <tr>
+						<th  style="width:40px;">
+						<input type="checkbox" id="chkAll" name="chkAll" onclick="CheckAll()"></th>
+						<th  nowrap="nowrap" style="width:80px;">地址</th>
+						<th  nowrap="nowrap" style="width:20px;">长度</th>
+						<th  nowrap="nowrap" >读取值(16进制)</th>
+						<th style="display:none;" >备注</th>
+				   </tr>
+				   <tr>
+				     <td ><input type="checkbox" name="chk" value="1"></td>
+					 <td  nowrap="nowrap"><input type="text" name="txtAddress1" id="txtAddress1" ></td>
+				     <td  nowrap="nowrap" style="padding-left:5px;"><input type="text" name="txtLength1" id="txtLength1" value="1" style="width:50px;"></td>
+				     <td  nowrap="nowrap" name="txtData1" id="txtData1" ></td>
+				     <td  name="txtRemark1" id="txtRemark1" style="display:none;"></td>
+				   </tr>
+				   <tr>
+						<td ><input type="checkbox" name="chk" value="2"></td>
+						<td  nowrap="nowrap"><input type="text" name="txtAddress2" id="txtAddress2" ></td>
+						<td  nowrap="nowrap" style="padding-left:5px;"><input type="text" name="txtLength2" id="txtLength2" value="1"></td>
+						<td  nowrap="nowrap" name="txtData2" id="txtData2"></td>
+						<td  name="txtRemark2" id="txtRemark2" style="display:none;"></td>
+				   </tr>
+				   <tr>
+						<td ><input type="checkbox" name="chk" value="3"></td>
+						<td  nowrap="nowrap"><input type="text" name="txtAddress3" id="txtAddress3" ></td>
+						<td  nowrap="nowrap" style="padding-left:5px;"><input type="text" name="txtLength3" id="txtLength3" value="1"></td>
+						<td  nowrap="nowrap" name="txtData3" id="txtData3"></td>
+						<td  name="txtRemark3" id="txtRemark3" style="display:none;"></td>
+				   </tr>
+				   <tr>
+						<td ><input type="checkbox" name="chk" value="4"></td>
+						<td  nowrap="nowrap"><input type="text" name="txtAddress4" id="txtAddress4" ></td>
+						<td  nowrap="nowrap" style="padding-left:5px;"><input type="text" name="txtLength4" id="txtLength4" value="1" ></td>
+						<td  nowrap="nowrap" name="txtData4" id="txtData4"></td>
+						<td   name="txtRemark4" id="txtRemark4" style="display:none;"></td>
+				   </tr>
+				   
+				   <tr>
+						<td ><input type="checkbox" name="chk" value="5"></td>
+						<td  nowrap="nowrap"><input type="text" name="txtAddress5" id="txtAddress5" ></td>
+						<td  nowrap="nowrap" style="padding-left:5px;"><input type="text" name="txtLength5" id="txtLength5" value="1" ></td>
+						<td  nowrap="nowrap" name="txtData5" id="txtData5"></td>
+						<td   name="txtRemark5" id="txtRemark5" style="display:none;"></td>
+				   </tr>
+				   <tr>
+				  		<td ><input type="checkbox" name="chk" value="6"></td>
+						<td  nowrap="nowrap"><input type="text" name="txtAddress6" id="txtAddress6" ></td>
+				     	<td  nowrap="nowrap" style="padding-left:5px;"><input type="text" name="txtLength6" id="txtLength6" value="1" ></td>
+				     	<td  nowrap="nowrap" name="txtData6" id="txtData6" style="display:none;"></td>
+				     	<td   name="txtRemark6" id="txtRemark6" style="display:none;"></td>
+				   </tr>
+				   
+				</table>
+				
+				<table id="tb-write" width="100%" border="0" cellspacing="0" cellpadding="0" class="datarw">
+					<tr>
+						<th  style="width:40px;">
+						<input type="checkbox" id="write-chkAll" name="write-chkAll"></th>
+						<th  nowrap="nowrap" style="width:70px;">地址</th>
+						<th  style="width:8px;">长度</th>
+						<th  nowrap="nowrap" style="width:70px;">写入值</th>
+						<th>结果</th>
+				   </tr>
+				   <tr>
+				     <td ><input type="checkbox" name="write-chk" value="1"></td>
+					 <td  nowrap="nowrap"><input type="text" name="write-txtAddress1" id="write-txtAddress1" ></td>
+				     <td  nowrap="nowrap" style="padding-left:5px;"><input type="text" name="write-txtLength1" id="write-txtLength1" value="1" style="width:50px;"></td>
+				     <td  nowrap="nowrap"><input type="text" name="write-txtData1" id="write-txtData1"></td>
+				     <td  name="write-txtResult1" id="write-txtResult1"></td>
+				   </tr>
+				   <tr>
+						<td ><input type="checkbox" name="write-chk" value="2"></td>
+						<td  nowrap="nowrap"><input type="text" name="write-txtAddress2" id="write-txtAddress2" ></td>
+						<td  nowrap="nowrap" style="padding-left:5px;"><input type="text" name="write-txtLength2" id="write-txtLength2" value="1"></td>
+						<td  nowrap="nowrap" ><input name="write-txtData2" id="write-txtData2"></td>
+						<td  name="write-txtResult2" id="write-txtResult2"></td>
+				   </tr>
+				   <tr>
+						<td ><input type="checkbox" name="write-chk" value="3"></td>
+						<td  nowrap="nowrap"><input type="text" name="write-txtAddress3" id="write-txtAddress3" ></td>
+						<td  nowrap="nowrap" style="padding-left:5px;"><input type="text" name="write-txtLength3" id="write-txtLength3" value="1"></td>
+						<td  nowrap="nowrap"><input name="write-txtData3" id="write-txtData3"></td>
+						<td  name="write-txtResult3" id="write-txtResult3"></td>
+				   </tr>
+				   <tr>
+						<td ><input type="checkbox" name="write-chk" value="4"></td>
+						<td  nowrap="nowrap"><input type="text" name="write-txtAddress4" id="write-txtAddress4" ></td>
+						<td  nowrap="nowrap" style="padding-left:5px;"><input type="text" name="write-txtLength4" id="write-txtLength4" value="1" ></td>
+						<td  nowrap="nowrap" ><input name="write-txtData4" id="write-txtData4"></td>
+						<td   name="write-txtResult4" id="write-txtResult4"></td>
+				   </tr>
+				   
+				   <tr>
+						<td ><input type="checkbox" name="write-chk" value="5"></td>
+						<td  nowrap="nowrap"><input type="text" name="write-txtAddress5" id="write-txtAddress5" ></td>
+						<td  nowrap="nowrap" style="padding-left:5px;"><input type="text" name="write-txtLength5" id="write-txtLength5" value="1" ></td>
+						<td  nowrap="nowrap" ><input name="write-txtData5" id="write-txtData5"></td>
+						<td   name="write-txtResult5" id="write-txtResult5"></td>
+				   </tr>
+				   <tr>
+				  		<td ><input type="checkbox" name="write-chk" value="6"></td>
+						<td  nowrap="nowrap"><input type="text" name="write-txtAddress6" id="write-txtAddress6" ></td>
+				     	<td  nowrap="nowrap" style="padding-left:5px;"><input type="text" name="write-txtLength6" id="write-txtLength6" value="1" ></td>
+				     	<td  nowrap="nowrap"><input name="write-txtData6" id="write-txtData6" ></td>
+				     	<td   name="write-txtResult6" id="write-txtResult6"></td>
+				   </tr>
+				</table>
+			</div>
+		</div>
+		<div id="footer-read" data-role="footer" data-position="fixed" data-theme="a" data-tap-toggle="false" style="position:fixed;" data-hide-during-focus="false">
+			<div data-role="navbar" id="navbar-custorm">
+	      		<ul>
+			  		<li><a id="btnRead" href="#" data-icon="mydatarw">读取</a></li>
+			  		<li><a id="btnReRead" href="#" data-icon="mydatarw">重读</a></li>
+			  		<li><a id="btnReflesh" href="#" data-icon="myrefresh">刷新</a></li>
+				  </ul>
+			</div>
+		</div>
+		<div id="footer-write" data-role="footer" data-position="fixed" data-theme="a" data-tap-toggle="false" style="position:fixed;" data-hide-during-focus="false">
+			<div data-role="navbar" id="navbar-custorm">
+	      		<ul>
+			  		<li><a id="write-btnReflesh" href="#" data-icon="myrefresh">刷新</a></li>
+			  		<li><a id="write-btnWrite" href="#" data-icon="mydatarw">写入</a></li>
+				  </ul>
+			</div>
+		</div>
+</div>
+</body>
+</html>
+

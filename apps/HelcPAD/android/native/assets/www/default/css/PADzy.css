@@ -1,0 +1,345 @@
+
+/* Stylesheet content from css/PADzy.css in folder common */
+/* 用于定位显示定位地址  */
+.dwAddress{
+	width:100%;
+	height:30px;
+	background-color:#7AC5A5;
+	float:left;
+	font-size: 17px;
+	color: #FFFFFF; 
+	line-height:30px;
+	text-align:center;
+}
+
+/* 隐藏x方向滚动条 */  
+.x-scroll-bar-x.active {  
+  width: 0px;   
+}  
+/* 隐藏y方向滚动条 */  
+.x-scroll-bar-y.active {  
+  width: 0px;   
+}  
+
+/* 下拉列表距离修改 */
+.xcxXG{
+	margin:0px 2% 0px 2%;
+}
+
+/* @CHARSET "UTF-8"; */
+/*自定义下拉选择框的样式*/
+.zDefineSelect{
+    /* background: url('yourimage') ;  */
+   /* the width and the height of your image */
+    width: 96%;
+    height: 30px;
+    float:left;
+    overflow: hidden;
+    margin:0% 2% 0px 2%;
+    border-radius: 3px;
+}
+.zDefineSelect select{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    /*background:transparent;*/
+    background-color:#FFF8BC;
+    border:none;
+    /*padding-left:10px;*/
+    width: 100%;
+    height:100%;    
+}
+/*提醒的样式*/
+.circle {
+    background-color: red;
+    position: absolute;
+}
+/*页面只读选项输入部分样式*/
+.ROCls{
+	background-color:#F5F5F5;
+}
+/*所有页面   通用字体大小*/
+.textf{
+	font-size:1.0em;
+}
+/*申请分批单   通用字体大小*/
+.textfTwo{
+	font-size:0.7em;
+}
+/*特殊字体大小*/
+.textSpecilF{
+	font-size:0.9em;
+}
+/* 让下拉列表的值为黄色 */
+.cusInfo_test{
+	background-color:#FFF8BC;
+}
+
+/* 页面标题专用大小 */
+.pad_view_FS{
+	font-size:1.3em;
+}
+
+/* 按钮专用大小  */
+.pad_button_FS{
+	font-size:0.8em;
+}
+
+.x-toolbar .x-button {
+border: 0;
+background-color: transparent;
+margin: 5px 0px 0px 0px;
+height: 2.0em;
+}
+
+
+/* list通用字体大小 */
+.pad_list_FS{
+	font-size:12px;
+}
+
+/* 下拉列表 */
+.x-list-pullrefresh-message, 
+.x-list-pullrefresh-wrap { color: #9e9e9e; }
+.x-list-pullrefresh-arrow, 
+.x-list-pullrefresh-loading *.x-loading-spinner { display: none; }
+
+/* 三合页面测试用 */
+.yemian{
+	font-size:1.0em;
+}
+
+/* 定制按钮 */
+/* 
+//背景属性：背景颜色 背景图片 背景是否重复 背景时候随浏览器滚动 背景平位置 背景垂直位置
+//按钮的长度 
+//按钮的高度 
+//边框为0 
+//字体大小 
+//字体颜色 
+//字体加重 
+//圆角 
+//指针形式：手型 
+//左浮动
+//垂直居中
+//水平居中
+ */
+.anOne{
+	background: none repeat scroll 0 0 #82C400; 
+	width:20%; 
+	height:30px; 
+	border-width: 0; 
+	font-size: 17px;
+	color: #FFFFFF; 
+	font-weight: 500; 
+	border-radius: 6px; 
+	cursor:pointer;
+	float:left;
+	line-height:30px;
+	text-align:center;
+	margin:10px 2% 5px 2%;
+}
+
+.anTwo{
+	background: none repeat scroll 0 0 #82C400; 
+	width:20%; 
+	height:30px; 
+	border-width: 0; 
+	font-size: 17px;
+	color: #FFFFFF; 
+	font-weight: 500; 
+	border-radius: 6px; 
+	cursor:pointer;
+	float:left;
+	line-height:30px;
+	text-align:center;
+	margin:2px 2% 2px 2%;
+}
+
+.anThree{
+	background: none repeat scroll 0 0 #82C400; 
+	width:20%; 
+	height:30px; 
+	border-width: 0; 
+	font-size: 17px;
+	color: #FFFFFF; 
+	font-weight: 500; 
+	border-radius: 6px; 
+	cursor:pointer;
+	float:left;
+	line-height:30px;
+	text-align:center;
+	margin:9px 2% 5px 2%;
+}
+
+
+.kOne{
+	width:46%; 
+}
+
+.kTwo{
+	width:96%; 
+}
+
+.kThree{
+	width:29%; 
+}
+
+.ysBlue{
+	background: none repeat scroll 0 0 #63B8FF; 
+}
+
+.ysRed{
+	background: none repeat scroll 0 0 #FF0000; 
+}
+
+.ysPink{
+	background: none repeat scroll 0 0 #FFBBFF; 
+}
+
+.ysQs{
+	background: none repeat scroll 0 0 #B3EE3A; 
+}
+
+/* 颜色组合
+绿 7AC5A5
+黄 F7B583 
+粉 FAA2AD
+蓝 8BC5D9
+澄 F5C2BA */
+.ysZhOne{
+	background: none repeat scroll 0 0 #7AC5A5; 
+}
+.ysZhTwo{
+	background: none repeat scroll 0 0 #F7B583; 
+}
+.ysZhThree{
+	background: none repeat scroll 0 0 #FAA2AD; 
+}
+.ysZhFour{
+	background: none repeat scroll 0 0 #8BC5D9; 
+}
+.ysZhFive{
+	background: none repeat scroll 0 0 #F5C2BA; 
+}
+
+
+.anOneDiv{
+	width:100%;
+	height:50px; 
+	float:left;
+	/* background:yellow; */
+}
+
+.anTwoDiv{
+	width:96%;
+	height:32px; 
+	float:left;
+	/* background:blue; */
+	margin:0px 2% 5px 2%;
+}
+
+.anThreeDiv{
+	width:96%;
+	height:32px; 
+	float:left;
+	/* background:blue; */
+	margin:0px 2% 8px 2%;
+}
+
+input, textarea {
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    transition: border linear 0.2s, box-shadow linear 0.2s;
+    width:96%;
+}
+
+input, textarea, select {
+    font-size: 1em;
+    display: inline-block;
+    padding: 4px;
+    color: #555555;
+    vertical-align: middle;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    margin: 3px 0;
+}
+
+/* 获得焦点时的输入框高光效果 */
+input:focus,
+textarea:focus {
+    border-color: rgba(82, 168, 236, 0.8);
+    outline: 0;
+    outline: thin dotted \9;    /* IE6-9 */  
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
+}
+
+/* 避免对其他元素的不良影响(主要表现在IE浏览器中) */
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus,
+select:focus {
+    outline: thin dotted #333;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+    box-shadow: none;
+}
+
+input[type="image"],
+input[type="checkbox"],
+input[type="radio"] {
+  padding: 0;
+  margin: 3px 0;
+  *margin-top: 0;   /* IE7 */
+  line-height: normal;
+  cursor: pointer;
+  background-color: transparent;
+  border: 0 \9;     /* IE9- */
+  border-radius: 0;
+}
+
+/* 避免对按钮样式的不良影响 */
+input[type="button"],
+input[type="submit"],
+.btn {
+    display: inline-block;
+    *display: inline;
+    padding: 4px 10px;
+    font-size: 1em;
+    color: #333333;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    cursor: pointer;
+    background-color: #f5f5f5;
+    *background-color: #e6e6e6;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+    background-image: linear-gradient(top, #ffffff, #e6e6e6);
+    background-repeat: repeat-x;
+    border: 1px solid #cccccc;
+    *border: 0;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+    border-bottom-color: #b3b3b3;
+    border-radius: 4px;
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+    filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+    *zoom: 1;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* 客户管理 */
+.khglDiv{
+	font-size:12px;
+	width:100%;
+	height:12px;
+}
+
+.khglDivLeft{
+	float:left;
+	width:70%
+}
+
+.khglDivRight{
+	float:right;
+	width:30%
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+    	<head>
+    		<meta charset="UTF-8">
+    		<title>Main</title>
+    	</head>
+    	<body>
+   		<div data-role="page" id="main">  
+   			<!-- 侧边菜单 -->
+	   		<div data-role="panel" id="leftpanel" data-position="left" data-display="overlay" data-theme="a">
+				<ul data-role="listview">
+					<li data-role="list-divider">菜单 </li>
+				    <li><a href="FeedbackList.html">意见反馈</a></li>
+				    <li><a href="About.html">关于</a></li>
+				    <li data-rel="close"><strong>关闭</strong></li>
+				</ul>
+			</div>
+			
+			<div data-role="header" data-position="fixed"  style="position:fixed;" >
+				<div class="home-header" style="width:100%;">
+				
+					<div class="tool">		
+						<a href="#leftpanel" class="leftmenu"><img alt="" src="images/menu/menu.png"></a>
+						<span id="labeluser" >{username}</span>
+						<a href="index.html?page=main" rel="external" id="exit" class="exit"><img src="images/home/header/main_2final_tuichu.png"/></a>
+					</div>		    
+			    
+					<div class="bg" style="padding-bottom:10px;"></div>
+					<div id="statinfo" class="statinfo" >
+		   				 <table style="width:100%;text-align:left;pading:5px;">
+			   				<tr>
+				   				<td class="lable" nowrap="nowrap">正常监控台量</td>
+				   				<td class="digtal" id="monitorcount" ></td>
+			   				
+				   				<td class="lable" nowrap="nowrap">正常监控比例</td>
+				   				<td class="digtal" id="div-rate"><div id="normalrate" style="width:40px;height:40px;"></div></td>
+			   				</tr>
+			   				<tr>
+				   				<td colspan="4" style="text-align:right;font-size:12px;" id="tip">
+				   				
+				   				</td>
+			   				</tr>
+			   				
+		   				</table>
+	   				</div>
+				</div>
+			</div>
+   			<div data-role="content" style="heigth:180px;padding:5px 0 0 0;"  id="content">
+   				<div class="swiper-container" style="heigth:180px;text-align:center;">
+   					
+			        <div class="swiper-wrapper" style="heigth:180px;">
+			           
+						
+			        </div>
+			    	<div class="pagination" id="pagination"></div>
+			        
+			    </div>
+   				<!-- <div id="menu"></div> -->
+			</div>
+			<div data-role="footer" data-position="fixed" data-theme="a" data-tap-toggle="false" style="position:fixed;" data-hide-during-focus="false">
+			<div data-role="navbar" id="navbar-custorm">
+	      		<ul>
+			  		<li><a id="footer-monitor" href="#" data-icon="home-mymonitor">遥监</a></li>
+			  		<li><a id="footer-search" href="#" data-icon="home-mysearch">查询</a></li>
+				    <li><a id="footer-data" href="#" data-icon="home-mydata">数据</a></li>
+				    <li><a id="footer-report" href="#" data-icon="home-myreport">统计</a></li>
+				  </ul>
+			</div>
+		</div>
+   		</div>
+    	</body>
+</html>
+

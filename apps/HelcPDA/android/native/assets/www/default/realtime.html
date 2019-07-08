@@ -1,0 +1,318 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Main</title>
+</head>
+<body>
+	<div data-role="page" id="realtime">
+		<div data-role="header" data-position="fixed" data-tap-toggle="false" style="background:#2B89D3;color:#ffffff;height:40px;" >
+			<div data-type="horizontal"  class="ui-btn-left">
+				<a href="#anylink" id="realtime-back" data-role="button" data-rel="back" data-iconpos="notext" data-theme="f" data-icon="custarrow-l">后退</a>
+				<a href="#anylink" id="realtime-external-back" data-role="button" rel="external" data-iconpos="notext" style="display:none;" data-theme="f"  data-icon="custarrow-l">后退</a>
+				<a href="javascript:void(0);" onclick="home();" data-role="button" data-iconpos="notext" data-theme="f" data-icon="custarrow-home">主页</a>
+			</div>
+			<h1 class="pagetitle" style="font-size:15px;">实时监视</h1>
+			<div data-type="horizontal" class="ui-btn-right">
+				<a href="search.html" id="dialoglink" data-role="button" data-inline="true" data-rel="dialog" data-transition="pop" data-iconpos="notext" data-theme="f" data-icon="custarrow-search" >搜索</a>
+			</div>
+			<div class="Mcstatus" id="Mcheader" width="100%" style="border:0px;background-color:#e4e4e4;margin-top:0;padding-left:5px;padding-right:5px;" >
+			   <table width="100%" border="0" cellspacing="0" cellpadding="0">
+			   <tr>
+				   <td style="width:160px;">
+					   <div id="divElevator" style="width:160px;height:152px;background:url(images/lift_close.png) left top no-repeat;position:relative;">
+							<div id="div-zhiti">
+							<div id="up" style="left: 130px; top: 50px; position: absolute;"><img id="imgUp" src="images/up_gray.gif" /></div>
+							<div id="floor" style="left: 135px; top: 70px; position: absolute;color:#ffffff;font-size:16px;font-weight:bold;" ></div>
+							<div id="down" style="left: 130px; top: 95px; position: absolute;"><img id="imgDown" src="images/down_gray.gif" /></div>
+							<div class="jindu" title="载重" style="left: 10px; top: 50px; position: absolute;">
+							    <ul>
+							        <li id="imgCarry" style="height: 0%"></li>
+							     </ul>
+							</div>
+							<div id="Carry" class="bfb" style="left: 15px; top: 100px; position: absolute;">0%</div>
+							</div>
+					   </div>
+				   </td>
+				   <td>
+					   <div class="" width="100%" style="margin-top:0px" >
+					   		<table style="color:#000;" cellspacing="0" cellpadding="0">
+					   			<tr onclick="javascript:ViewDetail();" style="cursor:pointer;">
+						   			<td colspan="2" style="padding-left:5px;size:15px;font-weight:blod;color:blue;" id="lbElevator"></td>
+						   		</tr>
+						   		<tr style="font-size:12px;vertical-align:top;display:none;">
+						   			<td style="padding-left:5px;width:30px;">地盘:</td>
+						   			<td id="lbBuilding"  style="font-weight:normal;"></td>
+						   		</tr>
+						   		<tr style="font-size:12px;vertical-align:top;">
+						   			<td style="padding-left:5px;width:30px;">位置:</td>
+						   			<td id="lbAddress" style="font-weight:normal;"></td>
+						   		</tr>
+					   		</table>
+					   		<table style="color:#000;" cellspacing="0" cellpadding="0">
+					   			<tr>
+						   			<td rowspan="2" align="center" style="width:45px;padding-left:5px;padding-right:5px;">
+						   				<img id="imgCom" src="images/shishijiankong/wifi-red.png" />
+						   			</td>
+						   			<td colspan="2" id="lbLastContactDate"  style="color:#363636;font-weight:normal;font-size:14px"></td>
+						   		</tr>
+						   		<tr>
+						   			<td colspan="2">
+					   			 		<table style="width:100%;border-collapse:collapse; font-size:12px;font-weight:normal; color:#fff;padding-right:5px;" >
+											<tr>
+												<td align="center" style="width:12px;background: url(images/shishijiankong/jiankong_time_s01.png) no-repeat center center;padding-left:0px;padding-right:0px;"><span id="time-hour-shi">0</span></td>
+												<td align="center" style="width:12px;background: url(images/shishijiankong/jiankong_time_s01.png) no-repeat center center;padding-left:0px;padding-right:0px;"><span id="time-hour-ge">0</span></td>
+												<td align="center" style="width:3px;background: url(images/shishijiankong/jiankong_time_s02.png) no-repeat center center;padding-left:0px;padding-right:0px;"></td>
+												<td align="center" style="width:12px;background: url(images/shishijiankong/jiankong_time_s01.png) no-repeat center center;padding-left:0px;padding-right:0px;"><span id="time-minute-shi">0</span></td>
+												<td align="center" style="width:12px;background: url(images/shishijiankong/jiankong_time_s01.png) no-repeat center center;padding-left:0px;padding-right:0px;"><span id="time-minute-ge">0</span></td>
+												<td align="center" style="width:3px;background: url(images/shishijiankong/jiankong_time_s02.png) no-repeat center center;padding-left:0px;padding-right:0px;"></td>
+												<td align="center" style="width:12px;background: url(images/shishijiankong/jiankong_time_s01.png) no-repeat center center;padding-left:0px;padding-right:0px;"><span id="time-second-shi">0</span></td>
+												<td align="center" style="width:12px;background: url(images/shishijiankong/jiankong_time_s01.png) no-repeat center center;padding-left:0px;padding-right:0px;"><span id="time-second-ge">0</span></td>
+											</tr>
+										</table>
+						   			</td>
+						   		</tr>
+						   		
+						   		<tr>
+						   			<td colspan="3">
+							   			<table>
+								   			<tr>
+									   			<td align="center">
+									   				<a href="javascript:void(0)" onclick="con(1);"  class="bluelink" style="font-size:12px;color:#ffffff;text-shadow: none;font-weight: normal;text-decoration:none;">连接</a>
+									   			</td>
+									   			<td align="center">
+									   				<a href="javascript:void(0)" onclick="discon(1);" class="reddisconnect" style="font-size:12px;color:#ffffff;text-shadow: none;font-weight: normal;text-decoration:none;">断开</a>
+									   			</td>
+								   			</tr>
+							   			</table>
+						   			</td>
+						   		</tr>
+					   		</table>
+					   </div>
+				   </td>
+			   </tr>
+			   </table>
+			</div>
+			<div class="Mcstatus" id="Mcmenu" width="100%" style="display:none">
+			   <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td align=center>
+                    	<a href="javascript:void(0)" onclick="HideRealtime();"><img id="imgActive" src="images/shousuo.png" /></a>
+					</td>
+                </tr>
+            </table>
+            </div>			
+		</div>
+		<div data-role="content" style="padding:120px 0px 0px" id="content">
+			<!--application UI goes here-->
+			<div class="Mcstatus" id="Mcstatus" width="100%">
+			   <table width="100%" border="0" cellspacing="0" cellpadding="0" class="littletable">
+                <tr class="title">
+                    <td colspan="6">
+                        	遥监设备状态
+                    </td>
+                </tr>
+
+                <tr class="title">
+                    <td colspan="6">
+                        	故障状态
+                    </td>
+                </tr>
+
+                <tr class="title">
+                    <td colspan="6">
+                        	运行状态
+                    </td>
+                </tr>
+
+                <tr class="title">
+                    <td colspan="6">
+                        	其他信息
+                    </td>
+                </tr>
+
+            </table>
+            </div>
+		</div>
+		
+		<div data-role="footer" data-position="fixed" data-theme="a" data-tap-toggle="false" style="position:fixed;" data-hide-during-focus="false">
+			<div data-role="navbar" id="navbar-custorm">
+	      		<ul>
+	     			<li data-icon="false" id="footer-activetest"><a href="#" data-icon="myactivetest">激活调试</a></li>
+		            <li data-icon="false" id="footer-readdata"><a href="#" data-icon="mydatarw">数据读取</a></li>
+		            <li data-icon="false" id="footer-faultfile"><a href="#" data-icon="myfaultfile">故障存档</a></li>
+		            <li data-icon="false" id="footer-favorite"><a href="#" data-icon="myfavorite">收藏</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div data-role="popup" id="popupElevatorDetail" data-tolerance="0,0" class="ui-popup " data-position-to="window" data-overlay-theme="b" data-theme="a" style="min-width:100%;min-heigth:100%;padding-left:0px;">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;height:40px;" >
+			<h1  class="pagetitle" style="font-size:15px;">电梯详细信息</h1>
+		</div>
+		<div data-role="content" style="padding:0px 0px 0px 0px;">
+			 
+		</div> 
+		 <div data-role="content" style="padding:0px 0px 0px 0px;">
+			   <div class="Mcstatus2" id="" width="100%">
+				<table  class="jhliftdata_edit" width="100%" border="0">
+				  <tr>
+				    <th width="25%" scope="row">电梯工号</th>
+				    <td width="65%" id="lbDeviceNo2"></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">所属分公司</th>
+				    <td id="lbFiliale2"></td>
+				  </tr>
+				  <tr>    
+				    <th scope="row">所属维保站</th>
+				    <td id="lbCompanyDesc2"></td>
+				  </tr>
+				  <!-- <tr>
+				    <th scope="row">最&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;后<br>上线时间</th>
+				    <td id="lbLastContactDate"></td>
+				  </tr> -->
+				  <tr>
+				    <th scope="row">地盘名称</th>
+				    <td id="lbBuilding2"></td>
+				  </tr>
+				   <tr>
+				    <th scope="row">电梯位置</th>
+				    <td><textarea id="lbAddress2"></textarea></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">遥监卡号</th>
+				    <td id="lbPhone2"></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">端&nbsp;&nbsp;口&nbsp;&nbsp;号</th>
+				    <td id="lbTerminalPort2"></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">电梯备注</th>
+				    <td ><textarea id="lbRemark2"></textarea></td>
+				  </tr>
+				  
+				  <!--
+				  <tr>
+				    <th scope="row">激活时间</th>
+				    <td id="lbFirstActiveDate"></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">导入时间</th>
+				    <td id="lbCreatedDate"></td>
+				  </tr>
+				   
+				  <tr style="display:none;">
+				    <th scope="row">激&nbsp;&nbsp;活&nbsp;&nbsp;码</th>
+				    <td style="padding-right:10px;"><input type="text" name="lbActiveCode" id="lbActiveCode"></td>
+				  </tr>
+				  
+				  <tr>
+				    <th scope="row">主板程序</th>
+				    <td id="lbSoftVersion"></td>
+				  </tr>
+				  
+				  <tr>
+				    <th scope="row">保&nbsp;&nbsp;养&nbsp;&nbsp;员</th>
+				    <td id="lbStaffName"></td>
+				  </tr>
+				  <tr>
+				    <th scope="row">保&nbsp;&nbsp;养&nbsp;&nbsp;员<br/>联系电话</th>
+				    <td id="lbMobile"></td>
+				  </tr>-->
+				  <tr>
+				  <td colspan="2">
+					  <div data-role="controlgroup" data-type="horizontal" style="text-align:center;">
+				   		<a href="#" data-role="button" data-icon="back"  id="btnback">取消</a>
+				    	<a  href="javascript:void(0)" id="btnSave" data-role="button" data-icon="info">保存</a>
+					  </div>
+				  </td>
+				  </tr>
+				  
+				</table>
+				
+            </div>
+            
+		</div>
+		</div>
+	
+		<div data-role="popup" id="popupDialog" data-overlay-theme="b" data-theme="a" data-dismissible="false">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;padding:0;margin:0;" >
+				<h1>中断提示</h1>
+			</div>
+		    <div data-role="content" style="padding-top:0px;margin-top:0px;">
+		        <p>通讯已中断，请重连</p>
+				<div data-role="navbar">
+			      <ul>
+			        <li><a href="#" data-theme="a" data-rel="back">关闭</a></li>
+			        <li><a href="#" data-theme="a" onclick="$('#popupDialog').popup('close');con(1);">重连</a></li>
+			      </ul>
+			    </div>
+		    </div>
+		</div>
+		
+		<div data-role="popup" id="popupConnectDialog" data-overlay-theme="b" data-theme="a" data-dismissible="false">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;padding:0;margin:0;" >
+				<h1>提示</h1>
+			</div>
+		    <div data-role="content" style="padding-top:0px;margin-top:0px;">
+		        <p>通讯超时</p>
+				<div data-role="navbar">
+			      <ul>
+			        <li><a href="#" data-theme="a" data-rel="back">继续等待</a></li>
+			        <li><a href="#" data-theme="a" onclick="$('#popupConnectDialog').popup('close');discon(1);">中断连接</a></li>
+			      </ul>
+			    </div>
+		    </div>
+		</div>
+		
+		<div data-role="popup" id="popupFavoriteGroupDialog" data-tolerance="0,0" data-position-to="window" data-overlay-theme="b" data-theme="a" style="min-width:100%;min-heigth:100%;width:200px;">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;" >
+				<h1>收藏组</h1>
+				<div data-type="horizontal" class="ui-btn-right">
+					<a href="javascript:void(0);" id="btnAddGroup" data-role="button" data-icon="custarrow-add" data-iconpos="notext" data-theme="f">新增</a>
+				</div>
+			</div>
+			<div data-role="content" style="padding-top:10px;">
+				<div data-role="listview" id="favoriteGroup-listview">
+				</div>
+			</div>
+			<div data-role="footer">
+				<fieldset class="ui-grid-a">
+				    <div class="ui-block-a" style="padding:2px;cursor:pointer;" id="btnFavorite"><div class="ui-bar ui-bar-a" style="height: 20px;text-align:center;background:#2B89D3;color:#ffffff">确定</div></div>
+				    <div class="ui-block-b" style="padding:2px;cursor:pointer;" id="btnCancel"><div class="ui-bar ui-bar-a" style="height: 20px;text-align:center;background:#2B89D3;color:#ffffff">取消</div></div>
+				</fieldset>
+			</div>
+		</div>
+		
+		<div data-role="popup" id="AddGroupUI" data-tolerance="0,0" data-position-to="window" data-overlay-theme="b" data-theme="a" style="min-width:100%;min-heigth:100%;">
+			<div data-role="header" style="background:#2B89D3;color:#ffffff;" >
+				<h1  class="pagetitle" style="font-size:15px;">新增分组</h1>
+				<div style="-moz-user-select:none;background-color:#fff;color:#000;height:100px;width:100%;">
+			 		<table style="width:100%;">
+				 		<tr>
+					 		<td align="right" style="padding-left:5px;padding-right:5px;">
+					 			<input type="text" name="txtGroupName" id="txtGroupName" placeholder="组名" >
+					 		</td>
+				 		</tr>
+				 		<tr>
+					 		<td style="text-align:center;">
+						 		<fieldset class="ui-grid-a">
+								    <div class="ui-block-a" style="padding:2px;cursor:pointer;" id="btn-add-Save"><div class="ui-bar ui-bar-a" style="height: 20px;text-align:center;background:#2B89D3;color:#ffffff">保存</div></div>
+								    <div class="ui-block-b" style="padding:2px;cursor:pointer;" id="btn-add-cancel"><div class="ui-bar ui-bar-a" style="height: 20px;text-align:center;background:#2B89D3;color:#ffffff">取消</div></div>
+								</fieldset>
+					 		</td>
+				 		</tr>
+			 		</table>
+				</div>
+			</div>
+		</div>
+		
+		<input type="hidden" id="hidinfo">
+		<input type="hidden" id="hidFiliale">
+		<input type="hidden" id="hidMaintenance">
+	</div>
+</body>
+</html>
+

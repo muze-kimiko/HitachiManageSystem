@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div data-role="page" id="SmsReceipt" style="background-color:#EFEFEF;">
+   <div  data-role="header" data-position="fixed" data-tap-toggle="false" data-hide-during-focus="false" style="background:#2B89D3;color:#ffffff;height:40px;" >
+   <div data-type="horizontal" class="ui-btn-left">
+				<a href="#anylink" id="about-back" data-role="button" data-icon="custarrow-l" data-iconpos="notext" data-rel="back" data-theme="f">后退</a>
+				<a href="#anylink" id="about-external-back" data-role="button" data-icon="custarrow-l" data-iconpos="notext" rel="external" style="display:none;" data-theme="f">后退</a>
+				<a href="javascript:void(0);" id="home" data-role="button" data-icon="custarrow-home" data-iconpos="notext" data-theme="f">主页</a>
+			</div>
+      <h1  class="pagetitle" style="font-size:15px;color:#ffffff;">查看短信回执</h1> 
+       <div data-type="horizontal" style="width:100%;font-size:15px;">
+	       <div  class="smstitle"><a href="#">电话号码</a></div>
+		    <div class="smstitle"><a href="#">发送时间</a></div>
+		    <div class="smstitle"><a href="#">回执内容</a></div>
+		    <div class="smstitle"><a href="#">回执时间</a></div>
+	   </div>
+   </div>
+   <div data-role="content" style="padding: 45px 0px 0px 0px;">
+				  <div  id="SearchResult">
+	              </div>
+		</div>
+   <div data-role="footer" data-position="fixed" data-theme="a" data-tap-toggle="false" style="position:fixed;" data-hide-during-focus="false">
+		<div id="div-more" style="display:none;padding-bottom:2px;">
+				<button id="more" class="btn" style="margin:0px;width:100%;">更多</button>
+			</div>
+		</div>
+</div>
+</body>
+</html>
